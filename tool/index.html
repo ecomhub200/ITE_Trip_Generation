@@ -165,6 +165,9 @@
 
         <!-- Export Buttons -->
         <div class="btn-group mt-4 no-print">
+          <button type="button" class="btn btn-save" id="save-analysis-btn">
+            Save Analysis
+          </button>
           <button type="button" class="btn btn-success" id="export-excel-btn">
             Download Excel Report
           </button>
@@ -174,6 +177,37 @@
           <button type="button" class="btn btn-outline" id="new-analysis-btn">
             New Analysis
           </button>
+        </div>
+      </section>
+
+      <!-- Saved Analyses Section -->
+      <section class="card no-print" id="saved-analyses-section">
+        <div class="card-header">
+          <h2 class="card-title">
+            Saved Analyses
+            <span class="saved-count" id="saved-count">(0)</span>
+          </h2>
+          <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline" id="toggle-saved">
+              Show Saved
+            </button>
+            <button type="button" class="btn btn-sm btn-danger hidden" id="clear-all-btn">
+              Clear All
+            </button>
+          </div>
+        </div>
+        <div id="saved-analyses-content" class="hidden">
+          <div class="search-box">
+            <input type="text" class="form-input" id="saved-search"
+                   placeholder="Search by parcel ID, ITE code, or development name...">
+          </div>
+          <div class="saved-analyses-list" id="saved-analyses-list">
+            <div class="empty-state">
+              <div class="empty-state-icon">&#128451;</div>
+              <p>No saved analyses yet</p>
+              <p class="text-muted">Run an analysis and click "Save Analysis" to store it here</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -207,9 +241,25 @@
     </div>
   </footer>
 
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Confirmation Dialog -->
+  <div class="dialog-overlay" id="dialog-overlay">
+    <div class="dialog">
+      <h3 class="dialog-title" id="dialog-title">Confirm Action</h3>
+      <p class="dialog-message" id="dialog-message">Are you sure you want to proceed?</p>
+      <div class="dialog-actions">
+        <button type="button" class="btn btn-outline" id="dialog-cancel">Cancel</button>
+        <button type="button" class="btn btn-danger" id="dialog-confirm">Confirm</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script src="assets/js/ite-database.js"></script>
   <script src="assets/js/calculator.js"></script>
+  <script src="assets/js/storage.js"></script>
   <script src="assets/js/export.js"></script>
   <script src="assets/js/ui.js"></script>
 </body>

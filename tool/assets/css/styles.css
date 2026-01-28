@@ -898,3 +898,230 @@ p {
 @media (min-width: 769px) {
   .hide-desktop { display: none; }
 }
+
+/* ============================================
+   Saved Analyses Section
+   ============================================ */
+.saved-analyses-section {
+  margin-top: var(--spacing-lg);
+}
+
+.saved-count {
+  font-size: 0.9rem;
+  color: var(--gray-500);
+  margin-left: var(--spacing-sm);
+}
+
+.saved-analyses-list {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  background: white;
+}
+
+.saved-analysis-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--gray-100);
+  transition: background 0.15s;
+}
+
+.saved-analysis-item:last-child {
+  border-bottom: none;
+}
+
+.saved-analysis-item:hover {
+  background: var(--gray-50);
+}
+
+.saved-analysis-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.saved-analysis-title {
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: var(--spacing-xs);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.saved-analysis-meta {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.saved-analysis-meta span {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.saved-analysis-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-left: var(--spacing-md);
+  flex-shrink: 0;
+}
+
+.saved-analysis-status {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.saved-analysis-status.pass {
+  background: rgba(56, 161, 105, 0.1);
+  color: var(--accent-green);
+}
+
+.saved-analysis-status.warning {
+  background: rgba(214, 158, 46, 0.1);
+  color: var(--accent-yellow);
+}
+
+.saved-analysis-status.tia-required {
+  background: rgba(229, 62, 62, 0.1);
+  color: var(--accent-red);
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--gray-500);
+}
+
+.empty-state-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.5;
+}
+
+.search-box {
+  margin-bottom: var(--spacing-md);
+}
+
+.search-box .form-input {
+  border-radius: var(--radius-md);
+}
+
+/* Save Button Styling */
+.btn-save {
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+  color: white;
+}
+
+.btn-save:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-danger {
+  background: var(--gradient-danger);
+  color: white;
+}
+
+.btn-danger:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: var(--spacing-xl);
+  right: var(--spacing-xl);
+  background: var(--gray-800);
+  color: white;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xl);
+  z-index: 1000;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast.toast-success {
+  background: var(--accent-green);
+}
+
+.toast.toast-error {
+  background: var(--accent-red);
+}
+
+.toast.toast-warning {
+  background: var(--accent-yellow);
+  color: var(--gray-800);
+}
+
+/* Confirmation Dialog */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.dialog-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dialog {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  max-width: 400px;
+  width: 90%;
+  box-shadow: var(--shadow-xl);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.dialog-overlay.show .dialog {
+  transform: scale(1);
+}
+
+.dialog-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--gray-800);
+}
+
+.dialog-message {
+  color: var(--gray-600);
+  margin-bottom: var(--spacing-lg);
+}
+
+.dialog-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: flex-end;
+}
