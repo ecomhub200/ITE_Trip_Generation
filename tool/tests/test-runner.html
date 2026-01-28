@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITE Calculator - Test Suite</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #1a202c;
+      color: #e2e8f0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .container { max-width: 1200px; margin: 0 auto; }
+    h1 {
+      color: #63b3ed;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      color: #a0aec0;
+      margin-bottom: 30px;
+    }
+    .summary-box {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    .stat-card {
+      background: #2d3748;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+    .stat-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    .stat-label {
+      color: #a0aec0;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+    }
+    .passed .stat-value { color: #48bb78; }
+    .failed .stat-value { color: #fc8181; }
+    .total .stat-value { color: #63b3ed; }
+    .rate .stat-value { color: #f6e05e; }
+    .test-output {
+      background: #2d3748;
+      border-radius: 8px;
+      padding: 20px;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.875rem;
+      white-space: pre-wrap;
+      overflow-x: auto;
+      max-height: 600px;
+      overflow-y: auto;
+    }
+    .pass { color: #48bb78; }
+    .fail { color: #fc8181; }
+    .header-line { color: #63b3ed; font-weight: bold; }
+    .btn {
+      background: #4299e1;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    .btn:hover { background: #3182ce; }
+    .test-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: #2d3748;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .test-table th, .test-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #4a5568;
+    }
+    .test-table th {
+      background: #1a365d;
+      color: #90cdf4;
+      font-weight: 600;
+    }
+    .test-table tr:hover { background: #3d4a5c; }
+    .status-pass {
+      background: rgba(72, 187, 120, 0.2);
+      color: #48bb78;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .status-fail {
+      background: rgba(252, 129, 129, 0.2);
+      color: #fc8181;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ITE Trip Generation Calculator - Test Suite</h1>
+    <p class="subtitle">Validating calculations against official ITETripGen Web App data</p>
+
+    <button class="btn" onclick="executeTests()">Run All Tests</button>
+
+    <div class="summary-box" id="summary-box" style="display: none;">
+      <div class="stat-card total">
+        <div class="stat-value" id="total-tests">0</div>
+        <div class="stat-label">Total Tests</div>
+      </div>
+      <div class="stat-card passed">
+        <div class="stat-value" id="passed-tests">0</div>
+        <div class="stat-label">Passed</div>
+      </div>
+      <div class="stat-card failed">
+        <div class="stat-value" id="failed-tests">0</div>
+        <div class="stat-label">Failed</div>
+      </div>
+      <div class="stat-card rate">
+        <div class="stat-value" id="success-rate">0%</div>
+        <div class="stat-label">Success Rate</div>
+      </div>
+    </div>
+
+    <div id="test-results"></div>
+
+    <div class="test-output" id="console-output">
+      Click "Run All Tests" to execute the test suite...
+    </div>
+  </div>
+
+  <!-- Load dependencies -->
+  <script src="../assets/js/ite-database.js"></script>
+  <script src="../assets/js/calculator.js"></script>
+  <script src="calculator-tests.js"></script>
+
+  <script>
+    // Capture console output
+    const outputDiv = document.getElementById('console-output');
+    const originalLog = console.log;
+
+    function formatLine(text) {
+      if (text.includes('✓ PASS')) {
+        return `<span class="pass">${text}</span>`;
+      } else if (text.includes('✗ FAIL')) {
+        return `<span class="fail">${text}</span>`;
+      } else if (text.includes('===') || text.includes('╔') || text.includes('╚') || text.includes('║')) {
+        return `<span class="header-line">${text}</span>`;
+      }
+      return text;
+    }
+
+    function executeTests() {
+      outputDiv.innerHTML = '';
+
+      // Override console.log to capture output
+      console.log = function(...args) {
+        originalLog.apply(console, args);
+        const text = args.map(a => typeof a === 'object' ? JSON.stringify(a) : a).join(' ');
+        outputDiv.innerHTML += formatLine(text) + '\n';
+        outputDiv.scrollTop = outputDiv.scrollHeight;
+      };
+
+      // Run tests
+      const results = runAllTests();
+
+      // Restore console
+      console.log = originalLog;
+
+      // Update summary
+      document.getElementById('summary-box').style.display = 'grid';
+      document.getElementById('total-tests').textContent = results.passed + results.failed;
+      document.getElementById('passed-tests').textContent = results.passed;
+      document.getElementById('failed-tests').textContent = results.failed;
+      document.getElementById('success-rate').textContent =
+        ((results.passed / (results.passed + results.failed)) * 100).toFixed(1) + '%';
+
+      // Build results table
+      const resultsDiv = document.getElementById('test-results');
+      let tableHTML = `
+        <table class="test-table">
+          <thead>
+            <tr>
+              <th>Test Name</th>
+              <th>Expected</th>
+              <th>Actual</th>
+              <th>Diff</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+      `;
+
+      results.tests.forEach(test => {
+        const statusClass = test.passed ? 'status-pass' : 'status-fail';
+        const statusText = test.passed ? 'PASS' : 'FAIL';
+        tableHTML += `
+          <tr>
+            <td>${test.name}</td>
+            <td>${test.expected}</td>
+            <td>${test.actual}</td>
+            <td>${test.difference !== undefined ? test.difference.toFixed ? test.difference.toFixed(2) : test.difference : 'N/A'}</td>
+            <td><span class="${statusClass}">${statusText}</span></td>
+          </tr>
+        `;
+      });
+
+      tableHTML += '</tbody></table>';
+      resultsDiv.innerHTML = tableHTML;
+    }
+  </script>
+</body>
+</html>
