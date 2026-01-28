@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITE Trip Generation Analyzer - Henrico County</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    /* Additional inline critical styles */
+    .main-content {
+      padding-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div>
+          <h1>ITE Trip Generation Analyzer</h1>
+          <p class="header-subtitle">Henrico County, Virginia - Transportation Planning Tool</p>
+        </div>
+        <div class="header-badge">
+          ITE 12th Edition
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <!-- Input Form Section -->
+      <section class="card" id="input-section">
+        <div class="card-header">
+          <h2 class="card-title">Development Information</h2>
+          <div class="card-icon">1</div>
+        </div>
+
+        <form id="trip-form">
+          <!-- Parcel Information -->
+          <div class="grid grid-3">
+            <div class="form-group">
+              <label class="form-label" for="parcel-type">Parcel Type</label>
+              <select class="form-select" id="parcel-type" name="parcelType">
+                <option value="REZ">REZ (Rezoning)</option>
+                <option value="PUP">PUP (Provisional Use Permit)</option>
+                <option value="SIA">SIA (Substantial In Accord)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label form-label-required" for="parcel-number">Parcel Number</label>
+              <input type="text" class="form-input" id="parcel-number" name="parcelNumber"
+                     placeholder="e.g., 2026-00001" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="zoning-code">Zoning Code</label>
+              <input type="text" class="form-input" id="zoning-code" name="zoningCode"
+                     placeholder="e.g., R-5, B-2, M-1">
+            </div>
+          </div>
+
+          <!-- Development Name -->
+          <div class="form-group">
+            <label class="form-label" for="dev-name">Development Name (Optional)</label>
+            <input type="text" class="form-input" id="dev-name" name="devName"
+                   placeholder="e.g., Riverside Apartments, Main Street Shopping Center">
+          </div>
+
+          <!-- ITE Code Selection -->
+          <div class="form-group">
+            <label class="form-label form-label-required" for="ite-search">ITE Land Use Code</label>
+            <div class="ite-search-container">
+              <input type="text" class="form-input" id="ite-search"
+                     placeholder="Search by code or name (e.g., 210, Single-Family, Apartment)..."
+                     autocomplete="off">
+              <div class="ite-search-results" id="ite-results"></div>
+            </div>
+            <input type="hidden" id="ite-code" name="iteCode" required>
+            <p class="form-helper" id="ite-selected">No ITE code selected</p>
+          </div>
+
+          <!-- Size Input -->
+          <div class="form-group">
+            <label class="form-label form-label-required" for="size">Development Size</label>
+            <div class="input-group">
+              <input type="number" class="form-input" id="size" name="size"
+                     min="1" step="1" placeholder="Enter size/quantity" required>
+              <select class="form-select" id="unit-display" disabled>
+                <option value="">Select ITE code first</option>
+              </select>
+            </div>
+            <p class="form-helper">Enter the number of units, 1000 SF, or other applicable measure</p>
+          </div>
+
+          <!-- Info Box -->
+          <div class="info-box">
+            <div class="info-box-icon">i</div>
+            <div class="info-box-content">
+              <strong>How this works:</strong> This tool uses ITE Trip Generation Manual (12th Edition) data
+              to estimate vehicle trips for your proposed development. Results include weekday daily trips
+              and AM/PM peak hour trips with directional splits.
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="btn-group">
+            <button type="submit" class="btn btn-primary btn-lg" id="calculate-btn">
+              Generate Trip Analysis
+            </button>
+            <button type="button" class="btn btn-outline" id="clear-btn">
+              Clear Form
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Results Section (Hidden initially) -->
+      <section class="card results-section" id="results-section">
+        <div class="results-header">
+          <h2 class="mb-0">Trip Generation Analysis Results</h2>
+          <p class="mb-0 mt-1" id="results-subtitle">Loading...</p>
+        </div>
+
+        <!-- Threshold Status -->
+        <div id="threshold-status"></div>
+
+        <!-- Summary Statistics -->
+        <div class="results-summary" id="results-summary"></div>
+
+        <!-- Trip Details Grid -->
+        <h3>Trip Generation Details</h3>
+        <div class="trip-grid" id="trip-details"></div>
+
+        <!-- Executive Summary -->
+        <div class="executive-summary">
+          <p class="executive-summary-title">Executive Summary</p>
+          <p class="executive-summary-text" id="executive-summary-text"></p>
+        </div>
+
+        <!-- Data Quality -->
+        <h3>Data Quality Assessment</h3>
+        <div class="quality-grid" id="quality-grid"></div>
+
+        <!-- Threshold Details Table -->
+        <h3 class="mt-4">Threshold Analysis</h3>
+        <div class="table-wrapper">
+          <table class="table" id="threshold-table">
+            <thead>
+              <tr>
+                <th>Threshold</th>
+                <th>Limit</th>
+                <th>Actual</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="threshold-tbody"></tbody>
+          </table>
+        </div>
+
+        <!-- Calculation Details -->
+        <h3 class="mt-4">Calculation Details</h3>
+        <div id="calculation-details"></div>
+
+        <!-- Export Buttons -->
+        <div class="btn-group mt-4 no-print">
+          <button type="button" class="btn btn-success" id="export-excel-btn">
+            Download Excel Report
+          </button>
+          <button type="button" class="btn btn-outline" id="print-btn">
+            Print / Save as PDF
+          </button>
+          <button type="button" class="btn btn-outline" id="new-analysis-btn">
+            New Analysis
+          </button>
+        </div>
+      </section>
+
+      <!-- ITE Code Reference (Collapsible) -->
+      <section class="card no-print">
+        <div class="card-header">
+          <h2 class="card-title">ITE Code Quick Reference</h2>
+          <button type="button" class="btn btn-sm btn-outline" id="toggle-reference">
+            Show All Codes
+          </button>
+        </div>
+        <div id="ite-reference" class="hidden">
+          <div id="ite-categories"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer no-print">
+    <div class="container">
+      <p>
+        ITE Trip Generation Analyzer | Based on ITE Trip Generation Manual, 12th Edition<br>
+        Henrico County Department of Planning |
+        <span id="current-year"></span>
+      </p>
+      <p class="mt-1 text-muted">
+        This tool provides estimates for planning purposes. Always verify calculations against
+        official ITE documentation for final submissions.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/ite-database.js"></script>
+  <script src="assets/js/calculator.js"></script>
+  <script src="assets/js/export.js"></script>
+  <script src="assets/js/ui.js"></script>
+</body>
+</html>
