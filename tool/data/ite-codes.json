@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "title": "ITE Trip Generation Database",
+    "source": "ITE Trip Generation Manual, 12th Edition",
+    "jurisdiction": "Henrico County, Virginia",
+    "setting": "Suburban",
+    "lastUpdated": "2026-01-28",
+    "version": "1.0.0"
+  },
+  "thresholds": {
+    "peakHourWarning": 100,
+    "dailyWarning": 1000,
+    "tiaRequired": 4000,
+    "vdotThreshold": 5000,
+    "sampleSizeWarning": 5,
+    "sampleSizeUnreliable": 3,
+    "rSquaredGood": 0.75,
+    "rSquaredFair": 0.50,
+    "rSquaredPoor": 0.25
+  },
+  "categories": {
+    "Port, Freight, Terminal": ["010", "021", "030"],
+    "Industrial": ["110", "130", "140", "150", "151", "154", "155", "156", "180"],
+    "Residential": ["210", "215", "220", "221", "222", "230", "240", "251", "252", "255", "260", "270"],
+    "Lodging": ["310", "311", "312", "320", "330"],
+    "Recreational": ["411", "420", "430", "432", "435", "444", "445", "454", "480", "491", "492", "495"],
+    "Institutional": ["520", "522", "530", "534", "536", "540", "550", "560", "565", "566", "575", "590"],
+    "Medical": ["610", "620", "630", "640", "650"],
+    "Office": ["710", "714", "715", "720", "730", "750", "760", "770"],
+    "Retail": ["810", "813", "815", "820", "821", "822", "840", "841", "848", "850", "851", "853", "857", "860", "861", "862", "863", "866", "867", "868", "875", "879", "880", "881", "890"],
+    "Services": ["910", "911", "912", "930", "931", "932", "933", "934", "936", "937", "938", "941", "942", "944", "945", "946", "947", "948", "960"]
+  },
+  "quickReference": {
+    "210": {
+      "name": "Single-Family Detached Housing",
+      "weekdayRate": 9.43,
+      "amRate": 0.74,
+      "pmRate": 0.99,
+      "unit": "Dwelling Units"
+    },
+    "220": {
+      "name": "Multifamily Housing (Low-Rise)",
+      "weekdayRate": 7.32,
+      "amRate": 0.55,
+      "pmRate": 0.67,
+      "unit": "Dwelling Units"
+    },
+    "710": {
+      "name": "General Office Building",
+      "weekdayRate": 9.74,
+      "amRate": 1.16,
+      "pmRate": 1.15,
+      "unit": "1000 SF GFA"
+    },
+    "820": {
+      "name": "Shopping Center",
+      "weekdayRate": 37.75,
+      "amRate": 0.94,
+      "pmRate": 3.81,
+      "unit": "1000 SF GLA"
+    }
+  }
+}
