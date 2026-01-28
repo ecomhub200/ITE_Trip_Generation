@@ -103,24 +103,24 @@ const ITE_DATABASE = {
     code: "210",
     name: "Single-Family Detached Housing",
     category: "Residential",
-    unit: "Residents",
+    unit: "Dwelling Units",
     weekday: {
-      rate: 2.65,
-      equation: { type: "log", a: 0.89, b: 1.72 },
-      r_squared: 0.96,
-      sample_size: 30
+      rate: 9.09,
+      equation: { type: "linear", a: 8.07, b: 265.45 },
+      r_squared: 0.94,
+      sample_size: 155
     },
     am_peak: {
-      rate: 0.21,
-      equation: { type: "log", a: 0.91, b: -0.47 },
-      r_squared: 0.94,
+      rate: 0.70,
+      equation: { type: "linear", a: 0.62, b: 22.48 },
+      r_squared: 0.92,
       entering: 26,
       exiting: 74
     },
     pm_peak: {
-      rate: 0.27,
-      equation: { type: "log", a: 0.93, b: -0.39 },
-      r_squared: 0.95,
+      rate: 0.94,
+      equation: { type: "linear", a: 0.82, b: 33.06 },
+      r_squared: 0.93,
       entering: 64,
       exiting: 36
     },
