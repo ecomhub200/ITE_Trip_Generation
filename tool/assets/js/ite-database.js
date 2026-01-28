@@ -103,29 +103,29 @@ const ITE_DATABASE = {
     code: "210",
     name: "Single-Family Detached Housing",
     category: "Residential",
-    unit: "Dwelling Units",
+    unit: "Residents",
     weekday: {
-      rate: 9.43,
-      equation: { type: "linear", a: 9.43, b: 0 },
-      r_squared: 0.92,
-      sample_size: 350
+      rate: 2.65,
+      equation: { type: "log", a: 0.89, b: 1.72 },
+      r_squared: 0.96,
+      sample_size: 30
     },
     am_peak: {
-      rate: 0.74,
-      equation: { type: "linear", a: 0.74, b: 0 },
-      r_squared: 0.89,
-      entering: 25,
-      exiting: 75
+      rate: 0.21,
+      equation: { type: "log", a: 0.91, b: -0.47 },
+      r_squared: 0.94,
+      entering: 26,
+      exiting: 74
     },
     pm_peak: {
-      rate: 0.99,
-      equation: { type: "linear", a: 0.99, b: 0 },
-      r_squared: 0.91,
-      entering: 63,
-      exiting: 37
+      rate: 0.27,
+      equation: { type: "log", a: 0.93, b: -0.39 },
+      r_squared: 0.95,
+      entering: 64,
+      exiting: 36
     },
     source: "ITE 12th Edition",
-    page_ref: "200s Data Plot p.15"
+    page_ref: "200s Data Plot"
   },
   "215": {
     code: "215",
