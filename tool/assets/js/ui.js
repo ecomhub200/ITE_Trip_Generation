@@ -33,7 +33,21 @@ const elements = {
   toggleReference: document.getElementById('toggle-reference'),
   iteReference: document.getElementById('ite-reference'),
   iteCategories: document.getElementById('ite-categories'),
-  currentYear: document.getElementById('current-year')
+  currentYear: document.getElementById('current-year'),
+  // Storage-related elements
+  saveAnalysisBtn: document.getElementById('save-analysis-btn'),
+  savedCount: document.getElementById('saved-count'),
+  toggleSaved: document.getElementById('toggle-saved'),
+  clearAllBtn: document.getElementById('clear-all-btn'),
+  savedAnalysesContent: document.getElementById('saved-analyses-content'),
+  savedAnalysesList: document.getElementById('saved-analyses-list'),
+  savedSearch: document.getElementById('saved-search'),
+  toast: document.getElementById('toast'),
+  dialogOverlay: document.getElementById('dialog-overlay'),
+  dialogTitle: document.getElementById('dialog-title'),
+  dialogMessage: document.getElementById('dialog-message'),
+  dialogCancel: document.getElementById('dialog-cancel'),
+  dialogConfirm: document.getElementById('dialog-confirm')
 };
 
 // Initialize
@@ -55,6 +69,16 @@ function initializeApp() {
   elements.newAnalysisBtn.addEventListener('click', handleNewAnalysis);
   elements.toggleReference.addEventListener('click', handleToggleReference);
 
+  // Storage event listeners
+  elements.saveAnalysisBtn.addEventListener('click', handleSaveAnalysis);
+  elements.toggleSaved.addEventListener('click', handleToggleSaved);
+  elements.clearAllBtn.addEventListener('click', handleClearAllAnalyses);
+  elements.savedSearch.addEventListener('input', handleSavedSearch);
+  elements.dialogCancel.addEventListener('click', hideDialog);
+  elements.dialogOverlay.addEventListener('click', (e) => {
+    if (e.target === elements.dialogOverlay) hideDialog();
+  });
+
   // Close search results when clicking outside
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.ite-search-container')) {
@@ -64,6 +88,9 @@ function initializeApp() {
 
   // Initialize ITE reference
   renderIteReference();
+
+  // Initialize saved analyses count
+  updateSavedCount();
 }
 
 // ITE Code Search
@@ -477,4 +504,319 @@ function renderIteReference() {
   }
 
   elements.iteCategories.innerHTML = html;
+}
+
+// ============================================
+// Storage Functions
+// ============================================
+
+/**
+ * Save current analysis to IndexedDB
+ */
+async function handleSaveAnalysis() {
+  if (!currentResult) {
+    showToast('Please generate an analysis first', 'warning');
+    return;
+  }
+
+  try {
+    const id = await ITEStorage.saveAnalysis(currentResult);
+    showToast('Analysis saved successfully!', 'success');
+    updateSavedCount();
+
+    // If saved analyses section is visible, refresh it
+    if (!elements.savedAnalysesContent.classList.contains('hidden')) {
+      renderSavedAnalyses();
+    }
+  } catch (error) {
+    console.error('Error saving analysis:', error);
+    showToast('Failed to save analysis', 'error');
+  }
+}
+
+/**
+ * Toggle saved analyses section visibility
+ */
+async function handleToggleSaved() {
+  const isHidden = elements.savedAnalysesContent.classList.contains('hidden');
+
+  if (isHidden) {
+    elements.savedAnalysesContent.classList.remove('hidden');
+    elements.toggleSaved.textContent = 'Hide Saved';
+    elements.clearAllBtn.classList.remove('hidden');
+    await renderSavedAnalyses();
+  } else {
+    elements.savedAnalysesContent.classList.add('hidden');
+    elements.toggleSaved.textContent = 'Show Saved';
+    elements.clearAllBtn.classList.add('hidden');
+  }
+}
+
+/**
+ * Search saved analyses
+ */
+async function handleSavedSearch(e) {
+  const query = e.target.value.trim();
+
+  if (query.length === 0) {
+    await renderSavedAnalyses();
+    return;
+  }
+
+  try {
+    const results = await ITEStorage.searchAnalyses(query);
+    renderSavedAnalysesList(results);
+  } catch (error) {
+    console.error('Error searching analyses:', error);
+  }
+}
+
+/**
+ * Clear all saved analyses with confirmation
+ */
+function handleClearAllAnalyses() {
+  showDialog(
+    'Clear All Analyses',
+    'Are you sure you want to delete all saved analyses? This action cannot be undone.',
+    async () => {
+      try {
+        await ITEStorage.clearAllAnalyses();
+        showToast('All analyses cleared', 'success');
+        updateSavedCount();
+        renderSavedAnalyses();
+      } catch (error) {
+        console.error('Error clearing analyses:', error);
+        showToast('Failed to clear analyses', 'error');
+      }
+    }
+  );
+}
+
+/**
+ * Delete a single analysis
+ * @param {number} id - Analysis ID to delete
+ */
+function handleDeleteAnalysis(id) {
+  showDialog(
+    'Delete Analysis',
+    'Are you sure you want to delete this analysis?',
+    async () => {
+      try {
+        await ITEStorage.deleteAnalysis(id);
+        showToast('Analysis deleted', 'success');
+        updateSavedCount();
+        renderSavedAnalyses();
+      } catch (error) {
+        console.error('Error deleting analysis:', error);
+        showToast('Failed to delete analysis', 'error');
+      }
+    }
+  );
+}
+
+/**
+ * Load a saved analysis
+ * @param {number} id - Analysis ID to load
+ */
+async function handleLoadAnalysis(id) {
+  try {
+    const analysis = await ITEStorage.getAnalysis(id);
+    if (!analysis) {
+      showToast('Analysis not found', 'error');
+      return;
+    }
+
+    // Populate form fields
+    document.getElementById('parcel-type').value = analysis.parcelType || 'REZ';
+    document.getElementById('parcel-number').value = analysis.parcelNumber || '';
+    document.getElementById('zoning-code').value = analysis.zoningCode || '';
+    document.getElementById('dev-name').value = analysis.devName || '';
+
+    // Set ITE code
+    if (analysis.iteCode) {
+      selectIteCode(analysis.iteCode);
+    }
+
+    // Set size
+    elements.sizeInput.value = analysis.size || '';
+
+    // Set current result and render
+    currentResult = analysis;
+    renderResults(currentResult);
+
+    // Show results section
+    elements.resultsSection.classList.add('active');
+
+    // Scroll to results
+    elements.resultsSection.scrollIntoView({ behavior: 'smooth' });
+
+    showToast('Analysis loaded', 'success');
+  } catch (error) {
+    console.error('Error loading analysis:', error);
+    showToast('Failed to load analysis', 'error');
+  }
+}
+
+/**
+ * Render saved analyses list
+ */
+async function renderSavedAnalyses() {
+  try {
+    const analyses = await ITEStorage.getAllAnalyses();
+    renderSavedAnalysesList(analyses);
+  } catch (error) {
+    console.error('Error rendering saved analyses:', error);
+    elements.savedAnalysesList.innerHTML = `
+      <div class="empty-state">
+        <p class="text-danger">Error loading saved analyses</p>
+      </div>
+    `;
+  }
+}
+
+/**
+ * Render the list of saved analyses
+ * @param {Array} analyses - Array of analysis objects
+ */
+function renderSavedAnalysesList(analyses) {
+  if (!analyses || analyses.length === 0) {
+    elements.savedAnalysesList.innerHTML = `
+      <div class="empty-state">
+        <div class="empty-state-icon">&#128451;</div>
+        <p>No saved analyses yet</p>
+        <p class="text-muted">Run an analysis and click "Save Analysis" to store it here</p>
+      </div>
+    `;
+    return;
+  }
+
+  const html = analyses.map(analysis => {
+    const statusClass = getStatusClass(analysis.thresholds?.overallStatus);
+    const statusText = analysis.thresholds?.overallStatus || 'N/A';
+
+    return `
+      <div class="saved-analysis-item fade-in">
+        <div class="saved-analysis-info">
+          <div class="saved-analysis-title">
+            <span>${analysis.parcelId || 'No Parcel ID'}</span>
+            <span class="saved-analysis-status ${statusClass}">${statusText}</span>
+          </div>
+          <div class="saved-analysis-meta">
+            <span><strong>ITE:</strong> ${analysis.iteCode} - ${truncateText(analysis.landUseName, 30)}</span>
+            <span><strong>Size:</strong> ${analysis.size?.toLocaleString() || 'N/A'} ${analysis.unit || ''}</span>
+            <span><strong>Trips:</strong> ${analysis.weekday?.trips?.toLocaleString() || 'N/A'}/day</span>
+            <span><strong>Saved:</strong> ${ITEStorage.formatDate(analysis.savedAt)}</span>
+          </div>
+          ${analysis.devName ? `<div class="text-muted mt-1">${analysis.devName}</div>` : ''}
+        </div>
+        <div class="saved-analysis-actions">
+          <button type="button" class="btn btn-sm btn-primary" onclick="handleLoadAnalysis(${analysis.id})">
+            Load
+          </button>
+          <button type="button" class="btn btn-sm btn-outline" onclick="handleDeleteAnalysis(${analysis.id})">
+            Delete
+          </button>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  elements.savedAnalysesList.innerHTML = html;
+}
+
+/**
+ * Update the saved analyses count badge
+ */
+async function updateSavedCount() {
+  try {
+    const count = await ITEStorage.getCount();
+    elements.savedCount.textContent = `(${count})`;
+  } catch (error) {
+    console.error('Error getting count:', error);
+    elements.savedCount.textContent = '(0)';
+  }
+}
+
+/**
+ * Get CSS class for status badge
+ * @param {string} status - Status string
+ * @returns {string} CSS class name
+ */
+function getStatusClass(status) {
+  switch (status) {
+    case 'PASS':
+      return 'pass';
+    case 'WARNING':
+      return 'warning';
+    case 'TIA REQUIRED':
+      return 'tia-required';
+    default:
+      return '';
+  }
+}
+
+/**
+ * Truncate text to specified length
+ * @param {string} text - Text to truncate
+ * @param {number} maxLength - Maximum length
+ * @returns {string} Truncated text
+ */
+function truncateText(text, maxLength) {
+  if (!text) return '';
+  if (text.length <= maxLength) return text;
+  return text.substring(0, maxLength) + '...';
+}
+
+// ============================================
+// Toast Notifications
+// ============================================
+
+/**
+ * Show a toast notification
+ * @param {string} message - Message to display
+ * @param {string} type - Toast type: 'success', 'error', 'warning'
+ */
+function showToast(message, type = 'success') {
+  elements.toast.textContent = message;
+  elements.toast.className = `toast toast-${type} show`;
+
+  setTimeout(() => {
+    elements.toast.classList.remove('show');
+  }, 3000);
+}
+
+// ============================================
+// Confirmation Dialog
+// ============================================
+
+let dialogCallback = null;
+
+/**
+ * Show a confirmation dialog
+ * @param {string} title - Dialog title
+ * @param {string} message - Dialog message
+ * @param {Function} onConfirm - Callback when confirmed
+ */
+function showDialog(title, message, onConfirm) {
+  elements.dialogTitle.textContent = title;
+  elements.dialogMessage.textContent = message;
+  dialogCallback = onConfirm;
+
+  elements.dialogOverlay.classList.add('show');
+
+  // Set up confirm handler
+  elements.dialogConfirm.onclick = async () => {
+    hideDialog();
+    if (dialogCallback) {
+      await dialogCallback();
+    }
+  };
+}
+
+/**
+ * Hide the confirmation dialog
+ */
+function hideDialog() {
+  elements.dialogOverlay.classList.remove('show');
+  dialogCallback = null;
 }
