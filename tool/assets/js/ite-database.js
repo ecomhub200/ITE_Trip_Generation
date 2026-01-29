@@ -37,7 +37,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "000s Data Plot p.5"
+    page_ref: "ITE 12th Ed. - 000s Modal Data Plots"
   },
   "021": {
     code: "021",
@@ -65,7 +65,7 @@ const ITE_DATABASE = {
       exiting: 55
     },
     source: "ITE 12th Edition",
-    page_ref: "000s Data Plot p.15"
+    page_ref: "ITE 12th Ed. - 000s Modal Data Plots"
   },
   "030": {
     code: "030",
@@ -93,7 +93,7 @@ const ITE_DATABASE = {
       exiting: 72
     },
     source: "ITE 12th Edition",
-    page_ref: "000s Data Plot p.25"
+    page_ref: "ITE 12th Ed. - 000s Modal Data Plots"
   },
 
   // ===========================================
@@ -125,7 +125,7 @@ const ITE_DATABASE = {
       exiting: 37
     },
     source: "ITE 12th Edition",
-    page_ref: "200s Data Plot p.15"
+    page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
   },
   "215": {
     code: "215",
@@ -153,7 +153,7 @@ const ITE_DATABASE = {
       exiting: 36
     },
     source: "ITE 12th Edition",
-    page_ref: "200s Data Plot p.45"
+    page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
   },
   "220": {
     code: "220",
@@ -181,7 +181,7 @@ const ITE_DATABASE = {
       exiting: 35
     },
     source: "ITE 12th Edition",
-    page_ref: "200s Data Plot p.75"
+    page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
   },
   "221": {
     code: "221",
@@ -209,7 +209,7 @@ const ITE_DATABASE = {
       exiting: 38
     },
     source: "ITE 12th Edition",
-    page_ref: "200s Data Plot p.105"
+    page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
   },
   "222": {
     code: "222",
@@ -237,7 +237,7 @@ const ITE_DATABASE = {
       exiting: 40
     },
     source: "ITE 12th Edition",
-    page_ref: "200s Data Plot p.125"
+    page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
   },
   "230": {
     code: "230",
@@ -265,7 +265,7 @@ const ITE_DATABASE = {
       exiting: 34
     },
     source: "ITE 12th Edition",
-    page_ref: "200s Data Plot p.155"
+    page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
   },
   "240": {
     code: "240",
@@ -293,7 +293,7 @@ const ITE_DATABASE = {
       exiting: 44
     },
     source: "ITE 12th Edition",
-    page_ref: "200s Data Plot p.175"
+    page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
   },
   "251": {
     code: "251",
@@ -321,7 +321,7 @@ const ITE_DATABASE = {
       exiting: 45
     },
     source: "ITE 12th Edition",
-    page_ref: "200s Data Plot p.195"
+    page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
   },
   "252": {
     code: "252",
@@ -349,7 +349,7 @@ const ITE_DATABASE = {
       exiting: 43
     },
     source: "ITE 12th Edition",
-    page_ref: "200s Data Plot p.215"
+    page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
   },
   "255": {
     code: "255",
@@ -377,7 +377,7 @@ const ITE_DATABASE = {
       exiting: 48
     },
     source: "ITE 12th Edition",
-    page_ref: "200s Data Plot p.235"
+    page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
   },
   "260": {
     code: "260",
@@ -405,7 +405,7 @@ const ITE_DATABASE = {
       exiting: 40
     },
     source: "ITE 12th Edition",
-    page_ref: "200s Data Plot p.255"
+    page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
   },
   "270": {
     code: "270",
@@ -433,7 +433,7 @@ const ITE_DATABASE = {
       exiting: 36
     },
     source: "ITE 12th Edition",
-    page_ref: "200s Data Plot p.275"
+    page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
   },
 
   // ===========================================
@@ -465,7 +465,7 @@ const ITE_DATABASE = {
       exiting: 48
     },
     source: "ITE 12th Edition",
-    page_ref: "300s Data Plot p.15"
+    page_ref: "ITE 12th Ed. - 300s Modal Data Plots"
   },
   "311": {
     code: "311",
@@ -493,7 +493,7 @@ const ITE_DATABASE = {
       exiting: 45
     },
     source: "ITE 12th Edition",
-    page_ref: "300s Data Plot p.35"
+    page_ref: "ITE 12th Ed. - 300s Modal Data Plots"
   },
   "312": {
     code: "312",
@@ -521,7 +521,7 @@ const ITE_DATABASE = {
       exiting: 46
     },
     source: "ITE 12th Edition",
-    page_ref: "300s Data Plot p.55"
+    page_ref: "ITE 12th Ed. - 300s Modal Data Plots"
   },
   "320": {
     code: "320",
@@ -549,7 +549,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "300s Data Plot p.75"
+    page_ref: "ITE 12th Ed. - 300s Modal Data Plots"
   },
   "330": {
     code: "330",
@@ -577,7 +577,7 @@ const ITE_DATABASE = {
       exiting: 52
     },
     source: "ITE 12th Edition",
-    page_ref: "300s Data Plot p.95"
+    page_ref: "ITE 12th Ed. - 300s Modal Data Plots"
   },
 
   // ===========================================
@@ -609,7 +609,7 @@ const ITE_DATABASE = {
       exiting: 55
     },
     source: "ITE 12th Edition",
-    page_ref: "400s Data Plot p.15"
+    page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
   },
   "420": {
     code: "420",
@@ -637,7 +637,7 @@ const ITE_DATABASE = {
       exiting: 60
     },
     source: "ITE 12th Edition",
-    page_ref: "400s Data Plot p.35"
+    page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
   },
   "430": {
     code: "430",
@@ -665,7 +665,7 @@ const ITE_DATABASE = {
       exiting: 55
     },
     source: "ITE 12th Edition",
-    page_ref: "400s Data Plot p.55"
+    page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
   },
   "432": {
     code: "432",
@@ -693,7 +693,7 @@ const ITE_DATABASE = {
       exiting: 45
     },
     source: "ITE 12th Edition",
-    page_ref: "400s Data Plot p.75"
+    page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
   },
   "435": {
     code: "435",
@@ -721,7 +721,7 @@ const ITE_DATABASE = {
       exiting: 45
     },
     source: "ITE 12th Edition",
-    page_ref: "400s Data Plot p.95"
+    page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
   },
   "444": {
     code: "444",
@@ -749,7 +749,7 @@ const ITE_DATABASE = {
       exiting: 35
     },
     source: "ITE 12th Edition",
-    page_ref: "400s Data Plot p.115"
+    page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
   },
   "445": {
     code: "445",
@@ -777,7 +777,7 @@ const ITE_DATABASE = {
       exiting: 38
     },
     source: "ITE 12th Edition",
-    page_ref: "400s Data Plot p.135"
+    page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
   },
   "454": {
     code: "454",
@@ -805,7 +805,7 @@ const ITE_DATABASE = {
       exiting: 45
     },
     source: "ITE 12th Edition",
-    page_ref: "400s Data Plot p.155"
+    page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
   },
   "480": {
     code: "480",
@@ -833,7 +833,7 @@ const ITE_DATABASE = {
       exiting: 75
     },
     source: "ITE 12th Edition",
-    page_ref: "400s Data Plot p.175"
+    page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
   },
   "491": {
     code: "491",
@@ -861,7 +861,7 @@ const ITE_DATABASE = {
       exiting: 45
     },
     source: "ITE 12th Edition",
-    page_ref: "400s Data Plot p.195"
+    page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
   },
   "492": {
     code: "492",
@@ -889,7 +889,7 @@ const ITE_DATABASE = {
       exiting: 45
     },
     source: "ITE 12th Edition",
-    page_ref: "400s Data Plot p.215"
+    page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
   },
   "495": {
     code: "495",
@@ -917,7 +917,7 @@ const ITE_DATABASE = {
       exiting: 48
     },
     source: "ITE 12th Edition",
-    page_ref: "400s Data Plot p.235"
+    page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
   },
 
   // ===========================================
@@ -949,7 +949,7 @@ const ITE_DATABASE = {
       exiting: 67
     },
     source: "ITE 12th Edition",
-    page_ref: "500s Data Plot p.15"
+    page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
   },
   "522": {
     code: "522",
@@ -977,7 +977,7 @@ const ITE_DATABASE = {
       exiting: 68
     },
     source: "ITE 12th Edition",
-    page_ref: "500s Data Plot p.35"
+    page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
   },
   "530": {
     code: "530",
@@ -1005,7 +1005,7 @@ const ITE_DATABASE = {
       exiting: 72
     },
     source: "ITE 12th Edition",
-    page_ref: "500s Data Plot p.55"
+    page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
   },
   "534": {
     code: "534",
@@ -1033,7 +1033,7 @@ const ITE_DATABASE = {
       exiting: 65
     },
     source: "ITE 12th Edition",
-    page_ref: "500s Data Plot p.75"
+    page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
   },
   "536": {
     code: "536",
@@ -1061,7 +1061,7 @@ const ITE_DATABASE = {
       exiting: 64
     },
     source: "ITE 12th Edition",
-    page_ref: "500s Data Plot p.95"
+    page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
   },
   "540": {
     code: "540",
@@ -1089,7 +1089,7 @@ const ITE_DATABASE = {
       exiting: 48
     },
     source: "ITE 12th Edition",
-    page_ref: "500s Data Plot p.115"
+    page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
   },
   "550": {
     code: "550",
@@ -1117,7 +1117,7 @@ const ITE_DATABASE = {
       exiting: 49
     },
     source: "ITE 12th Edition",
-    page_ref: "500s Data Plot p.135"
+    page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
   },
   "560": {
     code: "560",
@@ -1145,7 +1145,7 @@ const ITE_DATABASE = {
       exiting: 45
     },
     source: "ITE 12th Edition",
-    page_ref: "500s Data Plot p.155"
+    page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
   },
   "565": {
     code: "565",
@@ -1173,7 +1173,7 @@ const ITE_DATABASE = {
       exiting: 54
     },
     source: "ITE 12th Edition",
-    page_ref: "500s Data Plot p.175"
+    page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
   },
   "566": {
     code: "566",
@@ -1201,7 +1201,7 @@ const ITE_DATABASE = {
       exiting: 55
     },
     source: "ITE 12th Edition",
-    page_ref: "500s Data Plot p.195"
+    page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
   },
   "575": {
     code: "575",
@@ -1229,7 +1229,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "500s Data Plot p.215"
+    page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
   },
   "590": {
     code: "590",
@@ -1257,7 +1257,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "500s Data Plot p.235"
+    page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
   },
 
   // ===========================================
@@ -1289,7 +1289,7 @@ const ITE_DATABASE = {
       exiting: 62
     },
     source: "ITE 12th Edition",
-    page_ref: "600s Data Plot p.15"
+    page_ref: "ITE 12th Ed. - 600s Modal Data Plots"
   },
   "620": {
     code: "620",
@@ -1317,7 +1317,7 @@ const ITE_DATABASE = {
       exiting: 60
     },
     source: "ITE 12th Edition",
-    page_ref: "600s Data Plot p.35"
+    page_ref: "ITE 12th Ed. - 600s Modal Data Plots"
   },
   "630": {
     code: "630",
@@ -1345,7 +1345,7 @@ const ITE_DATABASE = {
       exiting: 65
     },
     source: "ITE 12th Edition",
-    page_ref: "600s Data Plot p.55"
+    page_ref: "ITE 12th Ed. - 600s Modal Data Plots"
   },
   "640": {
     code: "640",
@@ -1373,7 +1373,7 @@ const ITE_DATABASE = {
       exiting: 62
     },
     source: "ITE 12th Edition",
-    page_ref: "600s Data Plot p.75"
+    page_ref: "ITE 12th Ed. - 600s Modal Data Plots"
   },
   "650": {
     code: "650",
@@ -1401,7 +1401,7 @@ const ITE_DATABASE = {
       exiting: 68
     },
     source: "ITE 12th Edition",
-    page_ref: "600s Data Plot p.95"
+    page_ref: "ITE 12th Ed. - 600s Modal Data Plots"
   },
 
   // ===========================================
@@ -1433,7 +1433,7 @@ const ITE_DATABASE = {
       exiting: 83
     },
     source: "ITE 12th Edition",
-    page_ref: "700s Data Plot p.15"
+    page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
   },
   "714": {
     code: "714",
@@ -1461,7 +1461,7 @@ const ITE_DATABASE = {
       exiting: 85
     },
     source: "ITE 12th Edition",
-    page_ref: "700s Data Plot p.45"
+    page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
   },
   "715": {
     code: "715",
@@ -1489,7 +1489,7 @@ const ITE_DATABASE = {
       exiting: 84
     },
     source: "ITE 12th Edition",
-    page_ref: "700s Data Plot p.65"
+    page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
   },
   "720": {
     code: "720",
@@ -1517,7 +1517,7 @@ const ITE_DATABASE = {
       exiting: 68
     },
     source: "ITE 12th Edition",
-    page_ref: "700s Data Plot p.85"
+    page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
   },
   "730": {
     code: "730",
@@ -1545,7 +1545,7 @@ const ITE_DATABASE = {
       exiting: 72
     },
     source: "ITE 12th Edition",
-    page_ref: "700s Data Plot p.105"
+    page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
   },
   "750": {
     code: "750",
@@ -1573,7 +1573,7 @@ const ITE_DATABASE = {
       exiting: 82
     },
     source: "ITE 12th Edition",
-    page_ref: "700s Data Plot p.125"
+    page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
   },
   "760": {
     code: "760",
@@ -1601,7 +1601,7 @@ const ITE_DATABASE = {
       exiting: 80
     },
     source: "ITE 12th Edition",
-    page_ref: "700s Data Plot p.145"
+    page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
   },
   "770": {
     code: "770",
@@ -1629,7 +1629,7 @@ const ITE_DATABASE = {
       exiting: 78
     },
     source: "ITE 12th Edition",
-    page_ref: "700s Data Plot p.165"
+    page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
   },
 
   // ===========================================
@@ -1661,7 +1661,7 @@ const ITE_DATABASE = {
       exiting: 51
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.15"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "813": {
     code: "813",
@@ -1689,7 +1689,7 @@ const ITE_DATABASE = {
       exiting: 49
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.35"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "815": {
     code: "815",
@@ -1717,7 +1717,7 @@ const ITE_DATABASE = {
       exiting: 51
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.55"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "820": {
     code: "820",
@@ -1745,7 +1745,7 @@ const ITE_DATABASE = {
       exiting: 52
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.75"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "821": {
     code: "821",
@@ -1773,7 +1773,7 @@ const ITE_DATABASE = {
       exiting: 51
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.95"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "822": {
     code: "822",
@@ -1801,7 +1801,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.115"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "840": {
     code: "840",
@@ -1829,7 +1829,7 @@ const ITE_DATABASE = {
       exiting: 55
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.135"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "841": {
     code: "841",
@@ -1857,7 +1857,7 @@ const ITE_DATABASE = {
       exiting: 52
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.155"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "848": {
     code: "848",
@@ -1885,7 +1885,7 @@ const ITE_DATABASE = {
       exiting: 58
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.175"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "850": {
     code: "850",
@@ -1913,7 +1913,7 @@ const ITE_DATABASE = {
       exiting: 49
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.195"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "851": {
     code: "851",
@@ -1941,7 +1941,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.215"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "853": {
     code: "853",
@@ -1969,7 +1969,7 @@ const ITE_DATABASE = {
       exiting: 52
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.235"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "857": {
     code: "857",
@@ -1997,7 +1997,7 @@ const ITE_DATABASE = {
       exiting: 52
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.255"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "860": {
     code: "860",
@@ -2025,7 +2025,7 @@ const ITE_DATABASE = {
       exiting: 68
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.275"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "861": {
     code: "861",
@@ -2053,7 +2053,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.295"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "862": {
     code: "862",
@@ -2081,7 +2081,7 @@ const ITE_DATABASE = {
       exiting: 51
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.315"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "863": {
     code: "863",
@@ -2109,7 +2109,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.335"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "866": {
     code: "866",
@@ -2137,7 +2137,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.355"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "867": {
     code: "867",
@@ -2165,7 +2165,7 @@ const ITE_DATABASE = {
       exiting: 52
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.375"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "868": {
     code: "868",
@@ -2193,7 +2193,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.395"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "875": {
     code: "875",
@@ -2221,7 +2221,7 @@ const ITE_DATABASE = {
       exiting: 52
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.415"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "879": {
     code: "879",
@@ -2249,7 +2249,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.435"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "880": {
     code: "880",
@@ -2277,7 +2277,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.455"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "881": {
     code: "881",
@@ -2305,7 +2305,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.475"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
   "890": {
     code: "890",
@@ -2333,7 +2333,7 @@ const ITE_DATABASE = {
       exiting: 52
     },
     source: "ITE 12th Edition",
-    page_ref: "800s Data Plot p.495"
+    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
 
   // ===========================================
@@ -2365,7 +2365,7 @@ const ITE_DATABASE = {
       exiting: 55
     },
     source: "ITE 12th Edition",
-    page_ref: "900s Data Plot p.15"
+    page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
   "911": {
     code: "911",
@@ -2393,7 +2393,7 @@ const ITE_DATABASE = {
       exiting: 52
     },
     source: "ITE 12th Edition",
-    page_ref: "900s Data Plot p.35"
+    page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
   "912": {
     code: "912",
@@ -2421,7 +2421,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "900s Data Plot p.55"
+    page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
   "930": {
     code: "930",
@@ -2449,7 +2449,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "900s Data Plot p.75"
+    page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
   "931": {
     code: "931",
@@ -2477,7 +2477,7 @@ const ITE_DATABASE = {
       exiting: 35
     },
     source: "ITE 12th Edition",
-    page_ref: "900s Data Plot p.95"
+    page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
   "932": {
     code: "932",
@@ -2505,7 +2505,7 @@ const ITE_DATABASE = {
       exiting: 48
     },
     source: "ITE 12th Edition",
-    page_ref: "900s Data Plot p.115"
+    page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
   "933": {
     code: "933",
@@ -2533,7 +2533,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "900s Data Plot p.135"
+    page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
   "934": {
     code: "934",
@@ -2561,7 +2561,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "900s Data Plot p.155"
+    page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
   "936": {
     code: "936",
@@ -2589,7 +2589,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "900s Data Plot p.175"
+    page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
   "937": {
     code: "937",
@@ -2617,7 +2617,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "900s Data Plot p.195"
+    page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
   "938": {
     code: "938",
@@ -2645,7 +2645,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "900s Data Plot p.215"
+    page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
   "941": {
     code: "941",
@@ -2673,7 +2673,7 @@ const ITE_DATABASE = {
       exiting: 55
     },
     source: "ITE 12th Edition",
-    page_ref: "900s Data Plot p.235"
+    page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
   "942": {
     code: "942",
@@ -2701,7 +2701,7 @@ const ITE_DATABASE = {
       exiting: 60
     },
     source: "ITE 12th Edition",
-    page_ref: "900s Data Plot p.255"
+    page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
   "944": {
     code: "944",
@@ -2729,7 +2729,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "900s Data Plot p.275"
+    page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
   "945": {
     code: "945",
@@ -2757,7 +2757,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "900s Data Plot p.295"
+    page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
   "946": {
     code: "946",
@@ -2785,7 +2785,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "900s Data Plot p.315"
+    page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
   "947": {
     code: "947",
@@ -2813,7 +2813,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "900s Data Plot p.335"
+    page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
   "948": {
     code: "948",
@@ -2841,7 +2841,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "900s Data Plot p.355"
+    page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
   "960": {
     code: "960",
@@ -2869,7 +2869,7 @@ const ITE_DATABASE = {
       exiting: 50
     },
     source: "ITE 12th Edition",
-    page_ref: "900s Data Plot p.375"
+    page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
 
   // ===========================================
@@ -2901,7 +2901,7 @@ const ITE_DATABASE = {
       exiting: 88
     },
     source: "ITE 12th Edition",
-    page_ref: "100s Data Plot p.15"
+    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
   },
   "130": {
     code: "130",
@@ -2929,7 +2929,7 @@ const ITE_DATABASE = {
       exiting: 85
     },
     source: "ITE 12th Edition",
-    page_ref: "100s Data Plot p.35"
+    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
   },
   "140": {
     code: "140",
@@ -2957,7 +2957,7 @@ const ITE_DATABASE = {
       exiting: 92
     },
     source: "ITE 12th Edition",
-    page_ref: "100s Data Plot p.55"
+    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
   },
   "150": {
     code: "150",
@@ -2985,7 +2985,7 @@ const ITE_DATABASE = {
       exiting: 78
     },
     source: "ITE 12th Edition",
-    page_ref: "100s Data Plot p.75"
+    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
   },
   "151": {
     code: "151",
@@ -3013,7 +3013,7 @@ const ITE_DATABASE = {
       exiting: 52
     },
     source: "ITE 12th Edition",
-    page_ref: "100s Data Plot p.95"
+    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
   },
   "154": {
     code: "154",
@@ -3041,7 +3041,7 @@ const ITE_DATABASE = {
       exiting: 75
     },
     source: "ITE 12th Edition",
-    page_ref: "100s Data Plot p.115"
+    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
   },
   "155": {
     code: "155",
@@ -3069,7 +3069,7 @@ const ITE_DATABASE = {
       exiting: 72
     },
     source: "ITE 12th Edition",
-    page_ref: "100s Data Plot p.135"
+    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
   },
   "156": {
     code: "156",
@@ -3097,7 +3097,7 @@ const ITE_DATABASE = {
       exiting: 70
     },
     source: "ITE 12th Edition",
-    page_ref: "100s Data Plot p.155"
+    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
   },
   "180": {
     code: "180",
@@ -3125,7 +3125,7 @@ const ITE_DATABASE = {
       exiting: 68
     },
     source: "ITE 12th Edition",
-    page_ref: "100s Data Plot p.175"
+    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
   }
 };
 
