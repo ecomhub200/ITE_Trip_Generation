@@ -209,7 +209,7 @@ const ITE_DATABASE = {
       exiting: 38
     },
     source: "ITE 12th Edition",
-    page_ref: "200s Data Plot p.105"
+    page_ref: "200s Data Plot p.85"
   },
   "222": {
     code: "222",
