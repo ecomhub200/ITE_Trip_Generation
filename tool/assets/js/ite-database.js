@@ -105,24 +105,27 @@ const ITE_DATABASE = {
     category: "Residential",
     unit: "Dwelling Units",
     weekday: {
-      rate: 9.43,
-      equation: { type: "linear", a: 9.43, b: 0 },
-      r_squared: 0.92,
-      sample_size: 350
+      rate: 9.09,
+      equation: { type: "linear", a: 8.07, b: 265.45 },
+      r_squared: 0.94,
+      sample_size: 155,
+      study_range: { min: 11, max: 3000, avg: 261 }
     },
     am_peak: {
       rate: 0.74,
-      equation: { type: "linear", a: 0.74, b: 0 },
-      r_squared: 0.89,
+      equation: { type: "linear", a: 0.70, b: 1.52 },
+      r_squared: 0.92,
       entering: 25,
-      exiting: 75
+      exiting: 75,
+      study_range: { min: 11, max: 3000, avg: 261 }
     },
     pm_peak: {
       rate: 0.99,
-      equation: { type: "linear", a: 0.99, b: 0 },
-      r_squared: 0.91,
+      equation: { type: "linear", a: 0.94, b: 1.86 },
+      r_squared: 0.93,
       entering: 63,
-      exiting: 37
+      exiting: 37,
+      study_range: { min: 11, max: 3000, avg: 261 }
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"

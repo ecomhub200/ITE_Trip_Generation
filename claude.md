@@ -176,7 +176,7 @@ The table MUST include all of the following columns:
 | Development Name | - | Name of proposed development |
 | ITE Code | - | 3-digit ITE land use code |
 | **Trip Generation Summary** | | |
-| | Weekday Daily Trips | Show calculation: `4 units × 9.43 trips/unit = 38 trips` |
+| | Weekday Daily Trips | Show calculation: `4 units × 9.09 trips/unit = 36 trips` |
 | | AM Peak Entering | Number of entering trips |
 | | AM Peak Exiting | Number of exiting trips |
 | | PM Peak Entering | Number of entering trips |
@@ -214,10 +214,12 @@ Use these **memorized suburban rates** as fallback only. Flag as "Preliminary Es
 
 | Code | Land Use (12th Edition) | Weekday Rate | AM Peak | PM Peak |
 |------|--------------------------|--------------|---------|---------|
-| 210 | Single-Family Detached Housing | 9.43/unit | 0.74/unit | 0.99/unit |
+| 210 | Single-Family Detached Housing | 9.09/unit | 0.74/unit | 0.99/unit |
 | 220 | Multifamily Housing (Low-Rise) | 7.32/unit | 0.55/unit | 0.67/unit |
 | 710 | General Office Building | 9.74/1000sf | 1.15/1000sf | 1.14/1000sf |
 | 820 | Shopping Center (>150k) | 37.75/1000sf | 0.94/1000sf | 3.81/1000sf |
+
+> **Note:** For small developments (below the typical ITE study data range), use the Average Rate method. The Fitted Curve Equation may extrapolate poorly for small sizes due to positive intercept terms.
 
 ---
 

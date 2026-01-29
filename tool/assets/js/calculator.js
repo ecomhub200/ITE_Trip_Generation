@@ -241,16 +241,51 @@ class ITECalculator {
 
   /**
    * Calculate trips for a specific time period
+   * Implements smart method selection based on ITE guidance:
+   * - Uses fitted curve when size is within study data range
+   * - Falls back to average rate for small developments where fitted curve extrapolates poorly
    */
   calculatePeriod(periodData, size, periodType, enteringPct = 50, exitingPct = 50) {
     let trips, method, formula, caution = false;
+    let methodReason = null;
+    let alternativeResult = null;
 
-    // Decision tree from claude.md
-    if (periodData.r_squared >= this.thresholds.r_squared_good && periodData.equation) {
-      // R² >= 0.75 AND Equation exists: USE Fitted Curve Equation (MOST ACCURATE)
+    // Check if we should use fitted curve or average rate based on data range
+    const shouldUseFittedCurve = this.shouldUseFittedCurve(periodData, size);
+
+    // Decision tree with smart method selection
+    if (periodData.r_squared >= this.thresholds.r_squared_good && periodData.equation && shouldUseFittedCurve.use) {
+      // R² >= 0.75 AND Equation exists AND size is within reasonable range
       trips = this.useFittedCurve(periodData.equation, size);
       method = "Fitted Curve Equation";
       formula = this.getFormulaString(periodData.equation, size);
+
+      // Calculate alternative (average rate) for comparison
+      if (periodData.rate) {
+        const altTrips = this.useAverageRate(periodData.rate, size);
+        alternativeResult = {
+          trips: Math.round(altTrips),
+          method: "Average Rate",
+          formula: `${size} x ${periodData.rate} = ${altTrips.toFixed(2)}`
+        };
+      }
+    } else if (periodData.r_squared >= this.thresholds.r_squared_good && periodData.equation && !shouldUseFittedCurve.use) {
+      // R² is good BUT size is outside data range - use average rate instead
+      trips = this.useAverageRate(periodData.rate, size);
+      method = "Average Rate";
+      formula = `${size} x ${periodData.rate} = ${trips.toFixed(2)}`;
+      methodReason = shouldUseFittedCurve.reason;
+      caution = true;
+
+      // Calculate what fitted curve would give for comparison
+      const fittedTrips = this.useFittedCurve(periodData.equation, size);
+      alternativeResult = {
+        trips: Math.round(fittedTrips),
+        method: "Fitted Curve Equation (not recommended)",
+        formula: this.getFormulaString(periodData.equation, size),
+        notRecommended: true,
+        reason: shouldUseFittedCurve.reason
+      };
     } else if (periodData.r_squared >= this.thresholds.r_squared_fair && periodData.equation) {
       // R² >= 0.50 AND Equation exists: USE Fitted Curve Equation with caution
       trips = this.useFittedCurve(periodData.equation, size);
@@ -292,8 +327,80 @@ class ITECalculator {
       exiting: exiting,
       enteringPct: enteringPct,
       exitingPct: exitingPct,
-      caution: caution
+      caution: caution,
+      methodReason: methodReason,
+      alternativeResult: alternativeResult,
+      studyRange: periodData.study_range || null
     };
+  }
+
+  /**
+   * Determine if fitted curve equation should be used based on development size
+   * ITE guidance: Use average rate when size is well outside the study data range
+   * or when fitted curve produces unrealistic results
+   */
+  shouldUseFittedCurve(periodData, size) {
+    // If no equation exists, can't use fitted curve
+    if (!periodData.equation) {
+      return { use: false, reason: "No fitted curve equation available" };
+    }
+
+    // If no rate exists, must use fitted curve
+    if (!periodData.rate) {
+      return { use: true, reason: "Using fitted curve (no average rate available)" };
+    }
+
+    // Check study range if available
+    if (periodData.study_range) {
+      const { min, max, avg } = periodData.study_range;
+
+      // If size is less than 10% of the minimum study size, use average rate
+      if (size < min * 0.5) {
+        return {
+          use: false,
+          reason: `Development size (${size}) is well below the study data range (min: ${min}). Average rate is more appropriate.`
+        };
+      }
+
+      // If size is greater than 2x the maximum study size, use average rate
+      if (size > max * 2) {
+        return {
+          use: false,
+          reason: `Development size (${size}) is well above the study data range (max: ${max}). Average rate is more appropriate.`
+        };
+      }
+    }
+
+    // Calculate fitted curve result and check if it's unrealistic
+    const fittedTrips = this.useFittedCurve(periodData.equation, size);
+    const rateTrips = this.useAverageRate(periodData.rate, size);
+
+    // If fitted curve gives > 2.5x the average rate result, it's likely extrapolating poorly
+    if (fittedTrips > rateTrips * 2.5) {
+      return {
+        use: false,
+        reason: `Fitted curve produces unrealistic results (${Math.round(fittedTrips)} trips vs ${Math.round(rateTrips)} using average rate). This occurs when extrapolating outside the study data range.`
+      };
+    }
+
+    // If fitted curve gives < 0.4x the average rate result, also suspect
+    if (fittedTrips < rateTrips * 0.4 && fittedTrips > 0) {
+      return {
+        use: false,
+        reason: `Fitted curve produces unusually low results (${Math.round(fittedTrips)} trips vs ${Math.round(rateTrips)} using average rate). Average rate is more reliable here.`
+      };
+    }
+
+    // If fitted curve produces negative trips, definitely use average rate
+    if (fittedTrips < 0) {
+      return {
+        use: false,
+        reason: `Fitted curve produces negative trips at this size. Using average rate instead.`
+      };
+    }
+
+    // Default: use fitted curve
+    return { use: true, reason: null };
   }
 
   /**
