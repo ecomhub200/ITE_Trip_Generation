@@ -163,6 +163,73 @@
         <h3 class="mt-4">Calculation Details</h3>
         <div id="calculation-details"></div>
 
+        <!-- Hourly Distribution Section (Enhanced Accuracy) -->
+        <div id="hourly-distribution-section" class="mt-4">
+          <h3>
+            24-Hour Trip Distribution
+            <span class="badge badge-info" id="tod-source-badge">ITE Data</span>
+          </h3>
+          <p class="text-muted mb-2" id="tod-description">
+            Hourly breakdown based on ITE Time-of-Day data for more accurate traffic analysis.
+          </p>
+
+          <!-- Day Type Selector -->
+          <div class="form-group mb-2" id="day-type-selector" style="max-width: 300px;">
+            <label class="form-label">Day Type</label>
+            <select class="form-select" id="day-type-select">
+              <option value="weekday">Weekday</option>
+              <option value="saturday">Saturday</option>
+              <option value="sunday">Sunday</option>
+            </select>
+          </div>
+
+          <!-- Hourly Chart (Bar Chart visualization) -->
+          <div class="hourly-chart-container">
+            <div id="hourly-chart" class="hourly-chart"></div>
+          </div>
+
+          <!-- Peak Hour Summary -->
+          <div class="peak-summary-grid" id="peak-summary">
+            <div class="peak-summary-item">
+              <div class="peak-label">AM Peak Hour</div>
+              <div class="peak-time" id="am-peak-time">7:00 - 8:00 AM</div>
+              <div class="peak-trips" id="am-peak-trips">0 trips</div>
+              <div class="peak-split" id="am-peak-split">50% in / 50% out</div>
+            </div>
+            <div class="peak-summary-item">
+              <div class="peak-label">PM Peak Hour</div>
+              <div class="peak-time" id="pm-peak-time">5:00 - 6:00 PM</div>
+              <div class="peak-trips" id="pm-peak-trips">0 trips</div>
+              <div class="peak-split" id="pm-peak-split">50% in / 50% out</div>
+            </div>
+            <div class="peak-summary-item">
+              <div class="peak-label">Overall Peak</div>
+              <div class="peak-time" id="overall-peak-time">5:00 - 6:00 PM</div>
+              <div class="peak-trips" id="overall-peak-trips">0 trips</div>
+              <div class="peak-split" id="overall-peak-split">50% in / 50% out</div>
+            </div>
+          </div>
+
+          <!-- Hourly Table (Collapsible) -->
+          <details class="hourly-table-details mt-2">
+            <summary class="hourly-table-summary">View Detailed Hourly Table</summary>
+            <div class="table-wrapper mt-2">
+              <table class="table table-compact" id="hourly-table">
+                <thead>
+                  <tr>
+                    <th>Time</th>
+                    <th>Total Trips</th>
+                    <th>Entering</th>
+                    <th>Exiting</th>
+                    <th>% of Daily</th>
+                  </tr>
+                </thead>
+                <tbody id="hourly-tbody"></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+
         <!-- Export Buttons -->
         <div class="btn-group mt-4 no-print">
           <button type="button" class="btn btn-save" id="save-analysis-btn">
