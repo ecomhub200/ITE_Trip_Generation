@@ -47,7 +47,24 @@ const elements = {
   dialogTitle: document.getElementById('dialog-title'),
   dialogMessage: document.getElementById('dialog-message'),
   dialogCancel: document.getElementById('dialog-cancel'),
-  dialogConfirm: document.getElementById('dialog-confirm')
+  dialogConfirm: document.getElementById('dialog-confirm'),
+  // Hourly distribution elements
+  hourlyDistributionSection: document.getElementById('hourly-distribution-section'),
+  todSourceBadge: document.getElementById('tod-source-badge'),
+  todDescription: document.getElementById('tod-description'),
+  dayTypeSelector: document.getElementById('day-type-selector'),
+  dayTypeSelect: document.getElementById('day-type-select'),
+  hourlyChart: document.getElementById('hourly-chart'),
+  hourlyTbody: document.getElementById('hourly-tbody'),
+  amPeakTime: document.getElementById('am-peak-time'),
+  amPeakTrips: document.getElementById('am-peak-trips'),
+  amPeakSplit: document.getElementById('am-peak-split'),
+  pmPeakTime: document.getElementById('pm-peak-time'),
+  pmPeakTrips: document.getElementById('pm-peak-trips'),
+  pmPeakSplit: document.getElementById('pm-peak-split'),
+  overallPeakTime: document.getElementById('overall-peak-time'),
+  overallPeakTrips: document.getElementById('overall-peak-trips'),
+  overallPeakSplit: document.getElementById('overall-peak-split')
 };
 
 // Initialize
@@ -91,6 +108,27 @@ function initializeApp() {
 
   // Initialize saved analyses count
   updateSavedCount();
+
+  // Day type selector for hourly distribution
+  if (elements.dayTypeSelect) {
+    elements.dayTypeSelect.addEventListener('change', handleDayTypeChange);
+  }
+}
+
+/**
+ * Handle day type change for hourly distribution
+ */
+function handleDayTypeChange(e) {
+  if (!currentResult || !currentResult.iteCode) return;
+
+  const dayType = e.target.value;
+  const distribution = calculator.getHourlyDistribution(
+    currentResult.iteCode,
+    currentResult.weekday.trips,
+    dayType
+  );
+
+  renderHourlyDistribution(distribution, currentResult);
 }
 
 // ITE Code Search
@@ -241,6 +279,9 @@ function renderResults(result) {
 
   // Calculation Details
   renderCalculationDetails(result);
+
+  // Hourly Distribution (Enhanced Accuracy)
+  renderHourlyDistributionSection(result);
 }
 
 function renderThresholdStatus(thresholds) {
@@ -765,6 +806,216 @@ function truncateText(text, maxLength) {
   if (!text) return '';
   if (text.length <= maxLength) return text;
   return text.substring(0, maxLength) + '...';
+}
+
+// ============================================
+// Hourly Distribution Rendering
+// ============================================
+
+/**
+ * Render the hourly distribution section
+ * @param {object} result - The calculation result
+ */
+function renderHourlyDistributionSection(result) {
+  if (!result.hourlyDistribution) return;
+
+  const distribution = result.hourlyDistribution;
+
+  // Update source badge and description
+  if (result.hasTimeOfDayData) {
+    elements.todSourceBadge.textContent = 'ITE Data';
+    elements.todSourceBadge.className = 'badge badge-success';
+    elements.todDescription.innerHTML = `
+      Hourly breakdown based on <strong>ITE Time-of-Day data</strong> from ${distribution.dataSites || 'N/A'} study sites.
+      This provides more accurate traffic analysis than simple peak hour estimates.
+    `;
+  } else {
+    elements.todSourceBadge.textContent = 'Default Pattern';
+    elements.todSourceBadge.className = 'badge badge-warning';
+    elements.todDescription.innerHTML = `
+      Using <strong>default suburban pattern</strong> (no ITE time-of-day data available for this land use).
+      Consider manual adjustment based on local conditions.
+    `;
+  }
+
+  // Update day type selector based on available periods
+  updateDayTypeSelector(result.availablePeriods);
+
+  // Render the distribution
+  renderHourlyDistribution(distribution, result);
+}
+
+/**
+ * Update day type selector options
+ * @param {string[]} availablePeriods - Array of available periods
+ */
+function updateDayTypeSelector(availablePeriods) {
+  if (!elements.dayTypeSelect) return;
+
+  const options = elements.dayTypeSelect.options;
+  const periods = availablePeriods || ['weekday'];
+
+  // Enable/disable options based on available data
+  for (let i = 0; i < options.length; i++) {
+    const value = options[i].value;
+    options[i].disabled = !periods.includes(value);
+  }
+
+  // Reset to weekday if current selection is not available
+  if (!periods.includes(elements.dayTypeSelect.value)) {
+    elements.dayTypeSelect.value = 'weekday';
+  }
+
+  // Hide selector if only weekday is available
+  if (periods.length === 1 && periods[0] === 'weekday') {
+    elements.dayTypeSelector.style.display = 'none';
+  } else {
+    elements.dayTypeSelector.style.display = 'block';
+  }
+}
+
+/**
+ * Render the hourly distribution chart and table
+ * @param {object} distribution - Hourly distribution data
+ * @param {object} result - Full calculation result
+ */
+function renderHourlyDistribution(distribution, result) {
+  if (!distribution || !distribution.hourly) return;
+
+  // Render bar chart
+  renderHourlyChart(distribution);
+
+  // Render peak summary
+  renderPeakSummary(distribution);
+
+  // Render hourly table
+  renderHourlyTable(distribution);
+}
+
+/**
+ * Render the hourly bar chart
+ * @param {object} distribution - Hourly distribution data
+ */
+function renderHourlyChart(distribution) {
+  if (!elements.hourlyChart) return;
+
+  const hourly = distribution.hourly;
+  const maxTrips = Math.max(...hourly.map(h => h.total));
+  const chartHeight = 180; // Max bar height in pixels
+
+  const barsHtml = hourly.map(hour => {
+    const barHeight = maxTrips > 0 ? (hour.total / maxTrips) * chartHeight : 0;
+    const isAmPeak = distribution.amPeak && hour.hour === distribution.amPeak.hour;
+    const isPmPeak = distribution.pmPeak && hour.hour === distribution.pmPeak.hour;
+    const isPeak = distribution.peakHour && hour.hour === distribution.peakHour.hour;
+
+    let barClass = 'hourly-bar-fill';
+    if (isAmPeak) barClass += ' am-peak';
+    else if (isPmPeak) barClass += ' pm-peak';
+    else if (isPeak) barClass += ' peak-bar';
+
+    const shortTime = getShortTimeLabel(hour.hour);
+    const enteringPct = hour.total > 0 ? Math.round((hour.entering / hour.total) * 100) : 50;
+    const exitingPct = 100 - enteringPct;
+
+    return `
+      <div class="hourly-bar">
+        <div class="${barClass}" style="height: ${barHeight}px;"
+             title="${hour.time}: ${hour.total} trips">
+        </div>
+        <div class="hourly-bar-tooltip">
+          <strong>${hour.time}</strong><br>
+          Total: ${hour.total} trips<br>
+          In: ${hour.entering} (${enteringPct}%)<br>
+          Out: ${hour.exiting} (${exitingPct}%)
+        </div>
+        <div class="hourly-bar-label">${shortTime}</div>
+      </div>
+    `;
+  }).join('');
+
+  elements.hourlyChart.innerHTML = barsHtml;
+}
+
+/**
+ * Get short time label for chart
+ * @param {number} hour - Hour (0-23)
+ * @returns {string} Short label
+ */
+function getShortTimeLabel(hour) {
+  if (hour === 0) return '12a';
+  if (hour < 12) return hour + 'a';
+  if (hour === 12) return '12p';
+  return (hour - 12) + 'p';
+}
+
+/**
+ * Render peak hour summary
+ * @param {object} distribution - Hourly distribution data
+ */
+function renderPeakSummary(distribution) {
+  // AM Peak
+  if (distribution.amPeak) {
+    const amPeak = distribution.amPeak;
+    const amEnteringPct = amPeak.total > 0 ? Math.round((amPeak.entering / amPeak.total) * 100) : 50;
+    elements.amPeakTime.textContent = amPeak.time;
+    elements.amPeakTrips.textContent = `${amPeak.total.toLocaleString()} trips`;
+    elements.amPeakSplit.textContent = `${amEnteringPct}% in / ${100 - amEnteringPct}% out`;
+  }
+
+  // PM Peak
+  if (distribution.pmPeak) {
+    const pmPeak = distribution.pmPeak;
+    const pmEnteringPct = pmPeak.total > 0 ? Math.round((pmPeak.entering / pmPeak.total) * 100) : 50;
+    elements.pmPeakTime.textContent = pmPeak.time;
+    elements.pmPeakTrips.textContent = `${pmPeak.total.toLocaleString()} trips`;
+    elements.pmPeakSplit.textContent = `${pmEnteringPct}% in / ${100 - pmEnteringPct}% out`;
+  }
+
+  // Overall Peak
+  if (distribution.peakHour) {
+    const peak = distribution.peakHour;
+    const peakEnteringPct = peak.total > 0 ? Math.round((peak.entering / peak.total) * 100) : 50;
+    elements.overallPeakTime.textContent = peak.time;
+    elements.overallPeakTrips.textContent = `${peak.total.toLocaleString()} trips`;
+    elements.overallPeakSplit.textContent = `${peakEnteringPct}% in / ${100 - peakEnteringPct}% out`;
+  }
+}
+
+/**
+ * Render hourly table
+ * @param {object} distribution - Hourly distribution data
+ */
+function renderHourlyTable(distribution) {
+  if (!elements.hourlyTbody) return;
+
+  const hourly = distribution.hourly;
+  const totalTrips = distribution.totalTrips || hourly.reduce((sum, h) => sum + h.total, 0);
+
+  const rowsHtml = hourly.map(hour => {
+    const isAmPeak = distribution.amPeak && hour.hour === distribution.amPeak.hour;
+    const isPmPeak = distribution.pmPeak && hour.hour === distribution.pmPeak.hour;
+    const isPeak = distribution.peakHour && hour.hour === distribution.peakHour.hour;
+
+    let rowClass = '';
+    if (isAmPeak) rowClass = 'am-peak-row';
+    else if (isPmPeak) rowClass = 'pm-peak-row';
+    else if (isPeak) rowClass = 'peak-row';
+
+    const pctOfDaily = totalTrips > 0 ? ((hour.total / totalTrips) * 100).toFixed(1) : '0.0';
+
+    return `
+      <tr class="${rowClass}">
+        <td>${hour.time}</td>
+        <td>${hour.total.toLocaleString()}</td>
+        <td>${hour.entering.toLocaleString()}</td>
+        <td>${hour.exiting.toLocaleString()}</td>
+        <td>${pctOfDaily}%</td>
+      </tr>
+    `;
+  }).join('');
+
+  elements.hourlyTbody.innerHTML = rowsHtml;
 }
 
 // ============================================

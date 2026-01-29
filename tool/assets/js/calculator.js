@@ -10,6 +10,172 @@ class ITECalculator {
   constructor() {
     this.database = ITE_DATABASE;
     this.thresholds = HENRICO_THRESHOLDS;
+    this.timeOfDayData = null;
+    this.loadTimeOfDayData();
+  }
+
+  /**
+   * Load time-of-day distribution data
+   */
+  async loadTimeOfDayData() {
+    try {
+      const response = await fetch('data/time-of-day.json');
+      if (response.ok) {
+        const data = await response.json();
+        this.timeOfDayData = data.landUses;
+        console.log(`Loaded time-of-day data for ${Object.keys(this.timeOfDayData).length} land uses`);
+      }
+    } catch (error) {
+      console.warn('Could not load time-of-day data:', error);
+    }
+  }
+
+  /**
+   * Check if time-of-day data is available for a specific ITE code
+   * @param {string} iteCode - The ITE land use code
+   * @returns {boolean} True if time-of-day data exists
+   */
+  hasTimeOfDayData(iteCode) {
+    return this.timeOfDayData && this.timeOfDayData[iteCode] &&
+           this.timeOfDayData[iteCode].periods &&
+           Object.keys(this.timeOfDayData[iteCode].periods).length > 0;
+  }
+
+  /**
+   * Get available time periods for an ITE code
+   * @param {string} iteCode - The ITE land use code
+   * @returns {string[]} Array of available periods (e.g., ['weekday', 'saturday', 'sunday'])
+   */
+  getAvailablePeriods(iteCode) {
+    if (!this.hasTimeOfDayData(iteCode)) return [];
+    return Object.keys(this.timeOfDayData[iteCode].periods);
+  }
+
+  /**
+   * Get hourly trip distribution for a specific ITE code and day type
+   * @param {string} iteCode - The ITE land use code
+   * @param {number} dailyTrips - Total daily trips
+   * @param {string} dayType - 'weekday', 'saturday', or 'sunday'
+   * @returns {object} Hourly distribution with trips for each hour
+   */
+  getHourlyDistribution(iteCode, dailyTrips, dayType = 'weekday') {
+    if (!this.hasTimeOfDayData(iteCode)) {
+      return this.getDefaultHourlyDistribution(dailyTrips);
+    }
+
+    const todData = this.timeOfDayData[iteCode];
+    const periodData = todData.periods[dayType] || todData.periods['weekday'];
+
+    if (!periodData || !periodData.hourly) {
+      return this.getDefaultHourlyDistribution(dailyTrips);
+    }
+
+    const hourlyTrips = periodData.hourly.map(hour => ({
+      hour: hour.hour,
+      time: hour.time,
+      totalPct: hour.total,
+      enteringPct: hour.entering,
+      exitingPct: hour.exiting,
+      total: Math.round(dailyTrips * hour.total),
+      entering: Math.round(dailyTrips * hour.entering),
+      exiting: Math.round(dailyTrips * hour.exiting)
+    }));
+
+    // Find peak hours
+    const peakHour = hourlyTrips.reduce((max, h) => h.total > max.total ? h : max, hourlyTrips[0]);
+    const amPeak = hourlyTrips.filter(h => h.hour >= 6 && h.hour <= 9)
+                              .reduce((max, h) => h.total > max.total ? h : max, hourlyTrips[7]);
+    const pmPeak = hourlyTrips.filter(h => h.hour >= 15 && h.hour <= 18)
+                              .reduce((max, h) => h.total > max.total ? h : max, hourlyTrips[16]);
+
+    return {
+      source: 'ITE Time-of-Day Data',
+      dayType: dayType,
+      dataSites: periodData.dataSites,
+      setting: periodData.setting,
+      hourly: hourlyTrips,
+      peakHour: peakHour,
+      amPeak: amPeak,
+      pmPeak: pmPeak,
+      totalTrips: dailyTrips
+    };
+  }
+
+  /**
+   * Get default hourly distribution when no time-of-day data is available
+   * Uses typical patterns based on land use type
+   */
+  getDefaultHourlyDistribution(dailyTrips) {
+    // Default distribution based on typical suburban patterns
+    const defaultPcts = [
+      0.01, 0.005, 0.005, 0.005, 0.01, 0.02,  // 12AM-6AM
+      0.05, 0.08, 0.07, 0.05, 0.05, 0.05,     // 6AM-12PM
+      0.06, 0.06, 0.06, 0.07, 0.08, 0.09,     // 12PM-6PM
+      0.07, 0.05, 0.04, 0.03, 0.02, 0.015     // 6PM-12AM
+    ];
+
+    const timeSlots = [
+      "12:00 - 1:00 AM", "1:00 - 2:00 AM", "2:00 - 3:00 AM", "3:00 - 4:00 AM",
+      "4:00 - 5:00 AM", "5:00 - 6:00 AM", "6:00 - 7:00 AM", "7:00 - 8:00 AM",
+      "8:00 - 9:00 AM", "9:00 - 10:00 AM", "10:00 - 11:00 AM", "11:00 - 12:00 PM",
+      "12:00 - 1:00 PM", "1:00 - 2:00 PM", "2:00 - 3:00 PM", "3:00 - 4:00 PM",
+      "4:00 - 5:00 PM", "5:00 - 6:00 PM", "6:00 - 7:00 PM", "7:00 - 8:00 PM",
+      "8:00 - 9:00 PM", "9:00 - 10:00 PM", "10:00 - 11:00 PM", "11:00 - 12:00 AM"
+    ];
+
+    const hourlyTrips = defaultPcts.map((pct, i) => ({
+      hour: i,
+      time: timeSlots[i],
+      totalPct: pct,
+      enteringPct: pct * 0.5,
+      exitingPct: pct * 0.5,
+      total: Math.round(dailyTrips * pct),
+      entering: Math.round(dailyTrips * pct * 0.5),
+      exiting: Math.round(dailyTrips * pct * 0.5)
+    }));
+
+    return {
+      source: 'Default Distribution (No ITE Time-of-Day Data)',
+      dayType: 'weekday',
+      dataSites: 0,
+      setting: 'General',
+      hourly: hourlyTrips,
+      peakHour: hourlyTrips[17],
+      amPeak: hourlyTrips[7],
+      pmPeak: hourlyTrips[17],
+      totalTrips: dailyTrips
+    };
+  }
+
+  /**
+   * Get trips for a specific hour
+   * @param {string} iteCode - The ITE land use code
+   * @param {number} dailyTrips - Total daily trips
+   * @param {number} hour - Hour (0-23)
+   * @param {string} dayType - 'weekday', 'saturday', or 'sunday'
+   * @returns {object} Trip data for that hour
+   */
+  getTripsForHour(iteCode, dailyTrips, hour, dayType = 'weekday') {
+    const distribution = this.getHourlyDistribution(iteCode, dailyTrips, dayType);
+    return distribution.hourly[hour] || null;
+  }
+
+  /**
+   * Get the actual peak hour from ITE data (more accurate than assuming 7-9 AM / 4-6 PM)
+   * @param {string} iteCode - The ITE land use code
+   * @param {number} dailyTrips - Total daily trips
+   * @param {string} period - 'am' or 'pm'
+   * @param {string} dayType - 'weekday', 'saturday', or 'sunday'
+   */
+  getActualPeakHour(iteCode, dailyTrips, period = 'pm', dayType = 'weekday') {
+    const distribution = this.getHourlyDistribution(iteCode, dailyTrips, dayType);
+
+    if (period === 'am') {
+      return distribution.amPeak;
+    } else if (period === 'pm') {
+      return distribution.pmPeak;
+    }
+    return distribution.peakHour;
   }
 
   /**
@@ -46,6 +212,11 @@ class ITECalculator {
     // Check thresholds
     const thresholdCheck = this.checkThresholds(weekdayResult.trips, amPeakResult.trips, pmPeakResult.trips);
 
+    // Get hourly distribution if available (for more accurate analysis)
+    const hourlyDistribution = this.getHourlyDistribution(iteCode, weekdayResult.trips, 'weekday');
+    const hasTimeOfDay = this.hasTimeOfDayData(iteCode);
+    const availablePeriods = this.getAvailablePeriods(iteCode);
+
     return {
       success: true,
       iteCode: data.code,
@@ -60,6 +231,10 @@ class ITECalculator {
       pmPeak: pmPeakResult,
       quality: quality,
       thresholds: thresholdCheck,
+      // Enhanced accuracy data from Time-of-Day distribution
+      hourlyDistribution: hourlyDistribution,
+      hasTimeOfDayData: hasTimeOfDay,
+      availablePeriods: availablePeriods,
       timestamp: new Date().toISOString()
     };
   }
