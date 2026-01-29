@@ -189,10 +189,10 @@ const ITE_DATABASE = {
     category: "Residential",
     unit: "Dwelling Units",
     weekday: {
-      rate: 5.44,
-      equation: { type: "linear", a: 5.44, b: 0 },
-      r_squared: 0.78,
-      sample_size: 34
+      rate: 4.46,
+      equation: { type: "linear", a: 4.55, b: -17.52 },
+      r_squared: 0.90,
+      sample_size: 7
     },
     am_peak: {
       rate: 0.36,
