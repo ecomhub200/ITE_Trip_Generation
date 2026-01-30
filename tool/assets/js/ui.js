@@ -147,7 +147,7 @@ function handleIteSearch(e) {
 function renderSearchResults(results) {
   if (results.length === 0) {
     elements.iteResults.innerHTML = `
-      <div class="ite-search-item">
+      <div class="ite-search-item ite-search-empty">
         <p class="text-muted">No matching ITE codes found</p>
       </div>
     `;
@@ -155,13 +155,33 @@ function renderSearchResults(results) {
     return;
   }
 
-  const html = results.slice(0, 20).map(item => `
-    <div class="ite-search-item" data-code="${item.code}">
-      <span class="ite-search-item-code">${item.code}</span> -
-      <span class="ite-search-item-name">${item.name}</span>
-      <div class="ite-search-item-category">${item.category} | ${item.unit}</div>
-    </div>
-  `).join('');
+  // Group results by category
+  const grouped = {};
+  const limitedResults = results.slice(0, 25);
+
+  limitedResults.forEach(item => {
+    if (!grouped[item.category]) {
+      grouped[item.category] = [];
+    }
+    grouped[item.category].push(item);
+  });
+
+  // Build HTML with category headers
+  let html = '';
+  for (const [category, items] of Object.entries(grouped)) {
+    html += `<div class="ite-search-category-header">${category}</div>`;
+    html += items.map(item => `
+      <div class="ite-search-item" data-code="${item.code}">
+        <div class="ite-search-item-main">
+          <span class="ite-search-item-code">${item.code}</span>
+          <span class="ite-search-item-name">${item.name}</span>
+        </div>
+        <div class="ite-search-item-meta">
+          <span class="ite-search-item-unit">${item.unit}</span>
+        </div>
+      </div>
+    `).join('');
+  }
 
   elements.iteResults.innerHTML = html;
   elements.iteResults.classList.add('active');
