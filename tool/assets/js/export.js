@@ -52,9 +52,6 @@ function generateCSV(result, date) {
   if (result.devName) {
     lines.push(`Development Name,${result.devName}`);
   }
-  if (result.zoningCode) {
-    lines.push(`Zoning Code,${result.zoningCode}`);
-  }
   lines.push(`ITE Code,${result.iteCode}`);
   lines.push(`Land Use,${result.landUseName}`);
   lines.push(`Category,${result.category}`);
