@@ -32,6 +32,7 @@ const elements = {
   newAnalysisBtn: document.getElementById('new-analysis-btn'),
   toggleReference: document.getElementById('toggle-reference'),
   iteReference: document.getElementById('ite-reference'),
+  browseAllBtn: document.getElementById('browse-all-btn'),
   iteCategories: document.getElementById('ite-categories'),
   currentYear: document.getElementById('current-year'),
   // Storage-related elements
@@ -85,6 +86,7 @@ function initializeApp() {
   elements.printBtn.addEventListener('click', handlePrint);
   elements.newAnalysisBtn.addEventListener('click', handleNewAnalysis);
   elements.toggleReference.addEventListener('click', handleToggleReference);
+  elements.browseAllBtn.addEventListener('click', handleBrowseAll);
 
   // Storage event listeners
   elements.saveAnalysisBtn.addEventListener('click', handleSaveAnalysis);
@@ -142,6 +144,42 @@ function handleIteSearch(e) {
 
   const results = calculator.search(query);
   renderSearchResults(results);
+}
+
+// Browse All ITE Codes
+function handleBrowseAll() {
+  const grouped = calculator.getByCategory();
+  renderBrowseAllResults(grouped);
+}
+
+function renderBrowseAllResults(grouped) {
+  let html = '';
+
+  for (const [category, codes] of Object.entries(grouped)) {
+    html += `<div class="ite-search-category-header">${category}</div>`;
+    html += codes.map(item => `
+      <div class="ite-search-item" data-code="${item.code}">
+        <div class="ite-search-item-main">
+          <span class="ite-search-item-code">${item.code}</span>
+          <span class="ite-search-item-name">${item.name}</span>
+        </div>
+        <div class="ite-search-item-meta">
+          <span class="ite-search-item-unit">${item.unit}</span>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  elements.iteResults.innerHTML = html;
+  elements.iteResults.classList.add('active');
+
+  // Add click handlers
+  elements.iteResults.querySelectorAll('.ite-search-item[data-code]').forEach(item => {
+    item.addEventListener('click', () => selectIteCode(item.dataset.code));
+  });
+
+  // Focus on search input for filtering
+  elements.iteSearch.focus();
 }
 
 function renderSearchResults(results) {

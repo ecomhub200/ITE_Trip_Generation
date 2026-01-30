@@ -644,6 +644,21 @@ p {
   position: relative;
 }
 
+.ite-search-input-group {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.ite-search-input-group .form-input {
+  flex: 1;
+}
+
+.btn-browse-all {
+  white-space: nowrap;
+  padding: var(--spacing-md) var(--spacing-md);
+  font-size: 0.875rem;
+}
+
 .ite-search-results {
   position: absolute;
   top: 100%;

@@ -72,9 +72,14 @@
           <div class="form-group">
             <label class="form-label form-label-required" for="ite-search">ITE Land Use Code</label>
             <div class="ite-search-container">
-              <input type="text" class="form-input" id="ite-search"
-                     placeholder="Search by code or name (e.g., 210, Single-Family, Apartment)..."
-                     autocomplete="off">
+              <div class="ite-search-input-group">
+                <input type="text" class="form-input" id="ite-search"
+                       placeholder="Search by code or name (e.g., 210, Single-Family, Apartment)..."
+                       autocomplete="off">
+                <button type="button" class="btn btn-outline btn-browse-all" id="browse-all-btn" title="Browse all ITE codes">
+                  Browse All
+                </button>
+              </div>
               <div class="ite-search-results" id="ite-results"></div>
             </div>
             <input type="hidden" id="ite-code" name="iteCode" required>
