@@ -242,14 +242,12 @@ async function handleFormSubmit(e) {
   // Get parcel info
   const parcelType = document.getElementById('parcel-type').value;
   const parcelNumber = document.getElementById('parcel-number').value;
-  const zoningCode = document.getElementById('zoning-code').value;
   const devName = document.getElementById('dev-name').value;
 
   // Calculate
   currentResult = calculator.calculate(selectedIteCode, size);
   currentResult.parcelType = parcelType;
   currentResult.parcelNumber = parcelNumber;
-  currentResult.zoningCode = zoningCode;
   currentResult.devName = devName;
   currentResult.parcelId = `${parcelType}#${parcelNumber}`;
 
@@ -704,7 +702,6 @@ async function handleLoadAnalysis(id) {
     // Populate form fields
     document.getElementById('parcel-type').value = analysis.parcelType || 'REZ';
     document.getElementById('parcel-number').value = analysis.parcelNumber || '';
-    document.getElementById('zoning-code').value = analysis.zoningCode || '';
     document.getElementById('dev-name').value = analysis.devName || '';
 
     // Set ITE code
