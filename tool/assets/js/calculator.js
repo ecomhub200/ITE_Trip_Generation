@@ -11,7 +11,7 @@ class ITECalculator {
     this.database = ITE_DATABASE;
     this.thresholds = HENRICO_THRESHOLDS;
     this.timeOfDayData = null;
-    this.loadTimeOfDayData();
+    this._loadingPromise = this.loadTimeOfDayData();
   }
 
   /**
@@ -28,6 +28,21 @@ class ITECalculator {
     } catch (error) {
       console.warn('Could not load time-of-day data:', error);
     }
+  }
+
+  /**
+   * Wait for time-of-day data to finish loading
+   * Call this before calculations if you need to ensure data is available
+   */
+  async waitForData() {
+    await this._loadingPromise;
+  }
+
+  /**
+   * Check if time-of-day data has finished loading
+   */
+  isDataLoaded() {
+    return this.timeOfDayData !== null;
   }
 
   /**
@@ -106,12 +121,12 @@ class ITECalculator {
    * Uses typical patterns based on land use type
    */
   getDefaultHourlyDistribution(dailyTrips) {
-    // Default distribution based on typical suburban patterns
+    // Default distribution based on typical suburban patterns (must sum to 1.0)
     const defaultPcts = [
-      0.01, 0.005, 0.005, 0.005, 0.01, 0.02,  // 12AM-6AM
-      0.05, 0.08, 0.07, 0.05, 0.05, 0.05,     // 6AM-12PM
-      0.06, 0.06, 0.06, 0.07, 0.08, 0.09,     // 12PM-6PM
-      0.07, 0.05, 0.04, 0.03, 0.02, 0.015     // 6PM-12AM
+      0.008, 0.004, 0.004, 0.004, 0.008, 0.018,  // 12AM-6AM (0.046)
+      0.048, 0.076, 0.067, 0.048, 0.048, 0.048,  // 6AM-12PM (0.335)
+      0.057, 0.057, 0.057, 0.067, 0.076, 0.086,  // 12PM-6PM (0.400)
+      0.067, 0.048, 0.038, 0.029, 0.019, 0.018   // 6PM-12AM (0.219)
     ];
 
     const timeSlots = [

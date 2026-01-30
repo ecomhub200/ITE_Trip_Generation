@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bug Test - ITE Trip Generation</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 1200px; margin: 0 auto; }
+    .test { margin: 10px 0; padding: 10px; border: 1px solid #ddd; border-radius: 4px; }
+    .test.pass { background: #d4edda; border-color: #28a745; }
+    .test.fail { background: #f8d7da; border-color: #dc3545; }
+    .test.warn { background: #fff3cd; border-color: #ffc107; }
+    h2 { color: #333; border-bottom: 2px solid #333; padding-bottom: 5px; }
+    pre { background: #f5f5f5; padding: 10px; overflow-x: auto; }
+    .summary { font-size: 1.2em; font-weight: bold; margin: 20px 0; padding: 15px; border-radius: 4px; }
+    .summary.has-errors { background: #f8d7da; }
+    .summary.all-pass { background: #d4edda; }
+  </style>
+</head>
+<body>
+  <h1>ITE Trip Generation - Bug Test Suite</h1>
+  <div id="results"></div>
+  <div id="summary" class="summary"></div>
+
+  <!-- Load dependencies -->
+  <script src="assets/js/ite-database.js"></script>
+  <script src="assets/js/calculator.js"></script>
+
+  <script>
+    const results = [];
+    const resultsDiv = document.getElementById('results');
+    const summaryDiv = document.getElementById('summary');
+
+    function addResult(name, passed, message, isWarning = false) {
+      const status = passed ? 'pass' : (isWarning ? 'warn' : 'fail');
+      results.push({ name, passed, message, isWarning });
+      resultsDiv.innerHTML += `
+        <div class="test ${status}">
+          <strong>${passed ? '✓' : (isWarning ? '⚠' : '✗')} ${name}</strong>
+          <p>${message}</p>
+        </div>
+      `;
+    }
+
+    function updateSummary() {
+      const passed = results.filter(r => r.passed).length;
+      const failed = results.filter(r => !r.passed && !r.isWarning).length;
+      const warnings = results.filter(r => r.isWarning).length;
+
+      summaryDiv.className = 'summary ' + (failed > 0 ? 'has-errors' : 'all-pass');
+      summaryDiv.innerHTML = `
+        Tests: ${results.length} |
+        Passed: ${passed} |
+        Failed: ${failed} |
+        Warnings: ${warnings}
+      `;
+    }
+
+    async function runTests() {
+      resultsDiv.innerHTML = '<h2>Running Tests...</h2>';
+
+      // ========================================
+      // TEST 1: Async Loading Race Condition
+      // ========================================
+      resultsDiv.innerHTML += '<h2>Test 1: Async Loading</h2>';
+
+      // Check if data is loaded immediately after constructor
+      const dataImmediately = calculator.timeOfDayData;
+      if (dataImmediately === null) {
+        addResult(
+          'Race Condition Detected',
+          false,
+          'BUG: timeOfDayData is null immediately after page load. If user calculates before async load completes, they get default distribution instead of ITE data.'
+        );
+      } else {
+        addResult('Data Available Immediately', true, 'Time-of-day data loaded synchronously (unlikely)');
+      }
+
+      // Wait for async load
+      await new Promise(r => setTimeout(r, 500));
+
+      const dataAfterWait = calculator.timeOfDayData;
+      if (dataAfterWait) {
+        addResult(
+          'Data Loads After Delay',
+          true,
+          `Time-of-day data loaded with ${Object.keys(dataAfterWait).length} land uses after async fetch`
+        );
+      } else {
+        addResult(
+          'Data Failed to Load',
+          false,
+          'Time-of-day data did not load even after waiting. Check fetch path: data/time-of-day.json'
+        );
+      }
+
+      // ========================================
+      // TEST 2: getHourlyDistribution Function
+      // ========================================
+      resultsDiv.innerHTML += '<h2>Test 2: getHourlyDistribution</h2>';
+
+      if (calculator.timeOfDayData) {
+        // Test with valid code
+        const dist221 = calculator.getHourlyDistribution('221', 1000, 'weekday');
+
+        if (dist221.hourly && dist221.hourly.length === 24) {
+          addResult('Returns 24 Hours', true, 'Distribution returns all 24 hours');
+        } else {
+          addResult('Returns 24 Hours', false, `Expected 24 hours, got ${dist221.hourly?.length}`);
+        }
+
+        // Check trips sum
+        const totalTrips = dist221.hourly.reduce((sum, h) => sum + h.total, 0);
+        if (totalTrips >= 950 && totalTrips <= 1050) {
+          addResult('Trip Sum Correct', true, `Hourly trips sum to ${totalTrips} (expected ~1000)`);
+        } else {
+          addResult('Trip Sum Correct', false, `Hourly trips sum to ${totalTrips}, expected ~1000`);
+        }
+
+        // Check peak hours exist
+        if (dist221.amPeak && dist221.pmPeak && dist221.peakHour) {
+          addResult('Peak Hours Identified', true,
+            `AM: ${dist221.amPeak.time}, PM: ${dist221.pmPeak.time}, Overall: ${dist221.peakHour.time}`);
+        } else {
+          addResult('Peak Hours Identified', false, 'Missing peak hour data');
+        }
+
+        // Test with invalid code (should use default)
+        const dist999 = calculator.getHourlyDistribution('999', 1000, 'weekday');
+        if (dist999.source.includes('Default')) {
+          addResult('Fallback to Default', true, 'Unknown codes use default distribution');
+        } else {
+          addResult('Fallback to Default', false, 'Unknown codes should use default distribution');
+        }
+
+        // Test Saturday/Sunday if available
+        const periods = calculator.getAvailablePeriods('221');
+        if (periods.includes('saturday')) {
+          const distSat = calculator.getHourlyDistribution('221', 1000, 'saturday');
+          if (distSat.dayType === 'saturday') {
+            addResult('Saturday Data Works', true, 'Saturday distribution loaded correctly');
+          } else {
+            addResult('Saturday Data Works', false, 'Saturday distribution failed');
+          }
+        }
+      }
+
+      // ========================================
+      // TEST 3: calculate() Integration
+      // ========================================
+      resultsDiv.innerHTML += '<h2>Test 3: calculate() Integration</h2>';
+
+      const result = calculator.calculate('221', 100);
+
+      if (result.success) {
+        addResult('Calculate Succeeds', true, 'calculate() returns success for valid input');
+      } else {
+        addResult('Calculate Succeeds', false, `calculate() failed: ${result.error}`);
+      }
+
+      if (result.hourlyDistribution) {
+        addResult('Includes Hourly Distribution', true, 'Result includes hourlyDistribution');
+      } else {
+        addResult('Includes Hourly Distribution', false, 'BUG: Result missing hourlyDistribution');
+      }
+
+      if (typeof result.hasTimeOfDayData === 'boolean') {
+        addResult('Includes hasTimeOfDayData Flag', true, `hasTimeOfDayData = ${result.hasTimeOfDayData}`);
+      } else {
+        addResult('Includes hasTimeOfDayData Flag', false, 'BUG: Missing hasTimeOfDayData flag');
+      }
+
+      if (Array.isArray(result.availablePeriods)) {
+        addResult('Includes availablePeriods', true, `availablePeriods = ${JSON.stringify(result.availablePeriods)}`);
+      } else {
+        addResult('Includes availablePeriods', false, 'BUG: Missing availablePeriods array');
+      }
+
+      // ========================================
+      // TEST 4: Peak Hour Calculations
+      // ========================================
+      resultsDiv.innerHTML += '<h2>Test 4: Peak Hour Analysis</h2>';
+
+      if (result.hourlyDistribution) {
+        const amPeak = result.hourlyDistribution.amPeak;
+        const pmPeak = result.hourlyDistribution.pmPeak;
+
+        // Check AM peak is in AM range (6-9)
+        if (amPeak && amPeak.hour >= 6 && amPeak.hour <= 9) {
+          addResult('AM Peak in Correct Range', true, `AM peak at hour ${amPeak.hour} (${amPeak.time})`);
+        } else {
+          addResult('AM Peak in Correct Range', false, `AM peak at hour ${amPeak?.hour}, expected 6-9`);
+        }
+
+        // Check PM peak is in PM range (15-18)
+        if (pmPeak && pmPeak.hour >= 15 && pmPeak.hour <= 18) {
+          addResult('PM Peak in Correct Range', true, `PM peak at hour ${pmPeak.hour} (${pmPeak.time})`);
+        } else {
+          addResult('PM Peak in Correct Range', false, `PM peak at hour ${pmPeak?.hour}, expected 15-18`);
+        }
+
+        // Check directional splits are reasonable
+        if (amPeak) {
+          const enterPct = Math.round((amPeak.entering / amPeak.total) * 100);
+          // For residential, AM should be mostly exiting (people leaving for work)
+          if (enterPct < 50) {
+            addResult('AM Directional Split Logical', true,
+              `AM: ${enterPct}% entering, ${100-enterPct}% exiting (residential pattern: more leaving)`);
+          } else {
+            addResult('AM Directional Split Logical', false,
+              `AM: ${enterPct}% entering - residential should have more exiting in AM`, true);
+          }
+        }
+      }
+
+      // ========================================
+      // TEST 5: Default Distribution Percentage Sum
+      // ========================================
+      resultsDiv.innerHTML += '<h2>Test 5: Default Distribution</h2>';
+
+      const defaultDist = calculator.getDefaultHourlyDistribution(1000);
+      const defaultPctSum = defaultDist.hourly.reduce((sum, h) => sum + h.totalPct, 0);
+
+      if (Math.abs(defaultPctSum - 1.0) < 0.01) {
+        addResult('Default Percentages Sum to 1', true, `Sum = ${defaultPctSum.toFixed(4)}`);
+      } else {
+        addResult('Default Percentages Sum to 1', false,
+          `BUG: Default percentages sum to ${defaultPctSum.toFixed(4)}, should be 1.0`);
+      }
+
+      // ========================================
+      // TEST 6: Edge Cases
+      // ========================================
+      resultsDiv.innerHTML += '<h2>Test 6: Edge Cases</h2>';
+
+      // Zero trips
+      const zeroTripsDist = calculator.getHourlyDistribution('221', 0, 'weekday');
+      const hasZeroTrips = zeroTripsDist.hourly.every(h => h.total === 0);
+      if (hasZeroTrips) {
+        addResult('Zero Trips Handled', true, 'All hourly trips are 0 when daily trips = 0');
+      } else {
+        addResult('Zero Trips Handled', false, 'Non-zero trips when daily trips = 0');
+      }
+
+      // Very large trips
+      const largeTrips = calculator.getHourlyDistribution('221', 1000000, 'weekday');
+      if (largeTrips.hourly && largeTrips.hourly.length === 24) {
+        addResult('Large Trips Handled', true, 'Handles 1M daily trips');
+      } else {
+        addResult('Large Trips Handled', false, 'Failed with 1M daily trips');
+      }
+
+      // Invalid day type falls back gracefully
+      const invalidDayDist = calculator.getHourlyDistribution('221', 1000, 'invalid');
+      if (invalidDayDist.hourly && invalidDayDist.hourly.length === 24) {
+        addResult('Invalid Day Type Fallback', true, 'Falls back to weekday for invalid day type');
+      } else {
+        addResult('Invalid Day Type Fallback', false, 'Crashes on invalid day type');
+      }
+
+      // ========================================
+      // TEST 7: Data Consistency
+      // ========================================
+      resultsDiv.innerHTML += '<h2>Test 7: Data Consistency</h2>';
+
+      // Check a few land use codes have consistent data
+      const testCodes = ['210', '820', '710', '221'];
+      for (const code of testCodes) {
+        if (calculator.hasTimeOfDayData(code)) {
+          const dist = calculator.getHourlyDistribution(code, 1000, 'weekday');
+          const pctSum = dist.hourly.reduce((sum, h) => sum + h.totalPct, 0);
+
+          if (Math.abs(pctSum - 1.0) < 0.01) {
+            addResult(`Code ${code} Percentages Valid`, true, `Sum = ${pctSum.toFixed(4)}`);
+          } else {
+            addResult(`Code ${code} Percentages Valid`, false,
+              `BUG: Percentages sum to ${pctSum.toFixed(4)}`);
+          }
+        }
+      }
+
+      // ========================================
+      // Summary
+      // ========================================
+      updateSummary();
+
+      console.log('Test results:', results);
+    }
+
+    // Run tests after a short delay to allow async load
+    setTimeout(runTests, 100);
+  </script>
+</body>
+</html>

@@ -194,7 +194,7 @@ function selectIteCode(code) {
 }
 
 // Form Handling
-function handleFormSubmit(e) {
+async function handleFormSubmit(e) {
   e.preventDefault();
 
   if (!selectedIteCode) {
@@ -210,6 +210,15 @@ function handleFormSubmit(e) {
     return;
   }
 
+  // Wait for time-of-day data to load (fixes race condition)
+  if (!calculator.isDataLoaded()) {
+    elements.calculateBtn.textContent = 'Loading data...';
+    elements.calculateBtn.disabled = true;
+    await calculator.waitForData();
+    elements.calculateBtn.textContent = 'Generate Trip Analysis';
+    elements.calculateBtn.disabled = false;
+  }
+
   // Get parcel info
   const parcelType = document.getElementById('parcel-type').value;
   const parcelNumber = document.getElementById('parcel-number').value;
@@ -223,6 +232,11 @@ function handleFormSubmit(e) {
   currentResult.zoningCode = zoningCode;
   currentResult.devName = devName;
   currentResult.parcelId = `${parcelType}#${parcelNumber}`;
+
+  // Reset day type selector to weekday for new calculation
+  if (elements.dayTypeSelect) {
+    elements.dayTypeSelect.value = 'weekday';
+  }
 
   // Render results
   renderResults(currentResult);
