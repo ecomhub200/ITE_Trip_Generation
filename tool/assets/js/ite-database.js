@@ -105,14 +105,14 @@ const ITE_DATABASE = {
     category: "Residential",
     unit: "Dwelling Units",
     weekday: {
-      rate: 9.09,
+      rate: 9.43,
       equation: { type: "linear", a: 8.07, b: 265.45 },
       r_squared: 0.94,
       sample_size: 155,
       study_range: { min: 11, max: 3000, avg: 261 }
     },
     am_peak: {
-      rate: 0.74,
+      rate: 0.7,
       equation: { type: "linear", a: 0.70, b: 1.52 },
       r_squared: 0.92,
       entering: 25,
@@ -120,7 +120,7 @@ const ITE_DATABASE = {
       study_range: { min: 11, max: 3000, avg: 261 }
     },
     pm_peak: {
-      rate: 0.99,
+      rate: 0.94,
       equation: { type: "linear", a: 0.94, b: 1.86 },
       r_squared: 0.93,
       entering: 63,
@@ -142,14 +142,14 @@ const ITE_DATABASE = {
       sample_size: 45
     },
     am_peak: {
-      rate: 0.52,
+      rate: 0.48,
       equation: { type: "linear", a: 0.52, b: 0 },
       r_squared: 0.78,
       entering: 24,
       exiting: 76
     },
     pm_peak: {
-      rate: 0.62,
+      rate: 0.57,
       equation: { type: "linear", a: 0.62, b: 0 },
       r_squared: 0.80,
       entering: 64,
@@ -164,20 +164,20 @@ const ITE_DATABASE = {
     category: "Residential",
     unit: "Dwelling Units",
     weekday: {
-      rate: 7.32,
+      rate: 4.72,
       equation: { type: "linear", a: 7.32, b: 0 },
       r_squared: 0.85,
       sample_size: 89
     },
     am_peak: {
-      rate: 0.55,
+      rate: 0.38,
       equation: { type: "linear", a: 0.55, b: 0 },
       r_squared: 0.80,
       entering: 24,
       exiting: 76
     },
     pm_peak: {
-      rate: 0.67,
+      rate: 0.61,
       equation: { type: "linear", a: 0.67, b: 0 },
       r_squared: 0.82,
       entering: 65,
@@ -276,20 +276,20 @@ const ITE_DATABASE = {
     category: "Residential",
     unit: "Dwelling Units",
     weekday: {
-      rate: 4.99,
+      rate: 7.12,
       equation: { type: "linear", a: 4.99, b: 0 },
       r_squared: 0.76,
       sample_size: 18
     },
     am_peak: {
-      rate: 0.44,
+      rate: 0.39,
       equation: null,
       r_squared: 0.68,
       entering: 30,
       exiting: 70
     },
     pm_peak: {
-      rate: 0.59,
+      rate: 0.58,
       equation: null,
       r_squared: 0.70,
       entering: 56,
@@ -304,20 +304,20 @@ const ITE_DATABASE = {
     category: "Residential",
     unit: "Dwelling Units",
     weekday: {
-      rate: 3.71,
+      rate: 4.31,
       equation: null,
       r_squared: 0.55,
       sample_size: 12
     },
     am_peak: {
-      rate: 0.22,
+      rate: 0.24,
       equation: null,
       r_squared: 0.48,
       entering: 40,
       exiting: 60
     },
     pm_peak: {
-      rate: 0.27,
+      rate: 0.3,
       equation: null,
       r_squared: 0.52,
       entering: 55,
@@ -332,7 +332,7 @@ const ITE_DATABASE = {
     category: "Residential",
     unit: "Dwelling Units",
     weekday: {
-      rate: 3.48,
+      rate: 3.24,
       equation: null,
       r_squared: 0.52,
       sample_size: 15
@@ -345,7 +345,7 @@ const ITE_DATABASE = {
       exiting: 58
     },
     pm_peak: {
-      rate: 0.26,
+      rate: 0.25,
       equation: null,
       r_squared: 0.50,
       entering: 57,
@@ -360,20 +360,20 @@ const ITE_DATABASE = {
     category: "Residential",
     unit: "Dwelling Units",
     weekday: {
-      rate: 2.82,
+      rate: 2.47,
       equation: null,
       r_squared: 0.60,
       sample_size: 10
     },
     am_peak: {
-      rate: 0.19,
+      rate: 0.15,
       equation: null,
       r_squared: 0.52,
       entering: 45,
       exiting: 55
     },
     pm_peak: {
-      rate: 0.21,
+      rate: 0.19,
       equation: null,
       r_squared: 0.55,
       entering: 52,
@@ -416,13 +416,13 @@ const ITE_DATABASE = {
     category: "Residential",
     unit: "Dwelling Units",
     weekday: {
-      rate: 7.50,
+      rate: 7.31,
       equation: { type: "linear", a: 7.50, b: 0 },
       r_squared: 0.82,
       sample_size: 28
     },
     am_peak: {
-      rate: 0.55,
+      rate: 0.57,
       equation: null,
       r_squared: 0.75,
       entering: 25,
@@ -482,14 +482,14 @@ const ITE_DATABASE = {
       sample_size: 18
     },
     am_peak: {
-      rate: 0.45,
+      rate: 0.48,
       equation: null,
       r_squared: 0.60,
       entering: 35,
       exiting: 65
     },
     pm_peak: {
-      rate: 0.48,
+      rate: 0.52,
       equation: null,
       r_squared: 0.62,
       entering: 55,
@@ -504,20 +504,20 @@ const ITE_DATABASE = {
     category: "Lodging",
     unit: "Rooms",
     weekday: {
-      rate: 7.27,
+      rate: 5.08,
       equation: null,
       r_squared: 0.72,
       sample_size: 25
     },
     am_peak: {
-      rate: 0.52,
+      rate: 0.51,
       equation: null,
       r_squared: 0.64,
       entering: 36,
       exiting: 64
     },
     pm_peak: {
-      rate: 0.55,
+      rate: 0.41,
       equation: null,
       r_squared: 0.66,
       entering: 54,
@@ -592,20 +592,20 @@ const ITE_DATABASE = {
     category: "Recreational",
     unit: "Acres",
     weekday: {
-      rate: 3.25,
+      rate: 0.78,
       equation: null,
       r_squared: 0.42,
       sample_size: 12
     },
     am_peak: {
-      rate: 0.08,
+      rate: 0.02,
       equation: null,
       r_squared: null,
       entering: 65,
       exiting: 35
     },
     pm_peak: {
-      rate: 0.38,
+      rate: 0.11,
       equation: null,
       r_squared: null,
       entering: 45,
@@ -648,20 +648,20 @@ const ITE_DATABASE = {
     category: "Recreational",
     unit: "Holes",
     weekday: {
-      rate: 35.74,
+      rate: 30.38,
       equation: null,
       r_squared: 0.55,
       sample_size: 21
     },
     am_peak: {
-      rate: 2.74,
+      rate: 1.76,
       equation: null,
       r_squared: 0.48,
       entering: 80,
       exiting: 20
     },
     pm_peak: {
-      rate: 2.22,
+      rate: 2.91,
       equation: null,
       r_squared: 0.50,
       entering: 45,
@@ -900,20 +900,20 @@ const ITE_DATABASE = {
     category: "Recreational",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 22.88,
+      rate: 28.82,
       equation: null,
       r_squared: 0.62,
       sample_size: 18
     },
     am_peak: {
-      rate: 0.68,
+      rate: 18.35,
       equation: null,
       r_squared: null,
       entering: 65,
       exiting: 35
     },
     pm_peak: {
-      rate: 2.65,
+      rate: 23.06,
       equation: null,
       r_squared: null,
       entering: 52,
@@ -932,20 +932,20 @@ const ITE_DATABASE = {
     category: "Institutional",
     unit: "Students",
     weekday: {
-      rate: 1.37,
+      rate: 2.27,
       equation: null,
       r_squared: 0.72,
       sample_size: 44
     },
     am_peak: {
-      rate: 0.45,
+      rate: 0.74,
       equation: null,
       r_squared: 0.68,
       entering: 66,
       exiting: 34
     },
     pm_peak: {
-      rate: 0.28,
+      rate: 0.16,
       equation: null,
       r_squared: 0.62,
       entering: 33,
@@ -960,20 +960,20 @@ const ITE_DATABASE = {
     category: "Institutional",
     unit: "Students",
     weekday: {
-      rate: 1.19,
+      rate: 2.1,
       equation: null,
       r_squared: 0.68,
       sample_size: 32
     },
     am_peak: {
-      rate: 0.36,
+      rate: 0.67,
       equation: null,
       r_squared: 0.62,
       entering: 64,
       exiting: 36
     },
     pm_peak: {
-      rate: 0.20,
+      rate: 0.15,
       equation: null,
       r_squared: 0.58,
       entering: 32,
@@ -988,20 +988,20 @@ const ITE_DATABASE = {
     category: "Institutional",
     unit: "Students",
     weekday: {
-      rate: 1.71,
+      rate: 1.94,
       equation: null,
       r_squared: 0.74,
       sample_size: 56
     },
     am_peak: {
-      rate: 0.48,
+      rate: 0.52,
       equation: null,
       r_squared: 0.70,
       entering: 69,
       exiting: 31
     },
     pm_peak: {
-      rate: 0.27,
+      rate: 0.14,
       equation: null,
       r_squared: 0.65,
       entering: 28,
@@ -1044,20 +1044,20 @@ const ITE_DATABASE = {
     category: "Institutional",
     unit: "Students",
     weekday: {
-      rate: 2.48,
+      rate: 2.17,
       equation: null,
       r_squared: 0.65,
       sample_size: 18
     },
     am_peak: {
-      rate: 0.68,
+      rate: 0.66,
       equation: null,
       r_squared: 0.60,
       entering: 62,
       exiting: 38
     },
     pm_peak: {
-      rate: 0.45,
+      rate: 0.19,
       equation: null,
       r_squared: 0.55,
       entering: 35,
@@ -1100,13 +1100,13 @@ const ITE_DATABASE = {
     category: "Institutional",
     unit: "Students",
     weekday: {
-      rate: 1.71,
+      rate: 1.15,
       equation: null,
       r_squared: 0.70,
       sample_size: 22
     },
     am_peak: {
-      rate: 0.13,
+      rate: 0.11,
       equation: null,
       r_squared: 0.62,
       entering: 80,
@@ -1128,20 +1128,20 @@ const ITE_DATABASE = {
     category: "Institutional",
     unit: "Students",
     weekday: {
-      rate: 1.71,
+      rate: 1.56,
       equation: null,
       r_squared: 0.72,
       sample_size: 28
     },
     am_peak: {
-      rate: 0.13,
+      rate: 0.15,
       equation: null,
       r_squared: 0.65,
       entering: 79,
       exiting: 21
     },
     pm_peak: {
-      rate: 0.12,
+      rate: 0.15,
       equation: null,
       r_squared: 0.60,
       entering: 51,
@@ -1156,20 +1156,20 @@ const ITE_DATABASE = {
     category: "Institutional",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 9.11,
+      rate: 0.9,
       equation: null,
       r_squared: 0.48,
       sample_size: 18
     },
     am_peak: {
-      rate: 0.55,
+      rate: 0.07,
       equation: null,
       r_squared: null,
       entering: 65,
       exiting: 35
     },
     pm_peak: {
-      rate: 0.64,
+      rate: 0.1,
       equation: null,
       r_squared: null,
       entering: 55,
@@ -1184,20 +1184,20 @@ const ITE_DATABASE = {
     category: "Institutional",
     unit: "Students",
     weekday: {
-      rate: 4.38,
+      rate: 4.09,
       equation: { type: "linear", a: 4.38, b: 0 },
       r_squared: 0.85,
       sample_size: 105
     },
     am_peak: {
-      rate: 0.80,
+      rate: 0.78,
       equation: null,
       r_squared: 0.78,
       entering: 51,
       exiting: 49
     },
     pm_peak: {
-      rate: 0.82,
+      rate: 0.79,
       equation: null,
       r_squared: 0.80,
       entering: 46,
@@ -1212,7 +1212,7 @@ const ITE_DATABASE = {
     category: "Institutional",
     unit: "Acres",
     weekday: {
-      rate: 3.51,
+      rate: 6.02,
       equation: null,
       r_squared: 0.35,
       sample_size: 5
@@ -1225,7 +1225,7 @@ const ITE_DATABASE = {
       exiting: 40
     },
     pm_peak: {
-      rate: 0.32,
+      rate: 0.46,
       equation: null,
       r_squared: null,
       entering: 45,
@@ -1268,20 +1268,20 @@ const ITE_DATABASE = {
     category: "Institutional",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 56.24,
+      rate: 72.05,
       equation: null,
       r_squared: 0.62,
       sample_size: 24
     },
     am_peak: {
-      rate: 2.08,
+      rate: 1.0,
       equation: null,
       r_squared: 0.55,
       entering: 70,
       exiting: 30
     },
     pm_peak: {
-      rate: 5.71,
+      rate: 8.16,
       equation: null,
       r_squared: 0.58,
       entering: 50,
@@ -1313,7 +1313,7 @@ const ITE_DATABASE = {
       exiting: 28
     },
     pm_peak: {
-      rate: 0.88,
+      rate: 0.86,
       equation: null,
       r_squared: 0.74,
       entering: 38,
@@ -1328,20 +1328,20 @@ const ITE_DATABASE = {
     category: "Medical",
     unit: "Beds",
     weekday: {
-      rate: 2.74,
+      rate: 6.75,
       equation: null,
       r_squared: 0.65,
       sample_size: 24
     },
     am_peak: {
-      rate: 0.23,
+      rate: 0.55,
       equation: null,
       r_squared: 0.58,
       entering: 65,
       exiting: 35
     },
     pm_peak: {
-      rate: 0.23,
+      rate: 0.59,
       equation: null,
       r_squared: 0.60,
       entering: 40,
@@ -1356,20 +1356,20 @@ const ITE_DATABASE = {
     category: "Medical",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 31.45,
+      rate: 37.6,
       equation: { type: "log", a: 0.74, b: 1.91 },
       r_squared: 0.82,
       sample_size: 45
     },
     am_peak: {
-      rate: 2.57,
+      rate: 2.75,
       equation: null,
       r_squared: 0.75,
       entering: 78,
       exiting: 22
     },
     pm_peak: {
-      rate: 2.63,
+      rate: 3.69,
       equation: null,
       r_squared: 0.76,
       entering: 35,
@@ -1384,20 +1384,20 @@ const ITE_DATABASE = {
     category: "Medical",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 21.54,
+      rate: 21.5,
       equation: null,
       r_squared: 0.68,
       sample_size: 18
     },
     am_peak: {
-      rate: 1.62,
+      rate: 3.64,
       equation: null,
       r_squared: 0.62,
       entering: 75,
       exiting: 25
     },
     pm_peak: {
-      rate: 2.24,
+      rate: 3.53,
       equation: null,
       r_squared: 0.65,
       entering: 38,
@@ -1412,20 +1412,20 @@ const ITE_DATABASE = {
     category: "Medical",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 34.80,
+      rate: 24.94,
       equation: { type: "log", a: 0.72, b: 2.05 },
       r_squared: 0.85,
       sample_size: 72
     },
     am_peak: {
-      rate: 2.66,
+      rate: 1.12,
       equation: null,
       r_squared: 0.78,
       entering: 82,
       exiting: 18
     },
     pm_peak: {
-      rate: 3.46,
+      rate: 1.52,
       equation: null,
       r_squared: 0.80,
       entering: 32,
@@ -1444,20 +1444,20 @@ const ITE_DATABASE = {
     category: "Office",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 9.74,
+      rate: 10.84,
       equation: { type: "log", a: 0.80, b: 1.55 },
       r_squared: 0.88,
       sample_size: 312
     },
     am_peak: {
-      rate: 1.16,
+      rate: 1.52,
       equation: { type: "log", a: 0.81, b: 0.37 },
       r_squared: 0.85,
       entering: 88,
       exiting: 12
     },
     pm_peak: {
-      rate: 1.15,
+      rate: 1.44,
       equation: { type: "log", a: 0.83, b: 0.30 },
       r_squared: 0.86,
       entering: 17,
@@ -1472,20 +1472,20 @@ const ITE_DATABASE = {
     category: "Office",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 7.98,
+      rate: 7.95,
       equation: { type: "linear", a: 7.98, b: 0 },
       r_squared: 0.82,
       sample_size: 28
     },
     am_peak: {
-      rate: 1.12,
+      rate: 1.45,
       equation: null,
       r_squared: 0.78,
       entering: 90,
       exiting: 10
     },
     pm_peak: {
-      rate: 1.06,
+      rate: 1.3,
       equation: null,
       r_squared: 0.80,
       entering: 15,
@@ -1500,20 +1500,20 @@ const ITE_DATABASE = {
     category: "Office",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 8.28,
+      rate: 13.07,
       equation: { type: "linear", a: 8.28, b: 0 },
       r_squared: 0.80,
       sample_size: 35
     },
     am_peak: {
-      rate: 1.10,
+      rate: 1.85,
       equation: null,
       r_squared: 0.76,
       entering: 89,
       exiting: 11
     },
     pm_peak: {
-      rate: 1.08,
+      rate: 1.76,
       equation: null,
       r_squared: 0.78,
       entering: 16,
@@ -1528,20 +1528,20 @@ const ITE_DATABASE = {
     category: "Office",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 34.80,
+      rate: 31.86,
       equation: { type: "log", a: 0.72, b: 2.05 },
       r_squared: 0.85,
       sample_size: 72
     },
     am_peak: {
-      rate: 2.66,
+      rate: 2.68,
       equation: null,
       r_squared: 0.78,
       entering: 82,
       exiting: 18
     },
     pm_peak: {
-      rate: 3.46,
+      rate: 2.84,
       equation: null,
       r_squared: 0.80,
       entering: 32,
@@ -1556,20 +1556,20 @@ const ITE_DATABASE = {
     category: "Office",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 22.59,
+      rate: 3.99,
       equation: null,
       r_squared: 0.72,
       sample_size: 18
     },
     am_peak: {
-      rate: 2.42,
+      rate: 0.59,
       equation: null,
       r_squared: 0.65,
       entering: 78,
       exiting: 22
     },
     pm_peak: {
-      rate: 2.22,
+      rate: 0.38,
       equation: null,
       r_squared: 0.68,
       entering: 28,
@@ -1584,20 +1584,20 @@ const ITE_DATABASE = {
     category: "Office",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 8.91,
+      rate: 11.07,
       equation: { type: "linear", a: 8.91, b: 0 },
       r_squared: 0.84,
       sample_size: 42
     },
     am_peak: {
-      rate: 1.04,
+      rate: 1.33,
       equation: null,
       r_squared: 0.80,
       entering: 87,
       exiting: 13
     },
     pm_peak: {
-      rate: 1.05,
+      rate: 1.3,
       equation: null,
       r_squared: 0.82,
       entering: 18,
@@ -1612,13 +1612,13 @@ const ITE_DATABASE = {
     category: "Office",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 8.11,
+      rate: 11.08,
       equation: { type: "linear", a: 8.11, b: 0 },
       r_squared: 0.78,
       sample_size: 25
     },
     am_peak: {
-      rate: 1.08,
+      rate: 1.03,
       equation: null,
       r_squared: 0.72,
       entering: 86,
@@ -1640,20 +1640,20 @@ const ITE_DATABASE = {
     category: "Office",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 12.76,
+      rate: 12.44,
       equation: null,
       r_squared: 0.72,
       sample_size: 22
     },
     am_peak: {
-      rate: 1.26,
+      rate: 1.35,
       equation: null,
       r_squared: 0.68,
       entering: 82,
       exiting: 18
     },
     pm_peak: {
-      rate: 1.29,
+      rate: 1.22,
       equation: null,
       r_squared: 0.70,
       entering: 22,
@@ -1700,20 +1700,20 @@ const ITE_DATABASE = {
     category: "Retail",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 48.45,
+      rate: 50.52,
       equation: null,
       r_squared: 0.68,
       sample_size: 18
     },
     am_peak: {
-      rate: 1.21,
+      rate: 1.86,
       equation: null,
       r_squared: 0.60,
       entering: 58,
       exiting: 42
     },
     pm_peak: {
-      rate: 4.35,
+      rate: 4.33,
       equation: null,
       r_squared: 0.62,
       entering: 51,
@@ -1728,20 +1728,20 @@ const ITE_DATABASE = {
     category: "Retail",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 56.02,
+      rate: 53.87,
       equation: null,
       r_squared: 0.70,
       sample_size: 22
     },
     am_peak: {
-      rate: 1.38,
+      rate: 1.18,
       equation: null,
       r_squared: 0.62,
       entering: 60,
       exiting: 40
     },
     pm_peak: {
-      rate: 5.06,
+      rate: 4.86,
       equation: null,
       r_squared: 0.64,
       entering: 49,
@@ -1756,20 +1756,20 @@ const ITE_DATABASE = {
     category: "Retail",
     unit: "1000 SF GLA",
     weekday: {
-      rate: 37.75,
+      rate: 37.01,
       equation: { type: "log", a: 0.65, b: 2.71 },
       r_squared: 0.85,
       sample_size: 125
     },
     am_peak: {
-      rate: 0.94,
+      rate: 0.84,
       equation: null,
       r_squared: 0.78,
       entering: 62,
       exiting: 38
     },
     pm_peak: {
-      rate: 3.81,
+      rate: 3.4,
       equation: { type: "log", a: 0.74, b: 1.69 },
       r_squared: 0.82,
       entering: 48,
@@ -1790,14 +1790,14 @@ const ITE_DATABASE = {
       sample_size: 35
     },
     am_peak: {
-      rate: 1.52,
+      rate: 1.73,
       equation: null,
       r_squared: 0.70,
       entering: 60,
       exiting: 40
     },
     pm_peak: {
-      rate: 5.96,
+      rate: 5.19,
       equation: null,
       r_squared: 0.72,
       entering: 49,
@@ -1818,7 +1818,7 @@ const ITE_DATABASE = {
       sample_size: 28
     },
     am_peak: {
-      rate: 1.86,
+      rate: 2.36,
       equation: null,
       r_squared: 0.65,
       entering: 58,
@@ -1840,20 +1840,20 @@ const ITE_DATABASE = {
     category: "Retail",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 33.34,
+      rate: 27.84,
       equation: null,
       r_squared: 0.70,
       sample_size: 32
     },
     am_peak: {
-      rate: 1.58,
+      rate: 2.03,
       equation: null,
       r_squared: 0.62,
       entering: 65,
       exiting: 35
     },
     pm_peak: {
-      rate: 3.14,
+      rate: 2.26,
       equation: null,
       r_squared: 0.65,
       entering: 45,
@@ -1868,20 +1868,20 @@ const ITE_DATABASE = {
     category: "Retail",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 27.88,
+      rate: 27.06,
       equation: null,
       r_squared: 0.65,
       sample_size: 18
     },
     am_peak: {
-      rate: 1.32,
+      rate: 2.13,
       equation: null,
       r_squared: 0.58,
       entering: 62,
       exiting: 38
     },
     pm_peak: {
-      rate: 2.62,
+      rate: 3.75,
       equation: null,
       r_squared: 0.60,
       entering: 48,
@@ -1896,20 +1896,20 @@ const ITE_DATABASE = {
     category: "Retail",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 24.12,
+      rate: 27.69,
       equation: null,
       r_squared: 0.62,
       sample_size: 15
     },
     am_peak: {
-      rate: 1.88,
+      rate: 2.1,
       equation: null,
       r_squared: 0.55,
       entering: 72,
       exiting: 28
     },
     pm_peak: {
-      rate: 2.34,
+      rate: 3.42,
       equation: null,
       r_squared: 0.58,
       entering: 42,
@@ -1924,20 +1924,20 @@ const ITE_DATABASE = {
     category: "Retail",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 106.78,
+      rate: 93.84,
       equation: { type: "log", a: 0.55, b: 3.52 },
       r_squared: 0.82,
       sample_size: 68
     },
     am_peak: {
-      rate: 3.82,
+      rate: 2.86,
       equation: null,
       r_squared: 0.75,
       entering: 60,
       exiting: 40
     },
     pm_peak: {
-      rate: 10.45,
+      rate: 8.95,
       equation: null,
       r_squared: 0.78,
       entering: 51,
@@ -1952,20 +1952,20 @@ const ITE_DATABASE = {
     category: "Retail",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 737.99,
+      rate: 762.28,
       equation: null,
       r_squared: 0.45,
       sample_size: 42
     },
     am_peak: {
-      rate: 44.88,
+      rate: 62.54,
       equation: null,
       r_squared: 0.40,
       entering: 50,
       exiting: 50
     },
     pm_peak: {
-      rate: 55.68,
+      rate: 49.11,
       equation: null,
       r_squared: 0.42,
       entering: 50,
@@ -2008,20 +2008,20 @@ const ITE_DATABASE = {
     category: "Retail",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 41.80,
+      rate: 42.46,
       equation: null,
       r_squared: 0.75,
       sample_size: 22
     },
     am_peak: {
-      rate: 0.79,
+      rate: 0.8,
       equation: null,
       r_squared: 0.68,
       entering: 58,
       exiting: 42
     },
     pm_peak: {
-      rate: 3.75,
+      rate: 4.19,
       equation: null,
       r_squared: 0.70,
       entering: 48,
@@ -2064,20 +2064,20 @@ const ITE_DATABASE = {
     category: "Retail",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 21.43,
+      rate: 23.78,
       equation: null,
       r_squared: 0.68,
       sample_size: 14
     },
     am_peak: {
-      rate: 0.48,
+      rate: 0.77,
       equation: null,
       r_squared: 0.60,
       entering: 55,
       exiting: 45
     },
     pm_peak: {
-      rate: 2.15,
+      rate: 3.14,
       equation: null,
       r_squared: 0.62,
       entering: 50,
@@ -2092,20 +2092,20 @@ const ITE_DATABASE = {
     category: "Retail",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 28.84,
+      rate: 30.74,
       equation: null,
       r_squared: 0.72,
       sample_size: 25
     },
     am_peak: {
-      rate: 0.88,
+      rate: 1.51,
       equation: null,
       r_squared: 0.65,
       entering: 58,
       exiting: 42
     },
     pm_peak: {
-      rate: 2.75,
+      rate: 2.29,
       equation: null,
       r_squared: 0.68,
       entering: 49,
@@ -2120,20 +2120,20 @@ const ITE_DATABASE = {
     category: "Retail",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 45.04,
+      rate: 41.05,
       equation: null,
       r_squared: 0.70,
       sample_size: 18
     },
     am_peak: {
-      rate: 1.08,
+      rate: 0.27,
       equation: null,
       r_squared: 0.62,
       entering: 55,
       exiting: 45
     },
     pm_peak: {
-      rate: 4.25,
+      rate: 5.2,
       equation: null,
       r_squared: 0.65,
       entering: 50,
@@ -2288,20 +2288,20 @@ const ITE_DATABASE = {
     category: "Retail",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 90.06,
+      rate: 90.08,
       equation: null,
       r_squared: 0.68,
       sample_size: 28
     },
     am_peak: {
-      rate: 5.58,
+      rate: 2.94,
       equation: null,
       r_squared: 0.62,
       entering: 55,
       exiting: 45
     },
     pm_peak: {
-      rate: 8.24,
+      rate: 8.51,
       equation: null,
       r_squared: 0.65,
       entering: 50,
@@ -2316,20 +2316,20 @@ const ITE_DATABASE = {
     category: "Retail",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 106.32,
+      rate: 108.4,
       equation: null,
       r_squared: 0.72,
       sample_size: 35
     },
     am_peak: {
-      rate: 6.82,
+      rate: 3.74,
       equation: null,
       r_squared: 0.65,
       entering: 52,
       exiting: 48
     },
     pm_peak: {
-      rate: 9.85,
+      rate: 10.25,
       equation: null,
       r_squared: 0.68,
       entering: 50,
@@ -2344,13 +2344,13 @@ const ITE_DATABASE = {
     category: "Retail",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 5.06,
+      rate: 6.3,
       equation: null,
       r_squared: 0.52,
       sample_size: 22
     },
     am_peak: {
-      rate: 0.17,
+      rate: 0.26,
       equation: null,
       r_squared: 0.45,
       entering: 62,
@@ -2432,20 +2432,20 @@ const ITE_DATABASE = {
     category: "Services",
     unit: "Service Positions",
     weekday: {
-      rate: 265.21,
+      rate: 125.03,
       equation: null,
       r_squared: 0.48,
       sample_size: 12
     },
     am_peak: {
-      rate: 20.65,
+      rate: 8.54,
       equation: null,
       r_squared: 0.42,
       entering: 50,
       exiting: 50
     },
     pm_peak: {
-      rate: 24.82,
+      rate: 27.07,
       equation: null,
       r_squared: 0.45,
       entering: 50,
@@ -2488,20 +2488,20 @@ const ITE_DATABASE = {
     category: "Services",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 83.84,
+      rate: 2.6,
       equation: null,
       r_squared: 0.68,
       sample_size: 45
     },
     am_peak: {
-      rate: 0.81,
+      rate: 0.02,
       equation: null,
       r_squared: 0.55,
       entering: 65,
       exiting: 35
     },
     pm_peak: {
-      rate: 7.80,
+      rate: 0.28,
       equation: null,
       r_squared: 0.62,
       entering: 65,
@@ -2572,20 +2572,20 @@ const ITE_DATABASE = {
     category: "Services",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 470.95,
+      rate: 19.52,
       equation: { type: "log", a: 0.65, b: 3.95 },
       r_squared: 0.78,
       sample_size: 85
     },
     am_peak: {
-      rate: 45.42,
+      rate: 0.12,
       equation: null,
       r_squared: 0.72,
       entering: 50,
       exiting: 50
     },
     pm_peak: {
-      rate: 32.67,
+      rate: 0.04,
       equation: null,
       r_squared: 0.74,
       entering: 50,
@@ -2628,20 +2628,20 @@ const ITE_DATABASE = {
     category: "Services",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 820.00,
+      rate: 533.57,
       equation: null,
       r_squared: 0.55,
       sample_size: 22
     },
     am_peak: {
-      rate: 125.68,
+      rate: 0.15,
       equation: null,
       r_squared: 0.50,
       entering: 50,
       exiting: 50
     },
     pm_peak: {
-      rate: 58.35,
+      rate: 0.06,
       equation: null,
       r_squared: 0.52,
       entering: 50,
@@ -2656,20 +2656,20 @@ const ITE_DATABASE = {
     category: "Services",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 1200.00,
+      rate: 179.0,
       equation: null,
       r_squared: 0.48,
       sample_size: 8
     },
     am_peak: {
-      rate: 175.25,
+      rate: 39.81,
       equation: null,
       r_squared: 0.42,
       entering: 50,
       exiting: 50
     },
     pm_peak: {
-      rate: 85.42,
+      rate: 15.08,
       equation: null,
       r_squared: 0.45,
       entering: 50,
@@ -2740,20 +2740,20 @@ const ITE_DATABASE = {
     category: "Services",
     unit: "Fueling Positions",
     weekday: {
-      rate: 168.56,
+      rate: 172.01,
       equation: null,
       r_squared: 0.68,
       sample_size: 45
     },
     am_peak: {
-      rate: 12.82,
+      rate: 10.28,
       equation: null,
       r_squared: 0.62,
       entering: 50,
       exiting: 50
     },
     pm_peak: {
-      rate: 14.58,
+      rate: 13.91,
       equation: null,
       r_squared: 0.65,
       entering: 50,
@@ -2912,20 +2912,20 @@ const ITE_DATABASE = {
     category: "Industrial",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 4.96,
+      rate: 4.87,
       equation: { type: "log", a: 0.80, b: 0.89 },
       r_squared: 0.82,
       sample_size: 78
     },
     am_peak: {
-      rate: 0.70,
+      rate: 0.74,
       equation: null,
       r_squared: 0.75,
       entering: 88,
       exiting: 12
     },
     pm_peak: {
-      rate: 0.63,
+      rate: 0.65,
       equation: null,
       r_squared: 0.76,
       entering: 12,
@@ -2940,20 +2940,20 @@ const ITE_DATABASE = {
     category: "Industrial",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 3.93,
+      rate: 3.37,
       equation: null,
       r_squared: 0.72,
       sample_size: 35
     },
     am_peak: {
-      rate: 0.55,
+      rate: 0.34,
       equation: null,
       r_squared: 0.65,
       entering: 85,
       exiting: 15
     },
     pm_peak: {
-      rate: 0.52,
+      rate: 0.34,
       equation: null,
       r_squared: 0.68,
       entering: 15,
@@ -2968,20 +2968,20 @@ const ITE_DATABASE = {
     category: "Industrial",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 3.82,
+      rate: 39.53,
       equation: { type: "linear", a: 3.82, b: 0 },
       r_squared: 0.78,
       sample_size: 42
     },
     am_peak: {
-      rate: 0.65,
+      rate: 4.79,
       equation: null,
       r_squared: 0.72,
       entering: 92,
       exiting: 8
     },
     pm_peak: {
-      rate: 0.58,
+      rate: 4.99,
       equation: null,
       r_squared: 0.74,
       entering: 8,
@@ -2996,7 +2996,7 @@ const ITE_DATABASE = {
     category: "Industrial",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 1.74,
+      rate: 1.71,
       equation: { type: "log", a: 0.68, b: 0.43 },
       r_squared: 0.75,
       sample_size: 55
@@ -3009,7 +3009,7 @@ const ITE_DATABASE = {
       exiting: 18
     },
     pm_peak: {
-      rate: 0.19,
+      rate: 0.18,
       equation: null,
       r_squared: 0.70,
       entering: 22,
@@ -3024,20 +3024,20 @@ const ITE_DATABASE = {
     category: "Industrial",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 2.50,
+      rate: 1.65,
       equation: null,
       r_squared: 0.52,
       sample_size: 42
     },
     am_peak: {
-      rate: 0.14,
+      rate: 0.1,
       equation: null,
       r_squared: 0.45,
       entering: 55,
       exiting: 45
     },
     pm_peak: {
-      rate: 0.26,
+      rate: 0.17,
       equation: null,
       r_squared: 0.48,
       entering: 48,
@@ -3058,14 +3058,14 @@ const ITE_DATABASE = {
       sample_size: 18
     },
     am_peak: {
-      rate: 0.15,
+      rate: 0.08,
       equation: null,
       r_squared: 0.58,
       entering: 78,
       exiting: 22
     },
     pm_peak: {
-      rate: 0.14,
+      rate: 0.1,
       equation: null,
       r_squared: 0.60,
       entering: 25,
@@ -3108,20 +3108,20 @@ const ITE_DATABASE = {
     category: "Industrial",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 4.65,
+      rate: 4.63,
       equation: null,
       r_squared: 0.70,
       sample_size: 15
     },
     am_peak: {
-      rate: 0.58,
+      rate: 0.7,
       equation: null,
       r_squared: 0.62,
       entering: 72,
       exiting: 28
     },
     pm_peak: {
-      rate: 0.52,
+      rate: 0.64,
       equation: null,
       r_squared: 0.65,
       entering: 30,
@@ -3136,20 +3136,20 @@ const ITE_DATABASE = {
     category: "Industrial",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 10.22,
+      rate: 9.82,
       equation: null,
       r_squared: 0.58,
       sample_size: 12
     },
     am_peak: {
-      rate: 1.32,
+      rate: 1.66,
       equation: null,
       r_squared: 0.52,
       entering: 70,
       exiting: 30
     },
     pm_peak: {
-      rate: 1.18,
+      rate: 1.93,
       equation: null,
       r_squared: 0.55,
       entering: 32,
