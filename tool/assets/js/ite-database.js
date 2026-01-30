@@ -244,7 +244,7 @@ const ITE_DATABASE = {
   },
   "230": {
     code: "230",
-    name: "Residential Condominium/Townhouse",
+    name: "Low-Rise Residential with Ground-Floor Commercial",
     category: "Residential",
     unit: "Dwelling Units",
     weekday: {
@@ -500,7 +500,7 @@ const ITE_DATABASE = {
   },
   "312": {
     code: "312",
-    name: "Business Hotel",
+    name: "Limited-Service Hotel",
     category: "Lodging",
     unit: "Rooms",
     weekday: {
@@ -982,9 +982,37 @@ const ITE_DATABASE = {
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
   },
+  "525": {
+    code: "525",
+    name: "High School",
+    category: "Institutional",
+    unit: "Students",
+    weekday: {
+      rate: 1.71,
+      equation: null,
+      r_squared: 0.74,
+      sample_size: 56
+    },
+    am_peak: {
+      rate: 0.48,
+      equation: null,
+      r_squared: 0.70,
+      entering: 69,
+      exiting: 31
+    },
+    pm_peak: {
+      rate: 0.27,
+      equation: null,
+      r_squared: 0.65,
+      entering: 28,
+      exiting: 72
+    },
+    source: "ITE 12th Edition",
+    page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
+  },
   "530": {
     code: "530",
-    name: "High School",
+    name: "Private School (K-8)",
     category: "Institutional",
     unit: "Students",
     weekday: {
@@ -1324,7 +1352,7 @@ const ITE_DATABASE = {
   },
   "630": {
     code: "630",
-    name: "Clinic",
+    name: "Walk-In Clinic",
     category: "Medical",
     unit: "1000 SF GFA",
     weekday: {
@@ -1380,7 +1408,7 @@ const ITE_DATABASE = {
   },
   "650": {
     code: "650",
-    name: "Medical-Dental Office Building",
+    name: "Free-Standing Emergency Room",
     category: "Medical",
     unit: "1000 SF GFA",
     weekday: {
@@ -1640,7 +1668,7 @@ const ITE_DATABASE = {
   // ===========================================
   "810": {
     code: "810",
-    name: "Freestanding Discount Store",
+    name: "Tractor Supply Store",
     category: "Retail",
     unit: "1000 SF GFA",
     weekday: {
@@ -1920,7 +1948,7 @@ const ITE_DATABASE = {
   },
   "851": {
     code: "851",
-    name: "Convenience Market (Open 24 Hours)",
+    name: "Convenience Store",
     category: "Retail",
     unit: "1000 SF GFA",
     weekday: {
@@ -2172,7 +2200,7 @@ const ITE_DATABASE = {
   },
   "868": {
     code: "868",
-    name: "Value Retail Center",
+    name: "Book Superstore",
     category: "Retail",
     unit: "1000 SF GLA",
     weekday: {
@@ -2312,7 +2340,7 @@ const ITE_DATABASE = {
   },
   "890": {
     code: "890",
-    name: "Furniture Store",
+    name: "Furniture/Flooring Store",
     category: "Retail",
     unit: "1000 SF GFA",
     weekday: {
@@ -2456,7 +2484,7 @@ const ITE_DATABASE = {
   },
   "931": {
     code: "931",
-    name: "Quality Restaurant",
+    name: "Fine Dining Restaurant",
     category: "Services",
     unit: "1000 SF GFA",
     weekday: {
@@ -3134,16 +3162,16 @@ const ITE_DATABASE = {
 
 // Land use categories for grouping in UI
 const ITE_CATEGORIES = {
-  "Port, Freight, Terminal": ["010", "021", "030"],
+  "Port, Freight, Terminal": ["021", "030"],
   "Industrial": ["110", "130", "140", "150", "151", "154", "155", "156", "180"],
-  "Residential": ["210", "215", "220", "221", "222", "230", "240", "251", "252", "255", "260", "270"],
+  "Residential": ["210", "215", "220", "221", "222", "230", "240", "251", "252", "255", "260"],
   "Lodging": ["310", "311", "312", "320", "330"],
-  "Recreational": ["411", "420", "430", "432", "435", "444", "445", "454", "480", "491", "492", "495"],
-  "Institutional": ["520", "522", "530", "534", "536", "540", "550", "560", "565", "566", "575", "590"],
+  "Recreational": ["411", "430", "432", "435", "445", "491", "492", "495"],
+  "Institutional": ["520", "522", "525", "530", "534", "536", "540", "550", "560", "565", "566", "575", "590"],
   "Medical": ["610", "620", "630", "640", "650"],
   "Office": ["710", "714", "715", "720", "730", "750", "760", "770"],
-  "Retail": ["810", "813", "815", "820", "821", "822", "840", "841", "848", "850", "851", "853", "857", "860", "861", "862", "863", "866", "867", "868", "875", "879", "880", "881", "890"],
-  "Services": ["910", "911", "912", "930", "931", "932", "933", "934", "936", "937", "938", "941", "942", "944", "945", "946", "947", "948", "960"]
+  "Retail": ["810", "813", "815", "820", "821", "822", "840", "841", "848", "850", "851", "857", "860", "861", "862", "863", "866", "867", "875", "879", "880", "881", "890"],
+  "Services": ["911", "912", "930", "931", "932", "933", "934", "936", "937", "938", "941", "942", "944", "945", "947", "948"]
 };
 
 // Henrico County Thresholds
