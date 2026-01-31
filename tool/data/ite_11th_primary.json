@@ -629,7 +629,7 @@
   },
   "221": {
     "code": "221",
-    "name": "Land Use 221",
+    "name": "Multifamily Housing (Mid-Rise)",
     "unit": "Dwelling Units",
     "weekday": {
       "rate": 4.75,
@@ -648,8 +648,8 @@
       },
       "r_squared": 0.74,
       "sample_size": 7,
-      "entering": 56,
-      "exiting": 44
+      "entering": 26,
+      "exiting": 74
     },
     "pm_peak": {
       "rate": 0.29,
@@ -660,8 +660,8 @@
       },
       "r_squared": 0.89,
       "sample_size": 7,
-      "entering": 43,
-      "exiting": 57
+      "entering": 65,
+      "exiting": 35
     }
   },
   "222": {

@@ -307,9 +307,12 @@ class ITECalculator {
     }
 
     // Calculate trips for each time period
-    const weekdayResult = this.calculatePeriod(data.weekday, size, "weekday");
-    const amPeakResult = this.calculatePeriod(data.am_peak, size, "am_peak", data.am_peak.entering, data.am_peak.exiting);
-    const pmPeakResult = this.calculatePeriod(data.pm_peak, size, "pm_peak", data.pm_peak.entering, data.pm_peak.exiting);
+    // Use entering/exiting from database if available, otherwise default to 50/50
+    const weekdayEntering = data.weekday?.entering || 50;
+    const weekdayExiting = data.weekday?.exiting || 50;
+    const weekdayResult = this.calculatePeriod(data.weekday, size, "weekday", weekdayEntering, weekdayExiting);
+    const amPeakResult = this.calculatePeriod(data.am_peak, size, "am_peak", data.am_peak?.entering || 50, data.am_peak?.exiting || 50);
+    const pmPeakResult = this.calculatePeriod(data.pm_peak, size, "pm_peak", data.pm_peak?.entering || 50, data.pm_peak?.exiting || 50);
 
     // Determine data quality
     const quality = this.assessDataQuality(data);

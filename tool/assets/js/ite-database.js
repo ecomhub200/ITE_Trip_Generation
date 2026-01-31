@@ -195,7 +195,9 @@ const ITE_DATABASE = {
       rate: 4.46,
       equation: { type: "linear", a: 4.55, b: -17.52 },
       r_squared: 0.90,
-      sample_size: 7
+      sample_size: 7,
+      entering: 50,
+      exiting: 50
     },
     am_peak: {
       rate: 0.36,
@@ -208,8 +210,8 @@ const ITE_DATABASE = {
       rate: 0.44,
       equation: null,
       r_squared: 0.68,
-      entering: 62,
-      exiting: 38
+      entering: 65,
+      exiting: 35
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
