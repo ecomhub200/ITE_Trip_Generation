@@ -296,6 +296,108 @@
         </div>
       </section>
 
+      <!-- Segment Analysis Section -->
+      <section class="card no-print" id="segment-analysis-section">
+        <div class="card-header">
+          <h2 class="card-title">
+            Over-Represented Segments Analysis
+            <span class="badge badge-info" style="margin-left: 8px; font-size: 0.75rem; padding: 2px 8px;">FHWA Method</span>
+          </h2>
+          <button type="button" class="btn btn-primary" id="analyze-segments-btn">
+            Analyze Segments
+          </button>
+        </div>
+
+        <div class="info-box mb-3">
+          <div class="info-box-icon">i</div>
+          <div class="info-box-content">
+            <strong>Segment Crash Rate Analysis:</strong> Compares each road segment's crash rate (crashes/mile)
+            against the average for its FHWA functional class. Segments with Rate Ratio &gt;1.5 are flagged as
+            over-represented per FHWA guidelines. Segments &lt;0.25 miles are excluded.
+          </div>
+        </div>
+
+        <!-- Analysis Parameters -->
+        <div class="grid grid-3 mb-3">
+          <div class="form-group">
+            <label class="form-label">Start Date</label>
+            <input type="date" class="form-input" id="segment-start-date">
+          </div>
+          <div class="form-group">
+            <label class="form-label">End Date</label>
+            <input type="date" class="form-input" id="segment-end-date">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Min Crashes</label>
+            <div class="input-group">
+              <button type="button" class="btn btn-outline btn-sm" id="clear-min-crashes">Clear</button>
+              <input type="number" class="form-input" id="segment-min-crashes" value="20" min="1" max="100">
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-2 mb-3">
+          <div class="form-group">
+            <label class="form-label">Rate Threshold</label>
+            <select class="form-select" id="segment-rate-threshold">
+              <option value="1.5">1.5x (FHWA Standard)</option>
+              <option value="1.25">1.25x (More Sensitive)</option>
+              <option value="2.0">2.0x (Less Sensitive)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Functional Class</label>
+            <select class="form-select" id="segment-functional-class">
+              <option value="">All Classes</option>
+              <option value="interstate">Interstate</option>
+              <option value="principal_arterial">Principal Arterial</option>
+              <option value="minor_arterial">Minor Arterial</option>
+              <option value="collector">Collector</option>
+              <option value="local">Local</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Analysis Status -->
+        <div id="segment-analysis-status" class="hidden">
+          <div class="loading-indicator">
+            <div class="spinner"></div>
+            <span id="segment-status-text">Fetching road network data from OpenStreetMap...</span>
+          </div>
+        </div>
+
+        <!-- Analysis Results -->
+        <div id="segment-analysis-results" class="hidden">
+          <!-- Summary Stats -->
+          <div class="results-summary mb-3" id="segment-summary"></div>
+
+          <!-- Results Table -->
+          <div class="table-wrapper">
+            <table class="table" id="segment-results-table">
+              <thead>
+                <tr>
+                  <th>Segment Name</th>
+                  <th>Functional Class</th>
+                  <th>Length (mi)</th>
+                  <th>Crashes</th>
+                  <th>Rate (crashes/mi)</th>
+                  <th>Class Avg</th>
+                  <th>Rate Ratio</th>
+                </tr>
+              </thead>
+              <tbody id="segment-results-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Error Display -->
+        <div id="segment-analysis-error" class="hidden">
+          <div class="alert alert-danger">
+            <strong>Error:</strong> <span id="segment-error-text"></span>
+          </div>
+        </div>
+      </section>
+
       <!-- Saved Analyses Section -->
       <section class="card no-print" id="saved-analyses-section">
         <div class="card-header">
@@ -378,6 +480,7 @@
   <script src="assets/js/calculator.js"></script>
   <script src="assets/js/storage.js"></script>
   <script src="assets/js/export.js"></script>
+  <script src="assets/js/segment-analysis.js"></script>
   <script src="assets/js/ui.js"></script>
   <script src="assets/js/chat.js"></script>
 </body>

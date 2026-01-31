@@ -1350,3 +1350,163 @@ function hideDialog() {
   elements.dialogOverlay.classList.remove('show');
   dialogCallback = null;
 }
+
+// ============================================
+// Segment Analysis Section
+// ============================================
+
+/**
+ * Initialize segment analysis UI handlers
+ */
+function initializeSegmentAnalysis() {
+  const analyzeBtn = document.getElementById('analyze-segments-btn');
+  const clearMinCrashesBtn = document.getElementById('clear-min-crashes');
+
+  if (analyzeBtn) {
+    analyzeBtn.addEventListener('click', handleAnalyzeSegments);
+  }
+
+  if (clearMinCrashesBtn) {
+    clearMinCrashesBtn.addEventListener('click', () => {
+      document.getElementById('segment-min-crashes').value = '';
+    });
+  }
+}
+
+/**
+ * Handle segment analysis button click
+ */
+async function handleAnalyzeSegments() {
+  const statusDiv = document.getElementById('segment-analysis-status');
+  const statusText = document.getElementById('segment-status-text');
+  const resultsDiv = document.getElementById('segment-analysis-results');
+  const errorDiv = document.getElementById('segment-analysis-error');
+  const errorText = document.getElementById('segment-error-text');
+  const analyzeBtn = document.getElementById('analyze-segments-btn');
+
+  // Hide previous results/errors
+  resultsDiv.classList.add('hidden');
+  errorDiv.classList.add('hidden');
+
+  // Show loading status
+  statusDiv.classList.remove('hidden');
+  statusText.textContent = 'Fetching road network data from OpenStreetMap...';
+  analyzeBtn.disabled = true;
+  analyzeBtn.textContent = 'Analyzing...';
+
+  try {
+    // Get parameters from form
+    const startDate = document.getElementById('segment-start-date').value || null;
+    const endDate = document.getElementById('segment-end-date').value || null;
+    const minCrashes = parseInt(document.getElementById('segment-min-crashes').value) || 20;
+    const rateThreshold = parseFloat(document.getElementById('segment-rate-threshold').value) || 1.5;
+    const functionalClass = document.getElementById('segment-functional-class').value || null;
+
+    // Default bounds for Henrico County, Virginia area
+    // In production, this would come from user selection or crash data extent
+    const bounds = {
+      south: 37.45,
+      west: -77.65,
+      north: 37.70,
+      east: -77.30
+    };
+
+    statusText.textContent = 'Querying Overpass API for road segments...';
+
+    // Run analysis
+    const results = await segmentAnalysis.analyzeOverRepSegments({
+      bounds,
+      crashData: [], // In production, this would be actual crash data
+      minCrashes,
+      rateThreshold,
+      minSegmentLength: 0.25,
+      functionalClass,
+      startDate,
+      endDate
+    });
+
+    statusDiv.classList.add('hidden');
+
+    if (!results.success) {
+      throw new Error(results.error || 'Analysis failed');
+    }
+
+    // Render results
+    renderSegmentAnalysisResults(results);
+    resultsDiv.classList.remove('hidden');
+
+  } catch (error) {
+    console.error('[SegmentAnalysis] Error:', error);
+    statusDiv.classList.add('hidden');
+    errorText.textContent = error.message;
+    errorDiv.classList.remove('hidden');
+
+  } finally {
+    analyzeBtn.disabled = false;
+    analyzeBtn.textContent = 'Analyze Segments';
+  }
+}
+
+/**
+ * Render segment analysis results
+ * @param {object} results - Analysis results from segmentAnalysis.analyzeOverRepSegments
+ */
+function renderSegmentAnalysisResults(results) {
+  const summaryDiv = document.getElementById('segment-summary');
+  const tbody = document.getElementById('segment-results-tbody');
+
+  // Render summary stats
+  summaryDiv.innerHTML = `
+    <div class="summary-stat fade-in">
+      <div class="summary-stat-value">${results.summary.totalSegments.toLocaleString()}</div>
+      <div class="summary-stat-label">Total Segments</div>
+    </div>
+    <div class="summary-stat fade-in">
+      <div class="summary-stat-value">${results.summary.eligibleSegments.toLocaleString()}</div>
+      <div class="summary-stat-label">Eligible Segments</div>
+    </div>
+    <div class="summary-stat fade-in">
+      <div class="summary-stat-value">${results.summary.totalMiles}</div>
+      <div class="summary-stat-label">Total Miles</div>
+    </div>
+    <div class="summary-stat fade-in">
+      <div class="summary-stat-value ${results.summary.overRepresentedCount > 0 ? 'highlight' : ''}">${results.summary.overRepresentedCount}</div>
+      <div class="summary-stat-label">Over-Represented</div>
+    </div>
+  `;
+
+  // Render results table
+  if (results.overRepresentedSegments.length === 0) {
+    tbody.innerHTML = `
+      <tr>
+        <td colspan="7" class="text-center text-muted">
+          No over-represented segments found with current parameters.
+          Try lowering the rate threshold or minimum crashes value.
+        </td>
+      </tr>
+    `;
+    return;
+  }
+
+  tbody.innerHTML = results.overRepresentedSegments.map(segment => {
+    const ratioValue = parseFloat(segment.rateRatio);
+    const ratioClass = ratioValue >= 2.0 ? 'rate-ratio-high' : ratioValue >= 1.5 ? 'rate-ratio-medium' : '';
+
+    return `
+      <tr>
+        <td title="${segment.osmId}">${truncateText(segment.name, 40)}</td>
+        <td>${segment.functionalClass}</td>
+        <td>${segment.length.toFixed(2)}</td>
+        <td>${segment.crashes}</td>
+        <td>${segment.segmentRate}</td>
+        <td>${segment.classRate}</td>
+        <td class="${ratioClass}">${segment.rateRatio}x</td>
+      </tr>
+    `;
+  }).join('');
+}
+
+// Initialize segment analysis on page load
+document.addEventListener('DOMContentLoaded', () => {
+  initializeSegmentAnalysis();
+});

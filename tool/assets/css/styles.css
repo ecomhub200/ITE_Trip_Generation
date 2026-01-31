@@ -2143,3 +2143,95 @@ p {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================
+   Segment Analysis Section
+   ============================================ */
+.loading-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-xl);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-200);
+}
+
+.loading-indicator .spinner {
+  width: 24px;
+  height: 24px;
+  border-width: 3px;
+}
+
+.loading-indicator span {
+  color: var(--gray-600);
+  font-size: 0.95rem;
+}
+
+/* Alert Styles */
+.alert {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  margin: var(--spacing-md) 0;
+}
+
+.alert-danger {
+  background: rgba(229, 62, 62, 0.1);
+  border: 1px solid var(--accent-red);
+  color: var(--accent-red);
+}
+
+.alert-warning {
+  background: rgba(214, 158, 46, 0.1);
+  border: 1px solid var(--accent-yellow);
+  color: #744210;
+}
+
+.alert-success {
+  background: rgba(56, 161, 105, 0.1);
+  border: 1px solid var(--accent-green);
+  color: #22543d;
+}
+
+.alert-info {
+  background: rgba(44, 82, 130, 0.1);
+  border: 1px solid var(--primary-blue);
+  color: var(--primary-blue);
+}
+
+/* Segment Analysis Results Table */
+#segment-results-table tbody tr:hover {
+  background: var(--gray-100);
+}
+
+#segment-results-table .rate-ratio-high {
+  color: var(--accent-red);
+  font-weight: 700;
+}
+
+#segment-results-table .rate-ratio-medium {
+  color: var(--accent-yellow);
+  font-weight: 600;
+}
+
+/* Segment Summary Stats */
+#segment-summary .summary-stat-value.highlight {
+  color: var(--accent-red);
+}
+
+/* Quick Period Buttons */
+.period-buttons {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.period-buttons .btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 0.875rem;
+}
+
+/* Badge in Card Header */
+.card-title .badge {
+  vertical-align: middle;
+}
