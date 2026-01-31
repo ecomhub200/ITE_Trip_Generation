@@ -1,0 +1,475 @@
+{
+  "metadata": {
+    "source": "ITE Trip Generation Manual, 12th Edition",
+    "extraction_date": "2026-01-31",
+    "total_land_use_codes": 176,
+    "codes_extracted": 25,
+    "status": "partial_extraction"
+  },
+  "data": {
+    "021": {
+      "name": "Commercial Airport",
+      "group": "(000-099) Port and Terminal",
+      "default_iv": "1000 Sq. Ft. GFA",
+      "vehicle": {
+        "weekday": {
+          "rate": 1.21,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 1,
+          "standard_deviation": null,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {"low": 1.21, "high": 1.21},
+          "independent_variable": "1000 Sq. Ft. GFA",
+          "avg_iv_units": 2790
+        }
+      },
+      "alternative_ivs": {
+        "Annual Enplanements (1000s)": {
+          "vehicle": {
+            "pm_peak": {
+              "rate": 0.55,
+              "sample_size": 1,
+              "rate_range": {"low": 0.55, "high": 0.55},
+              "avg_iv_units": 549
+            }
+          }
+        }
+      },
+      "settings": {
+        "general_urban_suburban": true,
+        "dense_multi_use_urban": false,
+        "center_city_core": false,
+        "rural": false
+      }
+    },
+    "030": {
+      "name": "Intermodal Truck Terminal",
+      "group": "(000-099) Port and Terminal",
+      "default_iv": "1000 Sq. Ft. GFA",
+      "vehicle": {
+        "am_peak": {
+          "rate": 1.97,
+          "entering": 47,
+          "exiting": 53,
+          "sample_size": 2,
+          "standard_deviation": null,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {"low": 1.38, "high": 2.42},
+          "independent_variable": "1000 Sq. Ft. GFA",
+          "avg_iv_units": 15
+        },
+        "pm_peak": {
+          "rate": 1.87,
+          "entering": 52,
+          "exiting": 48,
+          "sample_size": 4,
+          "standard_deviation": 0.94,
+          "fitted_curve_equation": "T = 0.22(X) + 35.12",
+          "R_square_value": 0.63,
+          "rate_range": {"low": 1.19, "high": 3.67},
+          "independent_variable": "1000 Sq. Ft. GFA",
+          "avg_iv_units": 21
+        }
+      },
+      "person": {
+        "available": true
+      },
+      "alternative_ivs": {
+        "Employees": {
+          "available": true
+        }
+      }
+    },
+    "035": {
+      "name": "Truck and Trailer Parking",
+      "group": "(000-099) Port and Terminal",
+      "default_iv": "Parking Spaces",
+      "vehicle": {
+        "weekday": {
+          "rate": 0.70,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 2,
+          "rate_range": {"low": 0.47, "high": 1.46},
+          "independent_variable": "Parking Spaces",
+          "avg_iv_units": 413
+        }
+      }
+    },
+    "090": {
+      "name": "Park-and-Ride Lot with Bus or Light Rail Service",
+      "group": "(000-099) Port and Terminal",
+      "default_iv": "Parking Spaces",
+      "vehicle": {
+        "weekday": {
+          "rate": 1.65,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 1,
+          "rate_range": {"low": 1.65, "high": 1.65},
+          "independent_variable": "Parking Spaces",
+          "avg_iv_units": 470
+        }
+      }
+    },
+    "110": {
+      "name": "General Light Industrial",
+      "group": "(100-199) Industrial",
+      "default_iv": "1000 Sq. Ft. GFA",
+      "vehicle": {
+        "weekday": {
+          "rate": 3.60,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 27,
+          "standard_deviation": 4.67,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {"low": 0.34, "high": 43.86},
+          "independent_variable": "1000 Sq. Ft. GFA",
+          "avg_iv_units": 21
+        }
+      }
+    },
+    "130": {
+      "name": "Industrial Park",
+      "group": "(100-199) Industrial",
+      "default_iv": "1000 Sq. Ft. GFA",
+      "vehicle": {
+        "weekday": {
+          "rate": 2.68,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 27,
+          "standard_deviation": 1.84,
+          "fitted_curve_equation": "T = 2.04(X) + 808.48",
+          "R_square_value": 0.84,
+          "rate_range": {"low": 1.05, "high": 14.98},
+          "independent_variable": "1000 Sq. Ft. GFA",
+          "avg_iv_units": 1252
+        }
+      }
+    },
+    "140": {
+      "name": "Manufacturing",
+      "group": "(100-199) Industrial",
+      "default_iv": "1000 Sq. Ft. GFA",
+      "vehicle": {
+        "weekday": {
+          "rate": 4.27,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 36,
+          "standard_deviation": 3.49,
+          "fitted_curve_equation": "Ln(T) = 0.68Ln(X) + 2.81",
+          "fitted_curve_type": "Logarithmic",
+          "R_square_value": 0.50,
+          "rate_range": {"low": 0.83, "high": 49.50},
+          "independent_variable": "1000 Sq. Ft. GFA",
+          "avg_iv_units": 165
+        }
+      }
+    },
+    "150": {
+      "name": "Warehouse",
+      "group": "(100-199) Industrial",
+      "default_iv": "1000 Sq. Ft. GFA",
+      "vehicle": {
+        "weekday": {
+          "rate": 1.38,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 81,
+          "standard_deviation": 1.05,
+          "fitted_curve_equation": "T = 1.56(X) - 97.97",
+          "R_square_value": 0.69,
+          "rate_range": {"low": 0.15, "high": 16.93},
+          "independent_variable": "1000 Sq. Ft. GFA",
+          "avg_iv_units": 554
+        }
+      }
+    },
+    "151": {
+      "name": "Mini-Warehouse",
+      "group": "(100-199) Industrial",
+      "default_iv": "1000 Sq. Ft. GFA",
+      "vehicle": {
+        "weekday": {
+          "rate": 1.29,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 11,
+          "standard_deviation": 0.89,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {"low": 0.38, "high": 3.16},
+          "independent_variable": "1000 Sq. Ft. GFA",
+          "avg_iv_units": 64
+        }
+      }
+    },
+    "210": {
+      "name": "Single-Family Detached Housing",
+      "group": "(200-299) Residential",
+      "default_iv": "Dwelling Units",
+      "vehicle": {
+        "weekday": {
+          "rate": 9.09,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 155,
+          "standard_deviation": 2.29,
+          "fitted_curve_equation": "T = 8.07(X) + 265.45",
+          "R_square_value": 0.94,
+          "rate_range": {"low": 3.47, "high": 23.80},
+          "independent_variable": "Dwelling Units",
+          "avg_iv_units": 261
+        }
+      },
+      "alternative_ivs": {
+        "Residents": {
+          "available": true
+        }
+      }
+    },
+    "215": {
+      "name": "Single-Family Attached Housing",
+      "group": "(200-299) Residential",
+      "default_iv": "Dwelling Units",
+      "vehicle": {
+        "weekday": {
+          "rate": 6.57,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 11,
+          "standard_deviation": 1.28,
+          "fitted_curve_equation": "T = 6.53(X) + 3.25",
+          "R_square_value": 0.91,
+          "rate_range": {"low": 4.80, "high": 8.45},
+          "independent_variable": "Dwelling Units",
+          "avg_iv_units": 84
+        }
+      }
+    },
+    "220": {
+      "name": "Multifamily Housing (Low-Rise)",
+      "group": "(200-299) Residential",
+      "default_iv": "Dwelling Units",
+      "subcategories": {
+        "not_close_to_rail": {
+          "vehicle": {
+            "weekday": {
+              "rate": 6.21,
+              "entering": 50,
+              "exiting": 50,
+              "sample_size": 28,
+              "standard_deviation": 1.87,
+              "fitted_curve_equation": "T = 5.63(X) + 120.45",
+              "R_square_value": 0.70,
+              "rate_range": {"low": 2.46, "high": 12.50},
+              "independent_variable": "Dwelling Units",
+              "avg_iv_units": 208
+            }
+          }
+        },
+        "close_to_rail": {
+          "available": true
+        }
+      },
+      "settings": {
+        "general_urban_suburban": true,
+        "dense_multi_use_urban": true
+      }
+    },
+    "221": {
+      "name": "Multifamily Housing (Mid-Rise)",
+      "group": "(200-299) Residential",
+      "default_iv": "Dwelling Units",
+      "subcategories": {
+        "not_close_to_rail": {
+          "vehicle": {
+            "weekday": {
+              "rate": 4.46,
+              "entering": 50,
+              "exiting": 50,
+              "sample_size": 7,
+              "standard_deviation": 0.62,
+              "fitted_curve_equation": "T = 4.55(X) - 17.52",
+              "R_square_value": 0.90,
+              "rate_range": {"low": 3.76, "high": 5.40},
+              "independent_variable": "Dwelling Units",
+              "avg_iv_units": 192
+            }
+          }
+        }
+      }
+    },
+    "310": {
+      "name": "Hotel",
+      "group": "(300-399) Lodging",
+      "default_iv": "Rooms",
+      "vehicle": {
+        "weekday": {
+          "rate": 5.84,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 2,
+          "rate_range": {"low": 5.58, "high": 6.03},
+          "independent_variable": "Rooms",
+          "avg_iv_units": 143
+        }
+      }
+    },
+    "520": {
+      "name": "Elementary School",
+      "group": "(500-599) Institutional",
+      "default_iv": "Students",
+      "vehicle": {
+        "weekday": {
+          "rate": 2.27,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 16,
+          "standard_deviation": 0.93,
+          "rate_range": {"low": 1.51, "high": 5.89},
+          "independent_variable": "Students",
+          "avg_iv_units": 651
+        }
+      }
+    },
+    "610": {
+      "name": "Hospital",
+      "group": "(600-699) Medical",
+      "default_iv": "Beds",
+      "vehicle": {
+        "weekday": {
+          "rate": 23.87,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 3,
+          "standard_deviation": 15.99,
+          "rate_range": {"low": 17.22, "high": 57.13},
+          "independent_variable": "Beds",
+          "avg_iv_units": 363
+        }
+      }
+    },
+    "710": {
+      "name": "General Office Building",
+      "group": "(700-799) Office",
+      "default_iv": "1000 Sq. Ft. GFA",
+      "vehicle": {
+        "weekday": {
+          "rate": 7.83,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 22,
+          "standard_deviation": 3.71,
+          "fitted_curve_equation": "T = 6.18(X) + 207.96",
+          "R_square_value": 0.86,
+          "rate_range": {"low": 3.27, "high": 27.56},
+          "independent_variable": "1000 Sq. Ft. GFA",
+          "avg_iv_units": 126
+        }
+      }
+    },
+    "820": {
+      "name": "Shopping Center (>150k)",
+      "group": "(800-899) Retail",
+      "default_iv": "1000 Sq. Ft. GLA",
+      "vehicle": {
+        "weekday": {
+          "rate": 36.39,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 32,
+          "standard_deviation": 15.38,
+          "rate_range": {"low": 17.27, "high": 77.31},
+          "independent_variable": "1000 Sq. Ft. GLA",
+          "avg_iv_units": 459
+        }
+      }
+    },
+    "850": {
+      "name": "Supermarket",
+      "group": "(800-899) Retail",
+      "default_iv": "1000 Sq. Ft. GFA",
+      "vehicle": {
+        "weekday": {
+          "rate": 92.29,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 21,
+          "standard_deviation": 24.98,
+          "fitted_curve_equation": "T = 85.95(X) + 336.45",
+          "R_square_value": 0.82,
+          "rate_range": {"low": 30.09, "high": 170.24},
+          "independent_variable": "1000 Sq. Ft. GFA",
+          "avg_iv_units": 53
+        }
+      }
+    },
+    "862": {
+      "name": "Home Improvement Superstore",
+      "group": "(800-899) Retail",
+      "default_iv": "1000 Sq. Ft. GFA",
+      "vehicle": {
+        "weekday": {
+          "rate": 30.65,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 18,
+          "standard_deviation": 8.65,
+          "rate_range": {"low": 18.35, "high": 55.35},
+          "independent_variable": "1000 Sq. Ft. GFA",
+          "avg_iv_units": 140
+        },
+        "pm_peak": {
+          "rate": 2.28,
+          "entering": 49,
+          "exiting": 51,
+          "sample_size": 61,
+          "standard_deviation": 0.77,
+          "rate_range": {"low": 0.85, "high": 4.34},
+          "independent_variable": "1000 Sq. Ft. GFA",
+          "avg_iv_units": 138
+        },
+        "saturday": {
+          "rate": 61.20,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 2,
+          "rate_range": {"low": 49.99, "high": 73.12},
+          "independent_variable": "1000 Sq. Ft. GFA",
+          "avg_iv_units": 124
+        }
+      },
+      "settings": {
+        "general_urban_suburban": true,
+        "dense_multi_use_urban": true,
+        "center_city_core": true
+      },
+      "time_periods_available": ["weekday", "am_peak", "pm_peak", "am_generator", "pm_generator", "saturday", "saturday_peak", "sunday", "sunday_peak"]
+    },
+    "934": {
+      "name": "Fast-Food Restaurant with Drive-Through Window",
+      "group": "(900-999) Services",
+      "default_iv": "1000 Sq. Ft. GFA",
+      "vehicle": {
+        "weekday": {
+          "rate": 448.12,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 68,
+          "standard_deviation": 217.66,
+          "rate_range": {"low": 98.89, "high": 1122.37},
+          "independent_variable": "1000 Sq. Ft. GFA",
+          "avg_iv_units": 3
+        }
+      }
+    }
+  }
+}
