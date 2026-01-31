@@ -714,8 +714,8 @@
       "equation": null,
       "r_squared": null,
       "sample_size": 3,
-      "entering": 58,
-      "exiting": 42
+      "entering": 42,
+      "exiting": 58
     },
     "pm_peak": {
       "rate": 0.09,
@@ -895,16 +895,16 @@
       "equation": null,
       "r_squared": null,
       "sample_size": 14,
-      "entering": 60,
-      "exiting": 40
+      "entering": 40,
+      "exiting": 60
     },
     "pm_peak": {
       "rate": 0.24,
       "equation": null,
       "r_squared": null,
       "sample_size": 14,
-      "entering": 39,
-      "exiting": 61
+      "entering": 61,
+      "exiting": 39
     }
   },
   "255": {
@@ -932,8 +932,8 @@
       },
       "r_squared": 0.95,
       "sample_size": 15,
-      "entering": 65,
-      "exiting": 35
+      "entering": 35,
+      "exiting": 65
     },
     "pm_peak": {
       "rate": 0.19,
@@ -944,8 +944,8 @@
       },
       "r_squared": 0.94,
       "sample_size": 15,
-      "entering": 39,
-      "exiting": 61
+      "entering": 61,
+      "exiting": 39
     }
   },
   "260": {
@@ -962,8 +962,8 @@
       },
       "r_squared": 0.95,
       "sample_size": 6,
-      "entering": 55,
-      "exiting": 45
+      "entering": 45,
+      "exiting": 55
     },
     "pm_peak": {
       "rate": 1.11,
@@ -999,8 +999,8 @@
       },
       "r_squared": 0.74,
       "sample_size": 14,
-      "entering": 60,
-      "exiting": 40
+      "entering": 40,
+      "exiting": 60
     },
     "pm_peak": {
       "rate": 0.63,
@@ -1011,8 +1011,8 @@
       },
       "r_squared": 0.88,
       "sample_size": 13,
-      "entering": 40,
-      "exiting": 60
+      "entering": 60,
+      "exiting": 40
     }
   },
   "270": {

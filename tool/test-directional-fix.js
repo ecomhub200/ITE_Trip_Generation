@@ -20,7 +20,7 @@ const expectedResidentialPattern = {
   pm_peak: { moreEntering: true }  // People returning from work
 };
 
-const residentialCodes = ['210', '215', '220', '221', '222'];
+const residentialCodes = ['210', '215', '220', '221', '222', '223', '226', '253', '254', '255', '260', '265'];
 
 let passed = 0;
 let failed = 0;
