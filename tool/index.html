@@ -94,13 +94,62 @@
             <p class="form-helper">Enter the number of units, 1000 SF, or other applicable measure</p>
           </div>
 
+          <!-- Trip Mode Selection -->
+          <div class="form-group">
+            <label class="form-label">Trip Generation Modes</label>
+            <div class="mode-selector">
+              <label class="mode-checkbox mode-primary">
+                <input type="checkbox" id="mode-vehicle" name="modes" value="vehicle" checked>
+                <span class="mode-label">
+                  <span class="mode-icon">&#128663;</span>
+                  Vehicle
+                  <span class="mode-source">11th Ed</span>
+                </span>
+              </label>
+              <label class="mode-checkbox">
+                <input type="checkbox" id="mode-person" name="modes" value="person">
+                <span class="mode-label">
+                  <span class="mode-icon">&#128694;</span>
+                  Person
+                  <span class="mode-source">12th Ed</span>
+                </span>
+              </label>
+              <label class="mode-checkbox">
+                <input type="checkbox" id="mode-walk" name="modes" value="walk">
+                <span class="mode-label">
+                  <span class="mode-icon">&#128694;</span>
+                  Pedestrian
+                  <span class="mode-source">12th Ed</span>
+                </span>
+              </label>
+              <label class="mode-checkbox">
+                <input type="checkbox" id="mode-bicycle" name="modes" value="bicycle">
+                <span class="mode-label">
+                  <span class="mode-icon">&#128690;</span>
+                  Bicycle
+                  <span class="mode-source">12th Ed</span>
+                </span>
+              </label>
+              <label class="mode-checkbox">
+                <input type="checkbox" id="mode-transit" name="modes" value="transit">
+                <span class="mode-label">
+                  <span class="mode-icon">&#128652;</span>
+                  Transit
+                  <span class="mode-source">12th Ed</span>
+                </span>
+              </label>
+            </div>
+            <p class="form-helper" id="mode-helper">Vehicle mode selected (default). Select additional modes for multi-modal analysis.</p>
+          </div>
+
           <!-- Info Box -->
           <div class="info-box">
             <div class="info-box-icon">i</div>
             <div class="info-box-content">
-              <strong>How this works:</strong> This tool uses ITE Trip Generation Manual (12th Edition) data
-              to estimate vehicle trips for your proposed development. Results include weekday daily trips
-              and AM/PM peak hour trips with directional splits.
+              <strong>How this works:</strong> This tool uses ITE Trip Generation Manual data
+              to estimate trips for your proposed development. Vehicle rates use 11th Edition data;
+              pedestrian, bicycle, and transit rates use 12th Edition Modal Data. Results include
+              weekday daily trips and AM/PM peak hour trips with directional splits.
             </div>
           </div>
 
@@ -325,6 +374,7 @@
 
   <!-- Scripts -->
   <script src="assets/js/ite-database.js"></script>
+  <script src="assets/js/modal-data.js"></script>
   <script src="assets/js/calculator.js"></script>
   <script src="assets/js/storage.js"></script>
   <script src="assets/js/export.js"></script>

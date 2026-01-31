@@ -18,6 +18,13 @@ const elements = {
   unitDisplay: document.getElementById('unit-display'),
   calculateBtn: document.getElementById('calculate-btn'),
   clearBtn: document.getElementById('clear-btn'),
+  // Mode selection checkboxes
+  modeVehicle: document.getElementById('mode-vehicle'),
+  modePerson: document.getElementById('mode-person'),
+  modeWalk: document.getElementById('mode-walk'),
+  modeBicycle: document.getElementById('mode-bicycle'),
+  modeTransit: document.getElementById('mode-transit'),
+  modeHelper: document.getElementById('mode-helper'),
   resultsSection: document.getElementById('results-section'),
   resultsSubtitle: document.getElementById('results-subtitle'),
   thresholdStatus: document.getElementById('threshold-status'),
@@ -113,6 +120,70 @@ function initializeApp() {
   if (elements.dayTypeSelect) {
     elements.dayTypeSelect.addEventListener('change', handleDayTypeChange);
   }
+
+  // Mode selector change listeners
+  initializeModeSelectors();
+}
+
+/**
+ * Initialize mode selector checkboxes and event listeners
+ */
+function initializeModeSelectors() {
+  const modeCheckboxes = ['modeVehicle', 'modePerson', 'modeWalk', 'modeBicycle', 'modeTransit'];
+
+  modeCheckboxes.forEach(modeKey => {
+    if (elements[modeKey]) {
+      elements[modeKey].addEventListener('change', updateModeHelper);
+    }
+  });
+
+  // Ensure vehicle is always checked (it's the primary mode)
+  if (elements.modeVehicle) {
+    elements.modeVehicle.addEventListener('change', (e) => {
+      // Always keep vehicle checked
+      if (!e.target.checked) {
+        e.target.checked = true;
+        showToast('Vehicle mode is always required', 'warning');
+      }
+    });
+  }
+}
+
+/**
+ * Update mode helper text based on selected modes
+ */
+function updateModeHelper() {
+  const modes = getSelectedModes();
+  const modeNames = {
+    'vehicle': 'Vehicle',
+    'person': 'Person',
+    'walk': 'Pedestrian',
+    'bicycle': 'Bicycle',
+    'transit': 'Transit'
+  };
+
+  const selectedNames = modes.map(m => modeNames[m] || m);
+  if (elements.modeHelper) {
+    if (modes.length === 1) {
+      elements.modeHelper.textContent = 'Vehicle mode selected (default). Select additional modes for multi-modal analysis.';
+    } else {
+      elements.modeHelper.textContent = `Selected modes: ${selectedNames.join(', ')}`;
+    }
+  }
+}
+
+/**
+ * Get array of selected mode values
+ * @returns {string[]} Array of selected mode strings
+ */
+function getSelectedModes() {
+  const modes = [];
+  if (elements.modeVehicle?.checked) modes.push('vehicle');
+  if (elements.modePerson?.checked) modes.push('person');
+  if (elements.modeWalk?.checked) modes.push('walk');
+  if (elements.modeBicycle?.checked) modes.push('bicycle');
+  if (elements.modeTransit?.checked) modes.push('transit');
+  return modes.length > 0 ? modes : ['vehicle'];
 }
 
 /**
@@ -216,8 +287,11 @@ function handleFormSubmit(e) {
   const zoningCode = document.getElementById('zoning-code').value;
   const devName = document.getElementById('dev-name').value;
 
-  // Calculate
-  currentResult = calculator.calculate(selectedIteCode, size);
+  // Get selected modes
+  const selectedModes = getSelectedModes();
+
+  // Calculate with modes
+  currentResult = calculator.calculate(selectedIteCode, size, selectedModes);
   currentResult.parcelType = parcelType;
   currentResult.parcelNumber = parcelNumber;
   currentResult.zoningCode = zoningCode;
@@ -279,6 +353,9 @@ function renderResults(result) {
 
   // Calculation Details
   renderCalculationDetails(result);
+
+  // Modal Results (if multi-modal analysis)
+  renderModalResults(result);
 
   // Hourly Distribution (Enhanced Accuracy)
   renderHourlyDistributionSection(result);
@@ -482,6 +559,139 @@ function renderCalculationDetails(result) {
       <strong>Directional Split:</strong> ${result.pmPeak.enteringPct}% entering, ${result.pmPeak.exitingPct}% exiting
     </div>
   `;
+}
+
+/**
+ * Render modal results section for multi-modal analysis
+ * @param {object} result - Calculation result
+ */
+function renderModalResults(result) {
+  // Find or create modal results container
+  let modalContainer = document.getElementById('modal-results-section');
+  if (!modalContainer) {
+    // Create the section if it doesn't exist
+    const calculationDetails = document.getElementById('calculation-details');
+    if (calculationDetails) {
+      modalContainer = document.createElement('div');
+      modalContainer.id = 'modal-results-section';
+      modalContainer.className = 'mt-4';
+      calculationDetails.parentNode.insertBefore(modalContainer, calculationDetails.nextSibling);
+    } else {
+      return; // Can't render without container
+    }
+  }
+
+  // Check if multi-modal analysis was requested
+  if (!result.modalResults || !result.selectedModes || result.selectedModes.length <= 1) {
+    modalContainer.innerHTML = '';
+    modalContainer.style.display = 'none';
+    return;
+  }
+
+  modalContainer.style.display = 'block';
+
+  const modeNames = {
+    'vehicle': 'Vehicle Trips',
+    'person': 'Person Trips',
+    'walk': 'Pedestrian Trips',
+    'bicycle': 'Bicycle Trips',
+    'transit': 'Transit Trips'
+  };
+
+  const modeIcons = {
+    'vehicle': '&#128663;',
+    'person': '&#128694;',
+    'walk': '&#128694;',
+    'bicycle': '&#128690;',
+    'transit': '&#128652;'
+  };
+
+  const modeSources = {
+    'vehicle': '11th Ed',
+    'person': '12th Ed',
+    'walk': '12th Ed',
+    'bicycle': '12th Ed',
+    'transit': '12th Ed'
+  };
+
+  let html = `<h3>Multi-Modal Trip Analysis</h3>`;
+  html += `<p class="text-muted mb-2">Comparing trip generation across selected transportation modes.</p>`;
+  html += `<div class="modal-results-grid">`;
+
+  for (const mode of result.selectedModes) {
+    const modeResult = result.modalResults[mode];
+    const modeName = modeNames[mode] || mode;
+    const modeIcon = modeIcons[mode] || '';
+    const modeSource = modeSources[mode] || '';
+
+    if (!modeResult || !modeResult.available) {
+      html += `
+        <div class="modal-result-card modal-unavailable fade-in">
+          <div class="modal-result-header">
+            <span class="modal-icon">${modeIcon}</span>
+            <span class="modal-name">${modeName}</span>
+            <span class="badge badge-secondary">${modeSource}</span>
+          </div>
+          <div class="modal-result-body">
+            <p class="text-muted">No data available for this land use code</p>
+          </div>
+        </div>
+      `;
+      continue;
+    }
+
+    // Get trip values (use weekday if available, otherwise AM/PM peak)
+    const weekdayTrips = modeResult.weekday?.trips ?? 'N/A';
+    const amPeakTrips = modeResult.amPeak?.trips ?? 'N/A';
+    const pmPeakTrips = modeResult.pmPeak?.trips ?? 'N/A';
+
+    const isPrimary = mode === 'vehicle';
+
+    html += `
+      <div class="modal-result-card ${isPrimary ? 'modal-primary' : ''} fade-in">
+        <div class="modal-result-header">
+          <span class="modal-icon">${modeIcon}</span>
+          <span class="modal-name">${modeName}</span>
+          <span class="badge ${isPrimary ? 'badge-primary' : 'badge-info'}">${modeSource}</span>
+        </div>
+        <div class="modal-result-body">
+          <div class="modal-stat">
+            <div class="modal-stat-label">Weekday Daily</div>
+            <div class="modal-stat-value">${typeof weekdayTrips === 'number' ? weekdayTrips.toLocaleString() : weekdayTrips}</div>
+          </div>
+          <div class="modal-stat">
+            <div class="modal-stat-label">AM Peak</div>
+            <div class="modal-stat-value">${typeof amPeakTrips === 'number' ? amPeakTrips.toLocaleString() : amPeakTrips}</div>
+            ${modeResult.amPeak ? `<div class="modal-stat-split">${modeResult.amPeak.enteringPct}% in / ${modeResult.amPeak.exitingPct}% out</div>` : ''}
+          </div>
+          <div class="modal-stat">
+            <div class="modal-stat-label">PM Peak</div>
+            <div class="modal-stat-value">${typeof pmPeakTrips === 'number' ? pmPeakTrips.toLocaleString() : pmPeakTrips}</div>
+            ${modeResult.pmPeak ? `<div class="modal-stat-split">${modeResult.pmPeak.enteringPct}% in / ${modeResult.pmPeak.exitingPct}% out</div>` : ''}
+          </div>
+        </div>
+        <div class="modal-result-footer">
+          <span class="text-muted">Source: ${modeResult.source || 'ITE Data'}</span>
+        </div>
+      </div>
+    `;
+  }
+
+  html += `</div>`;
+
+  // Add mode comparison summary
+  if (result.selectedModes.length > 1 && result.modalResults.vehicle?.available) {
+    const vehicleTrips = result.modalResults.vehicle.weekday?.trips || 0;
+    html += `<div class="info-box mt-2">
+      <div class="info-box-icon">i</div>
+      <div class="info-box-content">
+        <strong>Note:</strong> Vehicle trips (${vehicleTrips.toLocaleString()} daily) are the primary metric for traffic impact analysis.
+        Modal data from ITE 12th Edition provides additional context for multi-modal planning and transportation demand management.
+      </div>
+    </div>`;
+  }
+
+  modalContainer.innerHTML = html;
 }
 
 // Export and Print
