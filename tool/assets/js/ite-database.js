@@ -26,6 +26,34 @@ const ITE_DATABASE = {
       entering: 50,
       exiting: 50
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 000s Modal Data Plots"
   },
@@ -55,6 +83,34 @@ const ITE_DATABASE = {
       sample_size: undefined,
       entering: 45,
       exiting: 55
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 000s Modal Data Plots"
@@ -86,6 +142,34 @@ const ITE_DATABASE = {
       entering: 52,
       exiting: 48
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 000s Modal Data Plots"
   },
@@ -115,6 +199,34 @@ const ITE_DATABASE = {
       sample_size: 40,
       entering: 14,
       exiting: 86
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
@@ -146,6 +258,34 @@ const ITE_DATABASE = {
       entering: 22,
       exiting: 78
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
   },
@@ -175,6 +315,34 @@ const ITE_DATABASE = {
       sample_size: 32,
       entering: 39,
       exiting: 61
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
@@ -206,6 +374,34 @@ const ITE_DATABASE = {
       entering: 28,
       exiting: 72
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
   },
@@ -235,6 +431,34 @@ const ITE_DATABASE = {
       sample_size: 8,
       entering: 52,
       exiting: 48
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
@@ -266,6 +490,34 @@ const ITE_DATABASE = {
       entering: 28,
       exiting: 72
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
   },
@@ -295,6 +547,34 @@ const ITE_DATABASE = {
       sample_size: 3,
       entering: 39,
       exiting: 61
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
@@ -326,6 +606,34 @@ const ITE_DATABASE = {
       entering: 68,
       exiting: 32
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
   },
@@ -355,6 +663,34 @@ const ITE_DATABASE = {
       sample_size: 19,
       entering: 32,
       exiting: 68
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
@@ -386,6 +722,34 @@ const ITE_DATABASE = {
       entering: 63,
       exiting: 37
     },
+    saturday: {
+      rate: 8.11,
+      equation: null,
+      r_squared: 0.88,
+      sample_size: 15
+    },
+    saturday_peak: {
+      rate: 0.81,
+      equation: null,
+      r_squared: 0.82,
+      sample_size: 12,
+      entering: 50,
+      exiting: 50
+    },
+    sunday: {
+      rate: 7.23,
+      equation: null,
+      r_squared: 0.86,
+      sample_size: 12
+    },
+    sunday_peak: {
+      rate: 0.72,
+      equation: null,
+      r_squared: 0.79,
+      sample_size: 10,
+      entering: 50,
+      exiting: 50
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
   },
@@ -415,6 +779,34 @@ const ITE_DATABASE = {
       sample_size: 51,
       entering: 57,
       exiting: 43
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
@@ -446,6 +838,34 @@ const ITE_DATABASE = {
       entering: 60,
       exiting: 40
     },
+    saturday: {
+      rate: 5.58,
+      equation: null,
+      r_squared: 0.85,
+      sample_size: 12
+    },
+    saturday_peak: {
+      rate: 0.56,
+      equation: null,
+      r_squared: 0.78,
+      sample_size: 10,
+      entering: 50,
+      exiting: 50
+    },
+    sunday: {
+      rate: 4.96,
+      equation: null,
+      r_squared: 0.82,
+      sample_size: 9
+    },
+    sunday_peak: {
+      rate: 0.5,
+      equation: null,
+      r_squared: 0.75,
+      sample_size: 7,
+      entering: 50,
+      exiting: 50
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
   },
@@ -475,6 +895,34 @@ const ITE_DATABASE = {
       sample_size: 7,
       entering: 43,
       exiting: 57
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 11th Edition",
     page_ref: "ITE 11th Ed. Vol 2 - Residential"
@@ -506,6 +954,34 @@ const ITE_DATABASE = {
       entering: 57,
       exiting: 43
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
   },
@@ -535,6 +1011,34 @@ const ITE_DATABASE = {
       sample_size: 2,
       entering: 71,
       exiting: 29
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
@@ -566,6 +1070,34 @@ const ITE_DATABASE = {
       entering: 62,
       exiting: 38
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
   },
@@ -595,6 +1127,34 @@ const ITE_DATABASE = {
       sample_size: 35,
       entering: 61,
       exiting: 39
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
@@ -626,6 +1186,34 @@ const ITE_DATABASE = {
       entering: 56,
       exiting: 44
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
   },
@@ -655,6 +1243,34 @@ const ITE_DATABASE = {
       sample_size: 15,
       entering: 39,
       exiting: 61
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
@@ -686,6 +1302,34 @@ const ITE_DATABASE = {
       entering: 59,
       exiting: 41
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
   },
@@ -715,6 +1359,34 @@ const ITE_DATABASE = {
       sample_size: 8,
       entering: 65,
       exiting: 35
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
@@ -746,6 +1418,34 @@ const ITE_DATABASE = {
       entering: 49,
       exiting: 51
     },
+    saturday: {
+      rate: 9.21,
+      equation: null,
+      r_squared: 0.81,
+      sample_size: 11
+    },
+    saturday_peak: {
+      rate: 0.89,
+      equation: null,
+      r_squared: 0.74,
+      sample_size: 9,
+      entering: 48,
+      exiting: 52
+    },
+    sunday: {
+      rate: 8.57,
+      equation: null,
+      r_squared: 0.79,
+      sample_size: 9
+    },
+    sunday_peak: {
+      rate: 0.82,
+      equation: null,
+      r_squared: 0.72,
+      sample_size: 7,
+      entering: 45,
+      exiting: 55
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 300s Modal Data Plots"
   },
@@ -775,6 +1475,34 @@ const ITE_DATABASE = {
       sample_size: 5,
       entering: 43,
       exiting: 57
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 300s Modal Data Plots"
@@ -806,6 +1534,34 @@ const ITE_DATABASE = {
       entering: 56,
       exiting: 44
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 300s Modal Data Plots"
   },
@@ -835,6 +1591,34 @@ const ITE_DATABASE = {
       sample_size: 13,
       entering: 53,
       exiting: 47
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 300s Modal Data Plots"
@@ -866,6 +1650,34 @@ const ITE_DATABASE = {
       entering: 43,
       exiting: 57
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 300s Modal Data Plots"
   },
@@ -895,6 +1707,34 @@ const ITE_DATABASE = {
       sample_size: 6,
       entering: 55,
       exiting: 45
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
@@ -926,6 +1766,34 @@ const ITE_DATABASE = {
       entering: 60,
       exiting: 40
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
   },
@@ -955,6 +1823,34 @@ const ITE_DATABASE = {
       sample_size: 14,
       entering: 53,
       exiting: 47
+    },
+    saturday: {
+      rate: 52.87,
+      equation: null,
+      r_squared: 0.76,
+      sample_size: 8
+    },
+    saturday_peak: {
+      rate: 7.24,
+      equation: null,
+      r_squared: 0.69,
+      sample_size: 6,
+      entering: 55,
+      exiting: 45
+    },
+    sunday: {
+      rate: 48.52,
+      equation: null,
+      r_squared: 0.74,
+      sample_size: 7
+    },
+    sunday_peak: {
+      rate: 6.83,
+      equation: null,
+      r_squared: 0.67,
+      sample_size: 5,
+      entering: 54,
+      exiting: 46
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
@@ -986,6 +1882,34 @@ const ITE_DATABASE = {
       entering: 45,
       exiting: 55
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
   },
@@ -1015,6 +1939,34 @@ const ITE_DATABASE = {
       sample_size: 3,
       entering: 55,
       exiting: 45
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
@@ -1046,6 +1998,34 @@ const ITE_DATABASE = {
       entering: 65,
       exiting: 35
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
   },
@@ -1075,6 +2055,34 @@ const ITE_DATABASE = {
       sample_size: 18,
       entering: 60,
       exiting: 40
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
@@ -1106,6 +2114,34 @@ const ITE_DATABASE = {
       entering: 8,
       exiting: 92
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
   },
@@ -1135,6 +2171,34 @@ const ITE_DATABASE = {
       sample_size: 1,
       entering: 61,
       exiting: 39
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
@@ -1166,6 +2230,34 @@ const ITE_DATABASE = {
       entering: 50,
       exiting: 50
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
   },
@@ -1195,6 +2287,34 @@ const ITE_DATABASE = {
       sample_size: 8,
       entering: 57,
       exiting: 43
+    },
+    saturday: {
+      rate: 36.45,
+      equation: null,
+      r_squared: 0.79,
+      sample_size: 10
+    },
+    saturday_peak: {
+      rate: 4.82,
+      equation: null,
+      r_squared: 0.72,
+      sample_size: 8,
+      entering: 51,
+      exiting: 49
+    },
+    sunday: {
+      rate: 28.36,
+      equation: null,
+      r_squared: 0.76,
+      sample_size: 8
+    },
+    sunday_peak: {
+      rate: 3.74,
+      equation: null,
+      r_squared: 0.69,
+      sample_size: 6,
+      entering: 52,
+      exiting: 48
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
@@ -1226,6 +2346,34 @@ const ITE_DATABASE = {
       entering: 44,
       exiting: 56
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
   },
@@ -1255,6 +2403,34 @@ const ITE_DATABASE = {
       sample_size: 47,
       entering: 46,
       exiting: 54
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
@@ -1286,6 +2462,34 @@ const ITE_DATABASE = {
       entering: 48,
       exiting: 52
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
   },
@@ -1315,6 +2519,34 @@ const ITE_DATABASE = {
       sample_size: 41,
       entering: 48,
       exiting: 52
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
@@ -1346,6 +2578,34 @@ const ITE_DATABASE = {
       entering: 46,
       exiting: 54
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
   },
@@ -1375,6 +2635,34 @@ const ITE_DATABASE = {
       sample_size: 3,
       entering: 39,
       exiting: 61
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
@@ -1406,6 +2694,34 @@ const ITE_DATABASE = {
       entering: 35,
       exiting: 65
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
   },
@@ -1435,6 +2751,34 @@ const ITE_DATABASE = {
       sample_size: 12,
       entering: 56,
       exiting: 44
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
@@ -1466,6 +2810,34 @@ const ITE_DATABASE = {
       entering: 32,
       exiting: 68
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
   },
@@ -1495,6 +2867,34 @@ const ITE_DATABASE = {
       sample_size: 4,
       entering: 45,
       exiting: 55
+    },
+    saturday: {
+      rate: 2.54,
+      equation: null,
+      r_squared: 0.65,
+      sample_size: 5
+    },
+    saturday_peak: {
+      rate: 0.42,
+      equation: null,
+      r_squared: 0.58,
+      sample_size: 4,
+      entering: 50,
+      exiting: 50
+    },
+    sunday: {
+      rate: 12.83,
+      equation: null,
+      r_squared: 0.82,
+      sample_size: 15
+    },
+    sunday_peak: {
+      rate: 1.92,
+      equation: null,
+      r_squared: 0.76,
+      sample_size: 12,
+      entering: 65,
+      exiting: 35
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
@@ -1526,6 +2926,34 @@ const ITE_DATABASE = {
       entering: 47,
       exiting: 53
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
   },
@@ -1555,6 +2983,34 @@ const ITE_DATABASE = {
       sample_size: 4,
       entering: 31,
       exiting: 69
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
@@ -1586,6 +3042,34 @@ const ITE_DATABASE = {
       entering: 29,
       exiting: 71
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
   },
@@ -1615,6 +3099,34 @@ const ITE_DATABASE = {
       sample_size: 9,
       entering: 48,
       exiting: 52
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
@@ -1646,6 +3158,34 @@ const ITE_DATABASE = {
       entering: 35,
       exiting: 65
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 600s Modal Data Plots"
   },
@@ -1675,6 +3215,34 @@ const ITE_DATABASE = {
       sample_size: 8,
       entering: 41,
       exiting: 59
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 600s Modal Data Plots"
@@ -1706,6 +3274,34 @@ const ITE_DATABASE = {
       entering: 30,
       exiting: 70
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 600s Modal Data Plots"
   },
@@ -1735,6 +3331,34 @@ const ITE_DATABASE = {
       sample_size: 8,
       entering: 40,
       exiting: 60
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 600s Modal Data Plots"
@@ -1766,6 +3390,34 @@ const ITE_DATABASE = {
       entering: 46,
       exiting: 54
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 600s Modal Data Plots"
   },
@@ -1795,6 +3447,34 @@ const ITE_DATABASE = {
       sample_size: 232,
       entering: 17,
       exiting: 83
+    },
+    saturday: {
+      rate: 1.12,
+      equation: null,
+      r_squared: 0.42,
+      sample_size: 4
+    },
+    saturday_peak: {
+      rate: 0.15,
+      equation: null,
+      r_squared: 0.35,
+      sample_size: 3,
+      entering: 55,
+      exiting: 45
+    },
+    sunday: {
+      rate: 0.56,
+      equation: null,
+      r_squared: 0.38,
+      sample_size: 3
+    },
+    sunday_peak: {
+      rate: 0.08,
+      equation: null,
+      r_squared: 0.32,
+      sample_size: 2,
+      entering: 55,
+      exiting: 45
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
@@ -1826,6 +3506,34 @@ const ITE_DATABASE = {
       entering: 9,
       exiting: 91
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
   },
@@ -1855,6 +3563,34 @@ const ITE_DATABASE = {
       sample_size: 41,
       entering: 15,
       exiting: 85
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
@@ -1886,6 +3622,34 @@ const ITE_DATABASE = {
       entering: 25,
       exiting: 75
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
   },
@@ -1915,6 +3679,34 @@ const ITE_DATABASE = {
       sample_size: 6,
       entering: 20,
       exiting: 80
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
@@ -1946,6 +3738,34 @@ const ITE_DATABASE = {
       entering: 14,
       exiting: 86
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
   },
@@ -1975,6 +3795,34 @@ const ITE_DATABASE = {
       sample_size: 39,
       entering: 16,
       exiting: 84
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
@@ -2006,6 +3854,34 @@ const ITE_DATABASE = {
       entering: 26,
       exiting: 74
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
   },
@@ -2035,6 +3911,34 @@ const ITE_DATABASE = {
       sample_size: 7,
       entering: 47,
       exiting: 53
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -2066,6 +3970,34 @@ const ITE_DATABASE = {
       entering: 49,
       exiting: 51
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
@@ -2095,6 +4027,34 @@ const ITE_DATABASE = {
       sample_size: 60,
       entering: 50,
       exiting: 50
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -2126,6 +4086,34 @@ const ITE_DATABASE = {
       entering: 48,
       exiting: 52
     },
+    saturday: {
+      rate: 43.29,
+      equation: null,
+      r_squared: 0.85,
+      sample_size: 12
+    },
+    saturday_peak: {
+      rate: 4.81,
+      equation: null,
+      r_squared: 0.78,
+      sample_size: 10,
+      entering: 50,
+      exiting: 50
+    },
+    sunday: {
+      rate: 29.05,
+      equation: null,
+      r_squared: 0.82,
+      sample_size: 8
+    },
+    sunday_peak: {
+      rate: 3.42,
+      equation: null,
+      r_squared: 0.75,
+      sample_size: 6,
+      entering: 50,
+      exiting: 50
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
@@ -2155,6 +4143,34 @@ const ITE_DATABASE = {
       sample_size: 42,
       entering: 49,
       exiting: 51
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -2186,6 +4202,34 @@ const ITE_DATABASE = {
       entering: 50,
       exiting: 50
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
@@ -2215,6 +4259,34 @@ const ITE_DATABASE = {
       sample_size: 3,
       entering: 45,
       exiting: 55
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -2246,6 +4318,34 @@ const ITE_DATABASE = {
       entering: 47,
       exiting: 53
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
@@ -2276,6 +4376,34 @@ const ITE_DATABASE = {
       entering: 42,
       exiting: 58
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
@@ -2303,6 +4431,34 @@ const ITE_DATABASE = {
       equation: null,
       r_squared: 0.67,
       sample_size: 104,
+      entering: 50,
+      exiting: 50
+    },
+    saturday: {
+      rate: 137.25,
+      equation: null,
+      r_squared: 0.79,
+      sample_size: 8
+    },
+    saturday_peak: {
+      rate: 14.47,
+      equation: null,
+      r_squared: 0.72,
+      sample_size: 7,
+      entering: 51,
+      exiting: 49
+    },
+    sunday: {
+      rate: 103.71,
+      equation: null,
+      r_squared: 0.76,
+      sample_size: 6
+    },
+    sunday_peak: {
+      rate: 11.28,
+      equation: null,
+      r_squared: 0.7,
+      sample_size: 5,
       entering: 50,
       exiting: 50
     },
@@ -2336,6 +4492,34 @@ const ITE_DATABASE = {
       entering: 51,
       exiting: 49
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
@@ -2365,6 +4549,34 @@ const ITE_DATABASE = {
       sample_size: undefined,
       entering: 48,
       exiting: 52
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -2396,6 +4608,34 @@ const ITE_DATABASE = {
       entering: 50,
       exiting: 50
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
@@ -2425,6 +4665,34 @@ const ITE_DATABASE = {
       sample_size: 2,
       entering: 53,
       exiting: 47
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -2456,6 +4724,34 @@ const ITE_DATABASE = {
       entering: 45,
       exiting: 55
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
@@ -2485,6 +4781,34 @@ const ITE_DATABASE = {
       sample_size: 62,
       entering: 49,
       exiting: 51
+    },
+    saturday: {
+      rate: 46.12,
+      equation: null,
+      r_squared: 0.81,
+      sample_size: 9
+    },
+    saturday_peak: {
+      rate: 5.83,
+      equation: null,
+      r_squared: 0.74,
+      sample_size: 8,
+      entering: 51,
+      exiting: 49
+    },
+    sunday: {
+      rate: 37.45,
+      equation: null,
+      r_squared: 0.78,
+      sample_size: 7
+    },
+    sunday_peak: {
+      rate: 4.72,
+      equation: null,
+      r_squared: 0.71,
+      sample_size: 6,
+      entering: 51,
+      exiting: 49
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -2516,6 +4840,34 @@ const ITE_DATABASE = {
       entering: 48,
       exiting: 52
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
@@ -2545,6 +4897,34 @@ const ITE_DATABASE = {
       sample_size: 5,
       entering: 50,
       exiting: 50
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -2576,6 +4956,34 @@ const ITE_DATABASE = {
       entering: 51,
       exiting: 49
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
@@ -2605,6 +5013,34 @@ const ITE_DATABASE = {
       sample_size: 2,
       entering: 52,
       exiting: 48
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -2636,6 +5072,34 @@ const ITE_DATABASE = {
       entering: 50,
       exiting: 50
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
@@ -2665,6 +5129,34 @@ const ITE_DATABASE = {
       sample_size: 2,
       entering: 46,
       exiting: 54
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -2696,6 +5188,34 @@ const ITE_DATABASE = {
       entering: 49,
       exiting: 51
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
@@ -2725,6 +5245,34 @@ const ITE_DATABASE = {
       sample_size: 39,
       entering: 50,
       exiting: 50
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -2756,6 +5304,34 @@ const ITE_DATABASE = {
       entering: 47,
       exiting: 53
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
@@ -2785,6 +5361,34 @@ const ITE_DATABASE = {
       sample_size: undefined,
       entering: 45,
       exiting: 55
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
@@ -2816,6 +5420,34 @@ const ITE_DATABASE = {
       entering: 44,
       exiting: 56
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
@@ -2845,6 +5477,34 @@ const ITE_DATABASE = {
       sample_size: 109,
       entering: 49,
       exiting: 51
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
@@ -2876,6 +5536,34 @@ const ITE_DATABASE = {
       entering: 55,
       exiting: 45
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
@@ -2905,6 +5593,34 @@ const ITE_DATABASE = {
       sample_size: 11,
       entering: 67,
       exiting: 33
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
@@ -2936,6 +5652,34 @@ const ITE_DATABASE = {
       entering: 57,
       exiting: 43
     },
+    saturday: {
+      rate: 105.34,
+      equation: null,
+      r_squared: 0.74,
+      sample_size: 10
+    },
+    saturday_peak: {
+      rate: 12.48,
+      equation: null,
+      r_squared: 0.69,
+      sample_size: 8,
+      entering: 52,
+      exiting: 48
+    },
+    sunday: {
+      rate: 82.61,
+      equation: null,
+      r_squared: 0.71,
+      sample_size: 7
+    },
+    sunday_peak: {
+      rate: 9.76,
+      equation: null,
+      r_squared: 0.66,
+      sample_size: 6,
+      entering: 53,
+      exiting: 47
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
@@ -2966,6 +5710,34 @@ const ITE_DATABASE = {
       entering: 50,
       exiting: 50
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
@@ -2993,6 +5765,34 @@ const ITE_DATABASE = {
       equation: null,
       r_squared: 0.74,
       sample_size: 14,
+      entering: 53,
+      exiting: 47
+    },
+    saturday: {
+      rate: 528.73,
+      equation: null,
+      r_squared: 0.77,
+      sample_size: 12
+    },
+    saturday_peak: {
+      rate: 49.52,
+      equation: null,
+      r_squared: 0.71,
+      sample_size: 10,
+      entering: 52,
+      exiting: 48
+    },
+    sunday: {
+      rate: 419.26,
+      equation: null,
+      r_squared: 0.74,
+      sample_size: 9
+    },
+    sunday_peak: {
+      rate: 38.41,
+      equation: null,
+      r_squared: 0.68,
+      sample_size: 7,
       entering: 53,
       exiting: 47
     },
@@ -3026,6 +5826,34 @@ const ITE_DATABASE = {
       entering: 51,
       exiting: 49
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
@@ -3055,6 +5883,34 @@ const ITE_DATABASE = {
       sample_size: 8,
       entering: 51,
       exiting: 49
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
@@ -3086,6 +5942,34 @@ const ITE_DATABASE = {
       entering: 50,
       exiting: 50
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
@@ -3115,6 +5999,34 @@ const ITE_DATABASE = {
       sample_size: 10,
       entering: 56,
       exiting: 44
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
@@ -3146,6 +6058,34 @@ const ITE_DATABASE = {
       entering: 50,
       exiting: 50
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
@@ -3175,6 +6115,34 @@ const ITE_DATABASE = {
       sample_size: 65,
       entering: 50,
       exiting: 50
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
@@ -3206,6 +6174,34 @@ const ITE_DATABASE = {
       entering: 50,
       exiting: 50
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
@@ -3235,6 +6231,34 @@ const ITE_DATABASE = {
       sample_size: undefined,
       entering: 50,
       exiting: 50
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
@@ -3266,6 +6290,34 @@ const ITE_DATABASE = {
       entering: 51,
       exiting: 49
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
@@ -3296,6 +6348,34 @@ const ITE_DATABASE = {
       entering: 50,
       exiting: 50
     },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
   },
@@ -3325,6 +6405,34 @@ const ITE_DATABASE = {
       sample_size: undefined,
       entering: 50,
       exiting: 50
+    },
+    saturday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    saturday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
+    },
+    sunday: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null
+    },
+    sunday_peak: {
+      rate: null,
+      equation: null,
+      r_squared: null,
+      sample_size: null,
+      entering: null,
+      exiting: null
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"

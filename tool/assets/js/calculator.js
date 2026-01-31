@@ -288,13 +288,97 @@ class ITECalculator {
   }
 
   /**
+   * Check if Saturday/Sunday data is available for a land use code
+   * @param {string} iteCode - The ITE land use code
+   * @returns {object} Object with hasData flags for each weekend period
+   */
+  hasWeekendData(iteCode) {
+    const data = this.database[iteCode];
+    if (!data) return { saturday: false, saturdayPeak: false, sunday: false, sundayPeak: false };
+
+    return {
+      saturday: !!(data.saturday && data.saturday.rate),
+      saturdayPeak: !!(data.saturday_peak && data.saturday_peak.rate),
+      sunday: !!(data.sunday && data.sunday.rate),
+      sundayPeak: !!(data.sunday_peak && data.sunday_peak.rate)
+    };
+  }
+
+  /**
+   * Calculate Saturday trips for a land use code
+   * @param {string} iteCode - The ITE land use code
+   * @param {number} size - The size/quantity of development
+   * @returns {object} Saturday trip calculation results
+   */
+  calculateSaturday(iteCode, size) {
+    const data = this.database[iteCode];
+    if (!data) return { available: false, error: `ITE Code ${iteCode} not found` };
+
+    const result = { available: false };
+
+    // Calculate Saturday daily
+    if (data.saturday && data.saturday.rate) {
+      result.daily = this.calculatePeriod(data.saturday, size, "saturday");
+      result.available = true;
+    }
+
+    // Calculate Saturday peak
+    if (data.saturday_peak && data.saturday_peak.rate) {
+      const enteringPct = data.saturday_peak.entering || 50;
+      const exitingPct = data.saturday_peak.exiting || 50;
+      result.peak = this.calculatePeriod(data.saturday_peak, size, "saturday_peak", enteringPct, exitingPct);
+      result.available = true;
+    }
+
+    if (!result.available) {
+      result.error = `No Saturday data available for ITE code ${iteCode}`;
+    }
+
+    return result;
+  }
+
+  /**
+   * Calculate Sunday trips for a land use code
+   * @param {string} iteCode - The ITE land use code
+   * @param {number} size - The size/quantity of development
+   * @returns {object} Sunday trip calculation results
+   */
+  calculateSunday(iteCode, size) {
+    const data = this.database[iteCode];
+    if (!data) return { available: false, error: `ITE Code ${iteCode} not found` };
+
+    const result = { available: false };
+
+    // Calculate Sunday daily
+    if (data.sunday && data.sunday.rate) {
+      result.daily = this.calculatePeriod(data.sunday, size, "sunday");
+      result.available = true;
+    }
+
+    // Calculate Sunday peak
+    if (data.sunday_peak && data.sunday_peak.rate) {
+      const enteringPct = data.sunday_peak.entering || 50;
+      const exitingPct = data.sunday_peak.exiting || 50;
+      result.peak = this.calculatePeriod(data.sunday_peak, size, "sunday_peak", enteringPct, exitingPct);
+      result.available = true;
+    }
+
+    if (!result.available) {
+      result.error = `No Sunday data available for ITE code ${iteCode}`;
+    }
+
+    return result;
+  }
+
+  /**
    * Main calculation function
    * @param {string} iteCode - The ITE land use code
    * @param {number} size - The size/quantity of development
    * @param {string[]} modes - Array of modes to calculate (default: ['vehicle'])
+   * @param {object} options - Optional parameters (includeWeekend: boolean)
    * @returns {object} Complete trip generation analysis
    */
-  calculate(iteCode, size, modes = ['vehicle']) {
+  calculate(iteCode, size, modes = ['vehicle'], options = {}) {
     const data = this.database[iteCode];
 
     if (!data) {
@@ -315,6 +399,16 @@ class ITECalculator {
     const weekdayResult = this.calculatePeriod(data.weekday, size, "weekday");
     const amPeakResult = this.calculatePeriod(data.am_peak, size, "am_peak", data.am_peak.entering, data.am_peak.exiting);
     const pmPeakResult = this.calculatePeriod(data.pm_peak, size, "pm_peak", data.pm_peak.entering, data.pm_peak.exiting);
+
+    // Calculate Saturday/Sunday trips if available or requested
+    const weekendAvailability = this.hasWeekendData(iteCode);
+    let saturdayResult = null;
+    let sundayResult = null;
+
+    if (options.includeWeekend || weekendAvailability.saturday || weekendAvailability.sunday) {
+      saturdayResult = this.calculateSaturday(iteCode, size);
+      sundayResult = this.calculateSunday(iteCode, size);
+    }
 
     // Determine data quality
     const quality = this.assessDataQuality(data);
@@ -338,10 +432,12 @@ class ITECalculator {
         modalResults.vehicle = {
           available: true,
           modeType: 'vehicle',
-          source: 'ITE 11th Edition',
+          source: 'ITE 12th Edition',
           weekday: weekdayResult,
           amPeak: amPeakResult,
-          pmPeak: pmPeakResult
+          pmPeak: pmPeakResult,
+          saturday: saturdayResult,
+          sunday: sundayResult
         };
       } else if (availableModalModes.includes(mode)) {
         modalResults[mode] = this.calculateModal(iteCode, size, mode);
@@ -366,6 +462,10 @@ class ITECalculator {
       weekday: weekdayResult,
       amPeak: amPeakResult,
       pmPeak: pmPeakResult,
+      // Weekend results (null if not available)
+      saturday: saturdayResult,
+      sunday: sundayResult,
+      hasWeekendData: weekendAvailability,
       quality: quality,
       thresholds: thresholdCheck,
       // Enhanced accuracy data from Time-of-Day distribution
