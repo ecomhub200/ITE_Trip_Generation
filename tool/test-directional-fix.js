@@ -22,6 +22,12 @@ const expectedResidentialPattern = {
 
 const residentialCodes = ['210', '215', '220', '221', '222', '223', '226', '253', '254', '255', '260', '265'];
 
+// Industrial/Warehouse codes: AM should have more entering, PM should have more exiting
+const industrialCodes = ['030', '156'];
+
+// Retail codes that were critically inverted (AM/PM swapped)
+const retailCriticalCodes = ['842', '897'];
+
 let passed = 0;
 let failed = 0;
 
@@ -89,6 +95,65 @@ for (const code of residentialCodes) {
     } else {
       console.log(`[FAIL] ${code} PM Peak: ${data.pm_peak.entering}% entering, ${data.pm_peak.exiting}% exiting (should have more entering!)`);
       failed++;
+    }
+  }
+}
+
+// Test Industrial codes (AM more entering, PM more exiting)
+console.log('\n--- Testing Industrial Codes (both files) ---\n');
+
+for (const file of [{ name: 'ite_11th_primary.json', data: ite11thPrimary }, { name: 'ite_11th_extracted.json', data: ite11thExtracted }]) {
+  for (const code of industrialCodes) {
+    const data = file.data[code];
+    if (!data) {
+      console.log(`[SKIP] ${code}: Not found in ${file.name}`);
+      continue;
+    }
+    // Industrial AM: should have more entering (workers arriving)
+    if (data.am_peak?.entering !== undefined && data.am_peak?.exiting !== undefined) {
+      const amValid = data.am_peak.entering >= data.am_peak.exiting;
+      if (amValid) {
+        console.log(`[PASS] ${code} AM Peak (${file.name}): ${data.am_peak.entering}% entering, ${data.am_peak.exiting}% exiting (more/equal entering - correct)`);
+        passed++;
+      } else {
+        console.log(`[FAIL] ${code} AM Peak (${file.name}): ${data.am_peak.entering}% entering, ${data.am_peak.exiting}% exiting (should have more entering!)`);
+        failed++;
+      }
+    }
+    // Industrial PM: should have more exiting (workers leaving)
+    if (data.pm_peak?.entering !== undefined && data.pm_peak?.exiting !== undefined) {
+      const pmValid = data.pm_peak.exiting >= data.pm_peak.entering;
+      if (pmValid) {
+        console.log(`[PASS] ${code} PM Peak (${file.name}): ${data.pm_peak.entering}% entering, ${data.pm_peak.exiting}% exiting (more/equal exiting - correct)`);
+        passed++;
+      } else {
+        console.log(`[FAIL] ${code} PM Peak (${file.name}): ${data.pm_peak.entering}% entering, ${data.pm_peak.exiting}% exiting (should have more exiting!)`);
+        failed++;
+      }
+    }
+  }
+}
+
+// Test Retail critical codes (PM more entering for customer traffic)
+console.log('\n--- Testing Critical Retail Codes (both files) ---\n');
+
+for (const file of [{ name: 'ite_11th_primary.json', data: ite11thPrimary }, { name: 'ite_11th_extracted.json', data: ite11thExtracted }]) {
+  for (const code of retailCriticalCodes) {
+    const data = file.data[code];
+    if (!data) {
+      console.log(`[SKIP] ${code}: Not found in ${file.name}`);
+      continue;
+    }
+    // Retail PM: should have more entering (customers shopping after work)
+    if (data.pm_peak?.entering !== undefined && data.pm_peak?.exiting !== undefined) {
+      const pmValid = data.pm_peak.entering > data.pm_peak.exiting;
+      if (pmValid) {
+        console.log(`[PASS] ${code} PM Peak (${file.name}): ${data.pm_peak.entering}% entering, ${data.pm_peak.exiting}% exiting (more entering - correct)`);
+        passed++;
+      } else {
+        console.log(`[FAIL] ${code} PM Peak (${file.name}): ${data.pm_peak.entering}% entering, ${data.pm_peak.exiting}% exiting (should have more entering!)`);
+        failed++;
+      }
     }
   }
 }

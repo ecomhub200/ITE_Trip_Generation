@@ -39,16 +39,16 @@
       "equation": null,
       "r_squared": null,
       "sample_size": 2,
-      "entering": 47,
-      "exiting": 53
+      "entering": 53,
+      "exiting": 47
     },
     "pm_peak": {
       "rate": 0.69,
       "equation": null,
       "r_squared": null,
       "sample_size": 4,
-      "entering": 52,
-      "exiting": 48
+      "entering": 48,
+      "exiting": 52
     }
   },
   "090": {
@@ -376,8 +376,8 @@
       },
       "r_squared": 0.86,
       "sample_size": 4,
-      "entering": 68,
-      "exiting": 32
+      "entering": 32,
+      "exiting": 68
     }
   },
   "157": {
@@ -3657,8 +3657,8 @@
       },
       "r_squared": 0.85,
       "sample_size": 5,
-      "entering": 85,
-      "exiting": 15
+      "entering": 29,
+      "exiting": 71
     },
     "pm_peak": {
       "rate": 0.91,
@@ -3669,8 +3669,8 @@
       },
       "r_squared": 0.54,
       "sample_size": 5,
-      "entering": 29,
-      "exiting": 71
+      "entering": 71,
+      "exiting": 29
     }
   },
   "843": {
@@ -4351,16 +4351,16 @@
       "equation": null,
       "r_squared": null,
       "sample_size": 1,
-      "entering": 88,
-      "exiting": 12
+      "entering": 12,
+      "exiting": 88
     },
     "pm_peak": {
       "rate": 1.24,
       "equation": null,
       "r_squared": null,
       "sample_size": 1,
-      "entering": 11,
-      "exiting": 89
+      "entering": 89,
+      "exiting": 11
     }
   },
   "899": {
