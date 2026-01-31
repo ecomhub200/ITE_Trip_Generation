@@ -1,16 +1,4 @@
-/**
- * ITE Trip Generation Database
- * Based on ITE Trip Generation Manual, 12th Edition
- *
- * Data extracted from official ITE publications
- * Last Updated: 2026-01-28
- * Applicable Jurisdiction: Henrico County, Virginia (Suburban)
- */
-
 const ITE_DATABASE = {
-  // ===========================================
-  // 000s - PORT, FREIGHT, AND TERMINAL
-  // ===========================================
   "010": {
     code: "010",
     name: "Waterport/Marine Terminal",
@@ -26,6 +14,7 @@ const ITE_DATABASE = {
       rate: 0.42,
       equation: null,
       r_squared: null,
+      sample_size: undefined,
       entering: 50,
       exiting: 50
     },
@@ -33,6 +22,7 @@ const ITE_DATABASE = {
       rate: 0.42,
       equation: null,
       r_squared: null,
+      sample_size: undefined,
       entering: 50,
       exiting: 50
     },
@@ -45,7 +35,7 @@ const ITE_DATABASE = {
     category: "Port, Freight, Terminal",
     unit: "Employees",
     weekday: {
-      rate: 13.40,
+      rate: 13.4,
       equation: null,
       r_squared: 0.55,
       sample_size: 4
@@ -54,6 +44,7 @@ const ITE_DATABASE = {
       rate: 0.82,
       equation: null,
       r_squared: null,
+      sample_size: undefined,
       entering: 55,
       exiting: 45
     },
@@ -61,6 +52,7 @@ const ITE_DATABASE = {
       rate: 1.03,
       equation: null,
       r_squared: null,
+      sample_size: undefined,
       entering: 45,
       exiting: 55
     },
@@ -79,26 +71,294 @@ const ITE_DATABASE = {
       sample_size: 6
     },
     am_peak: {
-      rate: 0.65,
+      rate: 1.97,
       equation: null,
       r_squared: null,
-      entering: 72,
-      exiting: 28
+      sample_size: 2,
+      entering: 47,
+      exiting: 53
     },
     pm_peak: {
-      rate: 0.60,
+      rate: 1.87,
       equation: null,
-      r_squared: null,
-      entering: 28,
-      exiting: 72
+      r_squared: 0.63,
+      sample_size: 4,
+      entering: 52,
+      exiting: 48
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 000s Modal Data Plots"
   },
-
-  // ===========================================
-  // 200s - RESIDENTIAL
-  // ===========================================
+  "110": {
+    code: "110",
+    name: "General Light Industrial",
+    category: "Industrial",
+    unit: "1000 SF GFA",
+    weekday: {
+      rate: 4.87,
+      equation: { type: "log", a: 0.8, b: 0.89 },
+      r_squared: 0.61,
+      sample_size: 37
+    },
+    am_peak: {
+      rate: 0.74,
+      equation: null,
+      r_squared: 0.66,
+      sample_size: 41,
+      entering: 88,
+      exiting: 12
+    },
+    pm_peak: {
+      rate: 0.65,
+      equation: null,
+      r_squared: 0.55,
+      sample_size: 40,
+      entering: 14,
+      exiting: 86
+    },
+    source: "ITE 12th Edition",
+    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
+  },
+  "130": {
+    code: "130",
+    name: "Industrial Park",
+    category: "Industrial",
+    unit: "1000 SF GFA",
+    weekday: {
+      rate: 3.37,
+      equation: null,
+      r_squared: 0.58,
+      sample_size: 27
+    },
+    am_peak: {
+      rate: 0.34,
+      equation: null,
+      r_squared: 0.65,
+      sample_size: 34,
+      entering: 81,
+      exiting: 19
+    },
+    pm_peak: {
+      rate: 0.34,
+      equation: null,
+      r_squared: 0.68,
+      sample_size: 35,
+      entering: 22,
+      exiting: 78
+    },
+    source: "ITE 12th Edition",
+    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
+  },
+  "140": {
+    code: "140",
+    name: "Manufacturing",
+    category: "Industrial",
+    unit: "1000 SF GFA",
+    weekday: {
+      rate: 39.53,
+      equation: { type: "linear", a: 3.82, b: 0 },
+      r_squared: 0.8,
+      sample_size: 37
+    },
+    am_peak: {
+      rate: 4.79,
+      equation: null,
+      r_squared: 0.73,
+      sample_size: 32,
+      entering: 86,
+      exiting: 14
+    },
+    pm_peak: {
+      rate: 4.99,
+      equation: null,
+      r_squared: 0.63,
+      sample_size: 32,
+      entering: 39,
+      exiting: 61
+    },
+    source: "ITE 12th Edition",
+    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
+  },
+  "150": {
+    code: "150",
+    name: "Warehousing",
+    category: "Industrial",
+    unit: "1000 SF GFA",
+    weekday: {
+      rate: 1.71,
+      equation: { type: "log", a: 0.68, b: 0.43 },
+      r_squared: 0.92,
+      sample_size: 31
+    },
+    am_peak: {
+      rate: 0.18,
+      equation: null,
+      r_squared: 0.69,
+      sample_size: 36,
+      entering: 77,
+      exiting: 23
+    },
+    pm_peak: {
+      rate: 0.18,
+      equation: null,
+      r_squared: 0.65,
+      sample_size: 49,
+      entering: 28,
+      exiting: 72
+    },
+    source: "ITE 12th Edition",
+    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
+  },
+  "151": {
+    code: "151",
+    name: "Mini-Warehouse",
+    category: "Industrial",
+    unit: "1000 SF GFA",
+    weekday: {
+      rate: 1.65,
+      equation: null,
+      r_squared: 0.52,
+      sample_size: 4
+    },
+    am_peak: {
+      rate: 0.1,
+      equation: null,
+      r_squared: 0.52,
+      sample_size: 8,
+      entering: 52,
+      exiting: 48
+    },
+    pm_peak: {
+      rate: 0.17,
+      equation: null,
+      r_squared: 0.48,
+      sample_size: 8,
+      entering: 52,
+      exiting: 48
+    },
+    source: "ITE 12th Edition",
+    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
+  },
+  "154": {
+    code: "154",
+    name: "High-Cube Transload and Short-Term Storage Warehouse",
+    category: "Industrial",
+    unit: "1000 SF GFA",
+    weekday: {
+      rate: 1.4,
+      equation: null,
+      r_squared: 0.65,
+      sample_size: 91
+    },
+    am_peak: {
+      rate: 0.08,
+      equation: null,
+      r_squared: 0.58,
+      sample_size: 102,
+      entering: 77,
+      exiting: 23
+    },
+    pm_peak: {
+      rate: 0.1,
+      equation: null,
+      r_squared: 0.6,
+      sample_size: 103,
+      entering: 28,
+      exiting: 72
+    },
+    source: "ITE 12th Edition",
+    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
+  },
+  "155": {
+    code: "155",
+    name: "High-Cube Fulfillment Center Warehouse",
+    category: "Industrial",
+    unit: "1000 SF GFA",
+    weekday: {
+      rate: 6.44,
+      equation: null,
+      r_squared: 0.68,
+      sample_size: 2
+    },
+    am_peak: {
+      rate: 0.87,
+      equation: null,
+      r_squared: 0.62,
+      sample_size: 3,
+      entering: 81,
+      exiting: 19
+    },
+    pm_peak: {
+      rate: 1.2,
+      equation: null,
+      r_squared: 0.64,
+      sample_size: 3,
+      entering: 39,
+      exiting: 61
+    },
+    source: "ITE 12th Edition",
+    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
+  },
+  "156": {
+    code: "156",
+    name: "High-Cube Parcel Hub Warehouse",
+    category: "Industrial",
+    unit: "1000 SF GFA",
+    weekday: {
+      rate: 4.63,
+      equation: null,
+      r_squared: 0.7,
+      sample_size: 8
+    },
+    am_peak: {
+      rate: 0.7,
+      equation: null,
+      r_squared: 0.93,
+      sample_size: 4,
+      entering: 50,
+      exiting: 50
+    },
+    pm_peak: {
+      rate: 0.64,
+      equation: null,
+      r_squared: 0.86,
+      sample_size: 4,
+      entering: 68,
+      exiting: 32
+    },
+    source: "ITE 12th Edition",
+    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
+  },
+  "180": {
+    code: "180",
+    name: "Specialty Trade Contractor",
+    category: "Industrial",
+    unit: "1000 SF GFA",
+    weekday: {
+      rate: 9.82,
+      equation: null,
+      r_squared: 0.58,
+      sample_size: 20
+    },
+    am_peak: {
+      rate: 1.66,
+      equation: null,
+      r_squared: 0.52,
+      sample_size: 20,
+      entering: 74,
+      exiting: 26
+    },
+    pm_peak: {
+      rate: 1.93,
+      equation: null,
+      r_squared: 0.55,
+      sample_size: 19,
+      entering: 32,
+      exiting: 68
+    },
+    source: "ITE 12th Edition",
+    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
+  },
   "210": {
     code: "210",
     name: "Single-Family Detached Housing",
@@ -107,25 +367,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 9.43,
       equation: { type: "linear", a: 8.07, b: 265.45 },
-      r_squared: 0.94,
-      sample_size: 155,
-      study_range: { min: 11, max: 3000, avg: 261 }
+      r_squared: 0.95,
+      sample_size: 174
     },
     am_peak: {
       rate: 0.7,
-      equation: { type: "linear", a: 0.70, b: 1.52 },
-      r_squared: 0.92,
-      entering: 25,
-      exiting: 75,
-      study_range: { min: 11, max: 3000, avg: 261 }
+      equation: { type: "linear", a: 0.7, b: 1.52 },
+      r_squared: 0.9,
+      sample_size: 192,
+      entering: 26,
+      exiting: 74
     },
     pm_peak: {
       rate: 0.94,
       equation: { type: "linear", a: 0.94, b: 1.86 },
-      r_squared: 0.93,
+      r_squared: 0.92,
+      sample_size: 208,
       entering: 63,
-      exiting: 37,
-      study_range: { min: 11, max: 3000, avg: 261 }
+      exiting: 37
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
@@ -136,24 +395,26 @@ const ITE_DATABASE = {
     category: "Residential",
     unit: "Dwelling Units",
     weekday: {
-      rate: 7.20,
-      equation: { type: "linear", a: 7.20, b: 0 },
-      r_squared: 0.85,
-      sample_size: 45
+      rate: 7.2,
+      equation: { type: "linear", a: 7.2, b: 0 },
+      r_squared: 0.94,
+      sample_size: 22
     },
     am_peak: {
       rate: 0.48,
       equation: { type: "linear", a: 0.52, b: 0 },
-      r_squared: 0.78,
-      entering: 24,
-      exiting: 76
+      r_squared: 0.92,
+      sample_size: 46,
+      entering: 31,
+      exiting: 69
     },
     pm_peak: {
       rate: 0.57,
       equation: { type: "linear", a: 0.62, b: 0 },
-      r_squared: 0.80,
-      entering: 64,
-      exiting: 36
+      r_squared: 0.91,
+      sample_size: 51,
+      entering: 57,
+      exiting: 43
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
@@ -166,22 +427,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 4.72,
       equation: { type: "linear", a: 7.32, b: 0 },
-      r_squared: 0.85,
-      sample_size: 89
+      r_squared: 0.93,
+      sample_size: 9
     },
     am_peak: {
       rate: 0.38,
       equation: { type: "linear", a: 0.55, b: 0 },
-      r_squared: 0.80,
-      entering: 24,
-      exiting: 76
+      r_squared: 0.8,
+      sample_size: 1,
+      entering: 29,
+      exiting: 71
     },
     pm_peak: {
       rate: 0.61,
       equation: { type: "linear", a: 0.67, b: 0 },
       r_squared: 0.82,
-      entering: 65,
-      exiting: 35
+      sample_size: 1,
+      entering: 60,
+      exiting: 40
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
@@ -192,27 +455,29 @@ const ITE_DATABASE = {
     category: "Residential",
     unit: "Dwelling Units",
     weekday: {
-      rate: 4.46,
-      equation: { type: "linear", a: 4.55, b: -17.52 },
-      r_squared: 0.90,
-      sample_size: 7
+      rate: 4.75,
+      equation: null,
+      r_squared: null,
+      sample_size: 2
     },
     am_peak: {
-      rate: 0.36,
-      equation: null,
-      r_squared: 0.65,
-      entering: 26,
-      exiting: 74
+      rate: 0.32,
+      equation: { type: "linear", a: 0.31, b: 1.06 },
+      r_squared: 0.74,
+      sample_size: 7,
+      entering: 56,
+      exiting: 44
     },
     pm_peak: {
-      rate: 0.44,
-      equation: null,
-      r_squared: 0.68,
-      entering: 62,
-      exiting: 38
+      rate: 0.29,
+      equation: { type: "linear", a: 0.29, b: -0.09 },
+      r_squared: 0.89,
+      sample_size: 7,
+      entering: 43,
+      exiting: 57
     },
-    source: "ITE 12th Edition",
-    page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
+    source: "ITE 11th Edition",
+    page_ref: "ITE 11th Ed. Vol 2 - Residential"
   },
   "222": {
     code: "222",
@@ -220,24 +485,26 @@ const ITE_DATABASE = {
     category: "Residential",
     unit: "Dwelling Units",
     weekday: {
-      rate: 4.20,
-      equation: { type: "linear", a: 4.20, b: 0 },
+      rate: 3.96,
+      equation: { type: "linear", a: 4.2, b: 0 },
       r_squared: 0.72,
-      sample_size: 22
+      sample_size: 2
     },
     am_peak: {
-      rate: 0.30,
+      rate: 0.23,
       equation: null,
       r_squared: 0.58,
-      entering: 28,
-      exiting: 72
+      sample_size: 3,
+      entering: 33,
+      exiting: 67
     },
     pm_peak: {
-      rate: 0.35,
+      rate: 0.26,
       equation: null,
-      r_squared: 0.60,
-      entering: 60,
-      exiting: 40
+      r_squared: 0.6,
+      sample_size: 3,
+      entering: 57,
+      exiting: 43
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
@@ -248,24 +515,26 @@ const ITE_DATABASE = {
     category: "Residential",
     unit: "Dwelling Units",
     weekday: {
-      rate: 5.86,
+      rate: 3.44,
       equation: { type: "linear", a: 5.86, b: 0 },
-      r_squared: 0.80,
-      sample_size: 68
+      r_squared: 0.8,
+      sample_size: 1
     },
     am_peak: {
       rate: 0.44,
       equation: null,
       r_squared: 0.72,
+      sample_size: 2,
       entering: 23,
       exiting: 77
     },
     pm_peak: {
-      rate: 0.52,
+      rate: 0.36,
       equation: null,
       r_squared: 0.75,
-      entering: 66,
-      exiting: 34
+      sample_size: 2,
+      entering: 71,
+      exiting: 29
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
@@ -278,22 +547,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 7.12,
       equation: { type: "linear", a: 4.99, b: 0 },
-      r_squared: 0.76,
-      sample_size: 18
+      r_squared: 0.61,
+      sample_size: 13
     },
     am_peak: {
       rate: 0.39,
       equation: null,
-      r_squared: 0.68,
-      entering: 30,
-      exiting: 70
+      r_squared: 0.84,
+      sample_size: 9,
+      entering: 21,
+      exiting: 79
     },
     pm_peak: {
       rate: 0.58,
       equation: null,
-      r_squared: 0.70,
-      entering: 56,
-      exiting: 44
+      r_squared: 0.91,
+      sample_size: 9,
+      entering: 62,
+      exiting: 38
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
@@ -306,22 +577,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 4.31,
       equation: null,
-      r_squared: 0.55,
-      sample_size: 12
+      r_squared: 0.94,
+      sample_size: 15
     },
     am_peak: {
       rate: 0.24,
       equation: null,
-      r_squared: 0.48,
-      entering: 40,
-      exiting: 60
+      r_squared: 0.88,
+      sample_size: 34,
+      entering: 33,
+      exiting: 67
     },
     pm_peak: {
       rate: 0.3,
       equation: null,
-      r_squared: 0.52,
-      entering: 55,
-      exiting: 45
+      r_squared: 0.86,
+      sample_size: 35,
+      entering: 61,
+      exiting: 39
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
@@ -334,22 +607,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 3.24,
       equation: null,
-      r_squared: 0.52,
-      sample_size: 15
+      r_squared: 0.99,
+      sample_size: 6
     },
     am_peak: {
-      rate: 0.20,
+      rate: 0.2,
       equation: null,
-      r_squared: 0.45,
-      entering: 42,
-      exiting: 58
+      r_squared: 0.85,
+      sample_size: 9,
+      entering: 34,
+      exiting: 66
     },
     pm_peak: {
       rate: 0.25,
       equation: null,
-      r_squared: 0.50,
-      entering: 57,
-      exiting: 43
+      r_squared: 0.84,
+      sample_size: 9,
+      entering: 56,
+      exiting: 44
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
@@ -362,22 +637,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 2.47,
       equation: null,
-      r_squared: 0.60,
-      sample_size: 10
+      r_squared: 0.98,
+      sample_size: 9
     },
     am_peak: {
       rate: 0.15,
       equation: null,
-      r_squared: 0.52,
-      entering: 45,
-      exiting: 55
+      r_squared: 0.95,
+      sample_size: 15,
+      entering: 65,
+      exiting: 35
     },
     pm_peak: {
       rate: 0.19,
       equation: null,
-      r_squared: 0.55,
-      entering: 52,
-      exiting: 48
+      r_squared: 0.94,
+      sample_size: 15,
+      entering: 39,
+      exiting: 61
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
@@ -394,18 +671,20 @@ const ITE_DATABASE = {
       sample_size: 8
     },
     am_peak: {
-      rate: 0.21,
+      rate: 0.22,
       equation: null,
-      r_squared: 0.38,
-      entering: 35,
-      exiting: 65
+      r_squared: 0.95,
+      sample_size: 6,
+      entering: 55,
+      exiting: 45
     },
     pm_peak: {
-      rate: 0.29,
+      rate: 1.11,
       equation: null,
       r_squared: 0.42,
-      entering: 60,
-      exiting: 40
+      sample_size: 9,
+      entering: 59,
+      exiting: 41
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
@@ -417,55 +696,55 @@ const ITE_DATABASE = {
     unit: "Dwelling Units",
     weekday: {
       rate: 7.31,
-      equation: { type: "linear", a: 7.50, b: 0 },
-      r_squared: 0.82,
-      sample_size: 28
+      equation: { type: "linear", a: 7.5, b: 0 },
+      r_squared: 0.94,
+      sample_size: 8
     },
     am_peak: {
       rate: 0.57,
       equation: null,
-      r_squared: 0.75,
-      entering: 25,
-      exiting: 75
+      r_squared: 0.97,
+      sample_size: 8,
+      entering: 22,
+      exiting: 78
     },
     pm_peak: {
       rate: 0.68,
       equation: null,
-      r_squared: 0.78,
-      entering: 64,
-      exiting: 36
+      r_squared: 0.97,
+      sample_size: 8,
+      entering: 65,
+      exiting: 35
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
   },
-
-  // ===========================================
-  // 300s - LODGING
-  // ===========================================
   "310": {
     code: "310",
     name: "Hotel",
     category: "Lodging",
     unit: "Rooms",
     weekday: {
-      rate: 8.36,
-      equation: { type: "log", a: 0.80, b: 0.69 },
+      rate: 12.23,
+      equation: { type: "log", a: 0.8, b: 0.69 },
       r_squared: 0.78,
-      sample_size: 82
+      sample_size: 2
     },
     am_peak: {
-      rate: 0.53,
+      rate: 0.62,
       equation: null,
-      r_squared: 0.68,
-      entering: 38,
-      exiting: 62
+      r_squared: 0.54,
+      sample_size: 13,
+      entering: 56,
+      exiting: 44
     },
     pm_peak: {
-      rate: 0.60,
+      rate: 0.73,
       equation: null,
-      r_squared: 0.70,
-      entering: 52,
-      exiting: 48
+      r_squared: 0.59,
+      sample_size: 16,
+      entering: 49,
+      exiting: 51
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 300s Modal Data Plots"
@@ -479,21 +758,23 @@ const ITE_DATABASE = {
       rate: 6.24,
       equation: null,
       r_squared: 0.68,
-      sample_size: 18
+      sample_size: 3
     },
     am_peak: {
       rate: 0.48,
       equation: null,
-      r_squared: 0.60,
-      entering: 35,
-      exiting: 65
+      r_squared: 0.6,
+      sample_size: 4,
+      entering: 67,
+      exiting: 33
     },
     pm_peak: {
       rate: 0.52,
       equation: null,
       r_squared: 0.62,
-      entering: 55,
-      exiting: 45
+      sample_size: 5,
+      entering: 43,
+      exiting: 57
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 300s Modal Data Plots"
@@ -507,21 +788,23 @@ const ITE_DATABASE = {
       rate: 5.08,
       equation: null,
       r_squared: 0.72,
-      sample_size: 25
+      sample_size: 3
     },
     am_peak: {
       rate: 0.51,
       equation: null,
-      r_squared: 0.64,
-      entering: 36,
-      exiting: 64
+      r_squared: 0.7,
+      sample_size: 7,
+      entering: 52,
+      exiting: 48
     },
     pm_peak: {
       rate: 0.41,
       equation: null,
       r_squared: 0.66,
-      entering: 54,
-      exiting: 46
+      sample_size: 14,
+      entering: 56,
+      exiting: 44
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 300s Modal Data Plots"
@@ -532,24 +815,26 @@ const ITE_DATABASE = {
     category: "Lodging",
     unit: "Rooms",
     weekday: {
-      rate: 5.63,
+      rate: 4.37,
       equation: null,
       r_squared: 0.55,
-      sample_size: 28
+      sample_size: 2
     },
     am_peak: {
-      rate: 0.39,
+      rate: 0.49,
       equation: null,
-      r_squared: 0.48,
-      entering: 40,
-      exiting: 60
+      r_squared: 0.7,
+      sample_size: 10,
+      entering: 36,
+      exiting: 64
     },
     pm_peak: {
-      rate: 0.42,
+      rate: 0.47,
       equation: null,
-      r_squared: 0.50,
-      entering: 50,
-      exiting: 50
+      r_squared: 0.5,
+      sample_size: 13,
+      entering: 53,
+      exiting: 47
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 300s Modal Data Plots"
@@ -566,26 +851,24 @@ const ITE_DATABASE = {
       sample_size: 15
     },
     am_peak: {
-      rate: 0.42,
+      rate: 0.37,
       equation: null,
-      r_squared: 0.50,
-      entering: 42,
-      exiting: 58
+      r_squared: 0.78,
+      sample_size: 6,
+      entering: 72,
+      exiting: 28
     },
     pm_peak: {
-      rate: 0.51,
+      rate: 0.47,
       equation: null,
-      r_squared: 0.52,
-      entering: 48,
-      exiting: 52
+      r_squared: 0.91,
+      sample_size: 9,
+      entering: 43,
+      exiting: 57
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 300s Modal Data Plots"
   },
-
-  // ===========================================
-  // 400s - RECREATIONAL
-  // ===========================================
   "411": {
     code: "411",
     name: "Public Park",
@@ -594,22 +877,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 0.78,
       equation: null,
-      r_squared: 0.42,
-      sample_size: 12
+      r_squared: 0.82,
+      sample_size: 5
     },
     am_peak: {
       rate: 0.02,
       equation: null,
       r_squared: null,
-      entering: 65,
-      exiting: 35
+      sample_size: 5,
+      entering: 59,
+      exiting: 41
     },
     pm_peak: {
       rate: 0.11,
       equation: null,
-      r_squared: null,
-      entering: 45,
-      exiting: 55
+      r_squared: 0.53,
+      sample_size: 6,
+      entering: 55,
+      exiting: 45
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
@@ -620,24 +905,26 @@ const ITE_DATABASE = {
     category: "Recreational",
     unit: "Berths",
     weekday: {
-      rate: 2.84,
+      rate: 2.41,
       equation: null,
       r_squared: 0.48,
-      sample_size: 14
+      sample_size: 2
     },
     am_peak: {
-      rate: 0.10,
+      rate: 0.07,
       equation: null,
       r_squared: null,
-      entering: 60,
-      exiting: 40
+      sample_size: 1,
+      entering: 33,
+      exiting: 67
     },
     pm_peak: {
-      rate: 0.22,
+      rate: 0.21,
       equation: null,
       r_squared: null,
-      entering: 40,
-      exiting: 60
+      sample_size: 1,
+      entering: 60,
+      exiting: 40
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
@@ -650,22 +937,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 30.38,
       equation: null,
-      r_squared: 0.55,
-      sample_size: 21
+      r_squared: 0.72,
+      sample_size: 4
     },
     am_peak: {
       rate: 1.76,
       equation: null,
-      r_squared: 0.48,
-      entering: 80,
-      exiting: 20
+      r_squared: 0.5,
+      sample_size: 15,
+      entering: 79,
+      exiting: 21
     },
     pm_peak: {
       rate: 2.91,
       equation: null,
-      r_squared: 0.50,
-      entering: 45,
-      exiting: 55
+      r_squared: 0.5,
+      sample_size: 14,
+      entering: 53,
+      exiting: 47
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
@@ -676,24 +965,26 @@ const ITE_DATABASE = {
     category: "Recreational",
     unit: "Tees",
     weekday: {
-      rate: 12.45,
+      rate: 13.65,
       equation: null,
       r_squared: 0.52,
-      sample_size: 8
+      sample_size: 1
     },
     am_peak: {
-      rate: 0.35,
+      rate: 0.4,
       equation: null,
       r_squared: null,
-      entering: 75,
-      exiting: 25
+      sample_size: 1,
+      entering: 61,
+      exiting: 39
     },
     pm_peak: {
-      rate: 1.42,
+      rate: 1.25,
       equation: null,
       r_squared: null,
-      entering: 55,
-      exiting: 45
+      sample_size: 7,
+      entering: 45,
+      exiting: 55
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
@@ -713,13 +1004,15 @@ const ITE_DATABASE = {
       rate: 5.25,
       equation: null,
       r_squared: null,
+      sample_size: undefined,
       entering: 70,
       exiting: 30
     },
     pm_peak: {
-      rate: 8.50,
+      rate: 3.58,
       equation: null,
       r_squared: null,
+      sample_size: 3,
       entering: 55,
       exiting: 45
     },
@@ -741,6 +1034,7 @@ const ITE_DATABASE = {
       rate: 0.29,
       equation: null,
       r_squared: null,
+      sample_size: undefined,
       entering: 50,
       exiting: 50
     },
@@ -748,6 +1042,7 @@ const ITE_DATABASE = {
       rate: 5.43,
       equation: null,
       r_squared: null,
+      sample_size: undefined,
       entering: 65,
       exiting: 35
     },
@@ -760,24 +1055,26 @@ const ITE_DATABASE = {
     category: "Recreational",
     unit: "Screens",
     weekday: {
-      rate: 145.00,
+      rate: 1.76,
       equation: null,
       r_squared: 0.72,
-      sample_size: 35
+      sample_size: 1
     },
     am_peak: {
       rate: 0.45,
       equation: null,
       r_squared: null,
+      sample_size: undefined,
       entering: 50,
       exiting: 50
     },
     pm_peak: {
-      rate: 10.25,
+      rate: 0.1,
       equation: null,
       r_squared: null,
-      entering: 62,
-      exiting: 38
+      sample_size: 18,
+      entering: 60,
+      exiting: 40
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
@@ -788,7 +1085,7 @@ const ITE_DATABASE = {
     category: "Recreational",
     unit: "Cages",
     weekday: {
-      rate: 24.80,
+      rate: 24.8,
       equation: null,
       r_squared: 0.45,
       sample_size: 4
@@ -797,15 +1094,17 @@ const ITE_DATABASE = {
       rate: 0.68,
       equation: null,
       r_squared: null,
+      sample_size: undefined,
       entering: 50,
       exiting: 50
     },
     pm_peak: {
-      rate: 3.10,
+      rate: 0.15,
       equation: null,
       r_squared: null,
-      entering: 55,
-      exiting: 45
+      sample_size: 1,
+      entering: 8,
+      exiting: 92
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
@@ -816,24 +1115,26 @@ const ITE_DATABASE = {
     category: "Recreational",
     unit: "Acres",
     weekday: {
-      rate: 57.60,
+      rate: 53.41,
       equation: null,
       r_squared: 0.55,
-      sample_size: 8
+      sample_size: 1
     },
     am_peak: {
-      rate: 3.80,
+      rate: 0.21,
       equation: null,
       r_squared: null,
-      entering: 85,
-      exiting: 15
+      sample_size: 1,
+      entering: 88,
+      exiting: 12
     },
     pm_peak: {
-      rate: 4.20,
+      rate: 3.95,
       equation: null,
       r_squared: null,
-      entering: 25,
-      exiting: 75
+      sample_size: 1,
+      entering: 61,
+      exiting: 39
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
@@ -844,24 +1145,26 @@ const ITE_DATABASE = {
     category: "Recreational",
     unit: "Courts",
     weekday: {
-      rate: 33.01,
+      rate: 27.71,
       equation: null,
       r_squared: 0.48,
-      sample_size: 10
+      sample_size: 2
     },
     am_peak: {
       rate: 1.65,
       equation: null,
       r_squared: null,
+      sample_size: undefined,
       entering: 60,
       exiting: 40
     },
     pm_peak: {
-      rate: 3.28,
+      rate: 3.82,
       equation: null,
       r_squared: null,
-      entering: 55,
-      exiting: 45
+      sample_size: 2,
+      entering: 50,
+      exiting: 50
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
@@ -878,18 +1181,20 @@ const ITE_DATABASE = {
       sample_size: 52
     },
     am_peak: {
-      rate: 1.92,
+      rate: 1.31,
       equation: null,
       r_squared: 0.65,
-      entering: 62,
-      exiting: 38
+      sample_size: 6,
+      entering: 51,
+      exiting: 49
     },
     pm_peak: {
-      rate: 3.53,
+      rate: 3.45,
       equation: null,
-      r_squared: 0.68,
-      entering: 55,
-      exiting: 45
+      r_squared: 0.67,
+      sample_size: 8,
+      entering: 57,
+      exiting: 43
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
@@ -902,30 +1207,28 @@ const ITE_DATABASE = {
     weekday: {
       rate: 28.82,
       equation: null,
-      r_squared: 0.62,
-      sample_size: 18
+      r_squared: 0.74,
+      sample_size: 4
     },
     am_peak: {
       rate: 18.35,
       equation: null,
       r_squared: null,
-      entering: 65,
-      exiting: 35
+      sample_size: 2,
+      entering: 55,
+      exiting: 45
     },
     pm_peak: {
       rate: 23.06,
       equation: null,
       r_squared: null,
-      entering: 52,
-      exiting: 48
+      sample_size: 2,
+      entering: 44,
+      exiting: 56
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 400s Modal Data Plots"
   },
-
-  // ===========================================
-  // 500s - INSTITUTIONAL
-  // ===========================================
   "520": {
     code: "520",
     name: "Elementary School",
@@ -935,21 +1238,23 @@ const ITE_DATABASE = {
       rate: 2.27,
       equation: null,
       r_squared: 0.72,
-      sample_size: 44
+      sample_size: 16
     },
     am_peak: {
       rate: 0.74,
       equation: null,
       r_squared: 0.68,
-      entering: 66,
-      exiting: 34
+      sample_size: 44,
+      entering: 54,
+      exiting: 46
     },
     pm_peak: {
       rate: 0.16,
       equation: null,
       r_squared: 0.62,
-      entering: 33,
-      exiting: 67
+      sample_size: 47,
+      entering: 46,
+      exiting: 54
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
@@ -962,22 +1267,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 2.1,
       equation: null,
-      r_squared: 0.68,
-      sample_size: 32
+      r_squared: 0.83,
+      sample_size: 14
     },
     am_peak: {
       rate: 0.67,
       equation: null,
       r_squared: 0.62,
-      entering: 64,
-      exiting: 36
+      sample_size: 23,
+      entering: 54,
+      exiting: 46
     },
     pm_peak: {
       rate: 0.15,
       equation: null,
       r_squared: 0.58,
-      entering: 32,
-      exiting: 68
+      sample_size: 21,
+      entering: 48,
+      exiting: 52
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
@@ -991,21 +1298,23 @@ const ITE_DATABASE = {
       rate: 1.94,
       equation: null,
       r_squared: 0.74,
-      sample_size: 56
+      sample_size: 31
     },
     am_peak: {
       rate: 0.52,
       equation: null,
-      r_squared: 0.70,
-      entering: 69,
-      exiting: 31
+      r_squared: 0.56,
+      sample_size: 42,
+      entering: 68,
+      exiting: 32
     },
     pm_peak: {
       rate: 0.14,
       equation: null,
       r_squared: 0.65,
-      entering: 28,
-      exiting: 72
+      sample_size: 41,
+      entering: 48,
+      exiting: 52
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
@@ -1016,24 +1325,26 @@ const ITE_DATABASE = {
     category: "Institutional",
     unit: "Students",
     weekday: {
-      rate: 1.71,
+      rate: 4.11,
       equation: null,
       r_squared: 0.74,
-      sample_size: 56
+      sample_size: 1
     },
     am_peak: {
-      rate: 0.48,
+      rate: 1.01,
       equation: null,
-      r_squared: 0.70,
-      entering: 69,
-      exiting: 31
+      r_squared: 0.92,
+      sample_size: 14,
+      entering: 56,
+      exiting: 44
     },
     pm_peak: {
-      rate: 0.27,
+      rate: 0.26,
       equation: null,
       r_squared: 0.65,
-      entering: 28,
-      exiting: 72
+      sample_size: 5,
+      entering: 46,
+      exiting: 54
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
@@ -1047,21 +1358,23 @@ const ITE_DATABASE = {
       rate: 2.17,
       equation: null,
       r_squared: 0.65,
-      sample_size: 18
+      sample_size: 3
     },
     am_peak: {
       rate: 0.66,
       equation: null,
-      r_squared: 0.60,
-      entering: 62,
-      exiting: 38
+      r_squared: 0.61,
+      sample_size: 4,
+      entering: 59,
+      exiting: 41
     },
     pm_peak: {
       rate: 0.19,
       equation: null,
       r_squared: 0.55,
-      entering: 35,
-      exiting: 65
+      sample_size: 3,
+      entering: 39,
+      exiting: 61
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
@@ -1072,24 +1385,26 @@ const ITE_DATABASE = {
     category: "Institutional",
     unit: "Students",
     weekday: {
-      rate: 2.28,
+      rate: 1.85,
       equation: null,
       r_squared: 0.62,
-      sample_size: 15
+      sample_size: 1
     },
     am_peak: {
-      rate: 0.60,
+      rate: 1.04,
       equation: null,
-      r_squared: 0.58,
-      entering: 64,
-      exiting: 36
+      r_squared: 0.86,
+      sample_size: 22,
+      entering: 52,
+      exiting: 48
     },
     pm_peak: {
-      rate: 0.40,
+      rate: 0.16,
       equation: null,
       r_squared: 0.52,
-      entering: 36,
-      exiting: 64
+      sample_size: 5,
+      entering: 35,
+      exiting: 65
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
@@ -1102,22 +1417,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 1.15,
       equation: null,
-      r_squared: 0.70,
-      sample_size: 22
+      r_squared: 0.7,
+      sample_size: 12
     },
     am_peak: {
       rate: 0.11,
       equation: null,
-      r_squared: 0.62,
-      entering: 80,
-      exiting: 20
+      r_squared: 0.8,
+      sample_size: 13,
+      entering: 81,
+      exiting: 19
     },
     pm_peak: {
       rate: 0.12,
       equation: null,
-      r_squared: 0.58,
-      entering: 52,
-      exiting: 48
+      r_squared: 0.75,
+      sample_size: 12,
+      entering: 56,
+      exiting: 44
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
@@ -1130,22 +1447,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 1.56,
       equation: null,
-      r_squared: 0.72,
-      sample_size: 28
+      r_squared: 0.95,
+      sample_size: 5
     },
     am_peak: {
       rate: 0.15,
       equation: null,
-      r_squared: 0.65,
-      entering: 79,
-      exiting: 21
+      r_squared: 0.85,
+      sample_size: 7,
+      entering: 78,
+      exiting: 22
     },
     pm_peak: {
       rate: 0.15,
       equation: null,
-      r_squared: 0.60,
-      entering: 51,
-      exiting: 49
+      r_squared: 0.92,
+      sample_size: 9,
+      entering: 32,
+      exiting: 68
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
@@ -1158,22 +1477,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 0.9,
       equation: null,
-      r_squared: 0.48,
-      sample_size: 18
+      r_squared: 0.85,
+      sample_size: 4
     },
     am_peak: {
       rate: 0.07,
       equation: null,
       r_squared: null,
-      entering: 65,
-      exiting: 35
+      sample_size: 2,
+      entering: 60,
+      exiting: 40
     },
     pm_peak: {
       rate: 0.1,
       equation: null,
       r_squared: null,
-      entering: 55,
-      exiting: 45
+      sample_size: 4,
+      entering: 45,
+      exiting: 55
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
@@ -1186,22 +1507,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 4.09,
       equation: { type: "linear", a: 4.38, b: 0 },
-      r_squared: 0.85,
-      sample_size: 105
+      r_squared: 0.72,
+      sample_size: 14
     },
     am_peak: {
       rate: 0.78,
       equation: null,
-      r_squared: 0.78,
-      entering: 51,
-      exiting: 49
+      r_squared: 0.69,
+      sample_size: 75,
+      entering: 53,
+      exiting: 47
     },
     pm_peak: {
       rate: 0.79,
       equation: null,
-      r_squared: 0.80,
-      entering: 46,
-      exiting: 54
+      r_squared: 0.57,
+      sample_size: 75,
+      entering: 47,
+      exiting: 53
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
@@ -1214,22 +1537,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 6.02,
       equation: null,
-      r_squared: 0.35,
+      r_squared: 0.86,
       sample_size: 5
     },
     am_peak: {
       rate: 0.18,
       equation: null,
-      r_squared: null,
-      entering: 60,
-      exiting: 40
+      r_squared: 0.84,
+      sample_size: 4,
+      entering: 80,
+      exiting: 20
     },
     pm_peak: {
       rate: 0.46,
       equation: null,
-      r_squared: null,
-      entering: 45,
-      exiting: 55
+      r_squared: 0.58,
+      sample_size: 4,
+      entering: 31,
+      exiting: 69
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
@@ -1240,7 +1565,7 @@ const ITE_DATABASE = {
     category: "Institutional",
     unit: "Employees",
     weekday: {
-      rate: 8.90,
+      rate: 8.9,
       equation: null,
       r_squared: 0.48,
       sample_size: 6
@@ -1249,15 +1574,17 @@ const ITE_DATABASE = {
       rate: 0.65,
       equation: null,
       r_squared: null,
+      sample_size: undefined,
       entering: 50,
       exiting: 50
     },
     pm_peak: {
-      rate: 0.50,
+      rate: 0.48,
       equation: null,
       r_squared: null,
-      entering: 50,
-      exiting: 50
+      sample_size: 3,
+      entering: 29,
+      exiting: 71
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
@@ -1270,30 +1597,28 @@ const ITE_DATABASE = {
     weekday: {
       rate: 72.05,
       equation: null,
-      r_squared: 0.62,
-      sample_size: 24
+      r_squared: 0.97,
+      sample_size: 6
     },
     am_peak: {
-      rate: 1.0,
+      rate: 1,
       equation: null,
-      r_squared: 0.55,
-      entering: 70,
-      exiting: 30
+      r_squared: 0.86,
+      sample_size: 4,
+      entering: 71,
+      exiting: 29
     },
     pm_peak: {
       rate: 8.16,
       equation: null,
-      r_squared: 0.58,
-      entering: 50,
-      exiting: 50
+      r_squared: 0.75,
+      sample_size: 9,
+      entering: 48,
+      exiting: 52
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 500s Modal Data Plots"
   },
-
-  // ===========================================
-  // 600s - MEDICAL
-  // ===========================================
   "610": {
     code: "610",
     name: "Hospital",
@@ -1302,22 +1627,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 10.77,
       equation: { type: "linear", a: 10.77, b: 0 },
-      r_squared: 0.78,
-      sample_size: 32
+      r_squared: 0.64,
+      sample_size: 7
     },
     am_peak: {
       rate: 0.81,
       equation: null,
       r_squared: 0.72,
-      entering: 72,
-      exiting: 28
+      sample_size: 19,
+      entering: 67,
+      exiting: 33
     },
     pm_peak: {
       rate: 0.86,
       equation: null,
-      r_squared: 0.74,
-      entering: 38,
-      exiting: 62
+      r_squared: 0.69,
+      sample_size: 19,
+      entering: 35,
+      exiting: 65
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 600s Modal Data Plots"
@@ -1330,22 +1657,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 6.75,
       equation: null,
-      r_squared: 0.65,
-      sample_size: 24
+      r_squared: 0.61,
+      sample_size: 9
     },
     am_peak: {
       rate: 0.55,
       equation: null,
-      r_squared: 0.58,
-      entering: 65,
-      exiting: 35
+      r_squared: 0.64,
+      sample_size: 8,
+      entering: 77,
+      exiting: 23
     },
     pm_peak: {
       rate: 0.59,
       equation: null,
-      r_squared: 0.60,
-      entering: 40,
-      exiting: 60
+      r_squared: 0.52,
+      sample_size: 8,
+      entering: 41,
+      exiting: 59
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 600s Modal Data Plots"
@@ -1358,22 +1687,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 37.6,
       equation: { type: "log", a: 0.74, b: 1.91 },
-      r_squared: 0.82,
-      sample_size: 45
+      r_squared: 0.76,
+      sample_size: 9
     },
     am_peak: {
       rate: 2.75,
       equation: null,
-      r_squared: 0.75,
-      entering: 78,
-      exiting: 22
+      r_squared: 0.98,
+      sample_size: 9,
+      entering: 81,
+      exiting: 19
     },
     pm_peak: {
       rate: 3.69,
       equation: null,
-      r_squared: 0.76,
-      entering: 35,
-      exiting: 65
+      r_squared: 0.72,
+      sample_size: 11,
+      entering: 30,
+      exiting: 70
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 600s Modal Data Plots"
@@ -1387,21 +1718,23 @@ const ITE_DATABASE = {
       rate: 21.5,
       equation: null,
       r_squared: 0.68,
-      sample_size: 18
+      sample_size: 6
     },
     am_peak: {
       rate: 3.64,
       equation: null,
-      r_squared: 0.62,
-      entering: 75,
-      exiting: 25
+      r_squared: 0.74,
+      sample_size: 8,
+      entering: 67,
+      exiting: 33
     },
     pm_peak: {
       rate: 3.53,
       equation: null,
-      r_squared: 0.65,
-      entering: 38,
-      exiting: 62
+      r_squared: 0.82,
+      sample_size: 8,
+      entering: 40,
+      exiting: 60
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 600s Modal Data Plots"
@@ -1415,29 +1748,27 @@ const ITE_DATABASE = {
       rate: 24.94,
       equation: { type: "log", a: 0.72, b: 2.05 },
       r_squared: 0.85,
-      sample_size: 72
+      sample_size: 4
     },
     am_peak: {
       rate: 1.12,
       equation: null,
       r_squared: 0.78,
-      entering: 82,
-      exiting: 18
+      sample_size: 4,
+      entering: 50,
+      exiting: 50
     },
     pm_peak: {
       rate: 1.52,
       equation: null,
-      r_squared: 0.80,
-      entering: 32,
-      exiting: 68
+      r_squared: 0.8,
+      sample_size: 4,
+      entering: 46,
+      exiting: 54
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 600s Modal Data Plots"
   },
-
-  // ===========================================
-  // 700s - OFFICE
-  // ===========================================
   "710": {
     code: "710",
     name: "General Office Building",
@@ -1445,21 +1776,23 @@ const ITE_DATABASE = {
     unit: "1000 SF GFA",
     weekday: {
       rate: 10.84,
-      equation: { type: "log", a: 0.80, b: 1.55 },
-      r_squared: 0.88,
-      sample_size: 312
+      equation: { type: "log", a: 0.8, b: 1.55 },
+      r_squared: 0.78,
+      sample_size: 59
     },
     am_peak: {
       rate: 1.52,
       equation: { type: "log", a: 0.81, b: 0.37 },
-      r_squared: 0.85,
+      r_squared: 0.78,
+      sample_size: 221,
       entering: 88,
       exiting: 12
     },
     pm_peak: {
       rate: 1.44,
-      equation: { type: "log", a: 0.83, b: 0.30 },
-      r_squared: 0.86,
+      equation: { type: "log", a: 0.83, b: 0.3 },
+      r_squared: 0.77,
+      sample_size: 232,
       entering: 17,
       exiting: 83
     },
@@ -1474,22 +1807,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 7.95,
       equation: { type: "linear", a: 7.98, b: 0 },
-      r_squared: 0.82,
-      sample_size: 28
+      r_squared: 0.81,
+      sample_size: 7
     },
     am_peak: {
       rate: 1.45,
       equation: null,
-      r_squared: 0.78,
-      entering: 90,
-      exiting: 10
+      r_squared: 0.68,
+      sample_size: 21,
+      entering: 93,
+      exiting: 7
     },
     pm_peak: {
       rate: 1.3,
       equation: null,
-      r_squared: 0.80,
-      entering: 15,
-      exiting: 85
+      r_squared: 0.7,
+      sample_size: 21,
+      entering: 9,
+      exiting: 91
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
@@ -1502,22 +1837,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 13.07,
       equation: { type: "linear", a: 8.28, b: 0 },
-      r_squared: 0.80,
-      sample_size: 35
+      r_squared: 0.53,
+      sample_size: 12
     },
     am_peak: {
       rate: 1.85,
       equation: null,
-      r_squared: 0.76,
+      r_squared: 0.84,
+      sample_size: 41,
       entering: 89,
       exiting: 11
     },
     pm_peak: {
       rate: 1.76,
       equation: null,
-      r_squared: 0.78,
-      entering: 16,
-      exiting: 84
+      r_squared: 0.85,
+      sample_size: 41,
+      entering: 15,
+      exiting: 85
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
@@ -1530,22 +1867,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 31.86,
       equation: { type: "log", a: 0.72, b: 2.05 },
-      r_squared: 0.85,
-      sample_size: 72
+      r_squared: 0.99,
+      sample_size: 6
     },
     am_peak: {
       rate: 2.68,
       equation: null,
-      r_squared: 0.78,
-      entering: 82,
-      exiting: 18
+      r_squared: 0.82,
+      sample_size: 8,
+      entering: 81,
+      exiting: 19
     },
     pm_peak: {
       rate: 2.84,
       equation: null,
-      r_squared: 0.80,
-      entering: 32,
-      exiting: 68
+      r_squared: 0.92,
+      sample_size: 10,
+      entering: 25,
+      exiting: 75
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
@@ -1558,22 +1897,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 3.99,
       equation: null,
-      r_squared: 0.72,
-      sample_size: 18
+      r_squared: 0.84,
+      sample_size: 7
     },
     am_peak: {
       rate: 0.59,
       equation: null,
-      r_squared: 0.65,
-      entering: 78,
-      exiting: 22
+      r_squared: 0.66,
+      sample_size: 7,
+      entering: 75,
+      exiting: 25
     },
     pm_peak: {
       rate: 0.38,
       equation: null,
-      r_squared: 0.68,
-      entering: 28,
-      exiting: 72
+      r_squared: 0.94,
+      sample_size: 6,
+      entering: 20,
+      exiting: 80
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
@@ -1586,22 +1927,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 11.07,
       equation: { type: "linear", a: 8.91, b: 0 },
-      r_squared: 0.84,
-      sample_size: 42
+      r_squared: 0.93,
+      sample_size: 10
     },
     am_peak: {
       rate: 1.33,
       equation: null,
-      r_squared: 0.80,
-      entering: 87,
-      exiting: 13
+      r_squared: 0.86,
+      sample_size: 23,
+      entering: 89,
+      exiting: 11
     },
     pm_peak: {
       rate: 1.3,
       equation: null,
-      r_squared: 0.82,
-      entering: 18,
-      exiting: 82
+      r_squared: 0.97,
+      sample_size: 20,
+      entering: 14,
+      exiting: 86
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
@@ -1614,22 +1957,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 11.08,
       equation: { type: "linear", a: 8.11, b: 0 },
-      r_squared: 0.78,
-      sample_size: 25
+      r_squared: 0.89,
+      sample_size: 22
     },
     am_peak: {
       rate: 1.03,
       equation: null,
-      r_squared: 0.72,
-      entering: 86,
-      exiting: 14
+      r_squared: 0.7,
+      sample_size: 39,
+      entering: 82,
+      exiting: 18
     },
     pm_peak: {
       rate: 0.98,
       equation: null,
-      r_squared: 0.74,
-      entering: 20,
-      exiting: 80
+      r_squared: 0.7,
+      sample_size: 39,
+      entering: 16,
+      exiting: 84
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
@@ -1642,30 +1987,28 @@ const ITE_DATABASE = {
     weekday: {
       rate: 12.44,
       equation: null,
-      r_squared: 0.72,
-      sample_size: 22
+      r_squared: 0.89,
+      sample_size: 16
     },
     am_peak: {
       rate: 1.35,
       equation: null,
-      r_squared: 0.68,
-      entering: 82,
-      exiting: 18
+      r_squared: 0.8,
+      sample_size: 21,
+      entering: 85,
+      exiting: 15
     },
     pm_peak: {
       rate: 1.22,
       equation: null,
-      r_squared: 0.70,
-      entering: 22,
-      exiting: 78
+      r_squared: 0.77,
+      sample_size: 22,
+      entering: 26,
+      exiting: 74
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
   },
-
-  // ===========================================
-  // 800s - RETAIL
-  // ===========================================
   "810": {
     code: "810",
     name: "Tractor Supply Store",
@@ -1681,15 +2024,17 @@ const ITE_DATABASE = {
       rate: 1.38,
       equation: null,
       r_squared: 0.62,
+      sample_size: undefined,
       entering: 60,
       exiting: 40
     },
     pm_peak: {
-      rate: 5.06,
+      rate: 1.4,
       equation: null,
       r_squared: 0.65,
-      entering: 49,
-      exiting: 51
+      sample_size: 7,
+      entering: 47,
+      exiting: 53
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -1703,21 +2048,23 @@ const ITE_DATABASE = {
       rate: 50.52,
       equation: null,
       r_squared: 0.68,
-      sample_size: 18
+      sample_size: 72
     },
     am_peak: {
       rate: 1.86,
       equation: null,
-      r_squared: 0.60,
-      entering: 58,
-      exiting: 42
+      r_squared: 0.6,
+      sample_size: 72,
+      entering: 56,
+      exiting: 44
     },
     pm_peak: {
       rate: 4.33,
       equation: null,
       r_squared: 0.62,
-      entering: 51,
-      exiting: 49
+      sample_size: 96,
+      entering: 49,
+      exiting: 51
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -1730,22 +2077,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 53.87,
       equation: null,
-      r_squared: 0.70,
-      sample_size: 22
+      r_squared: 0.83,
+      sample_size: 21
     },
     am_peak: {
       rate: 1.18,
       equation: null,
-      r_squared: 0.62,
-      entering: 60,
-      exiting: 40
+      r_squared: 0.64,
+      sample_size: 10,
+      entering: 70,
+      exiting: 30
     },
     pm_peak: {
       rate: 4.86,
       equation: null,
-      r_squared: 0.64,
-      entering: 49,
-      exiting: 51
+      r_squared: 0.59,
+      sample_size: 60,
+      entering: 50,
+      exiting: 50
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -1758,20 +2107,22 @@ const ITE_DATABASE = {
     weekday: {
       rate: 37.01,
       equation: { type: "log", a: 0.65, b: 2.71 },
-      r_squared: 0.85,
-      sample_size: 125
+      r_squared: 0.6,
+      sample_size: 108
     },
     am_peak: {
       rate: 0.84,
       equation: null,
-      r_squared: 0.78,
+      r_squared: 0.56,
+      sample_size: 44,
       entering: 62,
       exiting: 38
     },
     pm_peak: {
       rate: 3.4,
       equation: { type: "log", a: 0.74, b: 1.69 },
-      r_squared: 0.82,
+      r_squared: 0.7,
+      sample_size: 126,
       entering: 48,
       exiting: 52
     },
@@ -1787,19 +2138,21 @@ const ITE_DATABASE = {
       rate: 67.52,
       equation: null,
       r_squared: 0.78,
-      sample_size: 35
+      sample_size: 7
     },
     am_peak: {
       rate: 1.73,
       equation: null,
-      r_squared: 0.70,
-      entering: 60,
-      exiting: 40
+      r_squared: 0.7,
+      sample_size: 13,
+      entering: 62,
+      exiting: 38
     },
     pm_peak: {
       rate: 5.19,
       equation: null,
       r_squared: 0.72,
+      sample_size: 42,
       entering: 49,
       exiting: 51
     },
@@ -1814,20 +2167,22 @@ const ITE_DATABASE = {
     weekday: {
       rate: 54.45,
       equation: null,
-      r_squared: 0.72,
-      sample_size: 28
+      r_squared: 0.96,
+      sample_size: 4
     },
     am_peak: {
       rate: 2.36,
       equation: null,
-      r_squared: 0.65,
-      entering: 58,
-      exiting: 42
+      r_squared: 0.57,
+      sample_size: 5,
+      entering: 60,
+      exiting: 40
     },
     pm_peak: {
       rate: 6.59,
       equation: null,
-      r_squared: 0.68,
+      r_squared: 0.56,
+      sample_size: 25,
       entering: 50,
       exiting: 50
     },
@@ -1842,13 +2197,14 @@ const ITE_DATABASE = {
     weekday: {
       rate: 27.84,
       equation: null,
-      r_squared: 0.70,
-      sample_size: 32
+      r_squared: 0.8,
+      sample_size: 18
     },
     am_peak: {
       rate: 2.03,
       equation: null,
       r_squared: 0.62,
+      sample_size: 3,
       entering: 65,
       exiting: 35
     },
@@ -1856,6 +2212,7 @@ const ITE_DATABASE = {
       rate: 2.26,
       equation: null,
       r_squared: 0.65,
+      sample_size: 3,
       entering: 45,
       exiting: 55
     },
@@ -1871,21 +2228,23 @@ const ITE_DATABASE = {
       rate: 27.06,
       equation: null,
       r_squared: 0.65,
-      sample_size: 18
+      sample_size: 14
     },
     am_peak: {
       rate: 2.13,
       equation: null,
       r_squared: 0.58,
-      entering: 62,
-      exiting: 38
+      sample_size: 8,
+      entering: 76,
+      exiting: 24
     },
     pm_peak: {
       rate: 3.75,
       equation: null,
-      r_squared: 0.60,
-      entering: 48,
-      exiting: 52
+      r_squared: 0.6,
+      sample_size: 14,
+      entering: 47,
+      exiting: 53
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -1899,19 +2258,21 @@ const ITE_DATABASE = {
       rate: 27.69,
       equation: null,
       r_squared: 0.62,
-      sample_size: 15
+      sample_size: 13
     },
     am_peak: {
       rate: 2.1,
       equation: null,
       r_squared: 0.55,
-      entering: 72,
-      exiting: 28
+      sample_size: 9,
+      entering: 64,
+      exiting: 36
     },
     pm_peak: {
       rate: 3.42,
       equation: null,
       r_squared: 0.58,
+      sample_size: 10,
       entering: 42,
       exiting: 58
     },
@@ -1926,22 +2287,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 93.84,
       equation: { type: "log", a: 0.55, b: 3.52 },
-      r_squared: 0.82,
-      sample_size: 68
+      r_squared: 0.8,
+      sample_size: 22
     },
     am_peak: {
       rate: 2.86,
       equation: null,
       r_squared: 0.75,
-      entering: 60,
-      exiting: 40
+      sample_size: 34,
+      entering: 59,
+      exiting: 41
     },
     pm_peak: {
       rate: 8.95,
       equation: null,
-      r_squared: 0.78,
-      entering: 51,
-      exiting: 49
+      r_squared: 0.67,
+      sample_size: 104,
+      entering: 50,
+      exiting: 50
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -1954,13 +2317,14 @@ const ITE_DATABASE = {
     weekday: {
       rate: 762.28,
       equation: null,
-      r_squared: 0.45,
-      sample_size: 42
+      r_squared: 0.53,
+      sample_size: 8
     },
     am_peak: {
       rate: 62.54,
       equation: null,
-      r_squared: 0.40,
+      r_squared: 0.4,
+      sample_size: 39,
       entering: 50,
       exiting: 50
     },
@@ -1968,8 +2332,9 @@ const ITE_DATABASE = {
       rate: 49.11,
       equation: null,
       r_squared: 0.42,
-      entering: 50,
-      exiting: 50
+      sample_size: 39,
+      entering: 51,
+      exiting: 49
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -1989,6 +2354,7 @@ const ITE_DATABASE = {
       rate: 32.65,
       equation: null,
       r_squared: 0.42,
+      sample_size: undefined,
       entering: 52,
       exiting: 48
     },
@@ -1996,6 +2362,7 @@ const ITE_DATABASE = {
       rate: 38.92,
       equation: null,
       r_squared: 0.45,
+      sample_size: undefined,
       entering: 48,
       exiting: 52
     },
@@ -2011,21 +2378,23 @@ const ITE_DATABASE = {
       rate: 42.46,
       equation: null,
       r_squared: 0.75,
-      sample_size: 22
+      sample_size: 20
     },
     am_peak: {
       rate: 0.8,
       equation: null,
       r_squared: 0.68,
-      entering: 58,
-      exiting: 42
+      sample_size: 5,
+      entering: 61,
+      exiting: 39
     },
     pm_peak: {
       rate: 4.19,
       equation: null,
-      r_squared: 0.70,
-      entering: 48,
-      exiting: 52
+      r_squared: 0.7,
+      sample_size: 32,
+      entering: 50,
+      exiting: 50
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -2042,18 +2411,20 @@ const ITE_DATABASE = {
       sample_size: 12
     },
     am_peak: {
-      rate: 0.58,
+      rate: 0.55,
       equation: null,
       r_squared: 0.52,
-      entering: 75,
-      exiting: 25
+      sample_size: 1,
+      entering: 67,
+      exiting: 33
     },
     pm_peak: {
-      rate: 0.52,
+      rate: 1.76,
       equation: null,
       r_squared: 0.54,
-      entering: 32,
-      exiting: 68
+      sample_size: 2,
+      entering: 53,
+      exiting: 47
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -2066,22 +2437,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 23.78,
       equation: null,
-      r_squared: 0.68,
-      sample_size: 14
+      r_squared: 0.79,
+      sample_size: 8
     },
     am_peak: {
       rate: 0.77,
       equation: null,
-      r_squared: 0.60,
-      entering: 55,
-      exiting: 45
+      r_squared: 0.6,
+      sample_size: 1,
+      entering: 83,
+      exiting: 17
     },
     pm_peak: {
       rate: 3.14,
       equation: null,
       r_squared: 0.62,
-      entering: 50,
-      exiting: 50
+      sample_size: 1,
+      entering: 45,
+      exiting: 55
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -2095,19 +2468,21 @@ const ITE_DATABASE = {
       rate: 30.74,
       equation: null,
       r_squared: 0.72,
-      sample_size: 25
+      sample_size: 19
     },
     am_peak: {
       rate: 1.51,
       equation: null,
       r_squared: 0.65,
-      entering: 58,
-      exiting: 42
+      sample_size: 51,
+      entering: 57,
+      exiting: 43
     },
     pm_peak: {
       rate: 2.29,
       equation: null,
       r_squared: 0.68,
+      sample_size: 62,
       entering: 49,
       exiting: 51
     },
@@ -2122,22 +2497,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 41.05,
       equation: null,
-      r_squared: 0.70,
-      sample_size: 18
+      r_squared: 0.8,
+      sample_size: 5
     },
     am_peak: {
       rate: 0.27,
       equation: null,
       r_squared: 0.62,
-      entering: 55,
-      exiting: 45
+      sample_size: 2,
+      entering: 60,
+      exiting: 40
     },
     pm_peak: {
       rate: 5.2,
       equation: null,
       r_squared: 0.65,
-      entering: 50,
-      exiting: 50
+      sample_size: 2,
+      entering: 48,
+      exiting: 52
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -2157,13 +2534,15 @@ const ITE_DATABASE = {
       rate: 0.75,
       equation: null,
       r_squared: 0.58,
+      sample_size: undefined,
       entering: 55,
       exiting: 45
     },
     pm_peak: {
-      rate: 2.85,
+      rate: 3.55,
       equation: null,
-      r_squared: 0.60,
+      r_squared: 0.6,
+      sample_size: 5,
       entering: 50,
       exiting: 50
     },
@@ -2184,16 +2563,18 @@ const ITE_DATABASE = {
     am_peak: {
       rate: 0.62,
       equation: null,
-      r_squared: 0.60,
+      r_squared: 0.6,
+      sample_size: undefined,
       entering: 58,
       exiting: 42
     },
     pm_peak: {
-      rate: 1.92,
+      rate: 2.77,
       equation: null,
       r_squared: 0.62,
-      entering: 48,
-      exiting: 52
+      sample_size: 5,
+      entering: 51,
+      exiting: 49
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -2204,24 +2585,26 @@ const ITE_DATABASE = {
     category: "Retail",
     unit: "1000 SF GLA",
     weekday: {
-      rate: 14.91,
+      rate: 143.6,
       equation: null,
       r_squared: 0.62,
-      sample_size: 10
+      sample_size: 1
     },
     am_peak: {
-      rate: 0.38,
+      rate: 1.27,
       equation: null,
       r_squared: 0.55,
-      entering: 60,
-      exiting: 40
-    },
-    pm_peak: {
-      rate: 1.42,
-      equation: null,
-      r_squared: 0.58,
+      sample_size: 1,
       entering: 50,
       exiting: 50
+    },
+    pm_peak: {
+      rate: 15.83,
+      equation: null,
+      r_squared: 0.58,
+      sample_size: 2,
+      entering: 52,
+      exiting: 48
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -2241,15 +2624,17 @@ const ITE_DATABASE = {
       rate: 0.58,
       equation: null,
       r_squared: 0.65,
-      entering: 62,
-      exiting: 38
+      sample_size: 7,
+      entering: 64,
+      exiting: 36
     },
     pm_peak: {
-      rate: 2.28,
+      rate: 1.95,
       equation: null,
       r_squared: 0.68,
-      entering: 48,
-      exiting: 52
+      sample_size: 16,
+      entering: 50,
+      exiting: 50
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -2260,24 +2645,26 @@ const ITE_DATABASE = {
     category: "Retail",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 28.72,
+      rate: 56.55,
       equation: null,
       r_squared: 0.62,
-      sample_size: 8
+      sample_size: 1
     },
     am_peak: {
       rate: 0.72,
       equation: null,
       r_squared: 0.55,
+      sample_size: undefined,
       entering: 55,
       exiting: 45
     },
     pm_peak: {
-      rate: 2.85,
+      rate: 6.21,
       equation: null,
       r_squared: 0.58,
-      entering: 50,
-      exiting: 50
+      sample_size: 2,
+      entering: 46,
+      exiting: 54
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -2290,22 +2677,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 90.08,
       equation: null,
-      r_squared: 0.68,
-      sample_size: 28
+      r_squared: 0.73,
+      sample_size: 6
     },
     am_peak: {
       rate: 2.94,
       equation: null,
-      r_squared: 0.62,
-      entering: 55,
-      exiting: 45
+      r_squared: 0.89,
+      sample_size: 7,
+      entering: 65,
+      exiting: 35
     },
     pm_peak: {
       rate: 8.51,
       equation: null,
       r_squared: 0.65,
-      entering: 50,
-      exiting: 50
+      sample_size: 13,
+      entering: 49,
+      exiting: 51
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
@@ -2318,13 +2707,14 @@ const ITE_DATABASE = {
     weekday: {
       rate: 108.4,
       equation: null,
-      r_squared: 0.72,
-      sample_size: 35
+      r_squared: 0.51,
+      sample_size: 16
     },
     am_peak: {
       rate: 3.74,
       equation: null,
       r_squared: 0.65,
+      sample_size: 21,
       entering: 52,
       exiting: 48
     },
@@ -2332,6 +2722,7 @@ const ITE_DATABASE = {
       rate: 10.25,
       equation: null,
       r_squared: 0.68,
+      sample_size: 39,
       entering: 50,
       exiting: 50
     },
@@ -2346,30 +2737,28 @@ const ITE_DATABASE = {
     weekday: {
       rate: 6.3,
       equation: null,
-      r_squared: 0.52,
-      sample_size: 22
+      r_squared: 0.67,
+      sample_size: 19
     },
     am_peak: {
       rate: 0.26,
       equation: null,
-      r_squared: 0.45,
-      entering: 62,
-      exiting: 38
+      r_squared: 0.58,
+      sample_size: 20,
+      entering: 71,
+      exiting: 29
     },
     pm_peak: {
       rate: 0.52,
       equation: null,
-      r_squared: 0.48,
-      entering: 48,
-      exiting: 52
+      r_squared: 0.52,
+      sample_size: 26,
+      entering: 47,
+      exiting: 53
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
-
-  // ===========================================
-  // 900s - SERVICES
-  // ===========================================
   "910": {
     code: "910",
     name: "Bank",
@@ -2385,13 +2774,15 @@ const ITE_DATABASE = {
       rate: 11.52,
       equation: null,
       r_squared: 0.48,
+      sample_size: undefined,
       entering: 58,
       exiting: 42
     },
     pm_peak: {
       rate: 13.24,
       equation: null,
-      r_squared: 0.50,
+      r_squared: 0.5,
+      sample_size: undefined,
       entering: 45,
       exiting: 55
     },
@@ -2413,15 +2804,17 @@ const ITE_DATABASE = {
       rate: 14.28,
       equation: null,
       r_squared: 0.45,
+      sample_size: undefined,
       entering: 55,
       exiting: 45
     },
     pm_peak: {
-      rate: 16.45,
+      rate: 12.13,
       equation: null,
       r_squared: 0.48,
-      entering: 48,
-      exiting: 52
+      sample_size: 3,
+      entering: 44,
+      exiting: 56
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
@@ -2434,22 +2827,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 125.03,
       equation: null,
-      r_squared: 0.48,
-      sample_size: 12
+      r_squared: 0.55,
+      sample_size: 20
     },
     am_peak: {
       rate: 8.54,
       equation: null,
-      r_squared: 0.42,
-      entering: 50,
-      exiting: 50
+      r_squared: 0.59,
+      sample_size: 36,
+      entering: 61,
+      exiting: 39
     },
     pm_peak: {
       rate: 27.07,
       equation: null,
       r_squared: 0.45,
-      entering: 50,
-      exiting: 50
+      sample_size: 109,
+      entering: 49,
+      exiting: 51
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
@@ -2460,24 +2855,26 @@ const ITE_DATABASE = {
     category: "Services",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 78.42,
+      rate: 97.14,
       equation: null,
       r_squared: 0.72,
-      sample_size: 28
+      sample_size: 1
     },
     am_peak: {
-      rate: 3.85,
+      rate: 1.43,
       equation: null,
       r_squared: 0.65,
-      entering: 55,
-      exiting: 45
-    },
-    pm_peak: {
-      rate: 7.25,
-      equation: null,
-      r_squared: 0.68,
+      sample_size: 1,
       entering: 50,
       exiting: 50
+    },
+    pm_peak: {
+      rate: 12.55,
+      equation: null,
+      r_squared: 0.65,
+      sample_size: 15,
+      entering: 55,
+      exiting: 45
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
@@ -2490,22 +2887,24 @@ const ITE_DATABASE = {
     weekday: {
       rate: 2.6,
       equation: null,
-      r_squared: 0.68,
-      sample_size: 45
+      r_squared: 0.59,
+      sample_size: 6
     },
     am_peak: {
       rate: 0.02,
       equation: null,
       r_squared: 0.55,
-      entering: 65,
-      exiting: 35
+      sample_size: 5,
+      entering: 50,
+      exiting: 50
     },
     pm_peak: {
       rate: 0.28,
       equation: null,
       r_squared: 0.62,
-      entering: 65,
-      exiting: 35
+      sample_size: 11,
+      entering: 67,
+      exiting: 33
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
@@ -2516,24 +2915,26 @@ const ITE_DATABASE = {
     category: "Services",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 112.18,
+      rate: 4.37,
       equation: null,
       r_squared: 0.75,
-      sample_size: 52
+      sample_size: 1
     },
     am_peak: {
-      rate: 6.94,
+      rate: 0.45,
       equation: null,
-      r_squared: 0.68,
-      entering: 55,
-      exiting: 45
-    },
-    pm_peak: {
-      rate: 9.85,
-      equation: null,
-      r_squared: 0.70,
+      r_squared: 0.58,
+      sample_size: 7,
       entering: 52,
       exiting: 48
+    },
+    pm_peak: {
+      rate: 0.39,
+      equation: null,
+      r_squared: 0.7,
+      sample_size: 14,
+      entering: 57,
+      exiting: 43
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
@@ -2544,22 +2945,24 @@ const ITE_DATABASE = {
     category: "Services",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 346.48,
+      rate: 42.12,
       equation: null,
       r_squared: 0.62,
-      sample_size: 35
+      sample_size: 1
     },
     am_peak: {
-      rate: 23.05,
+      rate: 43.18,
       equation: null,
       r_squared: 0.55,
-      entering: 52,
-      exiting: 48
+      sample_size: 3,
+      entering: 58,
+      exiting: 42
     },
     pm_peak: {
-      rate: 27.62,
+      rate: 33.21,
       equation: null,
-      r_squared: 0.58,
+      r_squared: 0.53,
+      sample_size: 8,
       entering: 50,
       exiting: 50
     },
@@ -2575,21 +2978,23 @@ const ITE_DATABASE = {
       rate: 19.52,
       equation: { type: "log", a: 0.65, b: 3.95 },
       r_squared: 0.78,
-      sample_size: 85
+      sample_size: 10
     },
     am_peak: {
       rate: 0.12,
       equation: null,
       r_squared: 0.72,
-      entering: 50,
-      exiting: 50
+      sample_size: 5,
+      entering: 54,
+      exiting: 46
     },
     pm_peak: {
       rate: 0.04,
       equation: null,
       r_squared: 0.74,
-      entering: 50,
-      exiting: 50
+      sample_size: 14,
+      entering: 53,
+      exiting: 47
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
@@ -2600,24 +3005,26 @@ const ITE_DATABASE = {
     category: "Services",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 600.00,
+      rate: 600,
       equation: null,
       r_squared: 0.52,
       sample_size: 15
     },
     am_peak: {
-      rate: 85.42,
+      rate: 10.79,
       equation: null,
       r_squared: 0.48,
-      entering: 50,
-      exiting: 50
+      sample_size: 1,
+      entering: 53,
+      exiting: 47
     },
     pm_peak: {
-      rate: 42.85,
+      rate: 4.26,
       equation: null,
-      r_squared: 0.50,
-      entering: 50,
-      exiting: 50
+      r_squared: 0.5,
+      sample_size: 1,
+      entering: 51,
+      exiting: 49
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
@@ -2631,21 +3038,23 @@ const ITE_DATABASE = {
       rate: 533.57,
       equation: null,
       r_squared: 0.55,
-      sample_size: 22
+      sample_size: 6
     },
     am_peak: {
       rate: 0.15,
       equation: null,
-      r_squared: 0.50,
-      entering: 50,
-      exiting: 50
+      r_squared: 0.5,
+      sample_size: 10,
+      entering: 51,
+      exiting: 49
     },
     pm_peak: {
       rate: 0.06,
       equation: null,
       r_squared: 0.52,
-      entering: 50,
-      exiting: 50
+      sample_size: 8,
+      entering: 51,
+      exiting: 49
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
@@ -2656,7 +3065,7 @@ const ITE_DATABASE = {
     category: "Services",
     unit: "1000 SF GFA",
     weekday: {
-      rate: 179.0,
+      rate: 179,
       equation: null,
       r_squared: 0.48,
       sample_size: 8
@@ -2664,7 +3073,8 @@ const ITE_DATABASE = {
     am_peak: {
       rate: 39.81,
       equation: null,
-      r_squared: 0.42,
+      r_squared: 0.58,
+      sample_size: 20,
       entering: 50,
       exiting: 50
     },
@@ -2672,6 +3082,7 @@ const ITE_DATABASE = {
       rate: 15.08,
       equation: null,
       r_squared: 0.45,
+      sample_size: 8,
       entering: 50,
       exiting: 50
     },
@@ -2684,24 +3095,26 @@ const ITE_DATABASE = {
     category: "Services",
     unit: "Service Bays",
     weekday: {
-      rate: 40.00,
+      rate: 40,
       equation: null,
       r_squared: 0.58,
-      sample_size: 18
+      sample_size: 1
     },
     am_peak: {
-      rate: 3.25,
+      rate: 3,
       equation: null,
       r_squared: 0.52,
-      entering: 58,
-      exiting: 42
+      sample_size: 1,
+      entering: 67,
+      exiting: 33
     },
     pm_peak: {
-      rate: 4.12,
+      rate: 4.85,
       equation: null,
       r_squared: 0.55,
-      entering: 45,
-      exiting: 55
+      sample_size: 10,
+      entering: 56,
+      exiting: 44
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
@@ -2718,18 +3131,20 @@ const ITE_DATABASE = {
       sample_size: 22
     },
     am_peak: {
-      rate: 2.58,
+      rate: 1.52,
       equation: null,
       r_squared: 0.55,
-      entering: 65,
-      exiting: 35
+      sample_size: 1,
+      entering: 68,
+      exiting: 32
     },
     pm_peak: {
-      rate: 3.12,
+      rate: 2.17,
       equation: null,
       r_squared: 0.58,
-      entering: 40,
-      exiting: 60
+      sample_size: 1,
+      entering: 50,
+      exiting: 50
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
@@ -2743,12 +3158,13 @@ const ITE_DATABASE = {
       rate: 172.01,
       equation: null,
       r_squared: 0.68,
-      sample_size: 45
+      sample_size: 18
     },
     am_peak: {
       rate: 10.28,
       equation: null,
       r_squared: 0.62,
+      sample_size: 53,
       entering: 50,
       exiting: 50
     },
@@ -2756,6 +3172,7 @@ const ITE_DATABASE = {
       rate: 13.91,
       equation: null,
       r_squared: 0.65,
+      sample_size: 65,
       entering: 50,
       exiting: 50
     },
@@ -2768,22 +3185,24 @@ const ITE_DATABASE = {
     category: "Services",
     unit: "Fueling Positions",
     weekday: {
-      rate: 215.34,
+      rate: 345.75,
       equation: null,
       r_squared: 0.72,
-      sample_size: 58
+      sample_size: 1
     },
     am_peak: {
-      rate: 15.65,
+      rate: 31.6,
       equation: null,
       r_squared: 0.65,
+      sample_size: 29,
       entering: 50,
       exiting: 50
     },
     pm_peak: {
-      rate: 18.42,
+      rate: 26.9,
       equation: null,
       r_squared: 0.68,
+      sample_size: 29,
       entering: 50,
       exiting: 50
     },
@@ -2798,13 +3217,14 @@ const ITE_DATABASE = {
     weekday: {
       rate: 245.68,
       equation: null,
-      r_squared: 0.70,
+      r_squared: 0.7,
       sample_size: 35
     },
     am_peak: {
       rate: 18.24,
       equation: null,
       r_squared: 0.62,
+      sample_size: undefined,
       entering: 50,
       exiting: 50
     },
@@ -2812,6 +3232,7 @@ const ITE_DATABASE = {
       rate: 21.35,
       equation: null,
       r_squared: 0.65,
+      sample_size: undefined,
       entering: 50,
       exiting: 50
     },
@@ -2824,24 +3245,26 @@ const ITE_DATABASE = {
     category: "Services",
     unit: "Stalls",
     weekday: {
-      rate: 108.00,
+      rate: 108,
       equation: null,
       r_squared: 0.55,
-      sample_size: 14
+      sample_size: 1
     },
     am_peak: {
       rate: 4.82,
       equation: null,
       r_squared: 0.48,
+      sample_size: undefined,
       entering: 50,
       exiting: 50
     },
     pm_peak: {
-      rate: 8.65,
+      rate: 5.54,
       equation: null,
       r_squared: 0.52,
-      entering: 50,
-      exiting: 50
+      sample_size: 6,
+      entering: 51,
+      exiting: 49
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
@@ -2852,7 +3275,7 @@ const ITE_DATABASE = {
     category: "Services",
     unit: "Stalls",
     weekday: {
-      rate: 135.00,
+      rate: 135,
       equation: null,
       r_squared: 0.58,
       sample_size: 18
@@ -2861,13 +3284,15 @@ const ITE_DATABASE = {
       rate: 6.25,
       equation: null,
       r_squared: 0.52,
+      sample_size: undefined,
       entering: 50,
       exiting: 50
     },
     pm_peak: {
-      rate: 10.85,
+      rate: 14.2,
       equation: null,
       r_squared: 0.55,
+      sample_size: 1,
       entering: 50,
       exiting: 50
     },
@@ -2889,6 +3314,7 @@ const ITE_DATABASE = {
       rate: 13.58,
       equation: null,
       r_squared: 0.65,
+      sample_size: undefined,
       entering: 50,
       exiting: 50
     },
@@ -2896,298 +3322,11 @@ const ITE_DATABASE = {
       rate: 16.24,
       equation: null,
       r_squared: 0.68,
+      sample_size: undefined,
       entering: 50,
       exiting: 50
     },
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 900s Modal Data Plots"
-  },
-
-  // ===========================================
-  // INDUSTRIAL / MANUFACTURING
-  // ===========================================
-  "110": {
-    code: "110",
-    name: "General Light Industrial",
-    category: "Industrial",
-    unit: "1000 SF GFA",
-    weekday: {
-      rate: 4.87,
-      equation: { type: "log", a: 0.80, b: 0.89 },
-      r_squared: 0.82,
-      sample_size: 78
-    },
-    am_peak: {
-      rate: 0.74,
-      equation: null,
-      r_squared: 0.75,
-      entering: 88,
-      exiting: 12
-    },
-    pm_peak: {
-      rate: 0.65,
-      equation: null,
-      r_squared: 0.76,
-      entering: 12,
-      exiting: 88
-    },
-    source: "ITE 12th Edition",
-    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
-  },
-  "130": {
-    code: "130",
-    name: "Industrial Park",
-    category: "Industrial",
-    unit: "1000 SF GFA",
-    weekday: {
-      rate: 3.37,
-      equation: null,
-      r_squared: 0.72,
-      sample_size: 35
-    },
-    am_peak: {
-      rate: 0.34,
-      equation: null,
-      r_squared: 0.65,
-      entering: 85,
-      exiting: 15
-    },
-    pm_peak: {
-      rate: 0.34,
-      equation: null,
-      r_squared: 0.68,
-      entering: 15,
-      exiting: 85
-    },
-    source: "ITE 12th Edition",
-    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
-  },
-  "140": {
-    code: "140",
-    name: "Manufacturing",
-    category: "Industrial",
-    unit: "1000 SF GFA",
-    weekday: {
-      rate: 39.53,
-      equation: { type: "linear", a: 3.82, b: 0 },
-      r_squared: 0.78,
-      sample_size: 42
-    },
-    am_peak: {
-      rate: 4.79,
-      equation: null,
-      r_squared: 0.72,
-      entering: 92,
-      exiting: 8
-    },
-    pm_peak: {
-      rate: 4.99,
-      equation: null,
-      r_squared: 0.74,
-      entering: 8,
-      exiting: 92
-    },
-    source: "ITE 12th Edition",
-    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
-  },
-  "150": {
-    code: "150",
-    name: "Warehousing",
-    category: "Industrial",
-    unit: "1000 SF GFA",
-    weekday: {
-      rate: 1.71,
-      equation: { type: "log", a: 0.68, b: 0.43 },
-      r_squared: 0.75,
-      sample_size: 55
-    },
-    am_peak: {
-      rate: 0.18,
-      equation: null,
-      r_squared: 0.68,
-      entering: 82,
-      exiting: 18
-    },
-    pm_peak: {
-      rate: 0.18,
-      equation: null,
-      r_squared: 0.70,
-      entering: 22,
-      exiting: 78
-    },
-    source: "ITE 12th Edition",
-    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
-  },
-  "151": {
-    code: "151",
-    name: "Mini-Warehouse",
-    category: "Industrial",
-    unit: "1000 SF GFA",
-    weekday: {
-      rate: 1.65,
-      equation: null,
-      r_squared: 0.52,
-      sample_size: 42
-    },
-    am_peak: {
-      rate: 0.1,
-      equation: null,
-      r_squared: 0.45,
-      entering: 55,
-      exiting: 45
-    },
-    pm_peak: {
-      rate: 0.17,
-      equation: null,
-      r_squared: 0.48,
-      entering: 48,
-      exiting: 52
-    },
-    source: "ITE 12th Edition",
-    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
-  },
-  "154": {
-    code: "154",
-    name: "High-Cube Transload and Short-Term Storage Warehouse",
-    category: "Industrial",
-    unit: "1000 SF GFA",
-    weekday: {
-      rate: 1.40,
-      equation: null,
-      r_squared: 0.65,
-      sample_size: 18
-    },
-    am_peak: {
-      rate: 0.08,
-      equation: null,
-      r_squared: 0.58,
-      entering: 78,
-      exiting: 22
-    },
-    pm_peak: {
-      rate: 0.1,
-      equation: null,
-      r_squared: 0.60,
-      entering: 25,
-      exiting: 75
-    },
-    source: "ITE 12th Edition",
-    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
-  },
-  "155": {
-    code: "155",
-    name: "High-Cube Fulfillment Center Warehouse",
-    category: "Industrial",
-    unit: "1000 SF GFA",
-    weekday: {
-      rate: 1.99,
-      equation: null,
-      r_squared: 0.68,
-      sample_size: 22
-    },
-    am_peak: {
-      rate: 0.22,
-      equation: null,
-      r_squared: 0.62,
-      entering: 75,
-      exiting: 25
-    },
-    pm_peak: {
-      rate: 0.21,
-      equation: null,
-      r_squared: 0.64,
-      entering: 28,
-      exiting: 72
-    },
-    source: "ITE 12th Edition",
-    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
-  },
-  "156": {
-    code: "156",
-    name: "High-Cube Parcel Hub Warehouse",
-    category: "Industrial",
-    unit: "1000 SF GFA",
-    weekday: {
-      rate: 4.63,
-      equation: null,
-      r_squared: 0.70,
-      sample_size: 15
-    },
-    am_peak: {
-      rate: 0.7,
-      equation: null,
-      r_squared: 0.62,
-      entering: 72,
-      exiting: 28
-    },
-    pm_peak: {
-      rate: 0.64,
-      equation: null,
-      r_squared: 0.65,
-      entering: 30,
-      exiting: 70
-    },
-    source: "ITE 12th Edition",
-    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
-  },
-  "180": {
-    code: "180",
-    name: "Specialty Trade Contractor",
-    category: "Industrial",
-    unit: "1000 SF GFA",
-    weekday: {
-      rate: 9.82,
-      equation: null,
-      r_squared: 0.58,
-      sample_size: 12
-    },
-    am_peak: {
-      rate: 1.66,
-      equation: null,
-      r_squared: 0.52,
-      entering: 70,
-      exiting: 30
-    },
-    pm_peak: {
-      rate: 1.93,
-      equation: null,
-      r_squared: 0.55,
-      entering: 32,
-      exiting: 68
-    },
-    source: "ITE 12th Edition",
-    page_ref: "ITE 12th Ed. - 100s Modal Data Plots"
   }
 };
-
-// Land use categories for grouping in UI
-const ITE_CATEGORIES = {
-  "Port, Freight, Terminal": ["021", "030"],
-  "Industrial": ["110", "130", "140", "150", "151", "154", "155", "156", "180"],
-  "Residential": ["210", "215", "220", "221", "222", "230", "240", "251", "252", "255", "260"],
-  "Lodging": ["310", "311", "312", "320", "330"],
-  "Recreational": ["411", "430", "432", "435", "445", "491", "492", "495"],
-  "Institutional": ["520", "522", "525", "530", "534", "536", "540", "550", "560", "565", "566", "575", "590"],
-  "Medical": ["610", "620", "630", "640", "650"],
-  "Office": ["710", "714", "715", "720", "730", "750", "760", "770"],
-  "Retail": ["810", "813", "815", "820", "821", "822", "840", "841", "848", "850", "851", "857", "860", "861", "862", "863", "866", "867", "875", "879", "880", "881", "890"],
-  "Services": ["911", "912", "930", "931", "932", "933", "934", "936", "937", "938", "941", "942", "944", "945", "947", "948"]
-};
-
-// Henrico County Thresholds
-const HENRICO_THRESHOLDS = {
-  peak_hour_warning: 100,      // trips/hour triggers warning
-  daily_warning: 1000,         // daily trips triggers warning
-  tia_required: 4000,          // vpd requires TIA
-  vdot_threshold: 5000,        // VDOT threshold
-  sample_size_warning: 5,      // sites below this = low confidence
-  sample_size_unreliable: 3,   // sites below this = very unreliable
-  r_squared_good: 0.75,        // use fitted curve
-  r_squared_fair: 0.50,        // use fitted curve with caution
-  r_squared_poor: 0.25         // flag as no correlation
-};
-
-// Export for use in other modules
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { ITE_DATABASE, ITE_CATEGORIES, HENRICO_THRESHOLDS };
-}
