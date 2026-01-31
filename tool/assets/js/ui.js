@@ -128,31 +128,20 @@ function initializeApp() {
 }
 
 /**
- * Initialize mode selector checkboxes and event listeners
+ * Initialize mode selector radio buttons and event listeners
  */
 function initializeModeSelectors() {
-  const modeCheckboxes = ['modeVehicle', 'modePerson', 'modeWalk', 'modeBicycle', 'modeTransit'];
+  const modeRadios = ['modeVehicle', 'modePerson', 'modeWalk', 'modeBicycle', 'modeTransit'];
 
-  modeCheckboxes.forEach(modeKey => {
+  modeRadios.forEach(modeKey => {
     if (elements[modeKey]) {
       elements[modeKey].addEventListener('change', updateModeHelper);
     }
   });
-
-  // Ensure vehicle is always checked (it's the primary mode)
-  if (elements.modeVehicle) {
-    elements.modeVehicle.addEventListener('change', (e) => {
-      // Always keep vehicle checked
-      if (!e.target.checked) {
-        e.target.checked = true;
-        showToast('Vehicle mode is always required', 'warning');
-      }
-    });
-  }
 }
 
 /**
- * Update mode helper text based on selected modes
+ * Update mode helper text based on selected mode
  */
 function updateModeHelper() {
   const modes = getSelectedModes();
@@ -164,28 +153,28 @@ function updateModeHelper() {
     'transit': 'Transit'
   };
 
-  const selectedNames = modes.map(m => modeNames[m] || m);
+  const selectedMode = modes[0];
+  const modeName = modeNames[selectedMode] || selectedMode;
   if (elements.modeHelper) {
-    if (modes.length === 1) {
-      elements.modeHelper.textContent = 'Vehicle mode selected (default). Select additional modes for multi-modal analysis.';
+    if (selectedMode === 'vehicle') {
+      elements.modeHelper.textContent = 'Vehicle mode selected (default).';
     } else {
-      elements.modeHelper.textContent = `Selected modes: ${selectedNames.join(', ')}`;
+      elements.modeHelper.textContent = `${modeName} mode selected.`;
     }
   }
 }
 
 /**
- * Get array of selected mode values
- * @returns {string[]} Array of selected mode strings
+ * Get array of selected mode values (single selection with radio buttons)
+ * @returns {string[]} Array with a single selected mode string
  */
 function getSelectedModes() {
-  const modes = [];
-  if (elements.modeVehicle?.checked) modes.push('vehicle');
-  if (elements.modePerson?.checked) modes.push('person');
-  if (elements.modeWalk?.checked) modes.push('walk');
-  if (elements.modeBicycle?.checked) modes.push('bicycle');
-  if (elements.modeTransit?.checked) modes.push('transit');
-  return modes.length > 0 ? modes : ['vehicle'];
+  if (elements.modeVehicle?.checked) return ['vehicle'];
+  if (elements.modePerson?.checked) return ['person'];
+  if (elements.modeWalk?.checked) return ['walk'];
+  if (elements.modeBicycle?.checked) return ['bicycle'];
+  if (elements.modeTransit?.checked) return ['transit'];
+  return ['vehicle']; // Default to vehicle
 }
 
 /**

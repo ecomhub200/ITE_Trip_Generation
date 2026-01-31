@@ -96,10 +96,10 @@
 
           <!-- Trip Mode Selection -->
           <div class="form-group">
-            <label class="form-label">Trip Generation Modes</label>
+            <label class="form-label">Trip Generation Mode</label>
             <div class="mode-selector">
               <label class="mode-checkbox mode-primary">
-                <input type="checkbox" id="mode-vehicle" name="modes" value="vehicle" checked>
+                <input type="radio" id="mode-vehicle" name="modes" value="vehicle" checked>
                 <span class="mode-label">
                   <span class="mode-icon">&#128663;</span>
                   Vehicle
@@ -107,7 +107,7 @@
                 </span>
               </label>
               <label class="mode-checkbox">
-                <input type="checkbox" id="mode-person" name="modes" value="person">
+                <input type="radio" id="mode-person" name="modes" value="person">
                 <span class="mode-label">
                   <span class="mode-icon">&#128694;</span>
                   Person
@@ -115,7 +115,7 @@
                 </span>
               </label>
               <label class="mode-checkbox">
-                <input type="checkbox" id="mode-walk" name="modes" value="walk">
+                <input type="radio" id="mode-walk" name="modes" value="walk">
                 <span class="mode-label">
                   <span class="mode-icon">&#128694;</span>
                   Pedestrian
@@ -123,7 +123,7 @@
                 </span>
               </label>
               <label class="mode-checkbox">
-                <input type="checkbox" id="mode-bicycle" name="modes" value="bicycle">
+                <input type="radio" id="mode-bicycle" name="modes" value="bicycle">
                 <span class="mode-label">
                   <span class="mode-icon">&#128690;</span>
                   Bicycle
@@ -131,7 +131,7 @@
                 </span>
               </label>
               <label class="mode-checkbox">
-                <input type="checkbox" id="mode-transit" name="modes" value="transit">
+                <input type="radio" id="mode-transit" name="modes" value="transit">
                 <span class="mode-label">
                   <span class="mode-icon">&#128652;</span>
                   Transit
@@ -139,7 +139,7 @@
                 </span>
               </label>
             </div>
-            <p class="form-helper" id="mode-helper">Vehicle mode selected (default). Select additional modes for multi-modal analysis.</p>
+            <p class="form-helper" id="mode-helper">Vehicle mode selected (default).</p>
           </div>
 
           <!-- Info Box -->
