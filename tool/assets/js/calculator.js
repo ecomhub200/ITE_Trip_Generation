@@ -197,10 +197,12 @@ class ITECalculator {
   getAvailableModes(iteCode) {
     const modes = ['vehicle']; // Always available from main database
     if (this.modalData[iteCode]) {
-      if (this.modalData[iteCode].person) modes.push('person');
-      if (this.modalData[iteCode].walk) modes.push('walk');
-      if (this.modalData[iteCode].bicycle) modes.push('bicycle');
-      if (this.modalData[iteCode].transit) modes.push('transit');
+      const data = this.modalData[iteCode];
+      if (data.person) modes.push('person');
+      // For walk/bicycle/transit, also consider walk_bike_transit as fallback
+      if (data.walk || data.walk_bike_transit) modes.push('walk');
+      if (data.bicycle || data.walk_bike_transit) modes.push('bicycle');
+      if (data.transit || data.walk_bike_transit) modes.push('transit');
     }
     return modes;
   }
@@ -215,19 +217,37 @@ class ITECalculator {
   calculateModal(iteCode, size, modeType) {
     const modalData = this.modalData[iteCode];
 
-    if (!modalData || !modalData[modeType]) {
+    if (!modalData) {
+      return {
+        available: false,
+        modeType: modeType,
+        error: `No modal data available for ITE code ${iteCode}`
+      };
+    }
+
+    // Check if individual mode data exists
+    let modeData = modalData[modeType];
+    let usedFallback = false;
+
+    // If individual mode not available, try to use walk_bike_transit as fallback
+    // for walk, bicycle, or transit modes
+    if (!modeData && ['walk', 'bicycle', 'transit'].includes(modeType) && modalData.walk_bike_transit) {
+      modeData = modalData.walk_bike_transit;
+      usedFallback = true;
+    }
+
+    if (!modeData) {
       return {
         available: false,
         modeType: modeType,
         error: `No ${modeType} data available for ITE code ${iteCode}`
       };
     }
-
-    const modeData = modalData[modeType];
     const result = {
       available: true,
       modeType: modeType,
-      source: 'ITE 12th Edition Modal Data'
+      source: usedFallback ? 'ITE 12th Edition (Combined Walk/Bike/Transit)' : 'ITE 12th Edition Modal Data',
+      usedCombinedFallback: usedFallback
     };
 
     // Calculate for each time period if available
