@@ -1,0 +1,1376 @@
+{
+  "021": {
+    "code": "021",
+    "name": "Commercial Airport",
+    "unit": "Employees",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 10.28,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {},
+    "pm_peak": {}
+  },
+  "022": {
+    "code": "022",
+    "name": "General Aviation Airport",
+    "unit": "Employees",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 14.94,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.58,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "pm_peak": {
+      "rate": 1.57,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 55,
+      "exiting": 45
+    }
+  },
+  "030": {
+    "code": "030",
+    "name": "Intermodal Truck Terminal",
+    "unit": "Employees",
+    "setting": "General Urban/Suburban",
+    "weekday": {},
+    "am_peak": {
+      "rate": 0.66,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 5,
+      "entering": 48,
+      "exiting": 52
+    },
+    "pm_peak": {
+      "rate": 0.72,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 5,
+      "entering": 51,
+      "exiting": 49
+    }
+  },
+  "090": {
+    "code": "090",
+    "name": "Park-and-Ride Lot with Bus or Light Rail Service",
+    "unit": "Parking Spaces",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 3.24,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.69,
+      "equation": {
+        "type": "linear",
+        "a": 0.84,
+        "b": -84.88
+      },
+      "r_squared": 0.82,
+      "sample_size": 13,
+      "entering": 84,
+      "exiting": 16
+    },
+    "pm_peak": {
+      "rate": 0.45,
+      "equation": {
+        "type": "linear",
+        "a": 0.44,
+        "b": 6.95
+      },
+      "r_squared": 0.94,
+      "sample_size": 15,
+      "entering": 24,
+      "exiting": 76
+    }
+  },
+  "110": {
+    "code": "110",
+    "name": "General Light Industrial",
+    "unit": "Employees",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 3.1,
+      "equation": {
+        "type": "log",
+        "a": 0.77,
+        "b": 2.15
+      },
+      "r_squared": 0.83,
+      "sample_size": 37,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.69,
+      "equation": {
+        "type": "linear",
+        "a": 0.67,
+        "b": 2.1
+      },
+      "r_squared": 0.93,
+      "sample_size": 41,
+      "entering": 85,
+      "exiting": 15
+    },
+    "pm_peak": {
+      "rate": 0.69,
+      "equation": {
+        "type": "log",
+        "a": 0.79,
+        "b": 0.48
+      },
+      "r_squared": 0.87,
+      "sample_size": 41,
+      "entering": 31,
+      "exiting": 69
+    }
+  },
+  "130": {
+    "code": "130",
+    "name": "Industrial Park",
+    "unit": "Employees",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 2.91,
+      "equation": {
+        "type": "log",
+        "a": 0.68,
+        "b": 3.34
+      },
+      "r_squared": 0.81,
+      "sample_size": 16,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.42,
+      "equation": {
+        "type": "log",
+        "a": 0.83,
+        "b": 0.36
+      },
+      "r_squared": 0.9,
+      "sample_size": 19,
+      "entering": 87,
+      "exiting": 13
+    },
+    "pm_peak": {
+      "rate": 0.42,
+      "equation": {
+        "type": "log",
+        "a": 0.75,
+        "b": 0.9
+      },
+      "r_squared": 0.89,
+      "sample_size": 19,
+      "entering": 21,
+      "exiting": 79
+    }
+  },
+  "140": {
+    "code": "140",
+    "name": "Manufacturing",
+    "unit": "Acres",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 39.53,
+      "equation": {
+        "type": "linear",
+        "a": 37.05,
+        "b": 60.72
+      },
+      "r_squared": 0.8,
+      "sample_size": 37,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 6.95,
+      "equation": {
+        "type": "linear",
+        "a": 6.15,
+        "b": 20.14
+      },
+      "r_squared": 0.73,
+      "sample_size": 40,
+      "entering": 75,
+      "exiting": 25
+    },
+    "pm_peak": {
+      "rate": 7.65,
+      "equation": {
+        "type": "linear",
+        "a": 7.07,
+        "b": 14.47
+      },
+      "r_squared": 0.65,
+      "sample_size": 40,
+      "entering": 44,
+      "exiting": 56
+    }
+  },
+  "150": {
+    "code": "150",
+    "name": "Warehousing",
+    "unit": "Employees",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 5.05,
+      "equation": {
+        "type": "log",
+        "a": 0.82,
+        "b": 2.33
+      },
+      "r_squared": 0.88,
+      "sample_size": 14,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.68,
+      "equation": {
+        "type": "log",
+        "a": 0.67,
+        "b": 0.99
+      },
+      "r_squared": 0.87,
+      "sample_size": 15,
+      "entering": 53,
+      "exiting": 47
+    },
+    "pm_peak": {
+      "rate": 0.68,
+      "equation": {
+        "type": "log",
+        "a": 0.79,
+        "b": 0.49
+      },
+      "r_squared": 0.8,
+      "sample_size": 15,
+      "entering": 28,
+      "exiting": 72
+    }
+  },
+  "151": {
+    "code": "151",
+    "name": "Mini-Warehouse",
+    "unit": "1000 Sq. Ft. Net Rentable Area",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 1.65,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 4,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.17,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 9,
+      "entering": 53,
+      "exiting": 47
+    },
+    "pm_peak": {
+      "rate": 0.19,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 8,
+      "entering": 53,
+      "exiting": 47
+    }
+  },
+  "154": {
+    "code": "154",
+    "name": "High-Cube Transload and Short-Term Storage Warehouse",
+    "unit": "1000 Sq. Ft. GFA",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 1.4,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 91,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.13,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 31,
+      "entering": 78,
+      "exiting": 22
+    },
+    "pm_peak": {
+      "rate": 0.17,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 34,
+      "entering": 34,
+      "exiting": 66
+    }
+  },
+  "155": {
+    "code": "155",
+    "name": "High-Cube Fulfillment Center Warehouse - Non-Sort",
+    "unit": "Employees",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 1.18,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.11,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 81,
+      "exiting": 19
+    },
+    "pm_peak": {
+      "rate": 0.15,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 39,
+      "exiting": 61
+    }
+  },
+  "156": {
+    "code": "156",
+    "name": "High-Cube Parcel Hub Warehouse",
+    "unit": "Employees",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 6.77,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.88,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 34,
+      "exiting": 66
+    },
+    "pm_peak": {
+      "rate": 0.71,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 63,
+      "exiting": 37
+    }
+  },
+  "157": {
+    "code": "157",
+    "name": "High-Cube Cold Storage Warehouse",
+    "unit": "1000 Sq. Ft. GFA",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 2.12,
+      "equation": {
+        "type": "linear",
+        "a": 2.91,
+        "b": -452.8
+      },
+      "r_squared": 0.82,
+      "sample_size": 5,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.11,
+      "equation": {
+        "type": "linear",
+        "a": 0.15,
+        "b": -19.75
+      },
+      "r_squared": 0.76,
+      "sample_size": 5,
+      "entering": 50,
+      "exiting": 50
+    },
+    "pm_peak": {
+      "rate": 0.12,
+      "equation": {
+        "type": "linear",
+        "a": 0.16,
+        "b": -26.24
+      },
+      "r_squared": 0.84,
+      "sample_size": 5,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "160": {
+    "code": "160",
+    "name": "Data Center",
+    "unit": "1000 Sq. Ft. GFA",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 0.99,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.15,
+      "equation": {
+        "type": "linear",
+        "a": 0.18,
+        "b": -9.67
+      },
+      "r_squared": 0.92,
+      "sample_size": 4,
+      "entering": 50,
+      "exiting": 50
+    },
+    "pm_peak": {
+      "rate": 0.13,
+      "equation": {
+        "type": "linear",
+        "a": 0.15,
+        "b": -3.79
+      },
+      "r_squared": 0.83,
+      "sample_size": 4,
+      "entering": 42,
+      "exiting": 58
+    }
+  },
+  "170": {
+    "code": "170",
+    "name": "Utility",
+    "unit": "Employees",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 3.85,
+      "equation": {
+        "type": "linear",
+        "a": 3.87,
+        "b": -0.92
+      },
+      "r_squared": 0.82,
+      "sample_size": 13,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.72,
+      "equation": {
+        "type": "linear",
+        "a": 0.62,
+        "b": 3.85
+      },
+      "r_squared": 0.82,
+      "sample_size": 13,
+      "entering": 84,
+      "exiting": 16
+    },
+    "pm_peak": {
+      "rate": 0.72,
+      "equation": {
+        "type": "linear",
+        "a": 0.67,
+        "b": 2.04
+      },
+      "r_squared": 0.88,
+      "sample_size": 13,
+      "entering": 18,
+      "exiting": 82
+    }
+  },
+  "180": {
+    "code": "180",
+    "name": "Specialty Trade Contractor",
+    "unit": "Employees",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 3.63,
+      "equation": {
+        "type": "linear",
+        "a": 2.17,
+        "b": 22.67
+      },
+      "r_squared": 0.7,
+      "sample_size": 20,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.73,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 20,
+      "entering": 77,
+      "exiting": 23
+    },
+    "pm_peak": {
+      "rate": 0.8,
+      "equation": {
+        "type": "linear",
+        "a": 0.51,
+        "b": 4.63
+      },
+      "r_squared": 0.71,
+      "sample_size": 20,
+      "entering": 38,
+      "exiting": 62
+    }
+  },
+  "190": {
+    "code": "190",
+    "name": "Marijuana Cultivation and Processing Facility",
+    "unit": "1000 Sq. Ft. GFA",
+    "setting": "General Urban/Suburban",
+    "weekday": {},
+    "am_peak": {
+      "rate": 0.69,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 93,
+      "exiting": 7
+    },
+    "pm_peak": {
+      "rate": 0.64,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 28,
+      "exiting": 72
+    }
+  },
+  "210": {
+    "code": "210",
+    "name": "Single-Family Detached Housing",
+    "unit": "Residents",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 2.65,
+      "equation": {
+        "type": "log",
+        "a": 0.89,
+        "b": 1.72
+      },
+      "r_squared": 0.96,
+      "sample_size": 30,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.21,
+      "equation": {
+        "type": "log",
+        "a": 0.96,
+        "b": -1.39
+      },
+      "r_squared": 0.88,
+      "sample_size": 22,
+      "entering": 30,
+      "exiting": 70
+    },
+    "pm_peak": {
+      "rate": 0.28,
+      "equation": {
+        "type": "linear",
+        "a": 0.27,
+        "b": 9.67
+      },
+      "r_squared": 0.89,
+      "sample_size": 21,
+      "entering": 66,
+      "exiting": 34
+    }
+  },
+  "215": {
+    "code": "215",
+    "name": "Single-Family Attached Housing",
+    "unit": "Residents",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 3.28,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.39,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "pm_peak": {
+      "rate": 0.44,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "220": {
+    "code": "220",
+    "name": "Land Use 220",
+    "unit": "Dwelling Units",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 4.72,
+      "equation": {
+        "type": "linear",
+        "a": 6.13,
+        "b": -550.73
+      },
+      "r_squared": 0.93,
+      "sample_size": 9,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.38,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 29,
+      "exiting": 71
+    },
+    "pm_peak": {
+      "rate": 0.61,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 60,
+      "exiting": 40
+    }
+  },
+  "221": {
+    "code": "221",
+    "name": "Land Use 221",
+    "unit": "Dwelling Units",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 4.75,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.36,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 38,
+      "exiting": 62
+    },
+    "pm_peak": {
+      "rate": 0.45,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 75,
+      "exiting": 25
+    }
+  },
+  "222": {
+    "code": "222",
+    "name": "Land Use 222",
+    "unit": "Residents",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 2.1,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.23,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 5,
+      "exiting": 95
+    },
+    "pm_peak": {
+      "rate": 0.22,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 66,
+      "exiting": 34
+    }
+  },
+  "223": {
+    "code": "223",
+    "name": "Affordable Housing - Income Limits",
+    "unit": "Dwelling Units",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 1.46,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.18,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 58,
+      "exiting": 42
+    },
+    "pm_peak": {
+      "rate": 0.1,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 64,
+      "exiting": 36
+    }
+  },
+  "225": {
+    "code": "225",
+    "name": "Land Use 225",
+    "unit": "Bedrooms",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 3.97,
+      "equation": {
+        "type": "linear",
+        "a": 4.09,
+        "b": -78.98
+      },
+      "r_squared": 0.79,
+      "sample_size": 17,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.2,
+      "equation": {
+        "type": "linear",
+        "a": 0.17,
+        "b": 24.45
+      },
+      "r_squared": 0.63,
+      "sample_size": 17,
+      "entering": 40,
+      "exiting": 60
+    },
+    "pm_peak": {
+      "rate": 0.32,
+      "equation": {
+        "type": "linear",
+        "a": 0.33,
+        "b": -7.94
+      },
+      "r_squared": 0.8,
+      "sample_size": 17,
+      "entering": 52,
+      "exiting": 48
+    }
+  },
+  "226": {
+    "code": "226",
+    "name": "Land Use 226",
+    "unit": "Bedrooms",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 2.57,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.11,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 43,
+      "exiting": 57
+    },
+    "pm_peak": {
+      "rate": 0.23,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "230": {
+    "code": "230",
+    "name": "Land Use 230",
+    "unit": "Dwelling Units",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 3.44,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.44,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 23,
+      "exiting": 77
+    },
+    "pm_peak": {
+      "rate": 0.39,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 65,
+      "exiting": 35
+    }
+  },
+  "240": {
+    "code": "240",
+    "name": "Mobile Home Park",
+    "unit": "Dwelling Units",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 7.12,
+      "equation": {
+        "type": "log",
+        "a": 0.75,
+        "b": 3.11
+      },
+      "r_squared": 0.61,
+      "sample_size": 13,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.47,
+      "equation": {
+        "type": "linear",
+        "a": 0.29,
+        "b": 23.84
+      },
+      "r_squared": 0.69,
+      "sample_size": 14,
+      "entering": 25,
+      "exiting": 75
+    },
+    "pm_peak": {
+      "rate": 0.65,
+      "equation": {
+        "type": "linear",
+        "a": 0.52,
+        "b": 17.09
+      },
+      "r_squared": 0.82,
+      "sample_size": 14,
+      "entering": 61,
+      "exiting": 39
+    }
+  },
+  "251": {
+    "code": "251",
+    "name": "Senior Adult Housing - Single-Family",
+    "unit": "Dwelling Units",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 4.31,
+      "equation": {
+        "type": "log",
+        "a": 0.85,
+        "b": 2.47
+      },
+      "r_squared": 0.94,
+      "sample_size": 15,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.34,
+      "equation": {
+        "type": "linear",
+        "a": 0.26,
+        "b": 37.15
+      },
+      "r_squared": 0.89,
+      "sample_size": 24,
+      "entering": 43,
+      "exiting": 57
+    },
+    "pm_peak": {
+      "rate": 0.39,
+      "equation": {
+        "type": "linear",
+        "a": 0.26,
+        "b": 55.39
+      },
+      "r_squared": 0.84,
+      "sample_size": 24,
+      "entering": 56,
+      "exiting": 44
+    }
+  },
+  "252": {
+    "code": "252",
+    "name": "Senior Adult Housing - Multifamily",
+    "unit": "Dwelling Units",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 3.24,
+      "equation": {
+        "type": "linear",
+        "a": 2.89,
+        "b": 24.82
+      },
+      "r_squared": 0.99,
+      "sample_size": 6,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.29,
+      "equation": {
+        "type": "linear",
+        "a": 0.19,
+        "b": 8.01
+      },
+      "r_squared": 0.85,
+      "sample_size": 10,
+      "entering": 45,
+      "exiting": 55
+    },
+    "pm_peak": {
+      "rate": 0.3,
+      "equation": {
+        "type": "linear",
+        "a": 0.29,
+        "b": 0.82
+      },
+      "r_squared": 0.93,
+      "sample_size": 10,
+      "entering": 54,
+      "exiting": 46
+    }
+  },
+  "253": {
+    "code": "253",
+    "name": "Congregate Care Facility",
+    "unit": "Dwelling Units",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 2.21,
+      "equation": {
+        "type": "linear",
+        "a": 2.33,
+        "b": -22.53
+      },
+      "r_squared": 0.96,
+      "sample_size": 4,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.19,
+      "equation": {
+        "type": "linear",
+        "a": 0.2,
+        "b": -1.71
+      },
+      "r_squared": 0.74,
+      "sample_size": 6,
+      "entering": 56,
+      "exiting": 44
+    },
+    "pm_peak": {
+      "rate": 0.23,
+      "equation": {
+        "type": "linear",
+        "a": 0.25,
+        "b": -2.0
+      },
+      "r_squared": 0.84,
+      "sample_size": 6,
+      "entering": 54,
+      "exiting": 46
+    }
+  },
+  "254": {
+    "code": "254",
+    "name": "Assisted Living",
+    "unit": "Employees",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 4.24,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 4,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.57,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 8,
+      "entering": 65,
+      "exiting": 35
+    },
+    "pm_peak": {
+      "rate": 0.65,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 11,
+      "entering": 44,
+      "exiting": 56
+    }
+  },
+  "255": {
+    "code": "255",
+    "name": "Continuing Care Retirement Community",
+    "unit": "Units",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 2.47,
+      "equation": {
+        "type": "linear",
+        "a": 2.28,
+        "b": 191.69
+      },
+      "r_squared": 0.98,
+      "sample_size": 9,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.19,
+      "equation": {
+        "type": "linear",
+        "a": 0.12,
+        "b": 133.29
+      },
+      "r_squared": 0.78,
+      "sample_size": 5,
+      "entering": 53,
+      "exiting": 47
+    },
+    "pm_peak": {
+      "rate": 0.25,
+      "equation": {
+        "type": "linear",
+        "a": 0.24,
+        "b": 34.72
+      },
+      "r_squared": 0.7,
+      "sample_size": 5,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "260": {
+    "code": "260",
+    "name": "Recreational Homes",
+    "unit": "Dwelling Units",
+    "setting": "General Urban/Suburban",
+    "weekday": {},
+    "am_peak": {
+      "rate": 0.3,
+      "equation": {
+        "type": "log",
+        "a": 0.7,
+        "b": 0.71
+      },
+      "r_squared": 0.94,
+      "sample_size": 12,
+      "entering": 46,
+      "exiting": 54
+    },
+    "pm_peak": {
+      "rate": 1.11,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 9,
+      "entering": 59,
+      "exiting": 41
+    }
+  },
+  "265": {
+    "code": "265",
+    "name": "Timeshare",
+    "unit": "Dwelling Units",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 8.63,
+      "equation": {
+        "type": "log",
+        "a": 0.94,
+        "b": 2.47
+      },
+      "r_squared": 0.88,
+      "sample_size": 13,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.29,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 51,
+      "exiting": 49
+    },
+    "pm_peak": {
+      "rate": 0.43,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 47,
+      "exiting": 53
+    }
+  },
+  "270": {
+    "code": "270",
+    "name": "Residential Planned Unit Development",
+    "unit": "Dwelling Units",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 7.31,
+      "equation": {
+        "type": "log",
+        "a": 1.0,
+        "b": 2.0
+      },
+      "r_squared": 0.94,
+      "sample_size": 8,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.58,
+      "equation": {
+        "type": "log",
+        "a": 0.88,
+        "b": 0.3
+      },
+      "r_squared": 0.96,
+      "sample_size": 7,
+      "entering": 23,
+      "exiting": 77
+    },
+    "pm_peak": {
+      "rate": 0.72,
+      "equation": {
+        "type": "log",
+        "a": 0.93,
+        "b": 0.17
+      },
+      "r_squared": 0.97,
+      "sample_size": 7,
+      "entering": 64,
+      "exiting": 36
+    }
+  },
+  "310": {
+    "code": "310",
+    "name": "Hotel",
+    "unit": "Employees",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 14.34,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 5,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.8,
+      "equation": {
+        "type": "linear",
+        "a": 0.38,
+        "b": 72.71
+      },
+      "r_squared": 0.55,
+      "sample_size": 12,
+      "entering": 55,
+      "exiting": 45
+    },
+    "pm_peak": {
+      "rate": 1.04,
+      "equation": {
+        "type": "log",
+        "a": 0.71,
+        "b": 1.56
+      },
+      "r_squared": 0.63,
+      "sample_size": 12,
+      "entering": 59,
+      "exiting": 41
+    }
+  },
+  "311": {
+    "code": "311",
+    "name": "All Suites Hotel",
+    "unit": "Employees",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 6.24,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 4.76,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 67,
+      "exiting": 33
+    },
+    "pm_peak": {
+      "rate": 4.44,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 37,
+      "exiting": 63
+    }
+  },
+  "312": {
+    "code": "312",
+    "name": "Business Hotel",
+    "unit": "Employees",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 32.31,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 4.14,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 5,
+      "entering": 57,
+      "exiting": 43
+    },
+    "pm_peak": {
+      "rate": 4.67,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 5,
+      "entering": 61,
+      "exiting": 39
+    }
+  },
+  "320": {
+    "code": "320",
+    "name": "Motel",
+    "unit": "Employees",
+    "setting": "General Urban/Suburban",
+    "weekday": {
+      "rate": 25.17,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 4,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 3.46,
+      "equation": {
+        "type": "linear",
+        "a": 2.25,
+        "b": 11.37
+      },
+      "r_squared": 0.64,
+      "sample_size": 6,
+      "entering": 45,
+      "exiting": 55
+    },
+    "pm_peak": {
+      "rate": 3.13,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 6,
+      "entering": 61,
+      "exiting": 39
+    }
+  },
+  "330": {
+    "code": "330",
+    "name": "Resort Hotel",
+    "unit": "Employees",
+    "setting": "General Urban/Suburban",
+    "weekday": {},
+    "am_peak": {
+      "rate": 0.21,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 58,
+      "exiting": 42
+    },
+    "pm_peak": {
+      "rate": 0.26,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 51,
+      "exiting": 49
+    }
+  }
+}

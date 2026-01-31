@@ -3,6 +3,7 @@
  * Calculation engine for ITE trip generation analysis
  *
  * Based on ITE Trip Generation Manual, 12th Edition
+ * Vehicle rates from 11th Edition, Modal data from 12th Edition
  * Implements decision tree from claude.md instructions
  */
 
@@ -10,6 +11,7 @@ class ITECalculator {
   constructor() {
     this.database = ITE_DATABASE;
     this.thresholds = HENRICO_THRESHOLDS;
+    this.modalData = typeof ITE_MODAL_DATA !== 'undefined' ? ITE_MODAL_DATA : {};
     this.timeOfDayData = null;
     this._loadingPromise = this.loadTimeOfDayData();
   }
@@ -194,12 +196,100 @@ class ITECalculator {
   }
 
   /**
+   * Check if modal data is available for a land use code
+   * @param {string} iteCode - The ITE land use code
+   * @returns {boolean} True if modal data exists
+   */
+  hasModalData(iteCode) {
+    return !!this.modalData[iteCode];
+  }
+
+  /**
+   * Get available modes for a land use code
+   * @param {string} iteCode - The ITE land use code
+   * @returns {string[]} Array of available modes
+   */
+  getAvailableModes(iteCode) {
+    const modes = ['vehicle']; // Always available from main database
+    if (this.modalData[iteCode]) {
+      if (this.modalData[iteCode].person) modes.push('person');
+      if (this.modalData[iteCode].walk) modes.push('walk');
+      if (this.modalData[iteCode].bicycle) modes.push('bicycle');
+      if (this.modalData[iteCode].transit) modes.push('transit');
+    }
+    return modes;
+  }
+
+  /**
+   * Calculate trips for a specific modal type
+   * @param {string} iteCode - The ITE land use code
+   * @param {number} size - Development size
+   * @param {string} modeType - Modal type (person, walk, bicycle, transit)
+   * @returns {object} Modal trip results
+   */
+  calculateModal(iteCode, size, modeType) {
+    const modalData = this.modalData[iteCode];
+
+    if (!modalData || !modalData[modeType]) {
+      return {
+        available: false,
+        modeType: modeType,
+        error: `No ${modeType} data available for ITE code ${iteCode}`
+      };
+    }
+
+    const modeData = modalData[modeType];
+    const result = {
+      available: true,
+      modeType: modeType,
+      source: 'ITE 12th Edition Modal Data'
+    };
+
+    // Calculate for each time period if available
+    if (modeData.weekday) {
+      result.weekday = this.calculateModalPeriod(modeData.weekday, size);
+    }
+    if (modeData.am_peak) {
+      result.amPeak = this.calculateModalPeriod(modeData.am_peak, size);
+    }
+    if (modeData.pm_peak) {
+      result.pmPeak = this.calculateModalPeriod(modeData.pm_peak, size);
+    }
+
+    return result;
+  }
+
+  /**
+   * Calculate modal trips for a specific time period
+   * @param {object} periodData - Period data (rate, entering, exiting, sample_size)
+   * @param {number} size - Development size
+   * @returns {object} Period trip results
+   */
+  calculateModalPeriod(periodData, size) {
+    const trips = Math.round(periodData.rate * size);
+    const entering = Math.round(trips * (periodData.entering / 100));
+    const exiting = Math.round(trips * (periodData.exiting / 100));
+
+    return {
+      trips: trips,
+      rate: periodData.rate,
+      entering: entering,
+      exiting: exiting,
+      enteringPct: periodData.entering,
+      exitingPct: periodData.exiting,
+      sampleSize: periodData.sample_size,
+      method: 'Average Rate'
+    };
+  }
+
+  /**
    * Main calculation function
    * @param {string} iteCode - The ITE land use code
    * @param {number} size - The size/quantity of development
+   * @param {string[]} modes - Array of modes to calculate (default: ['vehicle'])
    * @returns {object} Complete trip generation analysis
    */
-  calculate(iteCode, size) {
+  calculate(iteCode, size, modes = ['vehicle']) {
     const data = this.database[iteCode];
 
     if (!data) {
@@ -232,6 +322,33 @@ class ITECalculator {
     const hasTimeOfDay = this.hasTimeOfDayData(iteCode);
     const availablePeriods = this.getAvailablePeriods(iteCode);
 
+    // Calculate modal trips for non-vehicle modes
+    const modalResults = {};
+    const selectedModes = modes || ['vehicle'];
+    const availableModalModes = this.getAvailableModes(iteCode);
+
+    for (const mode of selectedModes) {
+      if (mode === 'vehicle') {
+        // Vehicle is already calculated above
+        modalResults.vehicle = {
+          available: true,
+          modeType: 'vehicle',
+          source: 'ITE 11th Edition',
+          weekday: weekdayResult,
+          amPeak: amPeakResult,
+          pmPeak: pmPeakResult
+        };
+      } else if (availableModalModes.includes(mode)) {
+        modalResults[mode] = this.calculateModal(iteCode, size, mode);
+      } else {
+        modalResults[mode] = {
+          available: false,
+          modeType: mode,
+          error: `No ${mode} data available for ITE code ${iteCode}`
+        };
+      }
+    }
+
     return {
       success: true,
       iteCode: data.code,
@@ -250,6 +367,10 @@ class ITECalculator {
       hourlyDistribution: hourlyDistribution,
       hasTimeOfDayData: hasTimeOfDay,
       availablePeriods: availablePeriods,
+      // Multi-modal trip results
+      selectedModes: selectedModes,
+      availableModes: availableModalModes,
+      modalResults: modalResults,
       timestamp: new Date().toISOString()
     };
   }

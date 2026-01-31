@@ -1,0 +1,4952 @@
+{
+  "030": {
+    "code": "030",
+    "name": "Intermodal Truck Terminal",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {
+      "rate": 1.97,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 47,
+      "exiting": 53
+    },
+    "pm_peak": {
+      "rate": 1.87,
+      "equation": {
+        "type": "linear",
+        "a": 0.22,
+        "b": 35.12
+      },
+      "r_squared": 0.63,
+      "sample_size": 4,
+      "entering": 52,
+      "exiting": 48
+    }
+  },
+  "090": {
+    "code": "090",
+    "name": "Park-and-Ride Lot with Bus or Light Rail Service",
+    "unit": "Parking Spaces",
+    "weekday": {
+      "rate": 3.24,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.56,
+      "equation": {
+        "type": "linear",
+        "a": 0.51,
+        "b": 22.65
+      },
+      "r_squared": 0.63,
+      "sample_size": 38,
+      "entering": 78,
+      "exiting": 22
+    },
+    "pm_peak": {
+      "rate": 0.49,
+      "equation": {
+        "type": "linear",
+        "a": 0.39,
+        "b": 47.96
+      },
+      "r_squared": 0.81,
+      "sample_size": 31,
+      "entering": 26,
+      "exiting": 74
+    }
+  },
+  "110": {
+    "code": "110",
+    "name": "General Light Industrial",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 4.87,
+      "equation": {
+        "type": "linear",
+        "a": 3.76,
+        "b": 50.47
+      },
+      "r_squared": 0.61,
+      "sample_size": 37,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.74,
+      "equation": {
+        "type": "linear",
+        "a": 0.68,
+        "b": 3.81
+      },
+      "r_squared": 0.66,
+      "sample_size": 41,
+      "entering": 88,
+      "exiting": 12
+    },
+    "pm_peak": {
+      "rate": 0.65,
+      "equation": {
+        "type": "log",
+        "a": 0.72,
+        "b": 0.38
+      },
+      "r_squared": 0.55,
+      "sample_size": 40,
+      "entering": 14,
+      "exiting": 86
+    }
+  },
+  "130": {
+    "code": "130",
+    "name": "Industrial Park",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 3.37,
+      "equation": {
+        "type": "log",
+        "a": 0.52,
+        "b": 4.45
+      },
+      "r_squared": 0.58,
+      "sample_size": 27,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.34,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 34,
+      "entering": 81,
+      "exiting": 19
+    },
+    "pm_peak": {
+      "rate": 0.34,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 35,
+      "entering": 22,
+      "exiting": 78
+    }
+  },
+  "140": {
+    "code": "140",
+    "name": "Manufacturing",
+    "unit": "Acres",
+    "weekday": {
+      "rate": 39.53,
+      "equation": {
+        "type": "linear",
+        "a": 37.05,
+        "b": 60.72
+      },
+      "r_squared": 0.8,
+      "sample_size": 37,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 4.79,
+      "equation": {
+        "type": "linear",
+        "a": 4.05,
+        "b": 16.16
+      },
+      "r_squared": 0.73,
+      "sample_size": 32,
+      "entering": 86,
+      "exiting": 14
+    },
+    "pm_peak": {
+      "rate": 4.99,
+      "equation": {
+        "type": "linear",
+        "a": 3.32,
+        "b": 28.91
+      },
+      "r_squared": 0.63,
+      "sample_size": 32,
+      "entering": 39,
+      "exiting": 61
+    }
+  },
+  "150": {
+    "code": "150",
+    "name": "Warehousing",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 1.71,
+      "equation": {
+        "type": "linear",
+        "a": 1.58,
+        "b": 38.29
+      },
+      "r_squared": 0.92,
+      "sample_size": 31,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.17,
+      "equation": {
+        "type": "linear",
+        "a": 0.12,
+        "b": 23.62
+      },
+      "r_squared": 0.69,
+      "sample_size": 36,
+      "entering": 77,
+      "exiting": 23
+    },
+    "pm_peak": {
+      "rate": 0.18,
+      "equation": {
+        "type": "linear",
+        "a": 0.12,
+        "b": 26.48
+      },
+      "r_squared": 0.65,
+      "sample_size": 49,
+      "entering": 28,
+      "exiting": 72
+    }
+  },
+  "151": {
+    "code": "151",
+    "name": "Mini-Warehouse",
+    "unit": "1000 Sq. Ft. Net Rentable Area",
+    "weekday": {
+      "rate": 1.65,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 4,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.1,
+      "equation": {
+        "type": "linear",
+        "a": 0.12,
+        "b": -1.7
+      },
+      "r_squared": 0.52,
+      "sample_size": 8,
+      "entering": 52,
+      "exiting": 48
+    },
+    "pm_peak": {
+      "rate": 0.17,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 8,
+      "entering": 52,
+      "exiting": 48
+    }
+  },
+  "154": {
+    "code": "154",
+    "name": "High-Cube Transload and Short-Term Storage Warehouse",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 1.4,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 91,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.08,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 102,
+      "entering": 77,
+      "exiting": 23
+    },
+    "pm_peak": {
+      "rate": 0.1,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 103,
+      "entering": 28,
+      "exiting": 72
+    }
+  },
+  "155": {
+    "code": "155",
+    "name": "High-Cube Fulfillment Center Warehouse - Non-Sort",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 6.44,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.87,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 81,
+      "exiting": 19
+    },
+    "pm_peak": {
+      "rate": 1.2,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 39,
+      "exiting": 61
+    }
+  },
+  "156": {
+    "code": "156",
+    "name": "High-Cube Parcel Hub Warehouse",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 4.63,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 8,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.7,
+      "equation": {
+        "type": "linear",
+        "a": 1.37,
+        "b": -218.14
+      },
+      "r_squared": 0.93,
+      "sample_size": 4,
+      "entering": 50,
+      "exiting": 50
+    },
+    "pm_peak": {
+      "rate": 0.64,
+      "equation": {
+        "type": "linear",
+        "a": 1.41,
+        "b": -254.12
+      },
+      "r_squared": 0.86,
+      "sample_size": 4,
+      "entering": 68,
+      "exiting": 32
+    }
+  },
+  "157": {
+    "code": "157",
+    "name": "High-Cube Cold Storage Warehouse",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 2.12,
+      "equation": {
+        "type": "linear",
+        "a": 2.91,
+        "b": -452.8
+      },
+      "r_squared": 0.82,
+      "sample_size": 5,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.11,
+      "equation": {
+        "type": "linear",
+        "a": 0.15,
+        "b": -19.75
+      },
+      "r_squared": 0.76,
+      "sample_size": 5,
+      "entering": 50,
+      "exiting": 50
+    },
+    "pm_peak": {
+      "rate": 0.12,
+      "equation": {
+        "type": "linear",
+        "a": 0.16,
+        "b": -26.24
+      },
+      "r_squared": 0.84,
+      "sample_size": 5,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "160": {
+    "code": "160",
+    "name": "Data Center",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 0.99,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.11,
+      "equation": {
+        "type": "linear",
+        "a": 0.13,
+        "b": -5.63
+      },
+      "r_squared": 0.54,
+      "sample_size": 6,
+      "entering": 55,
+      "exiting": 45
+    },
+    "pm_peak": {
+      "rate": 0.09,
+      "equation": {
+        "type": "linear",
+        "a": 0.11,
+        "b": -5.65
+      },
+      "r_squared": 0.77,
+      "sample_size": 5,
+      "entering": 30,
+      "exiting": 70
+    }
+  },
+  "170": {
+    "code": "170",
+    "name": "Utility",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 12.29,
+      "equation": {
+        "type": "log",
+        "a": 0.74,
+        "b": 2.73
+      },
+      "r_squared": 0.51,
+      "sample_size": 13,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 2.33,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 13,
+      "entering": 87,
+      "exiting": 13
+    },
+    "pm_peak": {
+      "rate": 2.16,
+      "equation": {
+        "type": "log",
+        "a": 0.81,
+        "b": 0.86
+      },
+      "r_squared": 0.52,
+      "sample_size": 14,
+      "entering": 18,
+      "exiting": 82
+    }
+  },
+  "180": {
+    "code": "180",
+    "name": "Specialty Trade Contractor",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 9.82,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 20,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.66,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 20,
+      "entering": 74,
+      "exiting": 26
+    },
+    "pm_peak": {
+      "rate": 1.93,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 19,
+      "entering": 32,
+      "exiting": 68
+    }
+  },
+  "190": {
+    "code": "190",
+    "name": "Marijuana Cultivation and Processing Facility",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {
+      "rate": 0.69,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 93,
+      "exiting": 7
+    },
+    "pm_peak": {
+      "rate": 0.64,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 28,
+      "exiting": 72
+    }
+  },
+  "210": {
+    "code": "210",
+    "name": "Single-Family Detached Housing",
+    "unit": "Dwelling Units",
+    "weekday": {
+      "rate": 9.43,
+      "equation": {
+        "type": "log",
+        "a": 0.92,
+        "b": 2.68
+      },
+      "r_squared": 0.95,
+      "sample_size": 174,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.7,
+      "equation": {
+        "type": "log",
+        "a": 0.91,
+        "b": 0.12
+      },
+      "r_squared": 0.9,
+      "sample_size": 192,
+      "entering": 26,
+      "exiting": 74
+    },
+    "pm_peak": {
+      "rate": 0.94,
+      "equation": {
+        "type": "log",
+        "a": 0.94,
+        "b": 0.27
+      },
+      "r_squared": 0.92,
+      "sample_size": 208,
+      "entering": 63,
+      "exiting": 37
+    }
+  },
+  "215": {
+    "code": "215",
+    "name": "Single-Family Attached Housing",
+    "unit": "Dwelling Units",
+    "weekday": {
+      "rate": 7.2,
+      "equation": {
+        "type": "linear",
+        "a": 7.62,
+        "b": -50.48
+      },
+      "r_squared": 0.94,
+      "sample_size": 22,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.48,
+      "equation": {
+        "type": "linear",
+        "a": 0.52,
+        "b": -5.7
+      },
+      "r_squared": 0.92,
+      "sample_size": 46,
+      "entering": 31,
+      "exiting": 69
+    },
+    "pm_peak": {
+      "rate": 0.57,
+      "equation": {
+        "type": "linear",
+        "a": 0.6,
+        "b": -3.93
+      },
+      "r_squared": 0.91,
+      "sample_size": 51,
+      "entering": 57,
+      "exiting": 43
+    }
+  },
+  "220": {
+    "code": "220",
+    "name": "Land Use 220",
+    "unit": "Dwelling Units",
+    "weekday": {
+      "rate": 4.72,
+      "equation": {
+        "type": "linear",
+        "a": 6.13,
+        "b": -550.73
+      },
+      "r_squared": 0.93,
+      "sample_size": 9,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.38,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 29,
+      "exiting": 71
+    },
+    "pm_peak": {
+      "rate": 0.61,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 60,
+      "exiting": 40
+    }
+  },
+  "221": {
+    "code": "221",
+    "name": "Land Use 221",
+    "unit": "Dwelling Units",
+    "weekday": {
+      "rate": 4.75,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.32,
+      "equation": {
+        "type": "linear",
+        "a": 0.31,
+        "b": 1.06
+      },
+      "r_squared": 0.74,
+      "sample_size": 7,
+      "entering": 56,
+      "exiting": 44
+    },
+    "pm_peak": {
+      "rate": 0.29,
+      "equation": {
+        "type": "linear",
+        "a": 0.29,
+        "b": -0.09
+      },
+      "r_squared": 0.89,
+      "sample_size": 7,
+      "entering": 43,
+      "exiting": 57
+    }
+  },
+  "222": {
+    "code": "222",
+    "name": "Land Use 222",
+    "unit": "Dwelling Units",
+    "weekday": {
+      "rate": 3.96,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.23,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 33,
+      "exiting": 67
+    },
+    "pm_peak": {
+      "rate": 0.26,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 57,
+      "exiting": 43
+    }
+  },
+  "223": {
+    "code": "223",
+    "name": "Affordable Housing - Income Limits",
+    "unit": "Dwelling Units",
+    "weekday": {
+      "rate": 4.81,
+      "equation": {
+        "type": "linear",
+        "a": 3.73,
+        "b": 139.35
+      },
+      "r_squared": 0.98,
+      "sample_size": 5,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.18,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 58,
+      "exiting": 42
+    },
+    "pm_peak": {
+      "rate": 0.09,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 61,
+      "exiting": 39
+    }
+  },
+  "230": {
+    "code": "230",
+    "name": "Land Use 230",
+    "unit": "Dwelling Units",
+    "weekday": {
+      "rate": 3.44,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.44,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 23,
+      "exiting": 77
+    },
+    "pm_peak": {
+      "rate": 0.36,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 71,
+      "exiting": 29
+    }
+  },
+  "240": {
+    "code": "240",
+    "name": "Mobile Home Park",
+    "unit": "Dwelling Units",
+    "weekday": {
+      "rate": 7.12,
+      "equation": {
+        "type": "log",
+        "a": 0.75,
+        "b": 3.11
+      },
+      "r_squared": 0.61,
+      "sample_size": 13,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.39,
+      "equation": {
+        "type": "linear",
+        "a": 0.3,
+        "b": 14.45
+      },
+      "r_squared": 0.84,
+      "sample_size": 9,
+      "entering": 21,
+      "exiting": 79
+    },
+    "pm_peak": {
+      "rate": 0.58,
+      "equation": {
+        "type": "linear",
+        "a": 0.57,
+        "b": 0.35
+      },
+      "r_squared": 0.91,
+      "sample_size": 9,
+      "entering": 62,
+      "exiting": 38
+    }
+  },
+  "251": {
+    "code": "251",
+    "name": "Senior Adult Housing - Single-Family",
+    "unit": "Dwelling Units",
+    "weekday": {
+      "rate": 4.31,
+      "equation": {
+        "type": "log",
+        "a": 0.85,
+        "b": 2.47
+      },
+      "r_squared": 0.94,
+      "sample_size": 15,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.24,
+      "equation": {
+        "type": "log",
+        "a": 0.76,
+        "b": 0.16
+      },
+      "r_squared": 0.88,
+      "sample_size": 34,
+      "entering": 33,
+      "exiting": 67
+    },
+    "pm_peak": {
+      "rate": 0.3,
+      "equation": {
+        "type": "log",
+        "a": 0.78,
+        "b": 0.2
+      },
+      "r_squared": 0.86,
+      "sample_size": 35,
+      "entering": 61,
+      "exiting": 39
+    }
+  },
+  "252": {
+    "code": "252",
+    "name": "Senior Adult Housing - Multifamily",
+    "unit": "Dwelling Units",
+    "weekday": {
+      "rate": 3.24,
+      "equation": {
+        "type": "linear",
+        "a": 2.89,
+        "b": 24.82
+      },
+      "r_squared": 0.99,
+      "sample_size": 6,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.2,
+      "equation": {
+        "type": "linear",
+        "a": 0.19,
+        "b": 0.9
+      },
+      "r_squared": 0.85,
+      "sample_size": 9,
+      "entering": 34,
+      "exiting": 66
+    },
+    "pm_peak": {
+      "rate": 0.25,
+      "equation": {
+        "type": "linear",
+        "a": 0.25,
+        "b": 0.07
+      },
+      "r_squared": 0.84,
+      "sample_size": 9,
+      "entering": 56,
+      "exiting": 44
+    }
+  },
+  "254": {
+    "code": "254",
+    "name": "Assisted Living",
+    "unit": "Beds",
+    "weekday": {
+      "rate": 2.6,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.18,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 14,
+      "entering": 60,
+      "exiting": 40
+    },
+    "pm_peak": {
+      "rate": 0.24,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 14,
+      "entering": 39,
+      "exiting": 61
+    }
+  },
+  "255": {
+    "code": "255",
+    "name": "Continuing Care Retirement Community",
+    "unit": "Units",
+    "weekday": {
+      "rate": 2.47,
+      "equation": {
+        "type": "linear",
+        "a": 2.28,
+        "b": 191.69
+      },
+      "r_squared": 0.98,
+      "sample_size": 9,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.15,
+      "equation": {
+        "type": "linear",
+        "a": 0.13,
+        "b": 21.6
+      },
+      "r_squared": 0.95,
+      "sample_size": 15,
+      "entering": 65,
+      "exiting": 35
+    },
+    "pm_peak": {
+      "rate": 0.19,
+      "equation": {
+        "type": "linear",
+        "a": 0.13,
+        "b": 55.26
+      },
+      "r_squared": 0.94,
+      "sample_size": 15,
+      "entering": 39,
+      "exiting": 61
+    }
+  },
+  "260": {
+    "code": "260",
+    "name": "Recreational Homes",
+    "unit": "Dwelling Units",
+    "weekday": {},
+    "am_peak": {
+      "rate": 0.22,
+      "equation": {
+        "type": "log",
+        "a": 1.0,
+        "b": -1.53
+      },
+      "r_squared": 0.95,
+      "sample_size": 6,
+      "entering": 55,
+      "exiting": 45
+    },
+    "pm_peak": {
+      "rate": 1.11,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 9,
+      "entering": 59,
+      "exiting": 41
+    }
+  },
+  "265": {
+    "code": "265",
+    "name": "Timeshare",
+    "unit": "Dwelling Units",
+    "weekday": {
+      "rate": 8.63,
+      "equation": {
+        "type": "log",
+        "a": 0.94,
+        "b": 2.47
+      },
+      "r_squared": 0.88,
+      "sample_size": 13,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.4,
+      "equation": {
+        "type": "linear",
+        "a": 0.27,
+        "b": 12.25
+      },
+      "r_squared": 0.74,
+      "sample_size": 14,
+      "entering": 60,
+      "exiting": 40
+    },
+    "pm_peak": {
+      "rate": 0.63,
+      "equation": {
+        "type": "log",
+        "a": 0.89,
+        "b": 0.1
+      },
+      "r_squared": 0.88,
+      "sample_size": 13,
+      "entering": 40,
+      "exiting": 60
+    }
+  },
+  "270": {
+    "code": "270",
+    "name": "Residential Planned Unit Development",
+    "unit": "Dwelling Units",
+    "weekday": {
+      "rate": 7.31,
+      "equation": {
+        "type": "log",
+        "a": 1.0,
+        "b": 2.0
+      },
+      "r_squared": 0.94,
+      "sample_size": 8,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.57,
+      "equation": {
+        "type": "log",
+        "a": 0.89,
+        "b": 0.25
+      },
+      "r_squared": 0.97,
+      "sample_size": 8,
+      "entering": 22,
+      "exiting": 78
+    },
+    "pm_peak": {
+      "rate": 0.69,
+      "equation": {
+        "type": "log",
+        "a": 0.97,
+        "b": -0.14
+      },
+      "r_squared": 0.97,
+      "sample_size": 8,
+      "entering": 65,
+      "exiting": 35
+    }
+  },
+  "310": {
+    "code": "310",
+    "name": "Hotel",
+    "unit": "Occupied Rooms",
+    "weekday": {
+      "rate": 12.23,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.62,
+      "equation": {
+        "type": "log",
+        "a": 0.87,
+        "b": 0.21
+      },
+      "r_squared": 0.54,
+      "sample_size": 13,
+      "entering": 56,
+      "exiting": 44
+    },
+    "pm_peak": {
+      "rate": 0.73,
+      "equation": {
+        "type": "linear",
+        "a": 0.73,
+        "b": -0.69
+      },
+      "r_squared": 0.59,
+      "sample_size": 16,
+      "entering": 49,
+      "exiting": 51
+    }
+  },
+  "311": {
+    "code": "311",
+    "name": "All Suites Hotel",
+    "unit": "Occupied Rooms",
+    "weekday": {
+      "rate": 6.24,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.48,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 4,
+      "entering": 67,
+      "exiting": 33
+    },
+    "pm_peak": {
+      "rate": 0.52,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 5,
+      "entering": 43,
+      "exiting": 57
+    }
+  },
+  "312": {
+    "code": "312",
+    "name": "Business Hotel",
+    "unit": "Occupied Rooms",
+    "weekday": {
+      "rate": 5.08,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.51,
+      "equation": {
+        "type": "linear",
+        "a": 0.28,
+        "b": 27.89
+      },
+      "r_squared": 0.7,
+      "sample_size": 7,
+      "entering": 52,
+      "exiting": 48
+    },
+    "pm_peak": {
+      "rate": 0.41,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 14,
+      "entering": 56,
+      "exiting": 44
+    }
+  },
+  "320": {
+    "code": "320",
+    "name": "Motel",
+    "unit": "Occupied Rooms",
+    "weekday": {
+      "rate": 4.37,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.49,
+      "equation": {
+        "type": "linear",
+        "a": 0.29,
+        "b": 21.74
+      },
+      "r_squared": 0.7,
+      "sample_size": 10,
+      "entering": 36,
+      "exiting": 64
+    },
+    "pm_peak": {
+      "rate": 0.47,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 13,
+      "entering": 53,
+      "exiting": 47
+    }
+  },
+  "330": {
+    "code": "330",
+    "name": "Resort Hotel",
+    "unit": "Occupied Rooms",
+    "weekday": {},
+    "am_peak": {
+      "rate": 0.37,
+      "equation": {
+        "type": "linear",
+        "a": 0.34,
+        "b": 13.09
+      },
+      "r_squared": 0.78,
+      "sample_size": 6,
+      "entering": 72,
+      "exiting": 28
+    },
+    "pm_peak": {
+      "rate": 0.47,
+      "equation": {
+        "type": "linear",
+        "a": 0.48,
+        "b": -2.76
+      },
+      "r_squared": 0.91,
+      "sample_size": 9,
+      "entering": 43,
+      "exiting": 57
+    }
+  },
+  "411": {
+    "code": "411",
+    "name": "Public Park",
+    "unit": "Acres",
+    "weekday": {
+      "rate": 0.78,
+      "equation": {
+        "type": "linear",
+        "a": 0.64,
+        "b": 88.46
+      },
+      "r_squared": 0.82,
+      "sample_size": 5,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.02,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 5,
+      "entering": 59,
+      "exiting": 41
+    },
+    "pm_peak": {
+      "rate": 0.11,
+      "equation": {
+        "type": "linear",
+        "a": 0.06,
+        "b": 22.6
+      },
+      "r_squared": 0.53,
+      "sample_size": 6,
+      "entering": 55,
+      "exiting": 45
+    }
+  },
+  "416": {
+    "code": "416",
+    "name": "Campground/Recreational Vehicle Park",
+    "unit": "Acres",
+    "weekday": {},
+    "am_peak": {
+      "rate": 0.48,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 42,
+      "exiting": 58
+    },
+    "pm_peak": {
+      "rate": 0.98,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 69,
+      "exiting": 31
+    }
+  },
+  "420": {
+    "code": "420",
+    "name": "Marina",
+    "unit": "Berths",
+    "weekday": {
+      "rate": 2.41,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.07,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 33,
+      "exiting": 67
+    },
+    "pm_peak": {
+      "rate": 0.21,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 60,
+      "exiting": 40
+    }
+  },
+  "430": {
+    "code": "430",
+    "name": "Golf Course",
+    "unit": "Holes",
+    "weekday": {
+      "rate": 30.38,
+      "equation": {
+        "type": "linear",
+        "a": 34.93,
+        "b": -102.33
+      },
+      "r_squared": 0.72,
+      "sample_size": 4,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.76,
+      "equation": {
+        "type": "log",
+        "a": 0.91,
+        "b": 0.77
+      },
+      "r_squared": 0.5,
+      "sample_size": 15,
+      "entering": 79,
+      "exiting": 21
+    },
+    "pm_peak": {
+      "rate": 2.91,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 14,
+      "entering": 53,
+      "exiting": 47
+    }
+  },
+  "431": {
+    "code": "431",
+    "name": "Miniature Golf Course",
+    "unit": "Holes",
+    "weekday": {},
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 0.33,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 33,
+      "exiting": 67
+    }
+  },
+  "432": {
+    "code": "432",
+    "name": "Golf Driving Range",
+    "unit": "Tees/Driving Positions",
+    "weekday": {
+      "rate": 13.65,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.4,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 61,
+      "exiting": 39
+    },
+    "pm_peak": {
+      "rate": 1.25,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 7,
+      "entering": 45,
+      "exiting": 55
+    }
+  },
+  "433": {
+    "code": "433",
+    "name": "Batting Cages",
+    "unit": "Cages",
+    "weekday": {},
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 2.22,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 55,
+      "exiting": 45
+    }
+  },
+  "434": {
+    "code": "434",
+    "name": "Rock Climbing Gym",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {
+      "rate": 1.4,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 33,
+      "exiting": 67
+    },
+    "pm_peak": {
+      "rate": 1.64,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 57,
+      "exiting": 43
+    }
+  },
+  "435": {
+    "code": "435",
+    "name": "Multipurpose Recreational Facility",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 3.58,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 55,
+      "exiting": 45
+    }
+  },
+  "436": {
+    "code": "436",
+    "name": "Trampoline Park",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 1.5,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 48,
+      "exiting": 52
+    }
+  },
+  "437": {
+    "code": "437",
+    "name": "Bowling Alley",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {
+      "rate": 0.81,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 95,
+      "exiting": 5
+    },
+    "pm_peak": {
+      "rate": 1.16,
+      "equation": {
+        "type": "linear",
+        "a": 1.01,
+        "b": 4.92
+      },
+      "r_squared": 0.78,
+      "sample_size": 5,
+      "entering": 65,
+      "exiting": 35
+    }
+  },
+  "440": {
+    "code": "440",
+    "name": "Adult Cabaret",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 2.93,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 46,
+      "exiting": 54
+    }
+  },
+  "445": {
+    "code": "445",
+    "name": "Movie Theater",
+    "unit": "Seats",
+    "weekday": {
+      "rate": 1.76,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 0.1,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 18,
+      "entering": 60,
+      "exiting": 40
+    }
+  },
+  "452": {
+    "code": "452",
+    "name": "Horse Racetrack",
+    "unit": "Attendees",
+    "weekday": {
+      "rate": 1.19,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 0.13,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 66,
+      "exiting": 34
+    }
+  },
+  "454": {
+    "code": "454",
+    "name": "Dog Racetrack",
+    "unit": "Attendees",
+    "weekday": {},
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 0.15,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 8,
+      "exiting": 92
+    }
+  },
+  "462": {
+    "code": "462",
+    "name": "Professional Baseball Stadium",
+    "unit": "Attendees",
+    "weekday": {
+      "rate": 1.24,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.02,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 75,
+      "exiting": 25
+    },
+    "pm_peak": {
+      "rate": 0.15,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 12,
+      "exiting": 88
+    }
+  },
+  "465": {
+    "code": "465",
+    "name": "Ice Skating Rink",
+    "unit": "Seats",
+    "weekday": {
+      "rate": 1.26,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.01,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 37,
+      "exiting": 63
+    },
+    "pm_peak": {
+      "rate": 0.07,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 5,
+      "entering": 60,
+      "exiting": 40
+    }
+  },
+  "473": {
+    "code": "473",
+    "name": "Casino",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 388.18,
+      "equation": {
+        "type": "linear",
+        "a": 172.89,
+        "b": 8101.66
+      },
+      "r_squared": 0.52,
+      "sample_size": 4,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 22.61,
+      "equation": {
+        "type": "linear",
+        "a": 22.82,
+        "b": -3.29
+      },
+      "r_squared": 0.98,
+      "sample_size": 10,
+      "entering": 52,
+      "exiting": 48
+    }
+  },
+  "480": {
+    "code": "480",
+    "name": "Amusement Park",
+    "unit": "Acres",
+    "weekday": {
+      "rate": 53.41,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.21,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 88,
+      "exiting": 12
+    },
+    "pm_peak": {
+      "rate": 3.95,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 61,
+      "exiting": 39
+    }
+  },
+  "482": {
+    "code": "482",
+    "name": "Water Slide Park",
+    "unit": "Parking Spaces",
+    "weekday": {
+      "rate": 2.27,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.08,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 70,
+      "exiting": 30
+    },
+    "pm_peak": {
+      "rate": 0.28,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 21,
+      "exiting": 79
+    }
+  },
+  "488": {
+    "code": "488",
+    "name": "Soccer Complex",
+    "unit": "Fields",
+    "weekday": {
+      "rate": 71.33,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.99,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 5,
+      "entering": 61,
+      "exiting": 39
+    },
+    "pm_peak": {
+      "rate": 16.43,
+      "equation": {
+        "type": "linear",
+        "a": 13.92,
+        "b": 35.13
+      },
+      "r_squared": 0.53,
+      "sample_size": 5,
+      "entering": 66,
+      "exiting": 34
+    }
+  },
+  "490": {
+    "code": "490",
+    "name": "Tennis Courts",
+    "unit": "Tennis Courts",
+    "weekday": {
+      "rate": 30.32,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 4.21,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "491": {
+    "code": "491",
+    "name": "Racquet/Tennis Club",
+    "unit": "Tennis Courts",
+    "weekday": {
+      "rate": 27.71,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 3.82,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "492": {
+    "code": "492",
+    "name": "Health/Fitness Club",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {
+      "rate": 1.31,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 6,
+      "entering": 51,
+      "exiting": 49
+    },
+    "pm_peak": {
+      "rate": 3.45,
+      "equation": {
+        "type": "log",
+        "a": 0.67,
+        "b": 2.44
+      },
+      "r_squared": 0.67,
+      "sample_size": 8,
+      "entering": 57,
+      "exiting": 43
+    }
+  },
+  "493": {
+    "code": "493",
+    "name": "Athletic Club",
+    "unit": "Members",
+    "weekday": {},
+    "am_peak": {
+      "rate": 3.16,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 61,
+      "exiting": 39
+    },
+    "pm_peak": {
+      "rate": 0.07,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 61,
+      "exiting": 39
+    }
+  },
+  "495": {
+    "code": "495",
+    "name": "Recreational Community Center",
+    "unit": "Members (1000s)",
+    "weekday": {
+      "rate": 28.82,
+      "equation": {
+        "type": "log",
+        "a": 0.98,
+        "b": 3.42
+      },
+      "r_squared": 0.74,
+      "sample_size": 4,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 18.35,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 55,
+      "exiting": 45
+    },
+    "pm_peak": {
+      "rate": 23.06,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 44,
+      "exiting": 56
+    }
+  },
+  "520": {
+    "code": "520",
+    "name": "Elementary School",
+    "unit": "Students",
+    "weekday": {
+      "rate": 2.27,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 16,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.74,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 44,
+      "entering": 54,
+      "exiting": 46
+    },
+    "pm_peak": {
+      "rate": 0.16,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 47,
+      "entering": 46,
+      "exiting": 54
+    }
+  },
+  "522": {
+    "code": "522",
+    "name": "Middle School/Junior High School",
+    "unit": "Students",
+    "weekday": {
+      "rate": 2.1,
+      "equation": {
+        "type": "log",
+        "a": 0.97,
+        "b": 0.95
+      },
+      "r_squared": 0.83,
+      "sample_size": 14,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.67,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 23,
+      "entering": 54,
+      "exiting": 46
+    },
+    "pm_peak": {
+      "rate": 0.15,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 21,
+      "entering": 48,
+      "exiting": 52
+    }
+  },
+  "525": {
+    "code": "525",
+    "name": "High School",
+    "unit": "Students",
+    "weekday": {
+      "rate": 1.94,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 31,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.52,
+      "equation": {
+        "type": "log",
+        "a": 0.71,
+        "b": 1.41
+      },
+      "r_squared": 0.56,
+      "sample_size": 42,
+      "entering": 68,
+      "exiting": 32
+    },
+    "pm_peak": {
+      "rate": 0.14,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 41,
+      "entering": 48,
+      "exiting": 52
+    }
+  },
+  "528": {
+    "code": "528",
+    "name": "School District Office",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 14.37,
+      "equation": {
+        "type": "linear",
+        "a": 14.72,
+        "b": -6.6
+      },
+      "r_squared": 0.82,
+      "sample_size": 11,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 2.36,
+      "equation": {
+        "type": "linear",
+        "a": 2.5,
+        "b": -2.81
+      },
+      "r_squared": 0.76,
+      "sample_size": 11,
+      "entering": 76,
+      "exiting": 24
+    },
+    "pm_peak": {
+      "rate": 2.04,
+      "equation": {
+        "type": "linear",
+        "a": 2.19,
+        "b": -2.81
+      },
+      "r_squared": 0.61,
+      "sample_size": 11,
+      "entering": 17,
+      "exiting": 83
+    }
+  },
+  "530": {
+    "code": "530",
+    "name": "Land Use 530",
+    "unit": "Students",
+    "weekday": {
+      "rate": 4.11,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.01,
+      "equation": {
+        "type": "linear",
+        "a": 1.11,
+        "b": -40.99
+      },
+      "r_squared": 0.92,
+      "sample_size": 14,
+      "entering": 56,
+      "exiting": 44
+    },
+    "pm_peak": {
+      "rate": 0.26,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 5,
+      "entering": 46,
+      "exiting": 54
+    }
+  },
+  "532": {
+    "code": "532",
+    "name": "Land Use 532",
+    "unit": "Students",
+    "weekday": {
+      "rate": 2.48,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.79,
+      "equation": {
+        "type": "linear",
+        "a": 0.77,
+        "b": 13.81
+      },
+      "r_squared": 0.95,
+      "sample_size": 5,
+      "entering": 63,
+      "exiting": 37
+    },
+    "pm_peak": {
+      "rate": 0.17,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 43,
+      "exiting": 57
+    }
+  },
+  "534": {
+    "code": "534",
+    "name": "Private High School",
+    "unit": "Students",
+    "weekday": {
+      "rate": 2.17,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.66,
+      "equation": {
+        "type": "linear",
+        "a": 0.35,
+        "b": 133.66
+      },
+      "r_squared": 0.61,
+      "sample_size": 4,
+      "entering": 59,
+      "exiting": 41
+    },
+    "pm_peak": {
+      "rate": 0.19,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 39,
+      "exiting": 61
+    }
+  },
+  "536": {
+    "code": "536",
+    "name": "Charter Elementary School",
+    "unit": "Students",
+    "weekday": {
+      "rate": 1.85,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.04,
+      "equation": {
+        "type": "linear",
+        "a": 1.05,
+        "b": -2.46
+      },
+      "r_squared": 0.86,
+      "sample_size": 22,
+      "entering": 52,
+      "exiting": 48
+    },
+    "pm_peak": {
+      "rate": 0.16,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 5,
+      "entering": 35,
+      "exiting": 65
+    }
+  },
+  "538": {
+    "code": "538",
+    "name": "Land Use 538",
+    "unit": "Students",
+    "weekday": {},
+    "am_peak": {
+      "rate": 0.83,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 51,
+      "exiting": 49
+    },
+    "pm_peak": {}
+  },
+  "540": {
+    "code": "540",
+    "name": "Junior/Community College",
+    "unit": "Students",
+    "weekday": {
+      "rate": 1.15,
+      "equation": {
+        "type": "log",
+        "a": 0.67,
+        "b": 3.27
+      },
+      "r_squared": 0.7,
+      "sample_size": 12,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.11,
+      "equation": {
+        "type": "log",
+        "a": 0.63,
+        "b": 1.3
+      },
+      "r_squared": 0.8,
+      "sample_size": 13,
+      "entering": 81,
+      "exiting": 19
+    },
+    "pm_peak": {
+      "rate": 0.11,
+      "equation": {
+        "type": "log",
+        "a": 0.68,
+        "b": 0.81
+      },
+      "r_squared": 0.75,
+      "sample_size": 12,
+      "entering": 56,
+      "exiting": 44
+    }
+  },
+  "550": {
+    "code": "550",
+    "name": "University/College",
+    "unit": "Students",
+    "weekday": {
+      "rate": 1.56,
+      "equation": {
+        "type": "linear",
+        "a": 1.38,
+        "b": 2108.83
+      },
+      "r_squared": 0.95,
+      "sample_size": 5,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.15,
+      "equation": {
+        "type": "linear",
+        "a": 0.17,
+        "b": -471.66
+      },
+      "r_squared": 0.85,
+      "sample_size": 7,
+      "entering": 78,
+      "exiting": 22
+    },
+    "pm_peak": {
+      "rate": 0.15,
+      "equation": {
+        "type": "linear",
+        "a": 0.16,
+        "b": -187.21
+      },
+      "r_squared": 0.92,
+      "sample_size": 9,
+      "entering": 32,
+      "exiting": 68
+    }
+  },
+  "560": {
+    "code": "560",
+    "name": "Church",
+    "unit": "Seats",
+    "weekday": {
+      "rate": 0.9,
+      "equation": {
+        "type": "linear",
+        "a": 0.93,
+        "b": -16.74
+      },
+      "r_squared": 0.85,
+      "sample_size": 4,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.07,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 60,
+      "exiting": 40
+    },
+    "pm_peak": {
+      "rate": 0.1,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 4,
+      "entering": 45,
+      "exiting": 55
+    }
+  },
+  "561": {
+    "code": "561",
+    "name": "Synagogue",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {
+      "rate": 2.41,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 63,
+      "exiting": 37
+    },
+    "pm_peak": {
+      "rate": 2.92,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 57,
+      "exiting": 43
+    }
+  },
+  "562": {
+    "code": "562",
+    "name": "Mosque",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 4.22,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "565": {
+    "code": "565",
+    "name": "Day Care Center",
+    "unit": "Students",
+    "weekday": {
+      "rate": 4.09,
+      "equation": {
+        "type": "linear",
+        "a": 3.56,
+        "b": 47.23
+      },
+      "r_squared": 0.72,
+      "sample_size": 14,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.78,
+      "equation": {
+        "type": "linear",
+        "a": 0.66,
+        "b": 8.42
+      },
+      "r_squared": 0.69,
+      "sample_size": 75,
+      "entering": 53,
+      "exiting": 47
+    },
+    "pm_peak": {
+      "rate": 0.79,
+      "equation": {
+        "type": "log",
+        "a": 0.87,
+        "b": 0.29
+      },
+      "r_squared": 0.57,
+      "sample_size": 75,
+      "entering": 47,
+      "exiting": 53
+    }
+  },
+  "566": {
+    "code": "566",
+    "name": "Cemetery",
+    "unit": "Acres",
+    "weekday": {
+      "rate": 6.02,
+      "equation": {
+        "type": "linear",
+        "a": 4.65,
+        "b": 70.83
+      },
+      "r_squared": 0.86,
+      "sample_size": 5,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.17,
+      "equation": {
+        "type": "linear",
+        "a": 0.18,
+        "b": -0.49
+      },
+      "r_squared": 0.84,
+      "sample_size": 4,
+      "entering": 80,
+      "exiting": 20
+    },
+    "pm_peak": {
+      "rate": 0.46,
+      "equation": {
+        "type": "linear",
+        "a": 0.51,
+        "b": -3.18
+      },
+      "r_squared": 0.58,
+      "sample_size": 4,
+      "entering": 31,
+      "exiting": 69
+    }
+  },
+  "571": {
+    "code": "571",
+    "name": "Adult Detention Facility",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 4.09,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 59,
+      "exiting": 41
+    },
+    "am_peak": {
+      "rate": 0.68,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 73,
+      "exiting": 27
+    },
+    "pm_peak": {
+      "rate": 0.48,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 16,
+      "exiting": 84
+    }
+  },
+  "575": {
+    "code": "575",
+    "name": "Fire and Rescue Station",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 0.48,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 29,
+      "exiting": 71
+    }
+  },
+  "580": {
+    "code": "580",
+    "name": "Museum",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {
+      "rate": 0.28,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 86,
+      "exiting": 14
+    },
+    "pm_peak": {
+      "rate": 0.18,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 16,
+      "exiting": 84
+    }
+  },
+  "590": {
+    "code": "590",
+    "name": "Library",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 72.05,
+      "equation": {
+        "type": "log",
+        "a": 0.99,
+        "b": 4.28
+      },
+      "r_squared": 0.97,
+      "sample_size": 6,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.0,
+      "equation": {
+        "type": "linear",
+        "a": 1.75,
+        "b": -14.59
+      },
+      "r_squared": 0.86,
+      "sample_size": 4,
+      "entering": 71,
+      "exiting": 29
+    },
+    "pm_peak": {
+      "rate": 8.16,
+      "equation": {
+        "type": "linear",
+        "a": 9.33,
+        "b": -17.13
+      },
+      "r_squared": 0.75,
+      "sample_size": 9,
+      "entering": 48,
+      "exiting": 52
+    }
+  },
+  "610": {
+    "code": "610",
+    "name": "Hospital",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 10.77,
+      "equation": {
+        "type": "linear",
+        "a": 5.29,
+        "b": 3469.05
+      },
+      "r_squared": 0.64,
+      "sample_size": 7,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.82,
+      "equation": {
+        "type": "log",
+        "a": 0.6,
+        "b": 2.52
+      },
+      "r_squared": 0.72,
+      "sample_size": 19,
+      "entering": 67,
+      "exiting": 33
+    },
+    "pm_peak": {
+      "rate": 0.86,
+      "equation": {
+        "type": "log",
+        "a": 0.64,
+        "b": 2.27
+      },
+      "r_squared": 0.69,
+      "sample_size": 19,
+      "entering": 35,
+      "exiting": 65
+    }
+  },
+  "620": {
+    "code": "620",
+    "name": "Nursing Home",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 6.75,
+      "equation": {
+        "type": "log",
+        "a": 0.85,
+        "b": 2.45
+      },
+      "r_squared": 0.61,
+      "sample_size": 9,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.55,
+      "equation": {
+        "type": "log",
+        "a": 0.85,
+        "b": -0.05
+      },
+      "r_squared": 0.64,
+      "sample_size": 8,
+      "entering": 77,
+      "exiting": 23
+    },
+    "pm_peak": {
+      "rate": 0.59,
+      "equation": {
+        "type": "log",
+        "a": 0.93,
+        "b": -0.32
+      },
+      "r_squared": 0.52,
+      "sample_size": 8,
+      "entering": 41,
+      "exiting": 59
+    }
+  },
+  "630": {
+    "code": "630",
+    "name": "Clinic",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 37.6,
+      "equation": {
+        "type": "linear",
+        "a": 35.86,
+        "b": 34.88
+      },
+      "r_squared": 0.76,
+      "sample_size": 9,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 2.75,
+      "equation": {
+        "type": "linear",
+        "a": 2.19,
+        "b": 8.68
+      },
+      "r_squared": 0.98,
+      "sample_size": 9,
+      "entering": 81,
+      "exiting": 19
+    },
+    "pm_peak": {
+      "rate": 3.69,
+      "equation": {
+        "type": "linear",
+        "a": 3.53,
+        "b": 2.98
+      },
+      "r_squared": 0.72,
+      "sample_size": 11,
+      "entering": 30,
+      "exiting": 70
+    }
+  },
+  "640": {
+    "code": "640",
+    "name": "Animal Hospital/Veterinary Clinic",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 21.5,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 6,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 3.64,
+      "equation": {
+        "type": "linear",
+        "a": 4.07,
+        "b": -2.48
+      },
+      "r_squared": 0.74,
+      "sample_size": 8,
+      "entering": 67,
+      "exiting": 33
+    },
+    "pm_peak": {
+      "rate": 3.53,
+      "equation": {
+        "type": "linear",
+        "a": 4.75,
+        "b": -6.96
+      },
+      "r_squared": 0.82,
+      "sample_size": 8,
+      "entering": 40,
+      "exiting": 60
+    }
+  },
+  "650": {
+    "code": "650",
+    "name": "Free-Standing Emergency Room",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 24.94,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 4,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.12,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 4,
+      "entering": 50,
+      "exiting": 50
+    },
+    "pm_peak": {
+      "rate": 1.52,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 4,
+      "entering": 46,
+      "exiting": 54
+    }
+  },
+  "710": {
+    "code": "710",
+    "name": "General Office Building",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 10.84,
+      "equation": {
+        "type": "log",
+        "a": 0.87,
+        "b": 3.05
+      },
+      "r_squared": 0.78,
+      "sample_size": 59,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.52,
+      "equation": {
+        "type": "log",
+        "a": 0.86,
+        "b": 1.16
+      },
+      "r_squared": 0.78,
+      "sample_size": 221,
+      "entering": 88,
+      "exiting": 12
+    },
+    "pm_peak": {
+      "rate": 1.44,
+      "equation": {
+        "type": "log",
+        "a": 0.83,
+        "b": 1.29
+      },
+      "r_squared": 0.77,
+      "sample_size": 232,
+      "entering": 17,
+      "exiting": 83
+    }
+  },
+  "712": {
+    "code": "712",
+    "name": "Small Office Building",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 14.39,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 21,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.67,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 21,
+      "entering": 82,
+      "exiting": 18
+    },
+    "pm_peak": {
+      "rate": 2.16,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 21,
+      "entering": 34,
+      "exiting": 66
+    }
+  },
+  "714": {
+    "code": "714",
+    "name": "Corporate Headquarters Building",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 7.95,
+      "equation": {
+        "type": "linear",
+        "a": 6.16,
+        "b": 462.5
+      },
+      "r_squared": 0.81,
+      "sample_size": 7,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.45,
+      "equation": {
+        "type": "log",
+        "a": 0.89,
+        "b": 0.91
+      },
+      "r_squared": 0.68,
+      "sample_size": 21,
+      "entering": 93,
+      "exiting": 7
+    },
+    "pm_peak": {
+      "rate": 1.3,
+      "equation": {
+        "type": "log",
+        "a": 0.94,
+        "b": 0.58
+      },
+      "r_squared": 0.7,
+      "sample_size": 21,
+      "entering": 9,
+      "exiting": 91
+    }
+  },
+  "715": {
+    "code": "715",
+    "name": "Single Tenant Office Building",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 13.07,
+      "equation": {
+        "type": "linear",
+        "a": 8.04,
+        "b": 550.49
+      },
+      "r_squared": 0.53,
+      "sample_size": 12,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.85,
+      "equation": {
+        "type": "linear",
+        "a": 1.89,
+        "b": -7.67
+      },
+      "r_squared": 0.84,
+      "sample_size": 41,
+      "entering": 89,
+      "exiting": 11
+    },
+    "pm_peak": {
+      "rate": 1.76,
+      "equation": {
+        "type": "linear",
+        "a": 1.72,
+        "b": 7.89
+      },
+      "r_squared": 0.85,
+      "sample_size": 41,
+      "entering": 15,
+      "exiting": 85
+    }
+  },
+  "720": {
+    "code": "720",
+    "name": "Medical-Dental Office Building - Stand-Alone",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 31.86,
+      "equation": {
+        "type": "linear",
+        "a": 35.59,
+        "b": -127.95
+      },
+      "r_squared": 0.99,
+      "sample_size": 6,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 2.68,
+      "equation": {
+        "type": "linear",
+        "a": 2.72,
+        "b": -1.53
+      },
+      "r_squared": 0.82,
+      "sample_size": 8,
+      "entering": 81,
+      "exiting": 19
+    },
+    "pm_peak": {
+      "rate": 2.84,
+      "equation": {
+        "type": "linear",
+        "a": 3.05,
+        "b": -7.38
+      },
+      "r_squared": 0.92,
+      "sample_size": 10,
+      "entering": 25,
+      "exiting": 75
+    }
+  },
+  "730": {
+    "code": "730",
+    "name": "Government Office Building",
+    "unit": "Municipal Population (1000s)",
+    "weekday": {
+      "rate": 3.99,
+      "equation": {
+        "type": "linear",
+        "a": 2.14,
+        "b": 118.74
+      },
+      "r_squared": 0.84,
+      "sample_size": 7,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.59,
+      "equation": {
+        "type": "linear",
+        "a": 0.25,
+        "b": 21.82
+      },
+      "r_squared": 0.66,
+      "sample_size": 7,
+      "entering": 75,
+      "exiting": 25
+    },
+    "pm_peak": {
+      "rate": 0.38,
+      "equation": {
+        "type": "log",
+        "a": 0.52,
+        "b": 1.3
+      },
+      "r_squared": 0.94,
+      "sample_size": 6,
+      "entering": 20,
+      "exiting": 80
+    }
+  },
+  "731": {
+    "code": "731",
+    "name": "State Motor Vehicles Department",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 11.21,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 5.33,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 58,
+      "exiting": 42
+    },
+    "pm_peak": {
+      "rate": 5.2,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 38,
+      "exiting": 62
+    }
+  },
+  "732": {
+    "code": "732",
+    "name": "United States Post Office",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 103.94,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 7,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 8.28,
+      "equation": {
+        "type": "log",
+        "a": 0.47,
+        "b": 3.98
+      },
+      "r_squared": 0.58,
+      "sample_size": 12,
+      "entering": 52,
+      "exiting": 48
+    },
+    "pm_peak": {
+      "rate": 11.21,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 14,
+      "entering": 51,
+      "exiting": 49
+    }
+  },
+  "750": {
+    "code": "750",
+    "name": "Office Park",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 11.07,
+      "equation": {
+        "type": "log",
+        "a": 0.89,
+        "b": 3.1
+      },
+      "r_squared": 0.93,
+      "sample_size": 10,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.33,
+      "equation": {
+        "type": "linear",
+        "a": 0.94,
+        "b": 194.06
+      },
+      "r_squared": 0.86,
+      "sample_size": 23,
+      "entering": 89,
+      "exiting": 11
+    },
+    "pm_peak": {
+      "rate": 1.3,
+      "equation": {
+        "type": "linear",
+        "a": 1.26,
+        "b": 20.98
+      },
+      "r_squared": 0.97,
+      "sample_size": 20,
+      "entering": 14,
+      "exiting": 86
+    }
+  },
+  "760": {
+    "code": "760",
+    "name": "Research and Development Center",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 11.08,
+      "equation": {
+        "type": "linear",
+        "a": 9.7,
+        "b": 247.71
+      },
+      "r_squared": 0.89,
+      "sample_size": 22,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.03,
+      "equation": {
+        "type": "linear",
+        "a": 0.89,
+        "b": 24.54
+      },
+      "r_squared": 0.7,
+      "sample_size": 39,
+      "entering": 82,
+      "exiting": 18
+    },
+    "pm_peak": {
+      "rate": 0.98,
+      "equation": {
+        "type": "linear",
+        "a": 0.84,
+        "b": 25.08
+      },
+      "r_squared": 0.7,
+      "sample_size": 39,
+      "entering": 16,
+      "exiting": 84
+    }
+  },
+  "770": {
+    "code": "770",
+    "name": "Business Park",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 12.44,
+      "equation": {
+        "type": "linear",
+        "a": 10.62,
+        "b": 715.67
+      },
+      "r_squared": 0.89,
+      "sample_size": 16,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.35,
+      "equation": {
+        "type": "log",
+        "a": 0.94,
+        "b": 0.59
+      },
+      "r_squared": 0.8,
+      "sample_size": 21,
+      "entering": 85,
+      "exiting": 15
+    },
+    "pm_peak": {
+      "rate": 1.22,
+      "equation": {
+        "type": "log",
+        "a": 0.88,
+        "b": 0.93
+      },
+      "r_squared": 0.77,
+      "sample_size": 22,
+      "entering": 26,
+      "exiting": 74
+    }
+  },
+  "810": {
+    "code": "810",
+    "name": "Tractor Supply Store",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 1.4,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 7,
+      "entering": 47,
+      "exiting": 53
+    }
+  },
+  "811": {
+    "code": "811",
+    "name": "Construction Equipment Rental Store",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 0.99,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 28,
+      "exiting": 72
+    }
+  },
+  "812": {
+    "code": "812",
+    "name": "Building Materials and Lumber Store",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 17.05,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 13,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.59,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 16,
+      "entering": 62,
+      "exiting": 38
+    },
+    "pm_peak": {
+      "rate": 2.25,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 18,
+      "entering": 46,
+      "exiting": 54
+    }
+  },
+  "813": {
+    "code": "813",
+    "name": "Free-Standing Discount Superstore",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 50.52,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 72,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.86,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 72,
+      "entering": 56,
+      "exiting": 44
+    },
+    "pm_peak": {
+      "rate": 4.33,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 96,
+      "entering": 49,
+      "exiting": 51
+    }
+  },
+  "814": {
+    "code": "814",
+    "name": "Variety Store",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 63.66,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 29,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 3.04,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 29,
+      "entering": 55,
+      "exiting": 45
+    },
+    "pm_peak": {
+      "rate": 6.7,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 29,
+      "entering": 51,
+      "exiting": 49
+    }
+  },
+  "815": {
+    "code": "815",
+    "name": "Free-Standing Discount Store",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 53.87,
+      "equation": {
+        "type": "log",
+        "a": 0.77,
+        "b": 5.05
+      },
+      "r_squared": 0.83,
+      "sample_size": 21,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.18,
+      "equation": {
+        "type": "log",
+        "a": 0.84,
+        "b": 0.74
+      },
+      "r_squared": 0.64,
+      "sample_size": 10,
+      "entering": 70,
+      "exiting": 30
+    },
+    "pm_peak": {
+      "rate": 4.86,
+      "equation": {
+        "type": "log",
+        "a": 0.84,
+        "b": 2.3
+      },
+      "r_squared": 0.59,
+      "sample_size": 60,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "816": {
+    "code": "816",
+    "name": "Hardware/Paint Store",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 8.07,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 4,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.92,
+      "equation": {
+        "type": "linear",
+        "a": 0.75,
+        "b": 1.92
+      },
+      "r_squared": 0.62,
+      "sample_size": 4,
+      "entering": 54,
+      "exiting": 46
+    },
+    "pm_peak": {
+      "rate": 2.98,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 7,
+      "entering": 46,
+      "exiting": 54
+    }
+  },
+  "817": {
+    "code": "817",
+    "name": "Nursery (Garden Center)",
+    "unit": "Acres",
+    "weekday": {
+      "rate": 108.1,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 10,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 2.82,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 11,
+      "entering": 50,
+      "exiting": 50
+    },
+    "pm_peak": {
+      "rate": 8.06,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 11,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "818": {
+    "code": "818",
+    "name": "Nursery (Wholesale)",
+    "unit": "Acres",
+    "weekday": {},
+    "am_peak": {
+      "rate": 1.17,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "pm_peak": {
+      "rate": 0.36,
+      "equation": {
+        "type": "linear",
+        "a": 0.49,
+        "b": -3.33
+      },
+      "r_squared": 0.68,
+      "sample_size": 5,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "820": {
+    "code": "820",
+    "name": "Land Use 820",
+    "unit": "1000 Sq. Ft. GLA",
+    "weekday": {
+      "rate": 37.01,
+      "equation": {
+        "type": "linear",
+        "a": 26.11,
+        "b": 5863.73
+      },
+      "r_squared": 0.6,
+      "sample_size": 108,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.84,
+      "equation": {
+        "type": "linear",
+        "a": 0.59,
+        "b": 133.55
+      },
+      "r_squared": 0.56,
+      "sample_size": 44,
+      "entering": 62,
+      "exiting": 38
+    },
+    "pm_peak": {
+      "rate": 3.4,
+      "equation": {
+        "type": "log",
+        "a": 0.72,
+        "b": 3.02
+      },
+      "r_squared": 0.7,
+      "sample_size": 126,
+      "entering": 48,
+      "exiting": 52
+    }
+  },
+  "821": {
+    "code": "821",
+    "name": "Land Use 821",
+    "unit": "1000 Sq. Ft. GLA",
+    "weekday": {
+      "rate": 67.52,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 7,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.73,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 13,
+      "entering": 62,
+      "exiting": 38
+    },
+    "pm_peak": {
+      "rate": 5.19,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 42,
+      "entering": 49,
+      "exiting": 51
+    }
+  },
+  "822": {
+    "code": "822",
+    "name": "Land Use 822",
+    "unit": "1000 Sq. Ft. GLA",
+    "weekday": {
+      "rate": 54.45,
+      "equation": {
+        "type": "linear",
+        "a": 42.2,
+        "b": 229.68
+      },
+      "r_squared": 0.96,
+      "sample_size": 4,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 2.36,
+      "equation": {
+        "type": "log",
+        "a": 0.66,
+        "b": 1.84
+      },
+      "r_squared": 0.57,
+      "sample_size": 5,
+      "entering": 60,
+      "exiting": 40
+    },
+    "pm_peak": {
+      "rate": 6.59,
+      "equation": {
+        "type": "log",
+        "a": 0.71,
+        "b": 2.72
+      },
+      "r_squared": 0.56,
+      "sample_size": 25,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "823": {
+    "code": "823",
+    "name": "Factory Outlet Center",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 26.59,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 11,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.67,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 73,
+      "exiting": 27
+    },
+    "pm_peak": {
+      "rate": 2.29,
+      "equation": {
+        "type": "log",
+        "a": 0.43,
+        "b": 3.68
+      },
+      "r_squared": 0.56,
+      "sample_size": 14,
+      "entering": 47,
+      "exiting": 53
+    }
+  },
+  "840": {
+    "code": "840",
+    "name": "Automobile Sales (New)",
+    "unit": "Service Bays",
+    "weekday": {
+      "rate": 27.84,
+      "equation": {
+        "type": "linear",
+        "a": 28.65,
+        "b": -29.45
+      },
+      "r_squared": 0.8,
+      "sample_size": 18,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 2.03,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 65,
+      "exiting": 35
+    },
+    "pm_peak": {
+      "rate": 2.26,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 45,
+      "exiting": 55
+    }
+  },
+  "841": {
+    "code": "841",
+    "name": "Automobile Sales (Used)",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 27.06,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 14,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 2.13,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 8,
+      "entering": 76,
+      "exiting": 24
+    },
+    "pm_peak": {
+      "rate": 3.75,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 14,
+      "entering": 47,
+      "exiting": 53
+    }
+  },
+  "842": {
+    "code": "842",
+    "name": "Recreational Vehicle Sales",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 5.0,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 5,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.46,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 5,
+      "entering": 85,
+      "exiting": 15
+    },
+    "pm_peak": {
+      "rate": 0.77,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 7,
+      "entering": 31,
+      "exiting": 69
+    }
+  },
+  "843": {
+    "code": "843",
+    "name": "Automobile Parts Sales",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 54.57,
+      "equation": {
+        "type": "linear",
+        "a": 71.05,
+        "b": -127.72
+      },
+      "r_squared": 0.56,
+      "sample_size": 14,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 2.51,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 14,
+      "entering": 55,
+      "exiting": 45
+    },
+    "pm_peak": {
+      "rate": 4.9,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 16,
+      "entering": 48,
+      "exiting": 52
+    }
+  },
+  "848": {
+    "code": "848",
+    "name": "Tire Store",
+    "unit": "Service Bays",
+    "weekday": {
+      "rate": 27.69,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 13,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 2.1,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 9,
+      "entering": 64,
+      "exiting": 36
+    },
+    "pm_peak": {
+      "rate": 3.42,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 10,
+      "entering": 42,
+      "exiting": 58
+    }
+  },
+  "849": {
+    "code": "849",
+    "name": "Tire Superstore",
+    "unit": "Service Bays",
+    "weekday": {
+      "rate": 30.55,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 12,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 2.01,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 11,
+      "entering": 65,
+      "exiting": 35
+    },
+    "pm_peak": {
+      "rate": 3.17,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 12,
+      "entering": 47,
+      "exiting": 53
+    }
+  },
+  "850": {
+    "code": "850",
+    "name": "Supermarket",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 93.84,
+      "equation": {
+        "type": "linear",
+        "a": 83.39,
+        "b": 539.33
+      },
+      "r_squared": 0.8,
+      "sample_size": 22,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 2.86,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 34,
+      "entering": 59,
+      "exiting": 41
+    },
+    "pm_peak": {
+      "rate": 8.95,
+      "equation": {
+        "type": "log",
+        "a": 0.81,
+        "b": 2.92
+      },
+      "r_squared": 0.67,
+      "sample_size": 104,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "851": {
+    "code": "851",
+    "name": "Convenience Store",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 762.28,
+      "equation": {
+        "type": "linear",
+        "a": 761.44,
+        "b": 2.27
+      },
+      "r_squared": 0.53,
+      "sample_size": 8,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 62.54,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 39,
+      "entering": 50,
+      "exiting": 50
+    },
+    "pm_peak": {
+      "rate": 49.11,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 39,
+      "entering": 51,
+      "exiting": 49
+    }
+  },
+  "857": {
+    "code": "857",
+    "name": "Discount Club",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 42.46,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 20,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.8,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 5,
+      "entering": 61,
+      "exiting": 39
+    },
+    "pm_peak": {
+      "rate": 4.19,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 32,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "860": {
+    "code": "860",
+    "name": "Wholesale Market",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {
+      "rate": 0.55,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 67,
+      "exiting": 33
+    },
+    "pm_peak": {
+      "rate": 1.76,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 53,
+      "exiting": 47
+    }
+  },
+  "861": {
+    "code": "861",
+    "name": "Sporting Goods Superstore",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 23.78,
+      "equation": {
+        "type": "linear",
+        "a": 28.15,
+        "b": -376.5
+      },
+      "r_squared": 0.79,
+      "sample_size": 8,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.77,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 83,
+      "exiting": 17
+    },
+    "pm_peak": {
+      "rate": 3.14,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 45,
+      "exiting": 55
+    }
+  },
+  "862": {
+    "code": "862",
+    "name": "Home Improvement Superstore",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 30.74,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 19,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.51,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 51,
+      "entering": 57,
+      "exiting": 43
+    },
+    "pm_peak": {
+      "rate": 2.29,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 62,
+      "entering": 49,
+      "exiting": 51
+    }
+  },
+  "863": {
+    "code": "863",
+    "name": "Electronics Superstore",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 41.05,
+      "equation": {
+        "type": "linear",
+        "a": 84.01,
+        "b": -1576.41
+      },
+      "r_squared": 0.8,
+      "sample_size": 5,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.27,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 60,
+      "exiting": 40
+    },
+    "pm_peak": {
+      "rate": 5.2,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 48,
+      "exiting": 52
+    }
+  },
+  "864": {
+    "code": "864",
+    "name": "Toy/Children's Superstore",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 5.0,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "865": {
+    "code": "865",
+    "name": "Baby Superstore",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 1.82,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "866": {
+    "code": "866",
+    "name": "Pet Supply Superstore",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 3.55,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 5,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "867": {
+    "code": "867",
+    "name": "Office Supply Superstore",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 2.77,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 5,
+      "entering": 51,
+      "exiting": 49
+    }
+  },
+  "868": {
+    "code": "868",
+    "name": "Book Superstore",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 143.6,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.27,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "pm_peak": {
+      "rate": 15.83,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 52,
+      "exiting": 48
+    }
+  },
+  "869": {
+    "code": "869",
+    "name": "Discount Home Furnishing Superstore",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 20.0,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 8,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.57,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 7,
+      "entering": 64,
+      "exiting": 36
+    },
+    "pm_peak": {
+      "rate": 1.57,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 8,
+      "entering": 53,
+      "exiting": 47
+    }
+  },
+  "872": {
+    "code": "872",
+    "name": "Bed and Linen Superstore",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 2.22,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 41,
+      "exiting": 59
+    }
+  },
+  "875": {
+    "code": "875",
+    "name": "Department Store",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {
+      "rate": 0.58,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 7,
+      "entering": 64,
+      "exiting": 36
+    },
+    "pm_peak": {
+      "rate": 1.95,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 16,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "876": {
+    "code": "876",
+    "name": "Apparel Store",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 66.4,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.0,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 80,
+      "exiting": 20
+    },
+    "pm_peak": {
+      "rate": 4.12,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 9,
+      "entering": 51,
+      "exiting": 49
+    }
+  },
+  "879": {
+    "code": "879",
+    "name": "Arts and Crafts Store",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 56.55,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 6.21,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 46,
+      "exiting": 54
+    }
+  },
+  "880": {
+    "code": "880",
+    "name": "Pharmacy/Drugstore without Drive-Through Window",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 90.08,
+      "equation": {
+        "type": "log",
+        "a": 0.99,
+        "b": 4.51
+      },
+      "r_squared": 0.73,
+      "sample_size": 6,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 2.94,
+      "equation": {
+        "type": "linear",
+        "a": 10.22,
+        "b": -75.7
+      },
+      "r_squared": 0.89,
+      "sample_size": 7,
+      "entering": 65,
+      "exiting": 35
+    },
+    "pm_peak": {
+      "rate": 8.51,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 13,
+      "entering": 49,
+      "exiting": 51
+    }
+  },
+  "881": {
+    "code": "881",
+    "name": "Pharmacy/Drugstore with Drive-Through Window",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 108.4,
+      "equation": {
+        "type": "log",
+        "a": 0.74,
+        "b": 5.32
+      },
+      "r_squared": 0.51,
+      "sample_size": 16,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 3.74,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 21,
+      "entering": 52,
+      "exiting": 48
+    },
+    "pm_peak": {
+      "rate": 10.25,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 39,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "882": {
+    "code": "882",
+    "name": "Marijuana Dispensary",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 211.12,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 7,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 10.54,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 6,
+      "entering": 52,
+      "exiting": 48
+    },
+    "pm_peak": {
+      "rate": 18.92,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 16,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "890": {
+    "code": "890",
+    "name": "Furniture Store",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 6.3,
+      "equation": {
+        "type": "linear",
+        "a": 5.17,
+        "b": 46.56
+      },
+      "r_squared": 0.67,
+      "sample_size": 19,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.26,
+      "equation": {
+        "type": "linear",
+        "a": 0.24,
+        "b": 0.94
+      },
+      "r_squared": 0.58,
+      "sample_size": 20,
+      "entering": 71,
+      "exiting": 29
+    },
+    "pm_peak": {
+      "rate": 0.52,
+      "equation": {
+        "type": "log",
+        "a": 0.85,
+        "b": -0.18
+      },
+      "r_squared": 0.52,
+      "sample_size": 26,
+      "entering": 47,
+      "exiting": 53
+    }
+  },
+  "897": {
+    "code": "897",
+    "name": "Medical Equipment Store",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 6.0,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.17,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 88,
+      "exiting": 12
+    },
+    "pm_peak": {
+      "rate": 1.24,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 11,
+      "exiting": 89
+    }
+  },
+  "899": {
+    "code": "899",
+    "name": "Liquor Store",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 107.21,
+      "equation": {
+        "type": "log",
+        "a": 0.52,
+        "b": 5.75
+      },
+      "r_squared": 0.74,
+      "sample_size": 5,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.59,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 4,
+      "entering": 79,
+      "exiting": 21
+    },
+    "pm_peak": {
+      "rate": 16.62,
+      "equation": {
+        "type": "log",
+        "a": 0.47,
+        "b": 3.91
+      },
+      "r_squared": 0.73,
+      "sample_size": 9,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "911": {
+    "code": "911",
+    "name": "Walk-in Bank",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 12.13,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 44,
+      "exiting": 56
+    }
+  },
+  "912": {
+    "code": "912",
+    "name": "Drive-in Bank",
+    "unit": "Drive-In Lanes",
+    "weekday": {
+      "rate": 125.03,
+      "equation": {
+        "type": "linear",
+        "a": 117.68,
+        "b": 35.3
+      },
+      "r_squared": 0.55,
+      "sample_size": 20,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 8.54,
+      "equation": {
+        "type": "linear",
+        "a": 8.71,
+        "b": -0.75
+      },
+      "r_squared": 0.59,
+      "sample_size": 36,
+      "entering": 61,
+      "exiting": 39
+    },
+    "pm_peak": {
+      "rate": 27.07,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 109,
+      "entering": 49,
+      "exiting": 51
+    }
+  },
+  "918": {
+    "code": "918",
+    "name": "Hair Salon",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {
+      "rate": 1.21,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "pm_peak": {
+      "rate": 1.45,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 17,
+      "exiting": 83
+    }
+  },
+  "920": {
+    "code": "920",
+    "name": "Land Use 920",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {
+      "rate": 2.78,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 75,
+      "exiting": 25
+    },
+    "pm_peak": {
+      "rate": 7.42,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 44,
+      "exiting": 56
+    }
+  },
+  "926": {
+    "code": "926",
+    "name": "Food Cart Pod",
+    "unit": "Food Carts",
+    "weekday": {},
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 6.16,
+      "equation": {
+        "type": "linear",
+        "a": 6.98,
+        "b": -7.59
+      },
+      "r_squared": 0.97,
+      "sample_size": 4,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "930": {
+    "code": "930",
+    "name": "Fast Casual Restaurant",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 97.14,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.43,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "pm_peak": {
+      "rate": 12.55,
+      "equation": {
+        "type": "linear",
+        "a": 17.96,
+        "b": -15.94
+      },
+      "r_squared": 0.65,
+      "sample_size": 15,
+      "entering": 55,
+      "exiting": 45
+    }
+  },
+  "931": {
+    "code": "931",
+    "name": "Fine Dining Restaurant",
+    "unit": "Seats",
+    "weekday": {
+      "rate": 2.6,
+      "equation": {
+        "type": "linear",
+        "a": 3.9,
+        "b": -447.07
+      },
+      "r_squared": 0.59,
+      "sample_size": 6,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.02,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 5,
+      "entering": 50,
+      "exiting": 50
+    },
+    "pm_peak": {
+      "rate": 0.28,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 11,
+      "entering": 67,
+      "exiting": 33
+    }
+  },
+  "932": {
+    "code": "932",
+    "name": "High-Turnover (Sit-Down) Restaurant",
+    "unit": "Seats",
+    "weekday": {
+      "rate": 4.37,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.45,
+      "equation": {
+        "type": "linear",
+        "a": 0.81,
+        "b": -57.37
+      },
+      "r_squared": 0.58,
+      "sample_size": 7,
+      "entering": 52,
+      "exiting": 48
+    },
+    "pm_peak": {
+      "rate": 0.39,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 14,
+      "entering": 57,
+      "exiting": 43
+    }
+  },
+  "933": {
+    "code": "933",
+    "name": "Fast-Food Restaurant without Drive-Through Window",
+    "unit": "Seats",
+    "weekday": {
+      "rate": 42.12,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 43.18,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 58,
+      "exiting": 42
+    },
+    "pm_peak": {
+      "rate": 33.21,
+      "equation": {
+        "type": "linear",
+        "a": 25.22,
+        "b": 18.31
+      },
+      "r_squared": 0.53,
+      "sample_size": 8,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "934": {
+    "code": "934",
+    "name": "Fast-Food Restaurant with Drive-Through Window",
+    "unit": "PM Peak Hour Traffic on Adj. St.",
+    "weekday": {
+      "rate": 19.52,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 10,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.12,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 5,
+      "entering": 54,
+      "exiting": 46
+    },
+    "pm_peak": {
+      "rate": 0.04,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 14,
+      "entering": 53,
+      "exiting": 47
+    }
+  },
+  "935": {
+    "code": "935",
+    "name": "Fast-Food Restaurant with Drive-Through Window and No Indoor Seating",
+    "unit": "Drive-Through Lanes",
+    "weekday": {},
+    "am_peak": {
+      "rate": 43.0,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 47,
+      "exiting": 53
+    },
+    "pm_peak": {
+      "rate": 59.5,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 6,
+      "entering": 51,
+      "exiting": 49
+    }
+  },
+  "936": {
+    "code": "936",
+    "name": "Coffee/Donut Shop without Drive-Through Window",
+    "unit": "Seats",
+    "weekday": {},
+    "am_peak": {
+      "rate": 10.79,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 53,
+      "exiting": 47
+    },
+    "pm_peak": {
+      "rate": 4.26,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 51,
+      "exiting": 49
+    }
+  },
+  "937": {
+    "code": "937",
+    "name": "Coffee/Donut Shop with Drive-Through Window",
+    "unit": "PM Peak Hour Traffic on Adj. St.",
+    "weekday": {
+      "rate": 533.57,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 6,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.15,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 10,
+      "entering": 51,
+      "exiting": 49
+    },
+    "pm_peak": {
+      "rate": 0.06,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 8,
+      "entering": 51,
+      "exiting": 49
+    }
+  },
+  "938": {
+    "code": "938",
+    "name": "Coffee/Donut Shop with Drive-Through Window and No Indoor Seating",
+    "unit": "Drive-Through Lanes",
+    "weekday": {
+      "rate": 179.0,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 8,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 39.81,
+      "equation": {
+        "type": "linear",
+        "a": 53.21,
+        "b": -17.43
+      },
+      "r_squared": 0.58,
+      "sample_size": 20,
+      "entering": 50,
+      "exiting": 50
+    },
+    "pm_peak": {
+      "rate": 15.08,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 8,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "941": {
+    "code": "941",
+    "name": "Quick Lubrication Vehicle Shop",
+    "unit": "Servicing Positions",
+    "weekday": {
+      "rate": 40.0,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 3.0,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 67,
+      "exiting": 33
+    },
+    "pm_peak": {
+      "rate": 4.85,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 10,
+      "entering": 56,
+      "exiting": 44
+    }
+  },
+  "942": {
+    "code": "942",
+    "name": "Automobile Care Center",
+    "unit": "Service Bays",
+    "weekday": {},
+    "am_peak": {
+      "rate": 1.52,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 68,
+      "exiting": 32
+    },
+    "pm_peak": {
+      "rate": 2.17,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "943": {
+    "code": "943",
+    "name": "Automobile Parts and Service Center",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 16.6,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 27,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 1.91,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 26,
+      "entering": 72,
+      "exiting": 28
+    },
+    "pm_peak": {
+      "rate": 2.06,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 27,
+      "entering": 39,
+      "exiting": 61
+    }
+  },
+  "944": {
+    "code": "944",
+    "name": "Gasoline/Service Station",
+    "unit": "Vehicle Fueling Positions",
+    "weekday": {
+      "rate": 172.01,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 18,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 10.28,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 53,
+      "entering": 50,
+      "exiting": 50
+    },
+    "pm_peak": {
+      "rate": 13.91,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 65,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "945": {
+    "code": "945",
+    "name": "Land Use 945",
+    "unit": "Vehicle Fueling Positions",
+    "weekday": {
+      "rate": 345.75,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 31.6,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 29,
+      "entering": 50,
+      "exiting": 50
+    },
+    "pm_peak": {
+      "rate": 26.9,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 29,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "947": {
+    "code": "947",
+    "name": "Self-Service Car Wash",
+    "unit": "Wash Stalls",
+    "weekday": {
+      "rate": 108.0,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 5.54,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 6,
+      "entering": 51,
+      "exiting": 49
+    }
+  },
+  "948": {
+    "code": "948",
+    "name": "Automated Car Wash",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 14.2,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "949": {
+    "code": "949",
+    "name": "Car Wash and Detail Center",
+    "unit": "Wash Stalls",
+    "weekday": {
+      "rate": 156.2,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 8.6,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 63,
+      "exiting": 37
+    },
+    "pm_peak": {
+      "rate": 13.6,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 1,
+      "entering": 49,
+      "exiting": 51
+    }
+  },
+  "970": {
+    "code": "970",
+    "name": "Wine Tasting Room",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 45.96,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 5,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 3.38,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 3,
+      "entering": 46,
+      "exiting": 54
+    },
+    "pm_peak": {
+      "rate": 7.31,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 4,
+      "entering": 50,
+      "exiting": 50
+    }
+  },
+  "971": {
+    "code": "971",
+    "name": "Brewery Tap Room",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {
+      "rate": 61.69,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 50,
+      "exiting": 50
+    },
+    "am_peak": {
+      "rate": 0.68,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 88,
+      "exiting": 12
+    },
+    "pm_peak": {
+      "rate": 9.83,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 2,
+      "entering": 59,
+      "exiting": 41
+    }
+  },
+  "975": {
+    "code": "975",
+    "name": "Drinking Place",
+    "unit": "1000 Sq. Ft. GFA",
+    "weekday": {},
+    "am_peak": {},
+    "pm_peak": {
+      "rate": 11.36,
+      "equation": null,
+      "r_squared": null,
+      "sample_size": 12,
+      "entering": 66,
+      "exiting": 34
+    }
+  }
+}
