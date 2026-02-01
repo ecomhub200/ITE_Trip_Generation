@@ -1,0 +1,40 @@
+{
+  "active_edition": "12th",
+  "active_edition_path": "ite_12th_edition",
+  "available_editions": {
+    "11th": {
+      "path": "legacy",
+      "files": ["ite_11th_extracted.json", "ite_11th_primary.json", "ite_11th_vol3.json"],
+      "status": "deprecated",
+      "note": "Legacy data - use 12th edition for new projects"
+    },
+    "12th": {
+      "path": "ite_12th_edition",
+      "files": ["vehicle_rates.json", "modal_rates.json", "metadata.json"],
+      "status": "active",
+      "note": "Current edition - extraction in progress"
+    }
+  },
+  "data_sources": {
+    "vehicle_rates": "ite_12th_edition/vehicle_rates.json",
+    "modal_rates": "ite_12th_edition/modal_rates.json",
+    "time_of_day": "time-of-day.json",
+    "code_reference": "ite-codes.json"
+  },
+  "settings": {
+    "default_location": "General Urban/Suburban",
+    "default_subcategory": "All Sites",
+    "default_trip_type": "Vehicle",
+    "warning_thresholds": {
+      "peak_hour_warning": 100,
+      "daily_warning": 1000,
+      "tia_required": 4000,
+      "sample_size_warning": 5,
+      "sample_size_unreliable": 3,
+      "r_squared_good": 0.75,
+      "r_squared_fair": 0.50
+    }
+  },
+  "last_updated": "2026-02-01",
+  "version": "2.0.0"
+}
