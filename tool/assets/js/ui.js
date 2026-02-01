@@ -128,31 +128,25 @@ function initializeApp() {
 }
 
 /**
- * Initialize mode selector checkboxes and event listeners
+ * Initialize mode selector radio buttons and event listeners
  */
 function initializeModeSelectors() {
-  const modeCheckboxes = ['modeVehicle', 'modePerson', 'modeWalk', 'modeBicycle', 'modeTransit'];
+  const modeRadios = ['modeVehicle', 'modePerson', 'modeWalk', 'modeBicycle', 'modeTransit'];
 
-  modeCheckboxes.forEach(modeKey => {
+  modeRadios.forEach(modeKey => {
     if (elements[modeKey]) {
       elements[modeKey].addEventListener('change', updateModeHelper);
     }
   });
 
-  // Ensure vehicle is always checked (it's the primary mode)
-  if (elements.modeVehicle) {
-    elements.modeVehicle.addEventListener('change', (e) => {
-      // Always keep vehicle checked
-      if (!e.target.checked) {
-        e.target.checked = true;
-        showToast('Vehicle mode is always required', 'warning');
-      }
-    });
+  // Ensure vehicle is selected by default if nothing is selected
+  if (elements.modeVehicle && !document.querySelector('input[name="modes"]:checked')) {
+    elements.modeVehicle.checked = true;
   }
 }
 
 /**
- * Update mode helper text based on selected modes
+ * Update mode helper text based on selected mode
  */
 function updateModeHelper() {
   const modes = getSelectedModes();
@@ -164,28 +158,23 @@ function updateModeHelper() {
     'transit': 'Transit'
   };
 
-  const selectedNames = modes.map(m => modeNames[m] || m);
+  const selectedName = modeNames[modes[0]] || modes[0];
   if (elements.modeHelper) {
-    if (modes.length === 1) {
-      elements.modeHelper.textContent = 'Vehicle mode selected (default). Select additional modes for multi-modal analysis.';
-    } else {
-      elements.modeHelper.textContent = `Selected modes: ${selectedNames.join(', ')}`;
-    }
+    elements.modeHelper.textContent = `Selected mode: ${selectedName}`;
   }
 }
 
 /**
- * Get array of selected mode values
- * @returns {string[]} Array of selected mode strings
+ * Get array of selected mode values (single selection, returns array for API compatibility)
+ * @returns {string[]} Array with single selected mode string
  */
 function getSelectedModes() {
-  const modes = [];
-  if (elements.modeVehicle?.checked) modes.push('vehicle');
-  if (elements.modePerson?.checked) modes.push('person');
-  if (elements.modeWalk?.checked) modes.push('walk');
-  if (elements.modeBicycle?.checked) modes.push('bicycle');
-  if (elements.modeTransit?.checked) modes.push('transit');
-  return modes.length > 0 ? modes : ['vehicle'];
+  const selectedRadio = document.querySelector('input[name="modes"]:checked');
+  if (selectedRadio) {
+    return [selectedRadio.value];
+  }
+  // Default to vehicle if nothing selected
+  return ['vehicle'];
 }
 
 /**

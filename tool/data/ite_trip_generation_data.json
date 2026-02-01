@@ -1,0 +1,801 @@
+{
+  "metadata": {
+    "source": "ITE Trip Generation Manual, 12th Edition",
+    "extraction_date": "2026-02-01",
+    "total_land_use_codes": 12,
+    "land_use_codes_extracted": [
+      "222",
+      "223",
+      "225",
+      "226",
+      "230",
+      "231",
+      "253",
+      "760",
+      "814",
+      "821",
+      "840",
+      "843"
+    ]
+  },
+  "data": {
+    "222": {
+      "name": "Multifamily Housing (High-Rise)",
+      "group": "Residential",
+      "default_iv": "Dwelling Units",
+      "vehicle": {
+        "am_peak_adjacent_not_close_to_rail_transit_general_urbansuburban": {
+          "time_period": "Weekday, Peak Hour of Adjacent Street Traffic, One Hour Between 7 and 9 a.m.",
+          "time_period_code": "TASIDE",
+          "subcategory": "Not Close to Rail Transit",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 0.2,
+          "entering": 29,
+          "exiting": 71,
+          "sample_size": 23,
+          "avg_iv_units": 324,
+          "standard_deviation": 0.12,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 0.09,
+            "high": 0.67
+          }
+        },
+        "pm_peak_adjacent_not_close_to_rail_transit_general_urbansuburban": {
+          "time_period": "Weekday, Peak Hour of Adjacent Street Traffic, One Hour Between 4 and 6 p.m.",
+          "time_period_code": "TPSIDE",
+          "subcategory": "Not Close to Rail Transit",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 0.26,
+          "entering": 61,
+          "exiting": 39,
+          "sample_size": 23,
+          "avg_iv_units": 324,
+          "standard_deviation": 0.16,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 0.09,
+            "high": 0.8
+          }
+        },
+        "am_peak_generator_not_close_to_rail_transit_general_urbansuburban": {
+          "time_period": "Weekday, AM Peak Hour of Generator",
+          "time_period_code": "TAGEN",
+          "subcategory": "Not Close to Rail Transit",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 0.19,
+          "entering": 25,
+          "exiting": 75,
+          "sample_size": 1,
+          "avg_iv_units": 703,
+          "standard_deviation": null,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 0.19,
+            "high": 0.19
+          }
+        },
+        "pm_peak_generator_not_close_to_rail_transit_general_urbansuburban": {
+          "time_period": "Weekday, PM Peak Hour of Generator",
+          "time_period_code": "TPGEN",
+          "subcategory": "Not Close to Rail Transit",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 0.46,
+          "entering": 62,
+          "exiting": 38,
+          "sample_size": 2,
+          "avg_iv_units": 155,
+          "standard_deviation": null,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 0.44,
+            "high": 0.48
+          }
+        },
+        "weekday_close_to_rail_transit_general_urbansuburban": {
+          "time_period": "Weekday",
+          "time_period_code": "AWDVTE",
+          "subcategory": "Close to Rail Transit",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 3.96,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 2,
+          "avg_iv_units": 276,
+          "standard_deviation": null,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 2.77,
+            "high": 4.59
+          }
+        },
+        "am_peak_adjacent_close_to_rail_transit_general_urbansuburban": {
+          "time_period": "Weekday, Peak Hour of Adjacent Street Traffic, One Hour Between 7 and 9 a.m.",
+          "time_period_code": "TASIDE",
+          "subcategory": "Close to Rail Transit",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 0.23,
+          "entering": 22,
+          "exiting": 78,
+          "sample_size": 3,
+          "avg_iv_units": 434,
+          "standard_deviation": 0.1,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 0.16,
+            "high": 0.34
+          }
+        },
+        "pm_peak_adjacent_close_to_rail_transit_general_urbansuburban": {
+          "time_period": "Weekday, Peak Hour of Adjacent Street Traffic, One Hour Between 4 and 6 p.m.",
+          "time_period_code": "TPSIDE",
+          "subcategory": "Close to Rail Transit",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 0.26,
+          "entering": 62,
+          "exiting": 38,
+          "sample_size": 3,
+          "avg_iv_units": 434,
+          "standard_deviation": 0.1,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 0.19,
+            "high": 0.39
+          }
+        },
+        "saturday_close_to_rail_transit_general_urbansuburban": {
+          "time_period": "Saturday",
+          "time_period_code": "TSAT24",
+          "subcategory": "Close to Rail Transit",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 4.74,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 2,
+          "avg_iv_units": 276,
+          "standard_deviation": null,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 2.84,
+            "high": 5.74
+          }
+        },
+        "sunday_close_to_rail_transit_general_urbansuburban": {
+          "time_period": "Sunday",
+          "time_period_code": "TSUN24",
+          "subcategory": "Close to Rail Transit",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 4.47,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 2,
+          "avg_iv_units": 276,
+          "standard_deviation": null,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 2.7,
+            "high": 5.4
+          }
+        }
+      },
+      "person": {
+        "am_peak_adjacent_not_close_to_rail_transit_general_urbansuburban": {
+          "time_period": "Weekday, Peak Hour of Adjacent Street Traffic, One Hour Between 7 and 9 a.m.",
+          "time_period_code": "TASIDE",
+          "subcategory": "Not Close to Rail Transit",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 0.34,
+          "entering": 28,
+          "exiting": 72,
+          "sample_size": 15,
+          "avg_iv_units": 284,
+          "standard_deviation": 0.25,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 0.16,
+            "high": 1.28
+          }
+        },
+        "pm_peak_adjacent_not_close_to_rail_transit_general_urbansuburban": {
+          "time_period": "Weekday, Peak Hour of Adjacent Street Traffic, One Hour Between 4 and 6 p.m.",
+          "time_period_code": "TPSIDE",
+          "subcategory": "Not Close to Rail Transit",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 0.46,
+          "entering": 54,
+          "exiting": 46,
+          "sample_size": 15,
+          "avg_iv_units": 284,
+          "standard_deviation": 0.35,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 0.12,
+            "high": 1.26
+          }
+        }
+      },
+      "walk_bike_transit": {
+        "am_peak_adjacent_not_close_to_rail_transit_general_urbansuburban": {
+          "time_period": "Weekday, Peak Hour of Adjacent Street Traffic, One Hour Between 7 and 9 a.m.",
+          "time_period_code": "TASIDE",
+          "subcategory": "Not Close to Rail Transit",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 0.1,
+          "entering": 20,
+          "exiting": 80,
+          "sample_size": 15,
+          "avg_iv_units": 284,
+          "standard_deviation": 0.1,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 0.02,
+            "high": 0.5
+          }
+        },
+        "pm_peak_adjacent_not_close_to_rail_transit_general_urbansuburban": {
+          "time_period": "Weekday, Peak Hour of Adjacent Street Traffic, One Hour Between 4 and 6 p.m.",
+          "time_period_code": "TPSIDE",
+          "subcategory": "Not Close to Rail Transit",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 0.1,
+          "entering": 63,
+          "exiting": 37,
+          "sample_size": 15,
+          "avg_iv_units": 284,
+          "standard_deviation": 0.09,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 0.01,
+            "high": 0.37
+          }
+        }
+      },
+      "walk": {
+        "am_peak_adjacent_not_close_to_rail_transit_general_urbansuburban": {
+          "time_period": "Weekday, Peak Hour of Adjacent Street Traffic, One Hour Between 7 and 9 a.m.",
+          "time_period_code": "TASIDE",
+          "subcategory": "Not Close to Rail Transit",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 0.09,
+          "entering": 21,
+          "exiting": 79,
+          "sample_size": 15,
+          "avg_iv_units": 284,
+          "standard_deviation": 0.09,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 0.02,
+            "high": 0.45
+          }
+        },
+        "pm_peak_adjacent_not_close_to_rail_transit_general_urbansuburban": {
+          "time_period": "Weekday, Peak Hour of Adjacent Street Traffic, One Hour Between 4 and 6 p.m.",
+          "time_period_code": "TPSIDE",
+          "subcategory": "Not Close to Rail Transit",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 0.09,
+          "entering": 52,
+          "exiting": 48,
+          "sample_size": 15,
+          "avg_iv_units": 284,
+          "standard_deviation": 0.09,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 0.01,
+            "high": 0.37
+          }
+        }
+      },
+      "bicycle": {
+        "am_peak_adjacent_not_close_to_rail_transit_general_urbansuburban": {
+          "time_period": "Weekday, Peak Hour of Adjacent Street Traffic, One Hour Between 7 and 9 a.m.",
+          "time_period_code": "TASIDE",
+          "subcategory": "Not Close to Rail Transit",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 0.01,
+          "entering": 26,
+          "exiting": 74,
+          "sample_size": 15,
+          "avg_iv_units": 284,
+          "standard_deviation": 0.01,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 0,
+            "high": 0.05
+          }
+        },
+        "pm_peak_adjacent_not_close_to_rail_transit_general_urbansuburban": {
+          "time_period": "Weekday, Peak Hour of Adjacent Street Traffic, One Hour Between 4 and 6 p.m.",
+          "time_period_code": "TPSIDE",
+          "subcategory": "Not Close to Rail Transit",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 0.01,
+          "entering": 64,
+          "exiting": 36,
+          "sample_size": 15,
+          "avg_iv_units": 284,
+          "standard_deviation": 0.01,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 0,
+            "high": 0.03
+          }
+        }
+      },
+      "transit": {},
+      "truck": {},
+      "pass_by": {
+        "percent": null,
+        "applicable": false
+      }
+    },
+    "223": {
+      "name": "Affordable Housing",
+      "group": "Residential",
+      "default_iv": "Dwelling Units",
+      "vehicle": {
+        "weekday_income_limits_general_urbansuburban": {
+          "time_period": "Weekday",
+          "time_period_code": "AWDVTE",
+          "subcategory": "Income Limits",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 4.81,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 5,
+          "avg_iv_units": 128,
+          "standard_deviation": 2.03,
+          "fitted_curve_equation": "T = 3.73(X) + 139.35",
+          "R_square_value": 0.98,
+          "rate_range": {
+            "low": 4.03,
+            "high": 12.16
+          }
+        },
+        "am_peak_adjacent_income_limits_general_urbansuburban": {
+          "time_period": "Weekday, Peak Hour of Adjacent Street Traffic, One Hour Between 7 and 9 a.m.",
+          "time_period_code": "TASIDE",
+          "subcategory": "Income Limits",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 0.36,
+          "entering": 29,
+          "exiting": 71,
+          "sample_size": 6,
+          "avg_iv_units": 119,
+          "standard_deviation": 0.16,
+          "fitted_curve_equation": "T = 0.21(X) + 17.21",
+          "R_square_value": 0.96,
+          "rate_range": {
+            "low": 0.25,
+            "high": 0.63
+          }
+        },
+        "pm_peak_adjacent_income_limits_general_urbansuburban": {
+          "time_period": "Weekday, Peak Hour of Adjacent Street Traffic, One Hour Between 4 and 6 p.m.",
+          "time_period_code": "TPSIDE",
+          "subcategory": "Income Limits",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 0.46,
+          "entering": 59,
+          "exiting": 41,
+          "sample_size": 8,
+          "avg_iv_units": 113,
+          "standard_deviation": 0.28,
+          "fitted_curve_equation": "Ln(T) = 0.72 Ln(X) + 0.64",
+          "R_square_value": 0.67,
+          "rate_range": {
+            "low": 0.26,
+            "high": 1.22
+          }
+        }
+      },
+      "person": {},
+      "walk_bike_transit": {},
+      "walk": {},
+      "bicycle": {},
+      "transit": {},
+      "truck": {},
+      "pass_by": {
+        "percent": null,
+        "applicable": false
+      }
+    },
+    "225": {
+      "name": "Off-Campus Student Apartment (Low-Rise)",
+      "group": "Residential",
+      "default_iv": "Dwelling Units",
+      "vehicle": {
+        "am_peak_adjacent_adjacent_to_campus_general_urbansuburban": {
+          "time_period": "Weekday, Peak Hour of Adjacent Street Traffic, One Hour Between 7 and 9 a.m.",
+          "time_period_code": "TASIDE",
+          "subcategory": "Adjacent to Campus",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 0.4,
+          "entering": 18,
+          "exiting": 82,
+          "sample_size": 1,
+          "avg_iv_units": 55,
+          "standard_deviation": null,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 0.4,
+            "high": 0.4
+          }
+        }
+      },
+      "person": {},
+      "walk_bike_transit": {},
+      "walk": {},
+      "bicycle": {},
+      "transit": {},
+      "truck": {},
+      "pass_by": {
+        "percent": null,
+        "applicable": false
+      }
+    },
+    "226": {
+      "name": "Off-Campus Student Apartment (Mid-Rise)",
+      "group": "Residential",
+      "default_iv": "Dwelling Units",
+      "vehicle": {
+        "am_peak_generator_adjacent_to_campus_general_urbansuburban": {
+          "time_period": "Weekday, AM Peak Hour of Generator",
+          "time_period_code": "TAGEN",
+          "subcategory": "Adjacent to Campus",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 0.3,
+          "entering": 41,
+          "exiting": 59,
+          "sample_size": 4,
+          "avg_iv_units": 131,
+          "standard_deviation": 0.07,
+          "fitted_curve_equation": "T = 0.20(X) + 13.06",
+          "R_square_value": 0.97,
+          "rate_range": {
+            "low": 0.25,
+            "high": 0.4
+          }
+        }
+      },
+      "person": {},
+      "walk_bike_transit": {},
+      "walk": {},
+      "bicycle": {},
+      "transit": {},
+      "truck": {},
+      "pass_by": {
+        "percent": null,
+        "applicable": false
+      }
+    },
+    "230": {
+      "name": "Low-Rise Residential with Ground-Floor Commercial",
+      "group": "Residential",
+      "default_iv": "Dwelling Units",
+      "vehicle": {
+        "weekday_gfa_125k_general_urbansuburban": {
+          "time_period": "Weekday",
+          "time_period_code": "AWDVTE",
+          "subcategory": "GFA (1-25k)",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 3.44,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 1,
+          "avg_iv_units": 422,
+          "standard_deviation": null,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 3.44,
+            "high": 3.44
+          }
+        }
+      },
+      "person": {},
+      "walk_bike_transit": {},
+      "walk": {},
+      "bicycle": {},
+      "transit": {},
+      "truck": {},
+      "pass_by": {
+        "percent": null,
+        "applicable": false
+      }
+    },
+    "231": {
+      "name": "Mid-Rise Residential with Ground-Floor Commercial",
+      "group": "Residential",
+      "default_iv": "Dwelling Units",
+      "vehicle": {
+        "am_peak_adjacent_gfa_125k_general_urbansuburban": {
+          "time_period": "Weekday, Peak Hour of Adjacent Street Traffic, One Hour Between 7 and 9 a.m.",
+          "time_period_code": "TASIDE",
+          "subcategory": "GFA (1-25k)",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 0.34,
+          "entering": 30,
+          "exiting": 70,
+          "sample_size": 2,
+          "avg_iv_units": 168,
+          "standard_deviation": null,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 0.21,
+            "high": 0.42
+          }
+        }
+      },
+      "person": {},
+      "walk_bike_transit": {},
+      "walk": {},
+      "bicycle": {},
+      "transit": {},
+      "truck": {},
+      "pass_by": {
+        "percent": null,
+        "applicable": false
+      }
+    },
+    "253": {
+      "name": "Congregate Care Facility",
+      "group": "Residential",
+      "default_iv": "Dwelling Units",
+      "vehicle": {
+        "weekday_all_sites_general_urbansuburban": {
+          "time_period": "Weekday",
+          "time_period_code": "AWDVTE",
+          "subcategory": "All Sites",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "Dwelling Units",
+          "rate": 2.43,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 2,
+          "avg_iv_units": 165,
+          "standard_deviation": null,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 2.42,
+            "high": 2.44
+          }
+        }
+      },
+      "person": {},
+      "walk_bike_transit": {},
+      "walk": {},
+      "bicycle": {},
+      "transit": {},
+      "truck": {},
+      "pass_by": {
+        "percent": null,
+        "applicable": false
+      }
+    },
+    "760": {
+      "name": "Research and Development Center",
+      "group": "Office",
+      "default_iv": "1000 Sq. Ft. GFA",
+      "vehicle": {
+        "weekday_all_sites_general_urbansuburban": {
+          "time_period": "Weekday",
+          "time_period_code": "AWDVTE",
+          "subcategory": "All Sites",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "1000 Sq. Ft. GFA",
+          "rate": 9.47,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 1,
+          "avg_iv_units": 42,
+          "standard_deviation": null,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 9.47,
+            "high": 9.47
+          }
+        }
+      },
+      "person": {},
+      "walk_bike_transit": {},
+      "walk": {},
+      "bicycle": {},
+      "transit": {},
+      "truck": {},
+      "pass_by": {
+        "percent": null,
+        "applicable": false
+      }
+    },
+    "814": {
+      "name": "Variety Store",
+      "group": "Retail",
+      "default_iv": "1000 Sq. Ft. GLA",
+      "vehicle": {
+        "weekday_all_sites_general_urbansuburban": {
+          "time_period": "Weekday",
+          "time_period_code": "AWDVTE",
+          "subcategory": "All Sites",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "1000 Sq. Ft. GFA",
+          "rate": 63.66,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 29,
+          "avg_iv_units": 9,
+          "standard_deviation": 25.23,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "rate_range": {
+            "low": 20.51,
+            "high": 133.68
+          }
+        }
+      },
+      "person": {},
+      "walk_bike_transit": {},
+      "walk": {},
+      "bicycle": {},
+      "transit": {},
+      "truck": {},
+      "pass_by": {
+        "percent": null,
+        "applicable": true
+      }
+    },
+    "821": {
+      "name": "Shopping Plaza (40-150k)",
+      "group": "Retail",
+      "default_iv": "1000 Sq. Ft. GFA",
+      "vehicle": {
+        "weekday_supermarket__yes_general_urbansuburban": {
+          "time_period": "Weekday",
+          "time_period_code": "AWDVTE",
+          "subcategory": "Supermarket - Yes",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "1000 Sq. Ft. GLA",
+          "rate": 101.43,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 4,
+          "avg_iv_units": 77,
+          "standard_deviation": 17.91,
+          "fitted_curve_equation": "T = 136.41(X) - 2680.46",
+          "R_square_value": 0.95,
+          "rate_range": {
+            "low": 76.93,
+            "high": 113.46
+          }
+        }
+      },
+      "person": {},
+      "walk_bike_transit": {},
+      "walk": {},
+      "bicycle": {},
+      "transit": {},
+      "truck": {},
+      "pass_by": {
+        "percent": null,
+        "applicable": true
+      }
+    },
+    "840": {
+      "name": "Automobile Sales (New)",
+      "group": "Retail",
+      "default_iv": "1000 Sq. Ft. GFA",
+      "vehicle": {
+        "weekday_all_sites_general_urbansuburban": {
+          "time_period": "Weekday",
+          "time_period_code": "AWDVTE",
+          "subcategory": "All Sites",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "1000 Sq. Ft. GFA",
+          "rate": 27.84,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 18,
+          "avg_iv_units": 36,
+          "standard_deviation": 7.01,
+          "fitted_curve_equation": "T = 28.65(X) - 29.45",
+          "R_square_value": 0.8,
+          "rate_range": {
+            "low": 14.98,
+            "high": 41.78
+          }
+        }
+      },
+      "person": {},
+      "walk_bike_transit": {},
+      "walk": {},
+      "bicycle": {},
+      "transit": {},
+      "truck": {},
+      "pass_by": {
+        "percent": null,
+        "applicable": true
+      }
+    },
+    "843": {
+      "name": "Automobile Parts Sales",
+      "group": "Retail",
+      "default_iv": "1000 Sq. Ft. GFA",
+      "vehicle": {
+        "weekday_all_sites_general_urbansuburban": {
+          "time_period": "Weekday",
+          "time_period_code": "AWDVTE",
+          "subcategory": "All Sites",
+          "setting": "General Urban/Suburban",
+          "independent_variable": "1000 Sq. Ft. GFA",
+          "rate": 54.57,
+          "entering": 50,
+          "exiting": 50,
+          "sample_size": 14,
+          "avg_iv_units": 8,
+          "standard_deviation": 20.19,
+          "fitted_curve_equation": "T = 71.05(X) - 127.72",
+          "R_square_value": 0.56,
+          "rate_range": {
+            "low": 15.38,
+            "high": 90.41
+          }
+        }
+      },
+      "person": {},
+      "walk_bike_transit": {},
+      "walk": {},
+      "bicycle": {},
+      "transit": {},
+      "truck": {},
+      "pass_by": {
+        "percent": null,
+        "applicable": true
+      }
+    }
+  }
+}
