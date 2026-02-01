@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "source": "ITE Trip Generation Manual, 12th Edition",
+    "extraction_date": "2026-02-01",
+    "total_land_use_codes": 1,
+    "total_entries": 36
+  },
+  "data": {
+    "820": {
+      "name": "Shopping Center (>150k)",
+      "group": "(800-899) Retail",
+      "entries": [
+        {
+          "land_use_code": "820",
+          "land_use_name": "Shopping Center (>150k)",
+          "land_use_group": "(800-899) Retail",
+          "land_use_subcategory": "All Sites",
+          "location_setting": "General Urban/Suburban",
+          "independent_variable": "1000 Sq. Ft. GLA",
+          "time_period": "Weekday",
+          "trip_type": "Vehicle",
+          "number_of_studies": 32,
+          "average_rate": 36.39,
+          "rate_range_low": 17.27,
+          "rate_range_high": 77.31,
+          "standard_deviation": 15.38,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "entering_percent": 50,
+          "exiting_percent": 50
+        }
+      ]
+    }
+  }
+}

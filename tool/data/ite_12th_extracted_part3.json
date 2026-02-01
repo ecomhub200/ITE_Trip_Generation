@@ -1,0 +1,63 @@
+{
+  "311": {
+    "name": "All-Suites Hotel",
+    "group": "Lodging",
+    "default_iv": "Rooms",
+    "vehicle": {
+      "weekday": {"rate": 4.40, "sample_size": 7, "standard_deviation": 0.93, "rate_range": "3.11-6.02", "fitted_curve_equation": "T = 5.16(X) - 112.23", "R_square_value": 0.92, "entering_pct": 50, "exiting_pct": 50, "avg_iv_units": 147},
+      "am_peak": {"rate": 0.26, "sample_size": 7, "standard_deviation": 0.07, "rate_range": "0.13-0.34", "fitted_curve_equation": "T = 0.33(X) - 9.86", "R_square_value": 0.90, "entering_pct": 51, "exiting_pct": 49, "avg_iv_units": 147},
+      "pm_peak": {"rate": 0.34, "sample_size": 8, "standard_deviation": 0.07, "rate_range": "0.22-0.47", "fitted_curve_equation": "T = 0.36(X) - 3.70", "R_square_value": 0.87, "entering_pct": 51, "exiting_pct": 49, "avg_iv_units": 144}
+    }
+  },
+  "312": {
+    "name": "Limited-Service Hotel",
+    "group": "Lodging",
+    "default_iv": "Rooms",
+    "vehicle": {
+      "weekday": {"rate": 4.02, "sample_size": 10, "standard_deviation": 0.92, "rate_range": "2.94-7.52", "fitted_curve_equation": "T = 2.90(X) + 151.69", "R_square_value": 0.89, "entering_pct": 50, "exiting_pct": 50, "avg_iv_units": 136},
+      "am_peak": {"rate": 0.35, "sample_size": 18, "standard_deviation": 0.11, "rate_range": "0.18-0.59", "fitted_curve_equation": "T = 0.30(X) + 6.90", "R_square_value": 0.65, "entering_pct": 39, "exiting_pct": 61, "avg_iv_units": 120},
+      "pm_peak": {"rate": 0.31, "sample_size": 25, "standard_deviation": 0.09, "rate_range": "0.15-0.59", "fitted_curve_equation": "T = 0.21(X) + 12.06", "R_square_value": 0.56, "entering_pct": 55, "exiting_pct": 45, "avg_iv_units": 121}
+    }
+  },
+  "320": {
+    "name": "Motel",
+    "group": "Lodging",
+    "default_iv": "Rooms",
+    "vehicle": {
+      "weekday": {"rate": 3.35, "sample_size": 6, "standard_deviation": 0.87, "rate_range": "1.65-4.38", "fitted_curve_equation": "T = 3.62(X) - 29.43", "R_square_value": 0.96, "entering_pct": 50, "exiting_pct": 50, "avg_iv_units": 109},
+      "am_peak": {"rate": 0.33, "sample_size": 9, "standard_deviation": 0.22, "rate_range": "0.08-0.97", "fitted_curve_equation": "T = 0.32(X) + 0.48", "R_square_value": 0.76, "entering_pct": 39, "exiting_pct": 61, "avg_iv_units": 86},
+      "pm_peak": {"rate": 0.37, "sample_size": 14, "standard_deviation": 0.23, "rate_range": "0.06-0.83", "fitted_curve_equation": null, "R_square_value": null, "entering_pct": 54, "exiting_pct": 46, "avg_iv_units": 80}
+    }
+  },
+  "330": {
+    "name": "Resort Hotel",
+    "group": "Lodging",
+    "default_iv": "Rooms",
+    "vehicle": {
+      "weekday": {"rate": 2.67, "sample_size": 1, "standard_deviation": null, "rate_range": "2.67-2.67", "fitted_curve_equation": null, "R_square_value": null, "entering_pct": 50, "exiting_pct": 50, "avg_iv_units": 404},
+      "am_peak": {"rate": 0.33, "sample_size": 3, "standard_deviation": 0.15, "rate_range": "0.12-0.41", "fitted_curve_equation": null, "R_square_value": null, "entering_pct": 70, "exiting_pct": 30, "avg_iv_units": 574},
+      "pm_peak": {"rate": 0.39, "sample_size": 3, "standard_deviation": 0.15, "rate_range": "0.22-0.51", "fitted_curve_equation": null, "R_square_value": null, "entering_pct": 43, "exiting_pct": 57, "avg_iv_units": 574}
+    }
+  },
+  "411": {
+    "name": "Public Park",
+    "group": "Recreational",
+    "default_iv": "Acres",
+    "vehicle": {
+      "weekday": {"rate": 0.78, "sample_size": 5, "standard_deviation": 1.36, "rate_range": "0.55-34.00", "fitted_curve_equation": "T = 0.64(X) + 88.46", "R_square_value": 0.82, "entering_pct": 50, "exiting_pct": 50, "avg_iv_units": 612}
+    },
+    "alternative_ivs": {
+      "Employees": {"weekday": {"rate": 59.53, "sample_size": 1, "avg_iv_units": 17}}
+    }
+  },
+  "430": {
+    "name": "Golf Course",
+    "group": "Recreational",
+    "default_iv": "Holes",
+    "vehicle": {
+      "weekday": {"rate": 30.38, "sample_size": 4, "standard_deviation": 9.88, "rate_range": "14.50-40.50", "fitted_curve_equation": "T = 34.93(X) - 102.33", "R_square_value": 0.72, "entering_pct": 50, "exiting_pct": 50, "avg_iv_units": 23},
+      "am_peak": {"rate": 1.68, "sample_size": 14, "standard_deviation": 0.60, "rate_range": "0.61-3.06", "fitted_curve_equation": "T = 1.31(X) + 6.62", "R_square_value": 0.54, "entering_pct": 79, "exiting_pct": 21, "avg_iv_units": 18},
+      "pm_peak": {"rate": 2.86, "sample_size": 12, "standard_deviation": 0.94, "rate_range": "1.67-5.00", "fitted_curve_equation": "T = 1.40(X) + 27.46", "R_square_value": 0.51, "entering_pct": 54, "exiting_pct": 46, "avg_iv_units": 19}
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "210": {
+    "name": "Single-Family Detached Housing",
+    "group": "Residential",
+    "default_iv": "Dwelling Units",
+    "vehicle": {
+      "weekday": {"rate": 9.09, "sample_size": 155, "standard_deviation": 2.29, "rate_range": "3.47-23.80", "fitted_curve_equation": "T = 8.07(X) + 265.45", "R_square_value": 0.94, "entering_pct": 50, "exiting_pct": 50, "avg_iv_units": 261},
+      "am_peak": {"rate": 0.70, "sample_size": 153, "standard_deviation": 0.26, "rate_range": "0.22-2.27", "fitted_curve_equation": "T = 0.67(X) + 5.59", "R_square_value": 0.89, "entering_pct": 27, "exiting_pct": 73, "avg_iv_units": 239},
+      "pm_peak": {"rate": 0.93, "sample_size": 166, "standard_deviation": 0.33, "rate_range": "0.35-2.98", "fitted_curve_equation": "Ln(T) = 0.92 Ln(X) + 0.33", "R_square_value": 0.90, "entering_pct": 62, "exiting_pct": 38, "avg_iv_units": 266}
+    }
+  },
+  "215": {
+    "name": "Single-Family Attached Housing",
+    "group": "Residential",
+    "default_iv": "Dwelling Units",
+    "vehicle": {
+      "weekday": {"rate": 6.57, "sample_size": 11, "standard_deviation": 1.28, "rate_range": "4.80-8.45", "fitted_curve_equation": "T = 6.53(X) + 3.25", "R_square_value": 0.91, "entering_pct": 50, "exiting_pct": 50, "avg_iv_units": 84},
+      "am_peak": {"rate": 0.47, "sample_size": 26, "standard_deviation": 0.16, "rate_range": "0.12-0.74", "fitted_curve_equation": "T = 0.59(X) - 15.25", "R_square_value": 0.94, "entering_pct": 25, "exiting_pct": 75, "avg_iv_units": 129},
+      "pm_peak": {"rate": 0.51, "sample_size": 31, "standard_deviation": 0.16, "rate_range": "0.17-1.25", "fitted_curve_equation": "T = 0.57(X) - 7.84", "R_square_value": 0.92, "entering_pct": 57, "exiting_pct": 43, "avg_iv_units": 131}
+    }
+  },
+  "220": {
+    "name": "Multifamily Housing (Low-Rise)",
+    "group": "Residential",
+    "default_iv": "Dwelling Units",
+    "subcategory": "Not Close to Rail Transit",
+    "vehicle": {
+      "weekday": {"rate": 6.21, "sample_size": 28, "standard_deviation": 1.87, "rate_range": "2.46-12.50", "fitted_curve_equation": "T = 5.63(X) + 120.45", "R_square_value": 0.70, "entering_pct": 50, "exiting_pct": 50, "avg_iv_units": 208},
+      "am_peak": {"rate": 0.41, "sample_size": 51, "standard_deviation": 0.10, "rate_range": "0.13-0.73", "fitted_curve_equation": "T = 0.35(X) + 12.93", "R_square_value": 0.81, "entering_pct": 24, "exiting_pct": 76, "avg_iv_units": 219},
+      "pm_peak": {"rate": 0.52, "sample_size": 61, "standard_deviation": 0.13, "rate_range": "0.08-1.04", "fitted_curve_equation": "T = 0.48(X) + 7.35", "R_square_value": 0.83, "entering_pct": 62, "exiting_pct": 38, "avg_iv_units": 215}
+    }
+  },
+  "221": {
+    "name": "Multifamily Housing (Mid-Rise)",
+    "group": "Residential",
+    "default_iv": "Dwelling Units",
+    "subcategory": "Not Close to Rail Transit",
+    "vehicle": {
+      "weekday": {"rate": 4.46, "sample_size": 7, "standard_deviation": 0.62, "rate_range": "3.76-5.40", "fitted_curve_equation": "T = 4.55(X) - 17.52", "R_square_value": 0.90, "entering_pct": 50, "exiting_pct": 50, "avg_iv_units": 192},
+      "am_peak": {"rate": 0.38, "sample_size": 20, "standard_deviation": 0.10, "rate_range": "0.15-0.67", "fitted_curve_equation": "T = 0.42(X) - 7.77", "R_square_value": 0.87, "entering_pct": 23, "exiting_pct": 77, "avg_iv_units": 184},
+      "pm_peak": {"rate": 0.38, "sample_size": 21, "standard_deviation": 0.07, "rate_range": "0.26-0.57", "fitted_curve_equation": "T = 0.36(X) + 3.07", "R_square_value": 0.92, "entering_pct": 64, "exiting_pct": 36, "avg_iv_units": 179}
+    }
+  },
+  "240": {
+    "name": "Mobile Home Park",
+    "group": "Residential",
+    "default_iv": "Dwelling Units",
+    "vehicle": {
+      "weekday": {"rate": 7.87, "sample_size": 6, "standard_deviation": 4.06, "rate_range": "5.00-16.96", "fitted_curve_equation": "Ln(T) = 0.83 Ln(X) + 2.85", "R_square_value": 0.61, "entering_pct": 50, "exiting_pct": 50, "avg_iv_units": 110},
+      "am_peak": {"rate": 0.26, "sample_size": 1, "standard_deviation": null, "rate_range": "0.26-0.26", "fitted_curve_equation": null, "R_square_value": null, "entering_pct": 31, "exiting_pct": 69, "avg_iv_units": 160},
+      "pm_peak": {"rate": 0.46, "sample_size": 1, "standard_deviation": null, "rate_range": "0.46-0.46", "fitted_curve_equation": null, "R_square_value": null, "entering_pct": 62, "exiting_pct": 38, "avg_iv_units": 160}
+    }
+  },
+  "310": {
+    "name": "Hotel",
+    "group": "Lodging",
+    "default_iv": "Rooms",
+    "vehicle": {
+      "weekday": {"rate": 5.84, "sample_size": 2, "standard_deviation": null, "rate_range": "5.58-6.03", "fitted_curve_equation": null, "R_square_value": null, "entering_pct": 50, "exiting_pct": 50, "avg_iv_units": 143},
+      "am_peak": {"rate": 0.34, "sample_size": 17, "standard_deviation": 0.16, "rate_range": "0.03-0.69", "fitted_curve_equation": "T = 0.49(X) - 18.48", "R_square_value": 0.68, "entering_pct": 52, "exiting_pct": 48, "avg_iv_units": 128},
+      "pm_peak": {"rate": 0.47, "sample_size": 20, "standard_deviation": 0.28, "rate_range": "0.11-1.06", "fitted_curve_equation": "T = 0.85(X) - 55.22", "R_square_value": 0.64, "entering_pct": 51, "exiting_pct": 49, "avg_iv_units": 142}
+    }
+  }
+}

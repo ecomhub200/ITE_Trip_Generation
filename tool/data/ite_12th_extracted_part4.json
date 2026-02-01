@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "source": "ITE Trip Generation Manual, 12th Edition",
+    "extraction_date": "2026-02-01",
+    "total_land_use_codes": 7,
+    "total_entries": 96
+  },
+  "data": {
+    "431": {
+      "name": "Miniature Golf Course",
+      "group": "(400-499) Recreational",
+      "entries": [
+        {
+          "land_use_code": "431",
+          "land_use_name": "Miniature Golf Course",
+          "land_use_group": "(400-499) Recreational",
+          "land_use_subcategory": "All Sites",
+          "location_setting": "General Urban/Suburban",
+          "independent_variable": "Holes",
+          "independent_variable_code": "GOLF",
+          "time_period": "Weekday, Peak Hour of Adjacent Street Traffic, One Hour Between 4 and 6 p.m.",
+          "time_period_code": "TPSIDE",
+          "trip_type": "Vehicle",
+          "trip_type_code": "1",
+          "number_of_studies": 1,
+          "avg_iv_units": 18,
+          "average_rate": 0.33,
+          "rate_range_low": 0.33,
+          "rate_range_high": 0.33,
+          "standard_deviation": null,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "entering_percent": 33,
+          "exiting_percent": 67
+        }
+      ]
+    },
+    "432": {
+      "name": "Golf Driving Range",
+      "group": "(400-499) Recreational",
+      "entries": [
+        {
+          "land_use_code": "432",
+          "land_use_name": "Golf Driving Range",
+          "land_use_group": "(400-499) Recreational",
+          "land_use_subcategory": "All Sites",
+          "location_setting": "General Urban/Suburban",
+          "independent_variable": "Tees/Driving Positions",
+          "independent_variable_code": "TEES",
+          "time_period": "Weekday",
+          "time_period_code": "AWDVTE",
+          "trip_type": "Vehicle",
+          "trip_type_code": "1",
+          "number_of_studies": 1,
+          "avg_iv_units": 57,
+          "average_rate": 13.65,
+          "rate_range_low": 13.65,
+          "rate_range_high": 13.65,
+          "standard_deviation": null,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "entering_percent": 50,
+          "exiting_percent": 50
+        },
+        {
+          "land_use_code": "432",
+          "land_use_name": "Golf Driving Range",
+          "land_use_group": "(400-499) Recreational",
+          "land_use_subcategory": "All Sites",
+          "location_setting": "General Urban/Suburban",
+          "independent_variable": "Tees/Driving Positions",
+          "independent_variable_code": "TEES",
+          "time_period": "Weekday, Peak Hour of Adjacent Street Traffic, One Hour Between 7 and 9 a.m.",
+          "time_period_code": "TASIDE",
+          "trip_type": "Vehicle",
+          "trip_type_code": "1",
+          "number_of_studies": 1,
+          "avg_iv_units": 57,
+          "average_rate": 0.4,
+          "rate_range_low": 0.4,
+          "rate_range_high": 0.4,
+          "standard_deviation": null,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "entering_percent": 100,
+          "exiting_percent": 0
+        },
+        {
+          "land_use_code": "432",
+          "land_use_name": "Golf Driving Range",
+          "land_use_group": "(400-499) Recreational",
+          "land_use_subcategory": "All Sites",
+          "location_setting": "General Urban/Suburban",
+          "independent_variable": "Tees/Driving Positions",
+          "independent_variable_code": "TEES",
+          "time_period": "Weekday, Peak Hour of Adjacent Street Traffic, One Hour Between 4 and 6 p.m.",
+          "time_period_code": "TPSIDE",
+          "trip_type": "Vehicle",
+          "trip_type_code": "1",
+          "number_of_studies": 7,
+          "avg_iv_units": 42,
+          "average_rate": 1.25,
+          "rate_range_low": 0.44,
+          "rate_range_high": 2.13,
+          "standard_deviation": 0.61,
+          "fitted_curve_equation": null,
+          "R_square_value": null,
+          "entering_percent": 47,
+          "exiting_percent": 53
+        }
+      ]
+    },
+    "710": {
+      "name": "General Office Building",
+      "group": "(700-799) Office",
+      "entries": [
+        {
+          "land_use_code": "710",
+          "land_use_name": "General Office Building",
+          "land_use_group": "(700-799) Office",
+          "land_use_subcategory": "All Sites",
+          "location_setting": "General Urban/Suburban",
+          "independent_variable": "1000 Sq. Ft. GFA",
+          "independent_variable_code": "QFQAF",
+          "time_period": "Weekday",
+          "time_period_code": "AWDVTE",
+          "trip_type": "Vehicle",
+          "trip_type_code": "1",
+          "number_of_studies": 22,
+          "avg_iv_units": 126,
+          "average_rate": 7.83,
+          "rate_range_low": 3.27,
+          "rate_range_high": 27.56,
+          "standard_deviation": 3.71,
+          "fitted_curve_equation": "T = 6.18(X) + 207.96",
+          "R_square_value": 0.86,
+          "entering_percent": 50,
+          "exiting_percent": 50
+        }
+      ]
+    }
+  }
+}
