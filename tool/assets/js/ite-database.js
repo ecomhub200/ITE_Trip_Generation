@@ -1,9 +1,10 @@
 /**
  * ITE Trip Generation Database - HYBRID MERGED
- * Generated: 2026-02-01 20:12:22
- * Original codes (11th/12th Ed): 111
+ * Generated: 2026-02-01 20:23:34
+ * Original codes: 111
  * New codes from extraction: 72
- * Total Codes: 183
+ * Missing codes added: 12
+ * Total Codes: 190
  */
 
 const ITE_DATABASE = {
@@ -528,33 +529,15 @@ const ITE_DATABASE = {
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
   },
-  "222": {
+    "222": {
     code: "222",
     name: "Multifamily Housing (High-Rise)",
     category: "Residential",
     unit: "Dwelling Units",
-    weekday: {
-      rate: 4.20,
-      equation: { type: "linear", a: 4.20, b: 0 },
-      r_squared: 0.72,
-      sample_size: 22
-    },
-    am_peak: {
-      rate: 0.30,
-      equation: null,
-      r_squared: 0.58,
-      entering: 28,
-      exiting: 72
-    },
-    pm_peak: {
-      rate: 0.35,
-      equation: null,
-      r_squared: 0.60,
-      entering: 60,
-      exiting: 40
-    },
-    source: "ITE 12th Edition",
-    page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
+    weekday: { rate: 3.96, sample_size: 2 },
+    am_peak: { rate: 0.2, sample_size: 23, entering: 29, exiting: 71 },
+    pm_peak: { rate: 0.26, sample_size: 23, entering: 61, exiting: 39 },
+    source: "ITE 12th Edition"
   },
   "227": {
     code: "227",
@@ -566,33 +549,15 @@ const ITE_DATABASE = {
     pm_peak: { rate: null, entering: 50, exiting: 50 },
     source: "ITE 12th Edition"
   },
-  "230": {
+    "230": {
     code: "230",
     name: "Low-Rise Residential with Ground-Floor Commercial",
     category: "Residential",
     unit: "Dwelling Units",
-    weekday: {
-      rate: 5.86,
-      equation: { type: "linear", a: 5.86, b: 0 },
-      r_squared: 0.80,
-      sample_size: 68
-    },
-    am_peak: {
-      rate: 0.44,
-      equation: null,
-      r_squared: 0.72,
-      entering: 23,
-      exiting: 77
-    },
-    pm_peak: {
-      rate: 0.52,
-      equation: null,
-      r_squared: 0.75,
-      entering: 66,
-      exiting: 34
-    },
-    source: "ITE 12th Edition",
-    page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
+    weekday: { rate: 3.44, sample_size: 1 },
+    am_peak: { rate: null, entering: 50, exiting: 50 },
+    pm_peak: { rate: null, entering: 50, exiting: 50 },
+    source: "ITE 12th Edition"
   },
   "232": {
     code: "232",
@@ -2270,33 +2235,15 @@ const ITE_DATABASE = {
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
   },
-  "760": {
+    "760": {
     code: "760",
     name: "Research and Development Center",
     category: "Office",
-    unit: "1000 SF GFA",
-    weekday: {
-      rate: 11.08,
-      equation: { type: "linear", a: 8.11, b: 0 },
-      r_squared: 0.78,
-      sample_size: 25
-    },
-    am_peak: {
-      rate: 1.03,
-      equation: null,
-      r_squared: 0.72,
-      entering: 86,
-      exiting: 14
-    },
-    pm_peak: {
-      rate: 0.98,
-      equation: null,
-      r_squared: 0.74,
-      entering: 20,
-      exiting: 80
-    },
-    source: "ITE 12th Edition",
-    page_ref: "ITE 12th Ed. - 700s Modal Data Plots"
+    unit: "1000 Sq. Ft. GFA",
+    weekday: { rate: 9.47, sample_size: 1 },
+    am_peak: { rate: null, entering: 50, exiting: 50 },
+    pm_peak: { rate: null, entering: 50, exiting: 50 },
+    source: "ITE 12th Edition"
   },
   "770": {
     code: "770",
@@ -2478,33 +2425,15 @@ const ITE_DATABASE = {
     source: "ITE 12th Edition",
     page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
   },
-  "821": {
+    "821": {
     code: "821",
-    name: "Shopping Plaza (40-150K SF)",
+    name: "Shopping Plaza (40-150k)",
     category: "Retail",
-    unit: "1000 SF GLA",
-    weekday: {
-      rate: 67.52,
-      equation: null,
-      r_squared: 0.78,
-      sample_size: 35
-    },
-    am_peak: {
-      rate: 1.73,
-      equation: null,
-      r_squared: 0.70,
-      entering: 60,
-      exiting: 40
-    },
-    pm_peak: {
-      rate: 5.19,
-      equation: null,
-      r_squared: 0.72,
-      entering: 49,
-      exiting: 51
-    },
-    source: "ITE 12th Edition",
-    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
+    unit: "1000 Sq. Ft. GFA",
+    weekday: { rate: 101.43, equation: { type: "linear", a: 136.41, b: -2680.46 }, r_squared: 0.95, sample_size: 4 },
+    am_peak: { rate: null, entering: 50, exiting: 50 },
+    pm_peak: { rate: null, entering: 50, exiting: 50 },
+    source: "ITE 12th Edition"
   },
   "822": {
     code: "822",
@@ -2544,33 +2473,15 @@ const ITE_DATABASE = {
     pm_peak: { rate: null, entering: 50, exiting: 50 },
     source: "ITE 12th Edition"
   },
-  "840": {
+    "840": {
     code: "840",
     name: "Automobile Sales (New)",
     category: "Retail",
-    unit: "1000 SF GFA",
-    weekday: {
-      rate: 27.84,
-      equation: null,
-      r_squared: 0.70,
-      sample_size: 32
-    },
-    am_peak: {
-      rate: 2.03,
-      equation: null,
-      r_squared: 0.62,
-      entering: 65,
-      exiting: 35
-    },
-    pm_peak: {
-      rate: 2.26,
-      equation: null,
-      r_squared: 0.65,
-      entering: 45,
-      exiting: 55
-    },
-    source: "ITE 12th Edition",
-    page_ref: "ITE 12th Ed. - 800s Modal Data Plots"
+    unit: "1000 Sq. Ft. GFA",
+    weekday: { rate: 27.84, equation: { type: "linear", a: 28.65, b: -29.45 }, r_squared: 0.8, sample_size: 18 },
+    am_peak: { rate: null, entering: 50, exiting: 50 },
+    pm_peak: { rate: null, entering: 50, exiting: 50 },
+    source: "ITE 12th Edition"
   },
   "841": {
     code: "841",
@@ -3836,6 +3747,76 @@ const ITE_DATABASE = {
     weekday: { rate: null },
     am_peak: { rate: null, entering: 50, exiting: 50 },
     pm_peak: { rate: null, entering: 50, exiting: 50 },
+  "223": {
+    code: "223",
+    name: "Affordable Housing",
+    category: "Residential",
+    unit: "Dwelling Units",
+    weekday: { rate: 4.81, equation: { type: "linear", a: 3.73, b: 139.35 }, r_squared: 0.98, sample_size: 5 },
+    am_peak: { rate: 0.36, equation: { type: "linear", a: 0.21, b: 17.21 }, r_squared: 0.96, sample_size: 6, entering: 29, exiting: 71 },
+    pm_peak: { rate: 0.46, equation: { type: "log", a: 0.72, b: 0.64 }, r_squared: 0.67, sample_size: 8, entering: 59, exiting: 41 },
+    source: "ITE 12th Edition"
+  },
+  "225": {
+    code: "225",
+    name: "Off-Campus Student Apartment (Low-Rise)",
+    category: "Residential",
+    unit: "Dwelling Units",
+    weekday: { rate: null },
+    am_peak: { rate: 0.4, sample_size: 1, entering: 18, exiting: 82 },
+    pm_peak: { rate: null, entering: 50, exiting: 50 },
+    source: "ITE 12th Edition"
+  },
+  "226": {
+    code: "226",
+    name: "Off-Campus Student Apartment (Mid-Rise)",
+    category: "Residential",
+    unit: "Dwelling Units",
+    weekday: { rate: null },
+    am_peak: { rate: 0.3, equation: { type: "linear", a: 0.2, b: 13.06 }, r_squared: 0.97, sample_size: 4, entering: 41, exiting: 59 },
+    pm_peak: { rate: null, entering: 50, exiting: 50 },
+    source: "ITE 12th Edition"
+  },
+  "231": {
+    code: "231",
+    name: "Mid-Rise Residential with Ground-Floor Commercial",
+    category: "Residential",
+    unit: "Dwelling Units",
+    weekday: { rate: null },
+    am_peak: { rate: 0.34, sample_size: 2, entering: 30, exiting: 70 },
+    pm_peak: { rate: null, entering: 50, exiting: 50 },
+    source: "ITE 12th Edition"
+  },
+  "253": {
+    code: "253",
+    name: "Congregate Care Facility",
+    category: "Residential",
+    unit: "Dwelling Units",
+    weekday: { rate: 2.43, sample_size: 2 },
+    am_peak: { rate: null, entering: 50, exiting: 50 },
+    pm_peak: { rate: null, entering: 50, exiting: 50 },
+    source: "ITE 12th Edition"
+  },
+  "814": {
+    code: "814",
+    name: "Variety Store",
+    category: "Retail",
+    unit: "1000 Sq. Ft. GLA",
+    weekday: { rate: 63.66, sample_size: 29 },
+    am_peak: { rate: null, entering: 50, exiting: 50 },
+    pm_peak: { rate: null, entering: 50, exiting: 50 },
+    source: "ITE 12th Edition"
+  },
+  "843": {
+    code: "843",
+    name: "Automobile Parts Sales",
+    category: "Retail",
+    unit: "1000 Sq. Ft. GFA",
+    weekday: { rate: 54.57, equation: { type: "linear", a: 71.05, b: -127.72 }, r_squared: 0.56, sample_size: 14 },
+    am_peak: { rate: null, entering: 50, exiting: 50 },
+    pm_peak: { rate: null, entering: 50, exiting: 50 },
+    source: "ITE 12th Edition"
+  },
     source: "ITE 12th Edition"
   }
 };
