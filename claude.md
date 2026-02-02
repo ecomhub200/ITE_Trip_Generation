@@ -214,10 +214,12 @@ Use these **memorized suburban rates** as fallback only. Flag as "Preliminary Es
 
 | Code | Land Use (12th Edition) | Weekday Rate | AM Peak | PM Peak |
 |------|--------------------------|--------------|---------|---------|
-| 210 | Single-Family Detached Housing | 9.09/unit | 0.74/unit | 0.99/unit |
-| 220 | Multifamily Housing (Low-Rise) | 7.32/unit | 0.55/unit | 0.67/unit |
+| 210 | Single-Family Detached Housing | 9.09/unit | 0.70/unit | 0.94/unit |
+| 220 | Multifamily Housing (Low-Rise)* | 6.21/unit | 0.38/unit | 0.51/unit |
 | 710 | General Office Building | 9.74/1000sf | 1.15/1000sf | 1.14/1000sf |
 | 820 | Shopping Center (>150k) | 37.75/1000sf | 0.94/1000sf | 3.81/1000sf |
+
+> *Code 220 rates are for "Not Close to Rail Transit" subcategory (General Urban/Suburban setting)
 
 > **Note:** For small developments (below the typical ITE study data range), use the Average Rate method. The Fitted Curve Equation may extrapolate poorly for small sizes due to positive intercept terms.
 
@@ -577,19 +579,21 @@ Use these **memorized suburban rates** as fallback only. Flag as "Preliminary Es
 
 ## Quick Reference Card
 
-### Calculation Example (Residential)
+### Calculation Example (Residential - Using Fitted Curve)
 ```
 Development: 50-unit apartment complex
-ITE Code: 220 (Apartments)
-Rate: 7.32 trips/unit
+ITE Code: 220 (Multifamily Housing Low-Rise)
+Setting: General Urban/Suburban, Not Close to Rail Transit
+Fitted Curve Equation: T = 5.63(X) + 120.45
 
-Weekday Daily: 50 units × 7.32 trips/unit = 366 trips
-AM Peak: 50 units × 0.55 trips/unit = 28 trips
-  - Entering (25%): 7 trips
-  - Exiting (75%): 21 trips
-PM Peak: 50 units × 0.67 trips/unit = 34 trips
-  - Entering (65%): 22 trips
-  - Exiting (35%): 12 trips
+Weekday Daily: T = 5.63(50) + 120.45 = 402 trips
+  (Compare to average rate: 50 × 6.21 = 311 trips - lower due to intercept)
+AM Peak: 50 units × 0.38 trips/unit = 19 trips
+  - Entering (24%): 5 trips
+  - Exiting (76%): 14 trips
+PM Peak: 50 units × 0.51 trips/unit = 26 trips
+  - Entering (65%): 17 trips
+  - Exiting (35%): 9 trips
 
 Threshold Check: PASS (< 1,000 daily, < 100 peak)
 TIA Required: NO (< 4,000 vpd)
@@ -615,6 +619,6 @@ TIA Required: NO (< 4,000 vpd)
 
 ---
 
-*Last Updated: 2026-01-28*
+*Last Updated: 2026-02-02*
 *ITE Trip Generation Manual: 12th Edition*
 *Applicable Jurisdiction: Henrico County, Virginia*

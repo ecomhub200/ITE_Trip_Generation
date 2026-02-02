@@ -3,7 +3,7 @@
  * Based on ITE Trip Generation Manual, 12th Edition
  *
  * Data extracted from official ITE publications
- * Last Updated: 2026-01-28
+ * Last Updated: 2026-02-02
  * Applicable Jurisdiction: Henrico County, Virginia (Suburban)
  */
 
@@ -105,30 +105,30 @@ const ITE_DATABASE = {
     category: "Residential",
     unit: "Dwelling Units",
     weekday: {
-      rate: 9.43,
+      rate: 9.09,
       equation: { type: "linear", a: 8.07, b: 265.45 },
-      r_squared: 0.94,
+      r_squared: 0.87,
       sample_size: 155,
       study_range: { min: 11, max: 3000, avg: 261 }
     },
     am_peak: {
-      rate: 0.7,
+      rate: 0.70,
       equation: { type: "linear", a: 0.70, b: 1.52 },
       r_squared: 0.92,
-      entering: 25,
-      exiting: 75,
+      entering: 27,
+      exiting: 73,
       study_range: { min: 11, max: 3000, avg: 261 }
     },
     pm_peak: {
       rate: 0.94,
       equation: { type: "linear", a: 0.94, b: 1.86 },
       r_squared: 0.93,
-      entering: 63,
-      exiting: 37,
+      entering: 62,
+      exiting: 38,
       study_range: { min: 11, max: 3000, avg: 261 }
     },
     source: "ITE 12th Edition",
-    page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
+    page_ref: "ITE 12th Ed. - Land Use 210, General Urban/Suburban"
   },
   "215": {
     code: "215",
@@ -163,28 +163,32 @@ const ITE_DATABASE = {
     name: "Multifamily Housing (Low-Rise)",
     category: "Residential",
     unit: "Dwelling Units",
+    subcategory: "Not Close to Rail Transit",  // ITE 12th Ed. separates by rail transit proximity
     weekday: {
-      rate: 4.72,
-      equation: { type: "linear", a: 7.32, b: 0 },
-      r_squared: 0.85,
-      sample_size: 89
+      rate: 6.21,
+      equation: { type: "linear", a: 5.63, b: 120.45 },
+      r_squared: 0.70,
+      sample_size: 28,
+      study_range: { min: 16, max: 384, avg: 145 }
     },
     am_peak: {
       rate: 0.38,
-      equation: { type: "linear", a: 0.55, b: 0 },
-      r_squared: 0.80,
+      equation: { type: "linear", a: 0.36, b: 3.75 },
+      r_squared: 0.68,
       entering: 24,
-      exiting: 76
+      exiting: 76,
+      sample_size: 26
     },
     pm_peak: {
-      rate: 0.61,
-      equation: { type: "linear", a: 0.67, b: 0 },
-      r_squared: 0.82,
+      rate: 0.51,
+      equation: { type: "linear", a: 0.47, b: 5.82 },
+      r_squared: 0.72,
       entering: 65,
-      exiting: 35
+      exiting: 35,
+      sample_size: 26
     },
     source: "ITE 12th Edition",
-    page_ref: "ITE 12th Ed. - 200s Modal Data Plots"
+    page_ref: "ITE 12th Ed. - Land Use 220, General Urban/Suburban, Not Close to Rail Transit"
   },
   "221": {
     code: "221",

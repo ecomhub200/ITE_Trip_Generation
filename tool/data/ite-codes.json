@@ -4,7 +4,7 @@
     "source": "ITE Trip Generation Manual, 12th Edition",
     "jurisdiction": "Henrico County, Virginia",
     "setting": "Suburban",
-    "lastUpdated": "2026-01-30",
+    "lastUpdated": "2026-02-02",
     "version": "1.0.0"
   },
   "thresholds": {
@@ -33,17 +33,18 @@
   "quickReference": {
     "210": {
       "name": "Single-Family Detached Housing",
-      "weekdayRate": 9.43,
-      "amRate": 0.74,
-      "pmRate": 0.99,
+      "weekdayRate": 9.09,
+      "amRate": 0.70,
+      "pmRate": 0.94,
       "unit": "Dwelling Units"
     },
     "220": {
       "name": "Multifamily Housing (Low-Rise)",
-      "weekdayRate": 7.32,
-      "amRate": 0.55,
-      "pmRate": 0.67,
-      "unit": "Dwelling Units"
+      "weekdayRate": 6.21,
+      "amRate": 0.38,
+      "pmRate": 0.51,
+      "unit": "Dwelling Units",
+      "subcategory": "Not Close to Rail Transit"
     },
     "710": {
       "name": "General Office Building",

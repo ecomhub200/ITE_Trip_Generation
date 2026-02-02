@@ -41,8 +41,8 @@ const chatModule = (function() {
 - Else → Flag as "Insufficient data"
 
 ### Common ITE Codes (12th Edition):
-- 210: Single-Family Detached Housing (9.43 trips/unit weekday)
-- 220: Multifamily Housing Low-Rise (7.32 trips/unit weekday)
+- 210: Single-Family Detached Housing (9.09 trips/unit weekday)
+- 220: Multifamily Housing Low-Rise (6.21 trips/unit weekday, Not Close to Rail Transit)
 - 221: Multifamily Housing Mid-Rise (5.44 trips/unit weekday)
 - 710: General Office Building (9.74 trips/1000sf weekday)
 - 820: Shopping Center >150k (37.75 trips/1000sf weekday)
@@ -50,8 +50,8 @@ const chatModule = (function() {
 - 934: Fast Food with Drive-Through (467.48 trips/1000sf weekday)
 
 ### Directional Splits (Typical):
-- Residential AM: 25% entering, 75% exiting
-- Residential PM: 65% entering, 35% exiting
+- Residential AM: 27% entering, 73% exiting (Code 210)
+- Residential PM: 62% entering, 38% exiting (Code 210)
 - Office AM: 88% entering, 12% exiting
 - Office PM: 17% entering, 83% exiting
 - Retail: Generally 50/50 split
